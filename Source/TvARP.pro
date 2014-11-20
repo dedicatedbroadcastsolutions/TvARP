@@ -4,6 +4,7 @@
 #
 #-------------------------------------------------
 # http://qt-project.org/wiki/How-to-build-a-static-Qt-for-Windows-MinGW
+# https://github.com/Mendeley/Update-Installer/tree/master/src
 QT       += core gui serialport network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = TvARP_EAS_beta
