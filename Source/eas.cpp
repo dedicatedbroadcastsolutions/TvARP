@@ -7,7 +7,7 @@ EAS::EAS(QObject *parent) :
     vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
     vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
     //adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    adev   = "Line (USB Audio Device)";			// Set for Capture Device (Audio) Windows 7
+    adev   = "Line (2- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);
