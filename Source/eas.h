@@ -35,7 +35,9 @@ class EAS : public QObject
     fix_pcr *process_pcr;
     QTimer *check_timer;
     QList<int> channels;
-    QSerialPort *serial;
+    QSerialPort *serial, *mux_debug;
+    QFile mux_log;
+    QTextStream mux_log_out;
 
     int  playLocalVlcState;
     // CONFIG PIDs

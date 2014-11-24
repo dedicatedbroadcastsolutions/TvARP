@@ -3,11 +3,11 @@
 EAS::EAS(QObject *parent) :
     QObject(parent)
 {
-    //vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
-    vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
+    vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
+    //vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
     vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
-    //adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    adev   = "Line (2- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
+    adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
+    //adev   = "Line (USB Audio Device)";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);
@@ -23,18 +23,31 @@ EAS::EAS(QObject *parent) :
 
     d2mux = new Mux_Control(ctrl_addr, ctrl_port,this);
     serial = new QSerialPort(this);
+    mux_debug = new QSerialPort(this);
 
     eas_live=false;
     connect(serial, SIGNAL(error(QSerialPort::SerialPortError)), this,
                 SLOT(handleError()));
+    connect(mux_debug, SIGNAL(error(QSerialPort::SerialPortError)), this,
+            SLOT(handleError()));
+    connect(mux_debug, SIGNAL(readyRead()),this, SLOT(process_serial_debug()));
 
     serial->setPortName("com6");
     serial->setBaudRate(QSerialPort::Baud115200);
     serial->setDataBits(QSerialPort::Data8);
     serial->setParity(QSerialPort::NoParity);
     serial->setStopBits(QSerialPort::OneStop);
-    serial->setFlowControl(QSerialPort::NoFlowControl);
+    serial->setFlowControl(QSerialPort::HardwareControl);
     serial->open(QIODevice::ReadOnly);
+
+
+    mux_debug->setPortName("com3");
+    mux_debug->setBaudRate(QSerialPort::Baud115200);
+    mux_debug->setDataBits(QSerialPort::Data8);
+    mux_debug->setParity(QSerialPort::NoParity);
+    mux_debug->setStopBits(QSerialPort::OneStop);
+    mux_debug->setFlowControl(QSerialPort::NoFlowControl);
+    mux_debug->open(QIODevice::ReadOnly);
 
     check_timer= new QTimer(this);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
@@ -42,16 +55,19 @@ EAS::EAS(QObject *parent) :
     check_timer->start(1);                                               // create timer with 1 ms resolution
     init_vlc_start_play();
     libvlc_media_player_stop (mp);				// Stop the media player (mp)
+    mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
 }
 
 EAS::~EAS()
 {
     serial->close();
+    mux_debug->close();
 }
 
 void EAS::handleError()
 {
-    qDebug()<< "serial port error" << serial->errorString() << serial->error();
+    qDebug()<< "serial port error" << serial->errorString() << serial->error() << "\n"
+            << "mux debug port error" << mux_debug->errorString() << mux_debug->error();
 }
 
 void EAS::check_eas_ring()
@@ -96,6 +112,13 @@ void EAS::send_eas_message()
 
 void EAS::process_serial_debug()
 {
+    //QFile data("output.txt");
+     if (mux_log.open(QFile::WriteOnly | QFile::Append)) {
+         mux_log_out.setDevice(&mux_log);
+         mux_log_out << mux_debug->readAll();
+         mux_log.close();
+     }
+
 
 }
 void EAS::init_vlc_start_play()
