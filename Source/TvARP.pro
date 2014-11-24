@@ -11,7 +11,7 @@ TARGET = TvARP_EAS_beta
 TEMPLATE = app
 
 #INCLUDEPATH += $$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/include
-#LIBS += -L$$PWD/lib/ -llibvlc
+LIBS += -L$$PWD/lib/ -llibvlc
 #LIBS += -L$$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/lib -lavutil -lavcodec -lavformat -lswscale
 
 SOURCES += main.cpp\
@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     eas.cpp \
     mux_control.cpp \
     stream.cpp \
-    configure_eas.cpp
+    configure_eas.cpp \
+    fix_pcr.cpp
 
 HEADERS  += \
     automation.h \
@@ -30,7 +31,8 @@ HEADERS  += \
     eas.h \
     mux_control.h \
     stream.h \
-    configure_eas.h
+    configure_eas.h \
+    fix_pcr.h
 
 FORMS    += mainwindow.ui \
     configure_eas.ui

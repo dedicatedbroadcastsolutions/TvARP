@@ -63,6 +63,8 @@ private:
 private slots:
     void on_actionStart_Minimized_toggled(bool );
     void on_actionExit_triggered();
+    void on_restart_eas_clicked();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H

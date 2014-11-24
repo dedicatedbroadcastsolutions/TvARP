@@ -52,7 +52,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    eas = new EAS(this);
 }
 
 MainWindow::~MainWindow()
@@ -80,4 +80,14 @@ void MainWindow::readSettings()
 void MainWindow::on_actionExit_triggered()
 {
     this->close();
+}
+
+void MainWindow::on_restart_eas_clicked()
+{
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    eas->send_eas_message();
 }

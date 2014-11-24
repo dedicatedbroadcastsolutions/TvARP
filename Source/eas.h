@@ -34,8 +34,8 @@
 #include "QtCore"
 #include <QSerialPort>
 #include <string>
-//#include "vlc/vlc.h"            // Must include VLC core first (From VLC .zip version 1.1.0)
-//#include "fix_pcr.h"
+#include "vlc/vlc.h"            // Must include VLC core (From VLC .zip version 1.1.0)
+#include "fix_pcr.h"
 #include "mux_control.h"
 #include "stream.h"
 //#include "qt_ffmpeg_enc.h"
@@ -67,30 +67,30 @@ class EAS : public QObject
   private:
     bool dev_machine;
     Mux_Control *d2mux;
-  //  fix_pcr *process_pcr;
+    fix_pcr *process_pcr;
     QTimer *check_timer;
     QList<int> channels;
     QSerialPort *serial;
     stream *stream_video;
-    //int  playLocalVlcState;
+    int  playLocalVlcState;
     // CONFIG PIDs
-   // std::string pmtPid ,  pcrPid ,  vidPid,  audPid;
+    std::string pmtPid ,  pcrPid ,  vidPid,  audPid;
 
     // CONFIG Bitrates for Output (Video and Audio)
-   // std::string vb,  ab ;                  // in kbps; vb Video bitrate; ab Audio bitrate
+    std::string vb,  ab ;                  // in kbps; vb Video bitrate; ab Audio bitrate
 
     //
-    //std::string winTitle;
-   // std::string winX , winY ,  winWidth , winHeight;  // Window Location 3
+    std::string winTitle;
+    std::string winX , winY ,  winWidth , winHeight;  // Window Location 3
 
     // "Initialize libVLC" Variables
- //   libvlc_instance_t     *inst;
- //   libvlc_media_player_t *mp;
- //   libvlc_media_t        *m;
-  //  #define VLC_OUTPUT_FILE			"c:\\3ABN\\Z_vlcOutputFile.ts"
-  //  std::string vdev;									// Set for USB Capture Device (Video)
- //   std::string vidSize;									// Valid "Video Resolution Mode" of Video Capture Device
-  //  std::string adev ;									// Set for USB Capture Device (Audio)
+    libvlc_instance_t     *inst;
+    libvlc_media_player_t *mp;
+    libvlc_media_t        *m;
+    #define VLC_OUTPUT_FILE			"c:\\3ABN\\Z_vlcOutputFile.ts"
+    std::string vdev;									// Set for USB Capture Device (Video)
+    std::string vidSize;									// Valid "Video Resolution Mode" of Video Capture Device
+    std::string adev ;									// Set for USB Capture Device (Audio)
 };
 
 #endif // EAS_H
