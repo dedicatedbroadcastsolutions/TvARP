@@ -1,57 +1,13 @@
-/*
-***************************************************************************
-*
-* Author: Zach Swena
-*
-* Copyright (C) 2010, 2011, 2014 Zach Swena All Rights Reserved
-*
-* zcybercomputing@gmail.com
-*
-***************************************************************************
-*
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation version 2 of the License.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-***************************************************************************
-*
-* This version of GPL is at http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
-*
-***************************************************************************
-*/
 #include "eas.h"
 #include "windows.h"
 EAS::EAS(QObject *parent) :
     QObject(parent)
 {
-    pmtPid = "0x40";  pcrPid = "0x44";  vidPid = "0x44";  audPid = "0x45";
-
-    // CONFIG Bitrates for Output (Video and Audio)
-    vb = "2550";  ab = "192";                  // in kbps; vb Video bitrate; ab Audio bitrate
-
-    //
-    winTitle = "Local Vid (-2 Sec) PreView";
-    winX     = "570"; winY = "30";  winWidth = "240"; winHeight="180";  // Window Location 3
-
-
-
-
-    dev_machine=false;
-  ///  vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
+    //vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
     vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
- ///   vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
-       vidSize	 = "720x480";
- ///   adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    adev   = "Line (USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
+    vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
+    //adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
+    adev   = "Line (USB Audio Device)";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);
@@ -60,7 +16,7 @@ EAS::EAS(QObject *parent) :
     channels.append(5);
     channels.append(6);
     channels.append(7);
-    qDebug()<< "eas thread id = " << QThread::currentThreadId();
+
     QHostAddress ctrl_addr;
     ctrl_addr.setAddress("192.168.0.150");
     qint16 ctrl_port = 0x4541;
@@ -83,12 +39,9 @@ EAS::EAS(QObject *parent) :
     check_timer= new QTimer(this);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
-    setArgs_InitLibVlc();							     // Initialize libVLC to "conversion parameters" set by Args (Arguments)
-
-    check_timer->start(1);                      // create timer with 1 ms resolution
-   // init_vlc_start_play();
-    //libvlc_media_player_stop (mp);				// Stop the media player (mp)
-    qDebug("finished init eas");
+    check_timer->start(1);                                               // create timer with 1 ms resolution
+    init_vlc_start_play();
+    libvlc_media_player_stop (mp);				// Stop the media player (mp)
 }
 
 EAS::~EAS()
@@ -114,77 +67,31 @@ void EAS::check_eas_ring()
         else if((serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live)
         {
             // stop vlc capture
+            stream_eas_message();
             eas_live=false;
             libvlc_media_player_stop (mp);				// Stop the media player (mp)
-            stream_eas_message();
-            check_timer->stop();
         }
     }
     else
         qDebug("port not open");
 }
 
-void EAS::send_stream_test()
-{
-    QHostAddress stream_addr;
-    stream_addr.setAddress("239.0.0.230");
-    qint16 stream_port = 1234;
-    //#define K_BIT_RATE         4000           // 5000  4400 In kbps    //2875
-    stream_video = new stream(stream_addr , stream_port , 4000 , 7 , 188 , this );
-    char packet[188];
-    int packets_read;
-    qDebug(" opening file");
-    QFile file("C:\\3ABN\\ffmpeg_4000k.ts");
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        qDebug("File not opened");
-    }
-    else
-    {
-        qDebug("sending stream to test");
-        //for(int i=0;packets_read>0;i++)
-        packets_read=1;
-        while(packets_read>0)
-        {
-            //qDebug("sending packet");
-            packets_read  = file.read(packet,188);
-            stream_video->make_udp_packet( QByteArray((char*)packet,188) );
-        }
-        stream_video->send_udp_packet();
-    }
-
-}
-
 void EAS::stream_eas_message()
 {
-
     qDebug("starting stream");
-   // process_pcr = new fix_pcr(this);
+    process_pcr = new fix_pcr(this);
     //process_pcr->vlcFix_Send();
-    qDebug()<< "stream_eas_message thread id = " << QThread::currentThreadId();
-    process_pcr->vlcFix_Send(VLC_OUTPUT_FILE);
+    process_pcr->vlcFix_Send("c:\\3ABN\\Z_vlcOutputFile.ts");
     connect(process_pcr,SIGNAL(kill_me()),process_pcr,SLOT(deleteLater()));
-    if(!dev_machine)
-    {
-        connect(process_pcr,SIGNAL(kill_me()),this,SLOT(restart_timer()));
-    }
 }
 
 void EAS::send_eas_message()
 {
     qDebug("recieving EAS Message");
-    if(!dev_machine)
-    {
-        init_vlc_start_play();
-
-    }
+    init_vlc_start_play();
     qDebug("started vlc");
     d2mux->eas_insert(channels);
     //emit send_eas_config(channels);
-}
-void EAS::restart_timer()
-{
-    check_timer->start(1);
 }
 
 void EAS::process_serial_debug()
@@ -194,15 +101,13 @@ void EAS::process_serial_debug()
 void EAS::init_vlc_start_play()
 {
     /// Play code
-    qDebug("play vlc");
+        setArgs_InitLibVlc();							     // Initialize libVLC to "conversion parameters" set by Args (Arguments)
+
     /// -----Start VLC Play
         playLocalVlcState = (int)libvlc_media_get_state (m);
-        qDebug("libvlc media state");
-        qDebug()<< playLocalVlcState;
-        qDebug("libvlc_media_player_play");
+
         libvlc_media_player_play (mp);											       //  Play to VLC_OUTPUT_FILE set in setArgs_InitLibVlc
-        qDebug("here");
-       // /-----Wait for VLC to reach "Play" Status = 3 (after "startVlcPlay()" is executed
+        //-----Wait for VLC to reach "Play" Status = 3 (after "startVlcPlay()" is executed
         while (playLocalVlcState != 3)
         {											               // Wait for Play to Start (playLocalVlcState == 3)
             playLocalVlcState = (int)libvlc_media_get_state (m);
@@ -249,20 +154,28 @@ void EAS::setArgs_InitLibVlc()
           ts_pid_pmt.c_str(),						// "--sout-ts-pid-pmt=0x40",
           ts_pid_video.c_str(),					// "--sout-ts-pid-video=0x44",
           ts_pid_audio.c_str(),					// "--sout-ts-pid-audio=0x45",
+
+          "--sout-ts-dts-delay=100"				// No Comma on last string (line)
     };
+
+  //  printf ("\n  --> %s, Array Size =  %d, Size [6] = %d\n", aVlcArgs[1], sizeof (aVlcArgs), sizeof (aVlcArgs[6]) );
+
+
+  //------------------------------------------ INITIALIZE LIBVLC ----------------------------------------------------
 
           // Initialize VLC modules, should be done only once						// (Until Released)
           inst = libvlc_new (sizeof(aVlcArgs)/sizeof(aVlcArgs[0]), aVlcArgs);		// sizeof (vlc_args)/sizeof(vlc_args[0])
 
-        ///  Create a new media item
+          /* Create a new media item */
+  //		m = libvlc_media_new_path (inst, "c:\\Downlink\\ID\\ID.mpg");           // For testing
           m = libvlc_media_new_path (inst, "dshow://");
 
-       //    Create a media player playing environment
+          /* Create a media player playing environment */
           mp = libvlc_media_player_new_from_media (m);
 
           libvlc_media_add_option (m, ":dshow//");
+  //		libvlc_media_add_option (m, "c:\\Downlink\\ID\\ID.mpg");                 // Not Needed
           libvlc_media_add_option (m, dshow_vdev.c_str());                         // dshow Video Device Name
           libvlc_media_add_option (m, dshow_size.c_str());                         // dshow Video Encode Size (720x480)
           libvlc_media_add_option (m, dshow_adev.c_str());                         // dshow Audio Device Name
-    qDebug("set vlc init");
 }
