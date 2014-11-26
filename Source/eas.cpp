@@ -4,10 +4,11 @@ EAS::EAS(QObject *parent) :
     QObject(parent)
 {
     vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
-    //vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
+   // vdev   = "AmaRec Video Capture";					// Set for Capture Device (Video) Windows 7
+    //vdev     = ""
     vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
     adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    //adev   = "Line (USB Audio Device)";			// Set for Capture Device (Audio) Windows 7
+    //adev   = "AmaRec Audio Capture";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);
@@ -26,6 +27,7 @@ EAS::EAS(QObject *parent) :
     mux_debug = new QSerialPort(this);
 
     eas_live=false;
+    eas_test=false;
     connect(serial, SIGNAL(error(QSerialPort::SerialPortError)), this,
                 SLOT(handleError()));
     connect(mux_debug, SIGNAL(error(QSerialPort::SerialPortError)), this,
@@ -48,13 +50,16 @@ EAS::EAS(QObject *parent) :
     mux_debug->setStopBits(QSerialPort::OneStop);
     mux_debug->setFlowControl(QSerialPort::NoFlowControl);
     mux_debug->open(QIODevice::ReadOnly);
+    /// Play code
+        setArgs_InitLibVlc();							     // Initialize libVLC to "conversion parameters" set by Args (Arguments)
 
     check_timer= new QTimer(this);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
     check_timer->start(1);                                               // create timer with 1 ms resolution
-    init_vlc_start_play();
-    libvlc_media_player_stop (mp);				// Stop the media player (mp)
+    //init_vlc_start_play();
+
+    //libvlc_media_player_stop (mp);				// Stop the media player (mp)
     mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
 }
 
@@ -70,35 +75,58 @@ void EAS::handleError()
             << "mux debug port error" << mux_debug->errorString() << mux_debug->error();
 }
 
+void EAS::fake_ring()
+{
+    if(eas_test)
+        eas_test = false;
+    else
+        eas_test=true;
+}
+
 void EAS::check_eas_ring()
 {
     if(serial->isOpen())
     {
-        if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live)
+        //qDebug() << serial->pinoutSignals();
+        if ( (!(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live) )
         {
             qDebug("sensed ring");
             emit eas_ring();
             eas_live=true;
         }
-        else if((serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live)
+        else if( ((serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live) )
         {
             // stop vlc capture
-            stream_eas_message();
+            qDebug("sensed end of ring");
             eas_live=false;
             libvlc_media_player_stop (mp);				// Stop the media player (mp)
+            stream_eas_message();
         }
     }
-    else
-        qDebug("port not open");
+    else if (eas_test  && !eas_live)
+    {
+        qDebug("sensed ring");
+        emit eas_ring();
+        eas_live=true;
+    }
+    else if (!eas_test && eas_live)
+    {
+        // stop vlc capture
+        qDebug("sensed end of ring");
+        eas_live=false;
+        libvlc_media_player_stop (mp);				// Stop the media player (mp)
+        stream_eas_message();
+    }
 }
 
 void EAS::stream_eas_message()
 {
-    qDebug("starting stream");
+    qDebug("starting vlcFix");
     process_pcr = new fix_pcr(this);
     //process_pcr->vlcFix_Send();
     process_pcr->vlcFix_Send("c:\\3ABN\\Z_vlcOutputFile.ts");
     connect(process_pcr,SIGNAL(kill_me()),process_pcr,SLOT(deleteLater()));
+    qDebug(" done with vlcFix");
 }
 
 void EAS::send_eas_message()
@@ -108,6 +136,7 @@ void EAS::send_eas_message()
     qDebug("started vlc");
     d2mux->eas_insert(channels);
     //emit send_eas_config(channels);
+    qDebug("sent eas insert");
 }
 
 void EAS::process_serial_debug()
@@ -123,8 +152,6 @@ void EAS::process_serial_debug()
 }
 void EAS::init_vlc_start_play()
 {
-    /// Play code
-        setArgs_InitLibVlc();							     // Initialize libVLC to "conversion parameters" set by Args (Arguments)
 
     /// -----Start VLC Play
         playLocalVlcState = (int)libvlc_media_get_state (m);

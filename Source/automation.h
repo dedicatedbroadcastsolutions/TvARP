@@ -31,6 +31,7 @@
 #ifndef AUTOMATION_H
 #define AUTOMATION_H
 #include "QtCore"
+//#include "vlc/vlc.h"            // Must include VLC core first (From VLC .zip version 1.1.0)
 //#include "video_window.h"
 //#include "switcher.h"
 struct sch_entry

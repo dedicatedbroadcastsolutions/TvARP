@@ -89,5 +89,6 @@ void MainWindow::on_restart_eas_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    eas->send_eas_message();
+    //eas->send_eas_message();
+    eas->fake_ring();
 }

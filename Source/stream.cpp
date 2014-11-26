@@ -68,6 +68,7 @@ stream::~stream()
     worker->loop=false;
     workerThread.quit();
     workerThread.wait();
+    qDebug("Stream destructor finished");
 }
 
 void stream::make_udp_packet(QByteArray packet)
@@ -105,6 +106,7 @@ Worker::~Worker()
 {
     qDebug("Closing Socket");
     udp_streaming_socket->close();
+    qDebug("worker destructor finished");
 }
 void Worker::send_datagrams(QHostAddress stream_addr, qint16 stream_port, qint64 timer_freq , BufferList datagram_buffer)
 {
