@@ -3,12 +3,12 @@
 EAS::EAS(QObject *parent) :
     QObject(parent)
 {
-    //vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
-    vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
+    vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
+    //vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
     //vdev     = ""
     vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
-    //adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    adev   = "Line (2- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
+    adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
+    //adev   = "Line (2- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);

@@ -150,7 +150,8 @@ void Mux_Control::eas_insert( QList<int> channel_list)
 
      // Destinations – Destinations of program to receive EAS message injection.
      // Each bit in byte represents a destination.  Bit 0 = Port 0 (ASI-1), Bit 1 = Port 1 (ASI-2), Bit 2 = GigE 1, etc.  Destinations can be ORed together in byte.
-        eas_start_datagram.append( (char)0x10 );   // Send on port IP-1
+        //eas_start_datagram.append( (char)0x10 );   // 0x10 Send on port IP-1     Commment out other line
+        eas_start_datagram.append( (char)0x1 );   // 0x1 Send on port ASI-1
         // need to change to accomodate this as input argument.
 
      // Reserved – Reserved for future use.     24 bits
