@@ -23,6 +23,7 @@ class EAS : public QObject
     void handleError();
     void process_serial_debug();
     void init_vlc_start_play();
+    void vlc_stop_destroy_restart();
     void setArgs_InitLibVlc();
     void stream_eas_message();
     void fake_ring();
@@ -56,6 +57,19 @@ class EAS : public QObject
     std::string vdev    = "";									// Set for USB Capture Device (Video)
     std::string vidSize = "";									// Valid "Video Resolution Mode" of Video Capture Device
     std::string adev    = "";									// Set for USB Capture Device (Audio)
+    std::string dshow_vdev;
+    std::string dshow_adev;
+    std::string dshow_size ;
+    std::string vcodec	;
+    std::string acodec;
+    std::string transcodeChain;
+    std::string vid_title;
+    std::string video_x, video_y ;
+    std::string width , height;
+    std::string ts_pcr ;
+    std::string ts_pid_pmt;
+    std::string ts_pid_video , ts_pid_audio;
+
 };
 
 #endif // EAS_H
