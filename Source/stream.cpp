@@ -93,7 +93,9 @@ void stream::send_udp_packet()
 
 void stream::done_with_worker()
 {
+
     emit done_with_stream();
+    qDebug("done with stream signal sent");
 }
 
 Worker::Worker()

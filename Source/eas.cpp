@@ -3,12 +3,12 @@
 EAS::EAS(QObject *parent) :
     QObject(parent)
 {
-    vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
-   // vdev   = "AmaRec Video Capture";					// Set for Capture Device (Video) Windows 7
+    //vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
+    vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
     //vdev     = ""
     vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
-    adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    //adev   = "AmaRec Audio Capture";			// Set for Capture Device (Audio) Windows 7
+    //adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
+    adev   = "Line (2- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);
@@ -85,19 +85,23 @@ void EAS::fake_ring()
 
 void EAS::check_eas_ring()
 {
+
     if(serial->isOpen())
     {
         //qDebug() << serial->pinoutSignals();
-        if ( (!(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live) )
+        if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live )
         {
             qDebug("sensed ring");
+            qDebug() << (serial->pinoutSignals() & QSerialPort::RingIndicatorSignal);
+            qDebug() << serial->pinoutSignals();
             emit eas_ring();
             eas_live=true;
         }
-        else if( ((serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live) )
+        else if( (serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live )
         {
             // stop vlc capture
             qDebug("sensed end of ring");
+            qDebug() << serial->pinoutSignals();
             eas_live=false;
             libvlc_media_player_stop (mp);				// Stop the media player (mp)
             stream_eas_message();
@@ -105,14 +109,14 @@ void EAS::check_eas_ring()
     }
     else if (eas_test  && !eas_live)
     {
-        qDebug("sensed ring");
+        qDebug("sensed test ring");
         emit eas_ring();
         eas_live=true;
     }
     else if (!eas_test && eas_live)
     {
         // stop vlc capture
-        qDebug("sensed end of ring");
+        qDebug("sensed end of test ring");
         eas_live=false;
         libvlc_media_player_stop (mp);				// Stop the media player (mp)
         stream_eas_message();
