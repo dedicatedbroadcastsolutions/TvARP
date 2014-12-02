@@ -5,10 +5,9 @@ EAS::EAS(QObject *parent) :
 {
     vdev     = "USB 2861 Device";					// Set for Capture Device (Video) Windows XP/Vista
     //vdev   = "WDM 2861 Capture";					// Set for Capture Device (Video) Windows 7
-    //vdev     = ""
     vidSize	 = "720x480";							// Valid "Video Resolution Mode" of Video Capture Device
     adev     = "USB Audio Device";			        // Set for Capture Device (Audio) Windows XP/Vista
-    //adev   = "Line (2- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
+    //adev   = "Line (3- USB EMP Audio Device)";			// Set for Capture Device (Audio) Windows 7
     channels.clear();
     channels.append(1);
     channels.append(2);
@@ -144,13 +143,14 @@ void EAS::process_serial_debug()
 void EAS::vlc_stop_destroy_restart()
 {
     libvlc_media_player_stop (mp);
-    Sleep(500);
+    Sleep(750);
     libvlc_media_release (m);					// Free the media (m)
     Sleep(500);
     libvlc_media_player_release (mp);			// Free the media player (mp)
     Sleep(500);
     libvlc_release (inst);						// Free the libvlc instance (inst)
     qDebug("VLC Stopped, initialising again");
+    Sleep(500);
     /// initialise VLC
     setArgs_InitLibVlc();							     // Initialize libVLC to "conversion parameters" set by Args (Arguments)
 }
