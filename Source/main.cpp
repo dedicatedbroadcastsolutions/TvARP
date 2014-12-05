@@ -40,33 +40,6 @@
 int main(int argc, char *argv[])
 {
 
-
-
-/// Check to see if program is already running
-
-    QFile file("Schedule_and_logs/running.config");
-
-    if (!file.open(QIODevice::ReadWrite))
-    {
-        qDebug("couldn't open file");
-        return(0);
-    }
-
-/// initiate text stream, output and close file
-
-    QTextStream in(&file);
-    QTextStream out(&file);
-    if(in.readLine().toInt()==0)
-        out << 1;
-    else
-    {
-        file.close();
-        return(0);
-    }
-    file.close();
-/// -----------------------------------------------------
-
-
 #if defined(Q_OS_WIN)
    SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, SPIF_SENDCHANGE, 0, 0);
 #endif
@@ -91,6 +64,10 @@ int main(int argc, char *argv[])
     QApplication::setQuitOnLastWindowClosed(false);
 
     sys_Tray_Icon sys_Tray_Icon;
+
+    if ( sys_Tray_Icon.program_running() )
+        return(0);
+
     sys_Tray_Icon.setVisible(!settings.value("visible").toBool());
 
 

@@ -31,14 +31,29 @@
 #include "mux_control.h"
 
 /// ========================================================================================================
-Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QObject *parent) :
+Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString comport, int out_port , QObject *parent) :
     QObject(parent)
 {
+    mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
+    qDebug()<< "mux output port is " << out_port;
     splice_active = 0;
     eas_active = 0;
     udpSocket = new QUdpSocket(this);
     control_address = ctrl_addr ;
     control_port = ctrl_port;
+    output_port = out_port;
+    mux_debug = new QSerialPort(this);
+    connect(mux_debug, SIGNAL(error(QSerialPort::SerialPortError)), this,
+            SLOT(handleError()));
+    connect(mux_debug, SIGNAL(readyRead()),this, SLOT(read_mux_debug()));
+
+    mux_debug->setPortName(comport);
+    mux_debug->setBaudRate(QSerialPort::Baud115200);
+    mux_debug->setDataBits(QSerialPort::Data8);
+    mux_debug->setParity(QSerialPort::NoParity);
+    mux_debug->setStopBits(QSerialPort::OneStop);
+    mux_debug->setFlowControl(QSerialPort::HardwareControl);
+    mux_debug->open(QIODevice::ReadOnly);
 }
 
 Mux_Control::~Mux_Control()
@@ -53,8 +68,28 @@ Mux_Control::~Mux_Control()
         return_from_splice( channels );
     }
     udpSocket->close();
+    qDebug("mux control destructor");
 }
 
+void Mux_Control::read_mux_debug()
+{
+   // qDebug("reading mux data from serial port");
+    QString data;
+    data = mux_debug->readAll();
+    data = data.remove( QRegExp("\\r") );
+        if ( mux_log.open( QFile::WriteOnly | QFile::Append ) )
+        {
+            mux_log_out.setDevice(&mux_log);
+            mux_log_out << data;
+            mux_log.close();
+        }
+     emit process_debug(data);
+}
+
+void Mux_Control::handleError()
+{
+    qDebug() << "mux debug port error" << mux_debug->errorString() << mux_debug->error();
+}
 
 void Mux_Control::eas_insert( QList<int> channel_list)
 {
@@ -150,9 +185,9 @@ void Mux_Control::eas_insert( QList<int> channel_list)
 
      // Destinations – Destinations of program to receive EAS message injection.
      // Each bit in byte represents a destination.  Bit 0 = Port 0 (ASI-1), Bit 1 = Port 1 (ASI-2), Bit 2 = GigE 1, etc.  Destinations can be ORed together in byte.
-        ///eas_start_datagram.append( (char)0x10 );   // 0x10 Send on port IP-1     Commment out other line
-        eas_start_datagram.append( (char)0x1 );   // 0x1 Send on port ASI-1
-        // need to change to accomodate this as input argument.
+        ///eas_start_datagram.append( (char)0x10 );
+        eas_start_datagram.append( (char) 0x01 << output_port );   // // 0x10 Send on port IP-1    0x1 Send on port ASI-1
+        //                                                                                        00000001
 
      // Reserved – Reserved for future use.     24 bits
         eas_start_datagram.append( (char)0xff );

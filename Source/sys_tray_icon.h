@@ -44,6 +44,8 @@
 #define SYS_TRAY_ICON_H
 #include <mainwindow.h>
 #include <QSystemTrayIcon>
+#include "QLocalSocket"
+#include "QLocalServer"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -61,7 +63,9 @@ public:
     ~sys_Tray_Icon();
 
     void setVisible(bool visible);
-
+ public slots:
+    void on_newConnection();
+    bool program_running();
 protected:
     void closeEvent(QCloseEvent *event);
     //void changeEvent(QEvent* e);
@@ -76,7 +80,7 @@ private slots:
 private:
     void createActions();
     void createTrayIcon();
-
+    QLocalServer *running_server;
     QAction *minimizeAction;
     QAction *maximizeAction;
     QAction *restoreAction;

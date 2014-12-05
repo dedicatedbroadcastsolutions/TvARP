@@ -32,13 +32,13 @@
 #define MUX_CONTROL_H
 #include "QtCore"
 #include <QUdpSocket>
+#include <QSerialPort>
 
-#include <string>  // to get string type;
 class Mux_Control : public QObject
 {
     Q_OBJECT
 public:
-    explicit Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QObject *parent = 0);
+    explicit Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString comport, int out_port, QObject *parent = 0);
     ~Mux_Control();
     QHostAddress control_address;
     qint16 control_port;
@@ -49,10 +49,17 @@ public slots:
     void return_from_eas( QList<int> channel_list);
     void program_splice( QList<int> channel_list );
     void return_from_splice( QList<int> channel_list );
-
+    void handleError();
+    void read_mux_debug();
 signals:
+    void process_debug(QString);
+private slots:
 
 private:
+    QSerialPort *mux_debug;
+    QFile mux_log;
+    QTextStream mux_log_out;
+    int output_port;
     int message_type;
     QList<int> channels;
     bool splice_active;
@@ -71,7 +78,7 @@ private:
         // Array is [Mux TS Port In] [Sat Pgm #] [# PIDs to Insert] [Type 1] [PID #1] [Type 2] [PID #2] , [ AD Port ] , [ Add Program ]
                    {{      0        ,     0     ,        0         ,  0x02  ,  0x44  ,  0x81  ,  0x45   ,      7      ,       1         }    // Index 0 not used
                                ,{0,  1, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}	  // ATSC Minor Channel 1   3ABN-EN	  English TV
-                               ,{1,  5, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 2   3ABN-PR   Proclaim TV
+                               ,{0, 75, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 2   3ABN-PR   Proclaim TV
                                ,{0,  2, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 3   3ABN-DD   Dare to Dream TV
                                ,{0,  3, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 4   3ABN-ES   Latino TV
                                ,{0,111, 1, 0x81, 0x45,   0 , 0   , 7, 1}    // ATSC Minor Channel 5   3ABN-RD   English Radio

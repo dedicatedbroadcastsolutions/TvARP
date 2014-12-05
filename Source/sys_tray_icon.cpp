@@ -49,6 +49,8 @@ sys_Tray_Icon::sys_Tray_Icon()
     createActions();
     createTrayIcon();
 
+
+
     connect(trayIcon, SIGNAL(messageClicked()), this, SLOT(messageClicked()));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
@@ -58,12 +60,33 @@ sys_Tray_Icon::sys_Tray_Icon()
 
 sys_Tray_Icon::~sys_Tray_Icon()
 {
-    QFile file("Schedule_and_logs/running.config");
-    if (!file.open(QIODevice::WriteOnly))
-        return;
-    QTextStream out(&file);
-        out << 0;
-    file.close();
+
+}
+
+bool sys_Tray_Icon::program_running()
+{
+    QLocalSocket running_socket;
+    running_socket.connectToServer("TvARP",QIODevice::ReadWrite);
+
+    if( running_socket.waitForConnected(500) )
+    {
+        qDebug("already running");
+        running_socket.write("Program is already open");
+        return(true);
+        qDebug("should have quit already");
+    }
+    running_socket.close();
+    running_server = new QLocalServer(this);
+    running_server->listen("TvARP");
+    connect(running_server, SIGNAL(newConnection()), this, SLOT(on_newConnection()));
+    return(false);
+}
+
+void sys_Tray_Icon::on_newConnection()
+{
+    running_server->nextPendingConnection();
+    this->showNormal();
+    qDebug("new local socket connection");
 }
 
 /// ----------------------------------------------------

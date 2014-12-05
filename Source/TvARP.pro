@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     mux_control.cpp \
     stream.cpp \
     configure_eas.cpp \
-    fix_pcr.cpp
+    fix_pcr.cpp \
+    vlc_enc.cpp
 
 HEADERS  += \
     automation.h \
@@ -32,7 +33,8 @@ HEADERS  += \
     mux_control.h \
     stream.h \
     configure_eas.h \
-    fix_pcr.h
+    fix_pcr.h \
+    vlc_enc.h
 
 FORMS    += mainwindow.ui \
     configure_eas.ui

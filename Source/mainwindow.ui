@@ -31,7 +31,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -323,13 +323,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="1" column="0">
-                <widget class="QTextBrowser" name="textBrowser">
-                 <property name="autoFillBackground">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
                <item row="2" column="0">
                 <widget class="QLabel" name="label">
                  <property name="text">
@@ -339,6 +332,25 @@
                </item>
                <item row="3" column="0">
                 <widget class="QTextBrowser" name="textBrowser_3"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QTextEdit" name="mux_log_display">
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOn</enum>
+                 </property>
+                 <property name="autoFormatting">
+                  <set>QTextEdit::AutoAll</set>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="acceptRichText">
+                  <bool>true</bool>
+                 </property>
+                 <property name="textInteractionFlags">
+                  <set>Qt::NoTextInteraction</set>
+                 </property>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -353,6 +365,151 @@
        <attribute name="title">
         <string>Mux Setup</string>
        </attribute>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>271</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Settings</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Use Mux Output:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2" colspan="2">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>For EAS Alerts</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="mux_out_port">
+           <item>
+            <property name="text">
+             <string>ASI-1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ASI-2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SMPTE</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>No Output</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IP-1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IP-2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IP-3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IP-4</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="3">
+          <widget class="QLineEdit" name="mux_ctrl_addr">
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="inputMask">
+            <string>000.000.000.000;_</string>
+           </property>
+           <property name="text">
+            <string>192.168.000.150</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSpinBox" name="mux_ctrl_port">
+           <property name="maximumSize">
+            <size>
+             <width>75</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>1024</number>
+           </property>
+           <property name="maximum">
+            <number>49151</number>
+           </property>
+           <property name="value">
+            <number>17729</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="3">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>Mux Control Address</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>Port:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Mux Debug on:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="comboBox_3">
+           <item>
+            <property name="text">
+             <string>com3</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="2" colspan="2">
+          <widget class="QPushButton" name="update_mux_settings">
+           <property name="text">
+            <string>Save Changes</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">

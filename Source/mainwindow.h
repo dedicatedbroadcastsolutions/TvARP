@@ -35,7 +35,9 @@
 #include <QMainWindow>
 #include <QSettings>
 #include <QtCore>
-#include "eas.h"
+#include <QScrollBar>
+#include "automation.h"
+//#include "eas.h"
 //#include "video_window.h"
 
 namespace Ui {
@@ -51,6 +53,7 @@ public:
     ~MainWindow();
    // video_window *video;
     QSettings settings;
+    Automation *automation;
 
 public slots:
     void readSettings();
@@ -58,13 +61,16 @@ signals:
     void play();
 private:
     Ui::MainWindow *ui;
-    EAS *eas;
-
+    //EAS *eas;
+    int mux_scroll_maximum;
 private slots:
     void on_actionStart_Minimized_toggled(bool );
     void on_actionExit_triggered();
     void on_restart_eas_clicked();
     void on_pushButton_clicked();
+
+    void on_mux_log_display_textChanged();
+    void on_update_mux_settings_clicked();
 };
 
 #endif // MAINWINDOW_H

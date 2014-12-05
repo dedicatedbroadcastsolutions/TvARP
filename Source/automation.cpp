@@ -46,7 +46,141 @@ Automation::Automation(QObject *parent) :
 {
     state=0;
     isOpen=0;
+
+
+    mux_ctrl_addr.setAddress("192.168.0.150");
+    mux_ctrl_port = 0x4541;
+    mux_comport = "com3";
+
+    audio_dev = "USB Audio Device";
+    video_dev = "USB 2861 Device";
+    //video_dev = "WDM 2861 Capture";
+   // audio_dev = "Line (2- USB EMP Audio Device)";
+
+    init_mux_control();
+    init_ring_detect();
+    init_vlc();
 }
+
+Automation::~Automation()
+{
+    if( serial->isOpen() )
+        close_ring_detect();
+}
+
+void Automation::close_ring_detect()
+{
+    serial->close();
+}
+
+void Automation::init_vlc()
+{
+    vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
+}
+
+void Automation::start_vlc()
+{
+    vlc_enc->start();
+}
+
+void Automation::restart_vlc()
+{
+    vlc_enc->~VLC_ENC();
+
+    vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
+}
+
+void Automation::init_ring_detect()
+{
+    QString port_num = "com6";
+    channels.clear();
+    channels.append(1);
+    channels.append(2);
+    channels.append(3);
+    channels.append(4);
+    channels.append(5);
+    channels.append(6);
+    channels.append(7);
+
+    eas_live=false;
+    eas_test=false;
+
+    serial = new QSerialPort(this);
+    connect(serial, SIGNAL(error(QSerialPort::SerialPortError)), this,
+                SLOT(handleError()));
+    serial->setPortName(port_num);
+    serial->open(QIODevice::ReadOnly);
+
+    check_timer= new QTimer(this);
+    connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
+    connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
+    check_timer->start(1);                                               // create timer with 1 ms resolution
+    qDebug("finished eas init");
+}
+
+void Automation::handleError()
+{
+    qDebug()<< "serial port error" << serial->errorString() << serial->error() << "\n";
+}
+
+void Automation::check_eas_ring()
+{
+    if(serial->isOpen())
+    {
+        if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live )
+        {
+            qDebug("sensed ring");
+            emit eas_ring();
+            eas_live=true;
+        }
+        else if( (serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live )
+        {
+            qDebug("sensed end of ring");
+            eas_live=false;
+            /// Stop and destroy VLC
+            restart_vlc();
+            stream_eas_message();
+        }
+    }
+}
+
+void Automation::send_eas_message()
+{
+    qDebug("recieving EAS Message");
+    start_vlc();
+
+    d2mux->eas_insert(channels);
+    qDebug("sent eas insert");
+}
+
+void Automation::stream_eas_message()
+{
+    qDebug("starting vlcFix");
+    process_pcr = new fix_pcr(this);
+    //process_pcr->vlcFix_Send();
+    process_pcr->vlcFix_Send("c:\\3ABN\\Z_vlcOutputFile.ts");
+    connect(process_pcr,SIGNAL(kill_me()),process_pcr,SLOT(deleteLater()));
+    qDebug(" done with vlcFix");
+}
+
+void Automation::init_mux_control()
+{  
+    d2mux = new Mux_Control(mux_ctrl_addr, mux_ctrl_port, mux_comport , settings.value("mux_output_port").toInt() ,this);
+    connect(d2mux,SIGNAL(process_debug(QString)),this,SLOT(process_mux_debug(QString)));
+}
+
+void Automation::restart_mux_control()
+{
+    d2mux->~Mux_Control();
+
+    d2mux = new Mux_Control(mux_ctrl_addr, mux_ctrl_port, mux_comport , settings.value("mux_output_port").toInt() ,this);
+}
+
+void Automation::process_mux_debug(QString data)
+{
+    emit mux_eas_log(data);
+}
+
 // ================================================================
 void Automation::run_schedule()
 {
