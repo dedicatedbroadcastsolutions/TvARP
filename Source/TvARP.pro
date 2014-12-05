@@ -11,7 +11,9 @@ TARGET = TvARP_EAS_beta
 TEMPLATE = app
 
 #INCLUDEPATH += $$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/include
-LIBS += -L$$PWD/lib/ -llibvlc
+LIBS += -L$$PWD/lib/
+LIBS += -llibvlc
+#DEPENDPATH += $$PWD/
 #LIBS += -L$$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/lib -lavutil -lavcodec -lavformat -lswscale
 
 SOURCES += main.cpp\

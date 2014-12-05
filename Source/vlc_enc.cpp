@@ -29,7 +29,9 @@ VLC_ENC::~VLC_ENC()
 {
     qDebug("vlc stop destructor");
     libvlc_media_player_stop (mp);
+    qDebug("Stopped");
     Sleep(750);
+    qDebug("releasing media");
     libvlc_media_release (m);					// Free the media (m)
     Sleep(500);
     libvlc_media_player_release (mp);			// Free the media player (mp)
