@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setApplicationName("TVARP");
     QSettings settings;
 
-    qApp->addLibraryPath("/plugins");
+
     Q_INIT_RESOURCE(systray);
 
     QApplication a(argc, argv);
