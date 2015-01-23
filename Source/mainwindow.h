@@ -64,13 +64,16 @@ private:
     //EAS *eas;
     int mux_scroll_maximum;
 private slots:
+    void store_mux_settings();
     void on_actionStart_Minimized_toggled(bool );
     void on_actionExit_triggered();
     void on_restart_eas_clicked();
-    void on_pushButton_clicked();
 
     void on_mux_log_display_textChanged();
     void on_update_mux_settings_clicked();
+    void on_restore_mux_defaults_clicked();
+    void on_set_mux_defaults_clicked();
+    void on_mux_advanced_toggled(bool checked);
 };
 
 #endif // MAINWINDOW_H

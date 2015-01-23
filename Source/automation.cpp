@@ -47,15 +47,12 @@ Automation::Automation(QObject *parent) :
     state=0;
     isOpen=0;
 
-
-    mux_ctrl_addr.setAddress("192.168.0.150");
-    mux_ctrl_port = 0x4541;
-    mux_comport = "com3";
-
-    audio_dev = "USB Audio Device";
-    video_dev = "USB 2861 Device";
+    //audio_dev = "USB Audio Device";
+   // video_dev = "USB 2861 Device";
     //video_dev = "WDM 2861 Capture";
-   // audio_dev = "Line (2- USB EMP Audio Device)";
+   // audio_dev = "Line (3- USB EMP Audio Device)";
+    video_dev = settings.value( "eas video device" ).toString();
+    audio_dev = settings.value( "eas audio device" ).toString();
 
     init_mux_control();
     init_ring_detect();
@@ -71,6 +68,13 @@ Automation::~Automation()
 void Automation::close_ring_detect()
 {
     serial->close();
+}
+
+void Automation::restart_eas_engine()
+{
+    close_ring_detect();
+    init_ring_detect();
+    restart_vlc();
 }
 
 void Automation::init_vlc()
@@ -92,7 +96,7 @@ void Automation::restart_vlc()
 
 void Automation::init_ring_detect()
 {
-    QString port_num = "com6";
+    QString port_num = settings.value( "eas comport" ).toString();
     channels.clear();
     channels.append(1);
     channels.append(2);
@@ -165,15 +169,20 @@ void Automation::stream_eas_message()
 
 void Automation::init_mux_control()
 {  
-    d2mux = new Mux_Control(mux_ctrl_addr, mux_ctrl_port, mux_comport , settings.value("mux_output_port").toInt() ,this);
+    d2mux = new Mux_Control(QHostAddress( settings.value("Mux Control Address").toString() ) ,
+                            settings.value("Mux Control Port").toInt(),
+                            settings.value("Mux Debug Comport").toString() ,
+                            settings.value("mux_output_port").toInt() ,this);
     connect(d2mux,SIGNAL(process_debug(QString)),this,SLOT(process_mux_debug(QString)));
 }
 
 void Automation::restart_mux_control()
 {
     d2mux->~Mux_Control();
-
-    d2mux = new Mux_Control(mux_ctrl_addr, mux_ctrl_port, mux_comport , settings.value("mux_output_port").toInt() ,this);
+    d2mux = new Mux_Control(QHostAddress( settings.value("Mux Control Address").toString() ) ,
+                            settings.value("Mux Control Port").toInt(),
+                            settings.value("Mux Debug Comport").toString() ,
+                            settings.value("mux_output_port").toInt() ,this);
 }
 
 void Automation::process_mux_debug(QString data)

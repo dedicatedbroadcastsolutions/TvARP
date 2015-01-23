@@ -64,15 +64,14 @@ public:
     QString audio_dev ;
     QString video_dev ;
     QList<int> channels;
-    QHostAddress mux_ctrl_addr;
-    qint16 mux_ctrl_port;
-    QString mux_comport ;
+
     int mux_out_port ;
 public slots:
     // mux control slots
     void process_mux_debug(QString data);
     void init_mux_control();
     void restart_mux_control();
+    void restart_eas_engine();
     void init_ring_detect();
     void close_ring_detect();
     void handleError();

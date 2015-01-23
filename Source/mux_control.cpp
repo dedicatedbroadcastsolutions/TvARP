@@ -35,7 +35,7 @@ Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString compo
     QObject(parent)
 {
     mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
-    qDebug()<< "mux output port is " << out_port;
+    qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr;
     splice_active = 0;
     eas_active = 0;
     udpSocket = new QUdpSocket(this);

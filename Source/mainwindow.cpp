@@ -88,8 +88,72 @@ void MainWindow::readSettings()
         ui->mux_out_port->setCurrentIndex(settings.value("mux_output_port").toInt());
     else
         settings.setValue("mux_output_port", ui->mux_out_port->currentIndex() );
-}
 
+    if( settings.contains("Mux Control Address") )
+        ui->mux_ctrl_addr->setText( settings.value("Mux Control Address").toString() );
+    else
+        settings.setValue("Mux Control Address", ui->mux_ctrl_addr->text() );
+
+    if( settings.contains("Mux Control Port") )
+        ui->mux_ctrl_port->setValue( settings.value("Mux Control Port").toInt() );
+    else
+        settings.setValue("Mux Control Port", ui->mux_ctrl_port->value());
+
+    if( settings.contains("Mux Debug Comport") )
+        ui->mux_debug_comport->setCurrentText( settings.value("Mux Debug Comport").toString() );
+    else
+        settings.setValue("Mux Debug Comport", ui->mux_debug_comport->currentText());
+
+    if(settings.contains("eas video device"))
+    {
+        int index = ui->eas_video_device->findText( settings.value( "eas video device" ).toString() );
+        if(index >=0)
+        {
+            ui->eas_video_device->setCurrentIndex(index);
+        }
+        else
+        {
+            ui->eas_video_device->addItem( settings.value( "eas video device" ).toString() );
+            ui->eas_video_device->setCurrentIndex( ui->eas_video_device->count()-1 );
+        }
+    }
+    if(settings.contains("eas audio device"))
+    {
+
+        int index = ui->eas_audio_device->findText( settings.value( "eas audio device" ).toString() );
+        if(index >=0)
+        {
+            ui->eas_audio_device->setCurrentIndex(index);
+        }
+        else
+        {
+            ui->eas_audio_device->addItem( settings.value( "eas audio device" ).toString() );
+            ui->eas_audio_device->setCurrentIndex( ui->eas_audio_device->count()-1 );
+        }
+    }
+
+    if(settings.contains("eas comport"))
+    {
+
+        int index = ui->eas_comport->findText( settings.value( "eas comport" ).toString() );
+        if(index >=0)
+        {
+            ui->eas_comport->setCurrentIndex(index);
+        }
+        else
+        {
+            ui->eas_comport->addItem( settings.value( "eas comport" ).toString() );
+            ui->eas_comport->setCurrentIndex( ui->eas_comport->count()-1 );
+        }
+    }
+}
+void MainWindow::store_mux_settings()
+{
+    settings.setValue("mux_output_port", ui->mux_out_port->currentIndex() );
+    settings.setValue("Mux Control Address", ui->mux_ctrl_addr->text() );
+    settings.setValue("Mux Control Port", ui->mux_ctrl_port->value());
+    settings.setValue("Mux Debug Comport", ui->mux_debug_comport->currentText());
+}
 
 void MainWindow::on_actionExit_triggered()
 {
@@ -98,15 +162,12 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_restart_eas_clicked()
 {
-
+    settings.setValue( "eas video device",ui->eas_video_device->currentText() );
+    settings.setValue( "eas audio device",ui->eas_audio_device->currentText() );
+    settings.setValue( "eas comport" , ui->eas_comport->currentText());
+    qDebug()<< "video = " <<settings.value("eas video device") << "audio = " << settings.value("eas audio device");
+    automation->restart_eas_engine();
 }
-
-void MainWindow::on_pushButton_clicked()
-{
-    //eas->send_eas_message();
-    //eas->fake_ring();
-}
-
 
 void MainWindow::on_mux_log_display_textChanged()
 {
@@ -121,6 +182,34 @@ void MainWindow::on_mux_log_display_textChanged()
 
 void MainWindow::on_update_mux_settings_clicked()
 {
-    settings.setValue("mux_output_port", ui->mux_out_port->currentIndex() );
+    store_mux_settings();
     automation->restart_mux_control();
+}
+
+void MainWindow::on_restore_mux_defaults_clicked()
+{
+    if( settings.contains("default mux_output_port") )
+        ui->mux_out_port->setCurrentIndex(settings.value("default mux_output_port").toInt());
+
+    if( settings.contains("default Mux Control Address") )
+        ui->mux_ctrl_addr->setText( settings.value("default Mux Control Address").toString() );
+
+    if( settings.contains("default Mux Control Port") )
+        ui->mux_ctrl_port->setValue( settings.value("default Mux Control Port").toInt() );
+
+    if( settings.contains("default Mux Debug Comport") )
+        ui->mux_debug_comport->setCurrentText( settings.value("default Mux Debug Comport").toString() );
+}
+
+void MainWindow::on_set_mux_defaults_clicked()
+{
+    settings.setValue("default mux_output_port", ui->mux_out_port->currentIndex() );
+    settings.setValue("default Mux Control Address", ui->mux_ctrl_addr->text() );
+    settings.setValue("default Mux Control Port", ui->mux_ctrl_port->value());
+    settings.setValue("default Mux Debug Comport", ui->mux_debug_comport->currentText());
+}
+
+void MainWindow::on_mux_advanced_toggled(bool checked)
+{
+    ui->set_mux_defaults->setEnabled(checked);
 }
