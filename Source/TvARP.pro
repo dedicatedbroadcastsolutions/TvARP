@@ -23,9 +23,7 @@ SOURCES += main.cpp\
     sys_tray_icon.cpp \
     mux_control.cpp \
     stream.cpp \
-    configure_eas.cpp \
-    fix_pcr.cpp \
-    vlc_enc.cpp
+    configure_eas.cpp
 
 HEADERS  += \
     automation.h \
@@ -33,9 +31,7 @@ HEADERS  += \
     mainwindow.h \
     mux_control.h \
     stream.h \
-    configure_eas.h \
-    fix_pcr.h \
-    vlc_enc.h
+    configure_eas.h
 
 FORMS    += mainwindow.ui \
     configure_eas.ui
