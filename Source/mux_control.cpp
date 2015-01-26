@@ -35,7 +35,7 @@ Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString compo
     QObject(parent)
 {
     mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
-    qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr;
+    qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr << "mux output port" << out_port;
     splice_active = 0;
     eas_active = 0;
     udpSocket = new QUdpSocket(this);
@@ -76,13 +76,13 @@ void Mux_Control::read_mux_debug()
    // qDebug("reading mux data from serial port");
     QString data;
     data = mux_debug->readAll();
-    data = data.remove( QRegExp("\\r") );
-        if ( mux_log.open( QFile::WriteOnly | QFile::Append ) )
-        {
-            mux_log_out.setDevice(&mux_log);
-            mux_log_out << data;
-            mux_log.close();
-        }
+    if ( mux_log.open( QFile::WriteOnly | QFile::Append ) )
+    {
+        mux_log_out.setDevice(&mux_log);
+        mux_log_out << data;
+        mux_log.close();
+    }
+     data = data.remove( QRegExp("\\r") );
      emit process_debug(data);
 }
 
@@ -188,7 +188,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
         ///eas_start_datagram.append( (char)0x10 );
         eas_start_datagram.append( (char) 0x01 << output_port );   // // 0x10 Send on port IP-1    0x1 Send on port ASI-1
         //                                                                                        00000001
-
+    qDebug()<< "output port" << (char) 0x01 << output_port;
      // Reserved – Reserved for future use.     24 bits
         eas_start_datagram.append( (char)0xff );
         eas_start_datagram.append( (char)0xff );
@@ -226,7 +226,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
     udpSocket->writeDatagram(eas_start_datagram.data(), eas_start_datagram.size(),control_address , control_port);
 }
 
-void Mux_Control::return_from_eas(QList<int> channel_list)
+void Mux_Control::revert_eas_config(QList<int> channel_list)
 {
 
 

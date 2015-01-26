@@ -152,9 +152,28 @@ void Automation::send_eas_message()
 {
     qDebug("recieving EAS Message");
     start_vlc();
+    send_eas_config(channels);
+}
 
-    d2mux->eas_insert(channels);
+void Automation::send_eas_config( QList<int> channel_list )
+{
+    d2mux->eas_insert(channel_list);
     qDebug("sent eas insert");
+}
+
+void Automation::revert_eas_config( QList<int> channel_list )
+{
+    d2mux->revert_eas_config(channel_list);
+}
+
+void Automation::ad_splice_insert( QList<int> channel_list )
+{
+    d2mux->program_splice( channel_list );
+}
+
+void Automation::ad_splice_return_to_network( QList<int> channel_list )
+{
+    d2mux->return_from_splice( channel_list );
 }
 
 void Automation::stream_eas_message()
@@ -179,10 +198,7 @@ void Automation::init_mux_control()
 void Automation::restart_mux_control()
 {
     d2mux->~Mux_Control();
-    d2mux = new Mux_Control(QHostAddress( settings.value("Mux Control Address").toString() ) ,
-                            settings.value("Mux Control Port").toInt(),
-                            settings.value("Mux Debug Comport").toString() ,
-                            settings.value("mux_output_port").toInt() ,this);
+    init_mux_control();
 }
 
 void Automation::process_mux_debug(QString data)

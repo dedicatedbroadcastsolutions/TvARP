@@ -68,6 +68,10 @@ public:
     int mux_out_port ;
 public slots:
     // mux control slots
+    void send_eas_config( QList<int> channel_list );
+    void revert_eas_config( QList<int> channel_list );
+    void ad_splice_insert( QList<int> channel_list );
+    void ad_splice_return_to_network( QList<int> channel_list );
     void process_mux_debug(QString data);
     void init_mux_control();
     void restart_mux_control();

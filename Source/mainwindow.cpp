@@ -54,13 +54,21 @@ MainWindow::MainWindow(QWidget *parent) :
     readSettings();
 
     automation = new Automation(this);
-
+    eas_ch.clear();
+    eas_ch.append(1);
+    eas_ch.append(2);
+    eas_ch.append(3);
+    eas_ch.append(4);
+    eas_ch.append(5);
+    eas_ch.append(6);
+    eas_ch.append(7);
     ui->mux_log_display->ensureCursorVisible();
     ui->mux_log_display->moveCursor(QTextCursor::End);
     ui->mux_log_display->verticalScrollBar()->setValue( ui->mux_log_display->verticalScrollBar()->maximum() );
     QTextDocument * doc = ui->mux_log_display->document();
     doc->setMaximumBlockCount(maxblock);
     connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display,SLOT( insertPlainText(QString) ) );
+    connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
 }
 
 MainWindow::~MainWindow()
@@ -180,6 +188,17 @@ void MainWindow::on_mux_log_display_textChanged()
     mux_scroll_maximum = ui->mux_log_display->verticalScrollBar()->maximum();
 }
 
+void MainWindow::on_mux_log_display_2_textChanged()
+{
+
+    if ( mux_scroll_maximum == ui->mux_log_display->verticalScrollBar()->value() )
+    {
+        ui->mux_log_display->moveCursor(QTextCursor::End);
+        ui->mux_log_display->verticalScrollBar()->setValue( ui->mux_log_display->verticalScrollBar()->maximum() );
+    }
+    mux_scroll_maximum = ui->mux_log_display->verticalScrollBar()->maximum();
+}
+
 void MainWindow::on_update_mux_settings_clicked()
 {
     store_mux_settings();
@@ -212,4 +231,94 @@ void MainWindow::on_set_mux_defaults_clicked()
 void MainWindow::on_mux_advanced_toggled(bool checked)
 {
     ui->set_mux_defaults->setEnabled(checked);
+}
+
+void MainWindow::on_ch1_clicked(bool checked)
+{
+    if(!eas_ch.contains(1)&&checked)
+        eas_ch.append(1);
+    if (!checked)
+        eas_ch.removeAll(1);
+}
+
+void MainWindow::on_ch2_clicked(bool checked)
+{
+    if(!eas_ch.contains(2)&&checked)
+        eas_ch.append(2);
+    if (!checked)
+        eas_ch.removeAll(2);
+}
+
+void MainWindow::on_ch3_clicked(bool checked)
+{
+    if(!eas_ch.contains(3)&&checked)
+        eas_ch.append(3);
+    if (!checked)
+        eas_ch.removeAll(3);
+}
+
+void MainWindow::on_ch4_clicked(bool checked)
+{
+    if(!eas_ch.contains(4)&&checked)
+        eas_ch.append(4);
+    if (!checked)
+        eas_ch.removeAll(4);
+}
+
+void MainWindow::on_ch5_clicked(bool checked)
+{
+    if(!eas_ch.contains(5)&&checked)
+        eas_ch.append(5);
+    if (!checked)
+        eas_ch.removeAll(5);
+}
+
+void MainWindow::on_ch6_clicked(bool checked)
+{
+    if(!eas_ch.contains(6)&&checked)
+        eas_ch.append(6);
+    if (!checked)
+        eas_ch.removeAll(6);
+}
+
+void MainWindow::on_ch7_clicked(bool checked)
+{
+    if(!eas_ch.contains(7)&&checked)
+        eas_ch.append(7);
+    if (!checked)
+        eas_ch.removeAll(7);
+}
+
+void MainWindow::on_ch8_clicked(bool checked)
+{
+    if(!eas_ch.contains(8)&&checked)
+        eas_ch.append(8);
+    if (!checked)
+        eas_ch.removeAll(8);
+}
+
+void MainWindow::send_eas_config()
+{
+    automation->send_eas_config(eas_ch);
+}
+
+void MainWindow::on_revert_eas_config_clicked()
+{
+    automation->revert_eas_config(eas_ch);
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(int index)
+{
+    ad_ch.clear();
+    ad_ch.append(index);
+}
+
+void MainWindow::ad_insert()
+{
+    automation->ad_splice_insert(ad_ch);
+}
+
+void MainWindow::on_ad_return_to_network_clicked()
+{
+    automation->ad_splice_return_to_network(ad_ch);
 }

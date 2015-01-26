@@ -63,6 +63,7 @@ private:
     Ui::MainWindow *ui;
     //EAS *eas;
     int mux_scroll_maximum;
+    QList < int > eas_ch , ad_ch;
 private slots:
     void store_mux_settings();
     void on_actionStart_Minimized_toggled(bool );
@@ -70,10 +71,24 @@ private slots:
     void on_restart_eas_clicked();
 
     void on_mux_log_display_textChanged();
+    void on_mux_log_display_2_textChanged();
     void on_update_mux_settings_clicked();
     void on_restore_mux_defaults_clicked();
     void on_set_mux_defaults_clicked();
     void on_mux_advanced_toggled(bool checked);
+    void on_ch1_clicked(bool checked);
+    void on_ch2_clicked(bool checked);
+    void on_ch3_clicked(bool checked);
+    void on_ch4_clicked(bool checked);
+    void on_ch5_clicked(bool checked);
+    void on_ch6_clicked(bool checked);
+    void on_ch7_clicked(bool checked);
+    void on_ch8_clicked(bool checked);
+    void send_eas_config();
+    void on_revert_eas_config_clicked();
+    void on_comboBox_currentIndexChanged(int index);
+    void ad_insert();
+    void on_ad_return_to_network_clicked();
 };
 
 #endif // MAINWINDOW_H

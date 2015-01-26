@@ -46,7 +46,7 @@ public:
 
 public slots:
     void eas_insert(QList<int> channel_list);
-    void return_from_eas( QList<int> channel_list);
+    void revert_eas_config( QList<int> channel_list);
     void program_splice( QList<int> channel_list );
     void return_from_splice( QList<int> channel_list );
     void handleError();
