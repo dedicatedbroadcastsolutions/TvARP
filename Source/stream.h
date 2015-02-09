@@ -69,7 +69,7 @@ class stream : public QObject
 
     QThread workerThread;
   public:
-    explicit stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, QObject *parent);
+    explicit stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, int pktsPerDgram,int pkt_size, QObject *parent);
     ~stream();
 
   public slots:
