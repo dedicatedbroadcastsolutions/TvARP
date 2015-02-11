@@ -20,3 +20,4 @@ Windows_Binaries/Sample_Build_Directory/release/plugins/plugins-04041e-1f8.dat
 Source/main.cpp.autosave
 Windows_Binaries/Sample_Build_Directory/release/plugins/plugins-04041e-1f8.dat
 *.dat
+*.autosave
