@@ -31,7 +31,7 @@
 #include "stream.h"
 #include "windows.h"
 /// ========================================================================================================
-stream::stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, int pktsPerDgram,int pkt_size, QObject *parent) :
+stream::stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, QObject *parent) :
     QObject(parent)
 {
     qRegisterMetaType<QHostAddress>("QHostAddress");
@@ -41,7 +41,7 @@ stream::stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, int p
     ip_stream_address = stream_addr;
     ip_stream_port = stream_port;
 
-    timer_freq = 8*pkt_size*pktsPerDgram; // 8 bits per byte, ms between packets.
+    timer_freq = 8*188*8; // 8 bits per byte, ms between packets.
     timer_freq = timer_freq*1000000;
     timer_freq = timer_freq/(kBitRate);
 
@@ -54,9 +54,9 @@ stream::stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, int p
     workerThread.start(QThread::TimeCriticalPriority);
 
  // Prepare constants to build datagram.
-    pkts_PerDgram = pktsPerDgram;
-    packet_size   = pkt_size;
-    dgram_size    = pkt_size*pktsPerDgram;
+    pkts_PerDgram = 8;
+    packet_size   = 188;
+    dgram_size    = 188*8;
     packet.fill('1',packet_size);
     datagram.clear();
     packet_index=0;
@@ -126,6 +126,7 @@ void Worker::send_datagrams(QHostAddress stream_addr, qint16 stream_port, qint64
             emit done_streaming();
             save_file(datagram_buffer);
             qDebug("done with stream");
+            loop=false;
             break;
         }
         if(datagram_buffer.size()>datagram_index)
