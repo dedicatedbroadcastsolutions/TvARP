@@ -322,3 +322,8 @@ void MainWindow::on_ad_return_to_network_clicked()
 {
     automation->ad_splice_return_to_network(ad_ch);
 }
+
+void MainWindow::on_test_eas_clicked()
+{
+    automation->start_stream();
+}

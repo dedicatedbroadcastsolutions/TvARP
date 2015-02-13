@@ -47,20 +47,14 @@ class Worker : public QObject
   public:
     explicit Worker();
     ~Worker();
-    bool loop;
 
   public slots:
-  void send_datagrams(QHostAddress stream_addr, qint16 stream_port, qint64 timer_freq , BufferList datagram_buffer);
+  void start_stream();
 
 signals:
   void done_streaming();
 
   private:
-    void save_file(BufferList datagram_buffer);
-    QUdpSocket  *udp_streaming_socket;
-    int datagram_index;
-    int socket_state;
-    QElapsedTimer elapsed_timer;
 };
 
 class stream : public QObject
@@ -69,24 +63,16 @@ class stream : public QObject
 
     QThread workerThread;
   public:
-    explicit stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, QObject *parent);
+    explicit stream(QObject *parent);
     ~stream();
 
   public slots:
-    void send_udp_packet();
-    void make_udp_packet(QByteArray packet);
     void done_with_worker();
+    void start();
   signals:
-    void start_stream(QHostAddress stream_addr, qint16 stream_port,  qint64 timer_freq , BufferList datagram_buffer);
     void done_with_stream();
+    void start_streaming();
   private:
-    QHostAddress        ip_stream_address;
-    qint16              ip_stream_port;
-
-    BufferList  datagram_buffer;
-    QByteArray  datagram, packet;
     Worker *worker;
-    qint64 timer_freq;
-    int packet_index , KbitRate , pkts_PerDgram , packet_size , dgram_size;
 };
 #endif // STREAM_H

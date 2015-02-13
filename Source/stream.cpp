@@ -31,64 +31,36 @@
 #include "stream.h"
 #include "windows.h"
 /// ========================================================================================================
-stream::stream(QHostAddress stream_addr, qint16 stream_port, int kBitRate, QObject *parent) :
+stream::stream(QObject *parent) :
     QObject(parent)
 {
     qRegisterMetaType<QHostAddress>("QHostAddress");
     qRegisterMetaType<BufferList>("BufferList");
 
-    KbitRate = kBitRate;
-    ip_stream_address = stream_addr;
-    ip_stream_port = stream_port;
-
-    timer_freq = 8*188*8; // 8 bits per byte, ms between packets.
-    timer_freq = timer_freq*1000000;
-    timer_freq = timer_freq/(kBitRate);
-
     worker = new Worker;
 
     connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
-    connect(this, &stream::start_stream , worker, &Worker::send_datagrams );
+    connect(this, &stream::start_streaming , worker, &Worker::start_stream );
     connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
+    qDebug("Finished stream constructor");
 
- // Prepare constants to build datagram.
-    pkts_PerDgram = 8;
-    packet_size   = 188;
-    dgram_size    = 188*8;
-    packet.fill('1',packet_size);
-    datagram.clear();
-    packet_index=0;
 }
 
 stream::~stream()
 {
     qDebug("stopping stream");
-    worker->loop=false;
+    //worker->loop=false;
     workerThread.quit();
     workerThread.wait();
     qDebug("Stream destructor finished");
 }
 
-void stream::make_udp_packet(QByteArray packet)
+void stream::start()
 {
-    if (packet_index < pkts_PerDgram)
-    {
-        datagram.append(packet);
-        packet_index++;
-        if(packet_index == pkts_PerDgram)
-        {
-            datagram_buffer.append( datagram );
-            datagram.clear();
-            packet_index=0;
-        }
-    }
-}
-
-void stream::send_udp_packet()
-{
-    start_stream( ip_stream_address, ip_stream_port , timer_freq ,datagram_buffer);
+    qDebug()<< "start called";
+    emit start_streaming();
 }
 
 void stream::done_with_worker()
@@ -100,58 +72,76 @@ void stream::done_with_worker()
 
 Worker::Worker()
 {
-    loop=true;
+    //loop=true;
     qDebug("Constructor");
 }
 
 Worker::~Worker()
 {
     qDebug("Closing Socket");
-    udp_streaming_socket->close();
+    //udp_streaming_socket->close();
     qDebug("worker destructor finished");
 }
-void Worker::send_datagrams(QHostAddress stream_addr, qint16 stream_port, qint64 timer_freq , BufferList datagram_buffer)
+void Worker::start_stream()
 {
-    udp_streaming_socket = new QUdpSocket(this);    // switch to QUdpSocket and remove winsock when Qt is patched
-    datagram_index = 0;
-    elapsed_timer.start();
-    while(loop)
-    {
-        while(elapsed_timer.nsecsElapsed() <= timer_freq)
-        {
-            // spin until time to send next packet
-        }
-        if(datagram_buffer.size()<=datagram_index)
-        {
-            emit done_streaming();
-            save_file(datagram_buffer);
-            qDebug("done with stream");
-            loop=false;
-            break;
-        }
-        if(datagram_buffer.size()>datagram_index)
-        {
-            socket_state = udp_streaming_socket->writeDatagram(datagram_buffer.at(datagram_index).data(), datagram_buffer.at(datagram_index).size() ,stream_addr , stream_port);
-            udp_streaming_socket->waitForBytesWritten();
-            elapsed_timer.restart();     // start elapsed timer
-            if(socket_state<=0)
-            {
-                qDebug()<< "Socket error "<< udp_streaming_socket->error();
-            }
-            datagram_index++;
-        }
-    }
-    udp_streaming_socket->close();
-}
+    qDebug("streaming");
+    QFile readfile;
+    readfile.setFileName("C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/encode_test.ts");
+    QFile savefile;
+    savefile.setFileName("C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/out_test.ts");
+    char packet [188];
+    int bytes_read=0;
+    QByteArray packet_buffer;
+    int socket_state;
+    QUdpSocket *udp_streaming_socket;
+    QHostAddress stream_addr;
+    stream_addr.setAddress("239.0.0.230");
+    quint16 stream_port = 1234;
+    QElapsedTimer elapsed_timer;
+    qint64 timer_freq;
+    timer_freq = 8*188*8; // 8 bits per byte, ms between packets.
+    timer_freq = timer_freq*1000000;
+    timer_freq = timer_freq/(4000);
 
-void Worker::save_file(BufferList datagram_buffer)
-{
-    QFile file("c:\\3abn\\qudp_test.ts");
-    if(file.open(QIODevice::WriteOnly))
+    quint64 time1,time2,bitrate;
+
+    udp_streaming_socket = new QUdpSocket(this);
+
+    if( readfile.open(QFile::ReadOnly) )
     {
-        QDataStream out(&file);
-        for(int i=0; i<datagram_buffer.size();i++)
-            out.writeRawData(datagram_buffer.at(i).data(),datagram_buffer.at(i).size());
-        file.close();
+        if( savefile.open(QFile::WriteOnly) )
+        {
+
+            bytes_read = readfile.read(packet,188);
+            elapsed_timer.start();
+            while( bytes_read > 0 )
+            {
+                packet_buffer = QByteArray( (char*) packet ,188);
+                while(elapsed_timer.nsecsElapsed() <= timer_freq)
+                {
+                    QThread::usleep(1);
+                    // spin until time to send next packet
+                }
+               // time1 = elapsed_timer.nsecsElapsed();
+                elapsed_timer.restart();
+                socket_state = udp_streaming_socket->writeDatagram( packet_buffer.data() , packet_buffer.size() ,stream_addr , stream_port);
+                udp_streaming_socket->waitForBytesWritten();
+                //bitrate = 12032000000/time1;
+               // qDebug()<<bitrate;
+                if(socket_state<=0)
+                {
+                    qDebug()<< "Socket error "<< udp_streaming_socket->error();
+                }
+                savefile.write( packet_buffer );
+
+                bytes_read = readfile.read(packet,188);
+            }
+            savefile.close();
+            qDebug("Done writing file");
+        }
+        readfile.close();
     }
+
+    udp_streaming_socket->close();
+    qDebug("done with function");
 }

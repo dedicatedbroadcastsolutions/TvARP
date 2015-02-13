@@ -89,6 +89,7 @@ private slots:
     void on_comboBox_currentIndexChanged(int index);
     void ad_insert();
     void on_ad_return_to_network_clicked();
+    void on_test_eas_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -54,9 +54,10 @@ Automation::Automation(QObject *parent) :
     video_dev = settings.value( "eas video device" ).toString();
     audio_dev = settings.value( "eas audio device" ).toString();
 
+    mpeg_stream = new stream(this);
     init_mux_control();
     init_ring_detect();
-    init_vlc();
+   // init_vlc();
 }
 
 Automation::~Automation()
@@ -74,24 +75,29 @@ void Automation::restart_eas_engine()
 {
     close_ring_detect();
     init_ring_detect();
-    restart_vlc();
+    //restart_vlc();
 }
 
 void Automation::init_vlc()
 {
-    vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
+    //vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
 }
 
 void Automation::start_vlc()
 {
-    vlc_enc->start();
+    //vlc_enc->start();
 }
 
 void Automation::restart_vlc()
 {
-    vlc_enc->~VLC_ENC();
+    //vlc_enc->~VLC_ENC();
 
-    vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
+    //vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
+}
+
+void Automation::start_stream()
+{
+    mpeg_stream->start();
 }
 
 void Automation::init_ring_detect()
@@ -142,7 +148,7 @@ void Automation::check_eas_ring()
             qDebug("sensed end of ring");
             eas_live=false;
             /// Stop and destroy VLC
-            restart_vlc();
+            //restart_vlc();
             stream_eas_message();
         }
     }
@@ -178,12 +184,7 @@ void Automation::ad_splice_return_to_network( QList<int> channel_list )
 
 void Automation::stream_eas_message()
 {
-    qDebug("starting vlcFix");
-    process_pcr = new fix_pcr(this);
-    //process_pcr->vlcFix_Send();
-    process_pcr->vlcFix_Send("c:\\3ABN\\Z_vlcOutputFile.ts");
-    connect(process_pcr,SIGNAL(kill_me()),process_pcr,SLOT(deleteLater()));
-    qDebug(" done with vlcFix");
+
 }
 
 void Automation::init_mux_control()

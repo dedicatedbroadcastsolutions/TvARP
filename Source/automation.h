@@ -32,11 +32,12 @@
 #define AUTOMATION_H
 #include "QtCore"
 #include "mux_control.h"
-#include "fix_pcr.h"
-#include "vlc_enc.h"
+//#include "fix_pcr.h"
+//#include "vlc_enc.h"
 //#include "vlc/vlc.h"            // Must include VLC core first (From VLC .zip version 1.1.0)
 //#include "video_window.h"
 //#include "switcher.h"
+#include "stream.h"
 struct sch_entry
 {
     bool operator<(const sch_entry& other) const {
@@ -75,6 +76,8 @@ public slots:
     void process_mux_debug(QString data);
     void init_mux_control();
     void restart_mux_control();
+
+    void start_stream();
     void restart_eas_engine();
     void init_ring_detect();
     void close_ring_detect();
@@ -101,11 +104,12 @@ signals:
 private:
     Mux_Control *d2mux;
     QSerialPort *serial;
+    stream *mpeg_stream;
     bool eas_test;
     bool eas_live;
-    fix_pcr *process_pcr;
+    //fix_pcr *process_pcr;
     QTimer *check_timer;
-    VLC_ENC *vlc_enc;
+    //VLC_ENC *vlc_enc;
 };
 
 #endif // AUTOMATION_H
