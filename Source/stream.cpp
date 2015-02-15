@@ -44,6 +44,7 @@ stream::stream(QObject *parent) :
     connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
+    //workerThread.start(QThread::HighestPriority);
     qDebug("Finished stream constructor");
 
 }
@@ -89,7 +90,7 @@ void Worker::start_stream()
     readfile.setFileName("C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/encode_test.ts");
     QFile savefile;
     savefile.setFileName("C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/out_test.ts");
-    char packet [188];
+    char packet [1504];
     int bytes_read=0;
     QByteArray packet_buffer;
     int socket_state;
@@ -99,10 +100,13 @@ void Worker::start_stream()
     quint16 stream_port = 1234;
     QElapsedTimer elapsed_timer;
     qint64 timer_freq;
-    timer_freq = 8*188*8; // 8 bits per byte, ms between packets.
+    int pkts_per_dgm;
+    pkts_per_dgm = 7;
+    timer_freq = 8*188*pkts_per_dgm; // 8 bits per byte, ms between packets.
     timer_freq = timer_freq*1000000;
     timer_freq = timer_freq/(4000);
-
+    int packet_size;
+    packet_size = 188;
     quint64 time1,time2,bitrate;
 
     udp_streaming_socket = new QUdpSocket(this);
@@ -112,29 +116,44 @@ void Worker::start_stream()
         if( savefile.open(QFile::WriteOnly) )
         {
 
-            bytes_read = readfile.read(packet,188);
+            packet_buffer.clear();
+            for(int i=1; i<=pkts_per_dgm;i++)
+            {
+                bytes_read = readfile.read(packet,packet_size);
+                packet_buffer.append( QByteArray( (char*) packet ,packet_size) );
+            }
             elapsed_timer.start();
             while( bytes_read > 0 )
             {
-                packet_buffer = QByteArray( (char*) packet ,188);
                 while(elapsed_timer.nsecsElapsed() <= timer_freq)
                 {
-                    QThread::usleep(1);
+                   // QThread::usleep(1);
                     // spin until time to send next packet
                 }
-               // time1 = elapsed_timer.nsecsElapsed();
-                elapsed_timer.restart();
+
                 socket_state = udp_streaming_socket->writeDatagram( packet_buffer.data() , packet_buffer.size() ,stream_addr , stream_port);
                 udp_streaming_socket->waitForBytesWritten();
-                //bitrate = 12032000000/time1;
-               // qDebug()<<bitrate;
-                if(socket_state<=0)
+                //time1 = elapsed_timer.nsecsElapsed();
+                elapsed_timer.restart();
+               // time2 = time1/1000000;
+                //bitrate = socket_state*8;
+                //bitrate = bitrate/time2;
+                //qDebug()<< bitrate;
+                if(socket_state!=(188*pkts_per_dgm))
                 {
-                    qDebug()<< "Socket error "<< udp_streaming_socket->error();
+                    qDebug()<< socket_state;
+                    qDebug()<< "Possible Socket error "<< udp_streaming_socket->error();
                 }
                 savefile.write( packet_buffer );
 
-                bytes_read = readfile.read(packet,188);
+
+                packet_buffer.clear();
+                for(int i=1; i<=pkts_per_dgm;i++)
+                {
+                    bytes_read = readfile.read(packet,packet_size);
+                    packet_buffer.append( QByteArray( (char*) packet ,packet_size) );
+                }
+
             }
             savefile.close();
             qDebug("Done writing file");
