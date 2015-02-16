@@ -42,11 +42,9 @@ stream::stream(QObject *parent) :
     connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
     connect(this, &stream::start_streaming , worker, &Worker::start_stream );
     connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
+    connect(worker,SIGNAL(ts_info(QString)),this,SLOT(ts_info(QString)),Qt::DirectConnection);
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
-    //workerThread.start(QThread::HighestPriority);
-    qDebug("Finished stream constructor");
-
 }
 
 stream::~stream()
@@ -69,19 +67,22 @@ void stream::done_with_worker()
     qDebug("done with stream signal sent");
 }
 
+void stream::ts_info(QString filename)
+{
+    emit get_ts_info(filename);    // blocks until automation slot returns after setting bitrate
+}
+
+void stream::set_kbitrate(int kbitrate)
+{
+    worker->set_packet_period(kbitrate);
+}
+
 Worker::Worker()
 {
     packet_size = 188;
     pkts_per_dgm = 7;  // must be between 1 and 7 packets per datagram
-
-    timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
-    timer_period = timer_period*1000000;
-    // in stream function timer_period = timer_period/(kbit_rate);
-
-    one_third_of_timer_period = timer_period/3;
-    sleep_time = timer_period/2000;
-
     quit = false;
+
     qDebug("Constructor");
 }
 
@@ -103,42 +104,62 @@ void Worker::read_datagram()
     }
 }
 
-void Worker::start_stream( QHostAddress stream_addr , quint16 stream_port , QString source_filename)
+void Worker::set_packet_period(int kbitrate)
+{
+    timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
+    timer_period = timer_period*1000000;
+    timer_period = timer_period/(kbitrate);
+    one_third_of_timer_period = timer_period/3;
+    sleep_time = timer_period/2000;
+}
+
+bool Worker::stream_init(QString source_filename)
 {
     readfile.setFileName(source_filename);
-    udp_streaming_socket = new QUdpSocket(this);
 
     if( readfile.open(QFile::ReadOnly) )
     {
-        timer_period = timer_period/(4000);
-        read_datagram();
-        elapsed_timer.start();
-
-        while( !datagram.isEmpty() && !quit)
-        {
-            while(elapsed_timer.nsecsElapsed() <= timer_period)
-            {
-                if( elapsed_timer.nsecsElapsed() <= one_third_of_timer_period )
-                    QThread::usleep( sleep_time );
-            }
-            socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);
-            udp_streaming_socket->waitForBytesWritten();
-
-            elapsed_timer.restart();
-
-            if(socket_state!=(188*pkts_per_dgm))
-            {
-                while ( socket_state == -1 )
-                {
-                    socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);
-                    udp_streaming_socket->waitForBytesWritten();
-                    QThread::usleep(1);
-                }
-            }
-            emit datagram_sent(datagram);
-            read_datagram();
-        }
-        readfile.close();
+        emit ts_info(source_filename);  // blocks until stream class connection returns
+        return true;
     }
-    udp_streaming_socket->close();
+    else
+        return false;
+}
+
+void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString source_filename)
+{
+        if( stream_init(source_filename) )  // get bitrate from stream and block until file is ready to stream.
+
+        {
+            udp_streaming_socket = new QUdpSocket(this);
+            read_datagram();
+            elapsed_timer.start();
+
+            while( !datagram.isEmpty() && !quit)
+            {
+                while(elapsed_timer.nsecsElapsed() <= timer_period)
+                {
+                    if( elapsed_timer.nsecsElapsed() <= one_third_of_timer_period )
+                        QThread::usleep( sleep_time );
+                }
+                socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);
+                udp_streaming_socket->waitForBytesWritten();
+
+                elapsed_timer.restart();
+
+                if(socket_state!=(188*pkts_per_dgm))
+                {
+                    while ( socket_state == -1 )
+                    {
+                        socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                        QThread::usleep(1);
+                    }
+                }
+                emit datagram_sent(datagram);
+                read_datagram();
+            }
+            readfile.close();
+            udp_streaming_socket->close();
+        }
 }

@@ -54,6 +54,8 @@ MainWindow::MainWindow(QWidget *parent) :
     readSettings();
 
     automation = new Automation(this);
+    ad_ch.clear();
+    ad_ch.append(ui->comboBox->currentIndex());
     eas_ch.clear();
     eas_ch.append(1);
     eas_ch.append(2);
@@ -325,5 +327,11 @@ void MainWindow::on_ad_return_to_network_clicked()
 
 void MainWindow::on_test_eas_clicked()
 {
-    automation->start_stream();
+    QHostAddress stream_addr;
+    stream_addr.setAddress("239.0.0.230");
+    quint16 stream_port = 1234;
+    QString sourcefile;
+    sourcefile = "C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/encode_test.ts";
+
+    automation->start_stream(stream_addr,stream_port,sourcefile);
 }

@@ -32,12 +32,12 @@
 #define AUTOMATION_H
 #include "QtCore"
 #include "mux_control.h"
+#include "stream.h"
+#include "ts_info.h"
 //#include "fix_pcr.h"
-//#include "vlc_enc.h"
-//#include "vlc/vlc.h"            // Must include VLC core first (From VLC .zip version 1.1.0)
 //#include "video_window.h"
 //#include "switcher.h"
-#include "stream.h"
+
 struct sch_entry
 {
     bool operator<(const sch_entry& other) const {
@@ -67,6 +67,7 @@ public:
     QList<int> channels;
 
     int mux_out_port ;
+    TS_Info *ad_ts;
 public slots:
     // mux control slots
     void send_eas_config( QList<int> channel_list );
@@ -77,7 +78,7 @@ public slots:
     void init_mux_control();
     void restart_mux_control();
 
-    void start_stream();
+    void start_stream(QHostAddress stream_addr, quint16, QString sourcefile);
     void restart_eas_engine();
     void init_ring_detect();
     void close_ring_detect();
@@ -85,16 +86,16 @@ public slots:
     void check_eas_ring();
     void stream_eas_message();
     void send_eas_message();
-    void init_vlc();
-    void restart_vlc();
-    void start_vlc();
     void check_time();
     void video_state(int);
     void print_log(QString log);
     void log_channel(int channel,QDateTime DateTime);
     void is_open(bool);
     void log_playback(QString message,QString file,QDateTime DateTime);
+
+    void get_ts_info(QString filename);
 signals:
+    void bitrate(int kbitrate);
     void event_log_output(QString);
     void play();
     void openFile(QString);
@@ -107,9 +108,7 @@ private:
     stream *mpeg_stream;
     bool eas_test;
     bool eas_live;
-    //fix_pcr *process_pcr;
     QTimer *check_timer;
-    //VLC_ENC *vlc_enc;
 };
 
 #endif // AUTOMATION_H

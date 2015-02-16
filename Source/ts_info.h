@@ -1,5 +1,5 @@
-#ifndef READ_PCR_H
-#define READ_PCR_H
+#ifndef TS_Info_H
+#define TS_Info_H
 
 #include <QObject>
 #include "QString"
@@ -49,5 +49,5 @@ private:
     long long pcr;
 };
 
-#endif // READ_PCR_H
+#endif // TS_Info_H
 

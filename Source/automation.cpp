@@ -30,7 +30,6 @@
 */
 #include "automation.h"
 #include "QtCore"
-
 /// Initialize settings and Switcher on Comport
 QSettings settings("ZCybercomputing", "TVARP");
 
@@ -47,17 +46,17 @@ Automation::Automation(QObject *parent) :
     state=0;
     isOpen=0;
 
-    //audio_dev = "USB Audio Device";
-   // video_dev = "USB 2861 Device";
-    //video_dev = "WDM 2861 Capture";
-   // audio_dev = "Line (3- USB EMP Audio Device)";
+    mpeg_stream = new stream(this);
+    connect(mpeg_stream,SIGNAL(get_ts_info(QString)),this,SLOT(get_ts_info(QString)),Qt::DirectConnection);
+    connect(this,SIGNAL(bitrate(int)),mpeg_stream,SLOT(set_kbitrate(int)),Qt::DirectConnection);
+
     video_dev = settings.value( "eas video device" ).toString();
     audio_dev = settings.value( "eas audio device" ).toString();
+    ad_ts = new TS_Info(this);
 
-    mpeg_stream = new stream(this);
     init_mux_control();
     init_ring_detect();
-   // init_vlc();
+   // init_encoder();
 }
 
 Automation::~Automation()
@@ -65,6 +64,12 @@ Automation::~Automation()
     if( serial->isOpen() )
         close_ring_detect();
 }
+
+void Automation::get_ts_info(QString filename)
+{
+    emit bitrate(ad_ts->process_file(filename).kbitrate);  // blocks until bitrate in the worker thread is set.
+}
+
 
 void Automation::close_ring_detect()
 {
@@ -75,34 +80,10 @@ void Automation::restart_eas_engine()
 {
     close_ring_detect();
     init_ring_detect();
-    //restart_vlc();
 }
 
-void Automation::init_vlc()
+void Automation::start_stream(QHostAddress stream_addr,quint16 stream_port,QString sourcefile)
 {
-    //vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
-}
-
-void Automation::start_vlc()
-{
-    //vlc_enc->start();
-}
-
-void Automation::restart_vlc()
-{
-    //vlc_enc->~VLC_ENC();
-
-    //vlc_enc = new VLC_ENC( video_dev , audio_dev , this);
-}
-
-void Automation::start_stream()
-{
-    QHostAddress stream_addr;
-    stream_addr.setAddress("239.0.0.230");
-    quint16 stream_port = 1234;
-    QString sourcefile;
-    sourcefile = "C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/encode_test.ts";
-
     mpeg_stream->stream_start(stream_addr,stream_port,sourcefile);
 }
 
@@ -153,8 +134,8 @@ void Automation::check_eas_ring()
         {
             qDebug("sensed end of ring");
             eas_live=false;
-            /// Stop and destroy VLC
-            //restart_vlc();
+            /// Stop and destroy encoder
+            //restart_encoder();
             stream_eas_message();
         }
     }
@@ -163,7 +144,7 @@ void Automation::check_eas_ring()
 void Automation::send_eas_message()
 {
     qDebug("recieving EAS Message");
-    start_vlc();
+    //start_encoder();
     send_eas_config(channels);
 }
 

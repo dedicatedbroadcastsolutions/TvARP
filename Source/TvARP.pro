@@ -14,13 +14,15 @@ TEMPLATE = app
 #INCLUDEPATH += $$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/include
 #LIBS += -L$$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/lib -lavutil -lavcodec -lavformat -lswscale
 
-SOURCES += main.cpp\
+SOURCES +=\
         mainwindow.cpp \
     automation.cpp \
     sys_tray_icon.cpp \
     mux_control.cpp \
     stream.cpp \
-    configure_eas.cpp
+    configure_eas.cpp \
+    ts_info.cpp \
+    tvarp_main.cpp
 
 HEADERS  += \
     automation.h \
@@ -28,7 +30,8 @@ HEADERS  += \
     mainwindow.h \
     mux_control.h \
     stream.h \
-    configure_eas.h
+    configure_eas.h \
+    ts_info.h
 
 FORMS    += mainwindow.ui \
     configure_eas.ui

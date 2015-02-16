@@ -49,11 +49,16 @@ class Worker : public QObject
     ~Worker();
     bool quit;
   public slots:
-    void start_stream(QHostAddress stream_addr, quint16 stream_port, QString source_filename);
-    void read_datagram();
-signals:
+    void start_stream( QHostAddress stream_addr , quint16 stream_port , QString source_filename );
+    void set_packet_period(int kbitrate);
+  signals:
     void done_streaming();
     void datagram_sent(QByteArray datagram);
+    void ts_info(QString filename);
+  private slots:
+    void read_datagram();
+    bool stream_init(QString source_filename );
+
   private:
   // variables for reading datagrams from file
     QFile readfile;
@@ -83,9 +88,13 @@ class stream : public QObject
   public slots:
     void done_with_worker();
     void stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename);
+    void ts_info(QString filename);
+    void set_kbitrate(int kbitrate);
   signals:
     void done_with_stream();
+    void get_ts_info(QString filename);
     void start_streaming( QHostAddress stream_addr, quint16 stream_port, QString source_filename );
+
   private:
     Worker *worker;
 
