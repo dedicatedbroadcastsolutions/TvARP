@@ -21,3 +21,17 @@ Source/main.cpp.autosave
 Windows_Binaries/Sample_Build_Directory/release/plugins/plugins-04041e-1f8.dat
 *.dat
 *.autosave
+Windows_Binaries/TS_Analyser_Build_Directory/release/moc_pcr_analyser_mainwindow.cpp
+Windows_Binaries/TS_Analyser_Build_Directory/release/moc_ts_info.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/Makefile
+*.Debug
+*.Release
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_automation.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_configure_eas.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_mainwindow.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_mux_control.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_stream.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_sys_tray_icon.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/qrc_systray.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/ui_configure_eas.h
+Windows_Binaries/TvARP_Sample_Build_Directory/ui_mainwindow.h

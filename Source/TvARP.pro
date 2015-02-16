@@ -11,9 +11,6 @@ TARGET = TvARP_EAS_beta
 TEMPLATE = app
 
 
-LIBS += -L$$PWD/lib/
-LIBS += -llibvlc
-
 #INCLUDEPATH += $$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/include
 #LIBS += -L$$PWD/ffmpeg-20141113-git-3e1ac10-win32-dev/lib -lavutil -lavcodec -lavformat -lswscale
 
