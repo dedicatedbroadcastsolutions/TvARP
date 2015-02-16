@@ -15,6 +15,7 @@ TS_Info::~TS_Info()
 
 Transport_Stream TS_Info::process_file (QString source_filename)
 {
+    qDebug() << "analysing " << source_filename ;
     QByteArray ts_packet;
     char packet[188];
     int bytes_read = 188;
@@ -35,12 +36,12 @@ Transport_Stream TS_Info::process_file (QString source_filename)
     QStringList info_list;
     PCR pcr;
 
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        qDebug("File not opened");
-    }
-    else
-    {
+        while(!file.open(QIODevice::ReadOnly))
+        {
+            qDebug("File not opened");
+            QThread::msleep(100);
+        }
+        QThread::msleep(100);
         packets_read=0;
 
         while(bytes_read>0 && pcr_read<=2)
@@ -90,7 +91,8 @@ Transport_Stream TS_Info::process_file (QString source_filename)
         ts_properties.pcr_period_ms = ms_between_pcr;
         ts_properties.kbitrate = kbitrate;
         ts_properties.info = info_list;
-    }
+
+    qDebug() << "Bitrate Found" << kbitrate ;
     return(ts_properties);
 }
 PCR TS_Info::getPCR(QByteArray packet)

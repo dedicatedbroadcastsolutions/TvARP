@@ -30,3 +30,6 @@ Windows_Binaries/TS_Analyser_Build_Directory/ui_pcr_analyser_mainwindow.h
 Windows_Binaries/Ingest_Build_Directory/ui_ingest_dialog.h
 Windows_Binaries/Ingest_Build_Directory/release/moc_ffmpeg.cpp
 Windows_Binaries/Ingest_Build_Directory/release/moc_ingest_dialog.cpp
+*.ts
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_ffmpeg.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_ts_info.cpp

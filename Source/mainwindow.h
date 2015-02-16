@@ -63,6 +63,8 @@ private:
     Ui::MainWindow *ui;
     //EAS *eas;
     int mux_scroll_maximum;
+    int mux_scroll_2_maximum;
+    int encoder_scroll_maximum;
     QList < int > eas_ch , ad_ch;
 private slots:
     void store_mux_settings();
@@ -72,6 +74,7 @@ private slots:
 
     void on_mux_log_display_textChanged();
     void on_mux_log_display_2_textChanged();
+    void on_encoder_display_textChanged();
     void on_update_mux_settings_clicked();
     void on_restore_mux_defaults_clicked();
     void on_set_mux_defaults_clicked();

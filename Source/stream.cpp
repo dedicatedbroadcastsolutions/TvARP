@@ -116,10 +116,9 @@ void Worker::set_packet_period(int kbitrate)
 bool Worker::stream_init(QString source_filename)
 {
     readfile.setFileName(source_filename);
-
+    emit ts_info(source_filename);  // blocks until stream class connection returns
     if( readfile.open(QFile::ReadOnly) )
     {
-        emit ts_info(source_filename);  // blocks until stream class connection returns
         return true;
     }
     else

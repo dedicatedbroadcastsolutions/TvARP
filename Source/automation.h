@@ -34,6 +34,7 @@
 #include "mux_control.h"
 #include "stream.h"
 #include "ts_info.h"
+#include "ffmpeg.h"
 //#include "fix_pcr.h"
 //#include "video_window.h"
 //#include "switcher.h"
@@ -84,7 +85,7 @@ public slots:
     void close_ring_detect();
     void handleError();
     void check_eas_ring();
-    void stream_eas_message();
+    void capture_eas_message();
     void send_eas_message();
     void check_time();
     void video_state(int);
@@ -92,7 +93,7 @@ public slots:
     void log_channel(int channel,QDateTime DateTime);
     void is_open(bool);
     void log_playback(QString message,QString file,QDateTime DateTime);
-
+    void encoder_output(QString output);
     void get_ts_info(QString filename);
 signals:
     void bitrate(int kbitrate);
@@ -102,10 +103,13 @@ signals:
     void get_video_state();
     void mux_eas_log(QString);
     void eas_ring();
+    void encoder_display(QString);
+    void stream_eas(QHostAddress stream_addr, quint16, QString sourcefile);
 private:
     Mux_Control *d2mux;
     QSerialPort *serial;
     stream *mpeg_stream;
+    FFmpeg *ffmpeg;
     bool eas_test;
     bool eas_live;
     QTimer *check_timer;

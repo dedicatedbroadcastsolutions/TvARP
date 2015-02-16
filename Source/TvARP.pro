@@ -22,7 +22,8 @@ SOURCES +=\
     stream.cpp \
     configure_eas.cpp \
     ts_info.cpp \
-    tvarp_main.cpp
+    tvarp_main.cpp \
+    ffmpeg.cpp
 
 HEADERS  += \
     automation.h \
@@ -31,7 +32,8 @@ HEADERS  += \
     mux_control.h \
     stream.h \
     configure_eas.h \
-    ts_info.h
+    ts_info.h \
+    ffmpeg.h
 
 FORMS    += mainwindow.ui \
     configure_eas.ui

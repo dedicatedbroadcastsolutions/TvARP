@@ -50,13 +50,14 @@ Automation::Automation(QObject *parent) :
     connect(mpeg_stream,SIGNAL(get_ts_info(QString)),this,SLOT(get_ts_info(QString)),Qt::DirectConnection);
     connect(this,SIGNAL(bitrate(int)),mpeg_stream,SLOT(set_kbitrate(int)),Qt::DirectConnection);
 
+    ffmpeg = new FFmpeg(this);
+    connect(ffmpeg,SIGNAL(ffmpeg_stdout(QString)),this,SLOT(encoder_output(QString)));
     video_dev = settings.value( "eas video device" ).toString();
     audio_dev = settings.value( "eas audio device" ).toString();
     ad_ts = new TS_Info(this);
 
     init_mux_control();
     init_ring_detect();
-   // init_encoder();
 }
 
 Automation::~Automation()
@@ -70,6 +71,10 @@ void Automation::get_ts_info(QString filename)
     emit bitrate(ad_ts->process_file(filename).kbitrate);  // blocks until bitrate in the worker thread is set.
 }
 
+void Automation::encoder_output(QString output)
+{
+    emit encoder_display(output);
+}
 
 void Automation::close_ring_detect()
 {
@@ -111,6 +116,7 @@ void Automation::init_ring_detect()
     check_timer= new QTimer(this);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
+    connect(this,SIGNAL(stream_eas(QHostAddress,quint16,QString)),this,SLOT(start_stream(QHostAddress,quint16,QString)));
     check_timer->start(1);                                               // create timer with 1 ms resolution
     qDebug("finished eas init");
 }
@@ -136,7 +142,7 @@ void Automation::check_eas_ring()
             eas_live=false;
             /// Stop and destroy encoder
             //restart_encoder();
-            stream_eas_message();
+            capture_eas_message();
         }
     }
 }
@@ -169,8 +175,22 @@ void Automation::ad_splice_return_to_network( QList<int> channel_list )
     d2mux->return_from_splice( channel_list );
 }
 
-void Automation::stream_eas_message()
+void Automation::capture_eas_message()
 {
+    QString inputfile,outputfile;
+    QHostAddress stream_addr;
+    quint16 stream_port;
+
+    inputfile = "./Video/ew050812-004403SD-h264lb.mov";
+    outputfile = "./EAS Video/";
+    outputfile.append(QDateTime::currentDateTime().toString( "ss_dd_mm_yyyy" ));
+    outputfile.append(".ts");
+    outputfile = QFileInfo(outputfile).absoluteFilePath();
+    inputfile = QFileInfo(inputfile).absoluteFilePath();
+    stream_addr.setAddress("239.0.0.220");
+    stream_port = 1234;
+    emit stream_eas( stream_addr, stream_port, outputfile);
+    ffmpeg->encode(inputfile,outputfile);
 
 }
 

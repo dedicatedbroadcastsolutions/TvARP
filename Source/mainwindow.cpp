@@ -67,10 +67,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mux_log_display->ensureCursorVisible();
     ui->mux_log_display->moveCursor(QTextCursor::End);
     ui->mux_log_display->verticalScrollBar()->setValue( ui->mux_log_display->verticalScrollBar()->maximum() );
+    ui->mux_log_display_2->ensureCursorVisible();
+    ui->mux_log_display_2->moveCursor(QTextCursor::End);
+    ui->mux_log_display_2->verticalScrollBar()->setValue( ui->mux_log_display_2->verticalScrollBar()->maximum() );
     QTextDocument * doc = ui->mux_log_display->document();
     doc->setMaximumBlockCount(maxblock);
     connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display,SLOT( insertPlainText(QString) ) );
     connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
+
+    ui->encoder_display->ensureCursorVisible();
+    ui->encoder_display->moveCursor(QTextCursor::End);
+    ui->encoder_display->verticalScrollBar()->setValue( ui->encoder_display->verticalScrollBar()->maximum() );
+    connect(automation,SIGNAL(encoder_display(QString)),ui->encoder_display,SLOT(insertPlainText(QString)));
 }
 
 MainWindow::~MainWindow()
@@ -193,12 +201,23 @@ void MainWindow::on_mux_log_display_textChanged()
 void MainWindow::on_mux_log_display_2_textChanged()
 {
 
-    if ( mux_scroll_maximum == ui->mux_log_display->verticalScrollBar()->value() )
+    if ( mux_scroll_2_maximum == ui->mux_log_display_2->verticalScrollBar()->value() )
     {
-        ui->mux_log_display->moveCursor(QTextCursor::End);
-        ui->mux_log_display->verticalScrollBar()->setValue( ui->mux_log_display->verticalScrollBar()->maximum() );
+        ui->mux_log_display_2->moveCursor(QTextCursor::End);
+        ui->mux_log_display_2->verticalScrollBar()->setValue( ui->mux_log_display_2->verticalScrollBar()->maximum() );
     }
-    mux_scroll_maximum = ui->mux_log_display->verticalScrollBar()->maximum();
+    mux_scroll_2_maximum = ui->mux_log_display_2->verticalScrollBar()->maximum();
+}
+
+void MainWindow::on_encoder_display_textChanged()
+{
+
+    if ( encoder_scroll_maximum == ui->encoder_display->verticalScrollBar()->value() )
+    {
+        ui->encoder_display->moveCursor(QTextCursor::End);
+        ui->encoder_display->verticalScrollBar()->setValue( ui->encoder_display->verticalScrollBar()->maximum() );
+    }
+    encoder_scroll_maximum = ui->encoder_display->verticalScrollBar()->maximum();
 }
 
 void MainWindow::on_update_mux_settings_clicked()
@@ -327,11 +346,5 @@ void MainWindow::on_ad_return_to_network_clicked()
 
 void MainWindow::on_test_eas_clicked()
 {
-    QHostAddress stream_addr;
-    stream_addr.setAddress("239.0.0.230");
-    quint16 stream_port = 1234;
-    QString sourcefile;
-    sourcefile = "C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/encode_test.ts";
-
-    automation->start_stream(stream_addr,stream_port,sourcefile);
+    automation->capture_eas_message();
 }
