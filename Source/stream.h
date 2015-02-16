@@ -47,14 +47,28 @@ class Worker : public QObject
   public:
     explicit Worker();
     ~Worker();
-
+    bool quit;
   public slots:
-  void start_stream();
-
+    void start_stream(QHostAddress stream_addr, quint16 stream_port, QString source_filename);
+    void read_datagram();
 signals:
-  void done_streaming();
-
+    void done_streaming();
+    void datagram_sent(QByteArray datagram);
   private:
+  // variables for reading datagrams from file
+    QFile readfile;
+    int pkts_per_dgm;
+    char packet [1504];
+    int packet_size;
+    int bytes_read=0;
+  // variables for sending datagrams
+    qint64 timer_period;
+    QElapsedTimer elapsed_timer;
+    QByteArray datagram;
+    QUdpSocket *udp_streaming_socket;
+    int socket_state;
+    int sleep_time;
+    int one_third_of_timer_period;
 };
 
 class stream : public QObject
@@ -68,11 +82,12 @@ class stream : public QObject
 
   public slots:
     void done_with_worker();
-    void start();
+    void stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename);
   signals:
     void done_with_stream();
-    void start_streaming();
+    void start_streaming( QHostAddress stream_addr, quint16 stream_port, QString source_filename );
   private:
     Worker *worker;
+
 };
 #endif // STREAM_H

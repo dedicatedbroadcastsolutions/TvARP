@@ -97,7 +97,13 @@ void Automation::restart_vlc()
 
 void Automation::start_stream()
 {
-    mpeg_stream->start();
+    QHostAddress stream_addr;
+    stream_addr.setAddress("239.0.0.230");
+    quint16 stream_port = 1234;
+    QString sourcefile;
+    sourcefile = "C:/Users/Zach/Development/build-ffmpeg-Desktop_Qt_5_3_MinGW_32bit-Debug/encode_test.ts";
+
+    mpeg_stream->stream_start(stream_addr,stream_port,sourcefile);
 }
 
 void Automation::init_ring_detect()
