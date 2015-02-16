@@ -35,3 +35,4 @@ Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_sys_tray_icon.cpp
 Windows_Binaries/TvARP_Sample_Build_Directory/release/qrc_systray.cpp
 Windows_Binaries/TvARP_Sample_Build_Directory/ui_configure_eas.h
 Windows_Binaries/TvARP_Sample_Build_Directory/ui_mainwindow.h
+Windows_Binaries/TS_Analyser_Build_Directory/ui_pcr_analyser_mainwindow.h
