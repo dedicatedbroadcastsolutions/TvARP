@@ -133,6 +133,16 @@ void MainWindow::readSettings()
     else
         settings.setValue("Mux Debug Comport", ui->mux_debug_comport->currentText());
 
+    if( settings.contains("EAS Stream Address") )
+        ui->mux_ctrl_addr->setText( settings.value("EAS Stream Address").toString() );
+    else
+        settings.setValue("EAS Stream Address", ui->mux_ctrl_addr->text() );
+
+    if( settings.contains("EAS Stream Port") )
+        ui->mux_ctrl_port->setValue( settings.value("EAS Stream Port").toInt() );
+    else
+        settings.setValue("EAS Stream Port", ui->mux_ctrl_port->value());
+
     if(settings.contains("eas video device"))
     {
         int index = ui->eas_video_device->findText( settings.value( "eas video device" ).toString() );
@@ -191,6 +201,8 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_restart_eas_clicked()
 {
+    settings.setValue( "EAS Stream Address",ui->eas_stream_address->text());
+    settings.setValue( "EAS Stream Port" ,ui->eas_stream_port->value());
     settings.setValue( "eas video device",ui->eas_video_device->currentText() );
     settings.setValue( "eas audio device",ui->eas_audio_device->currentText() );
     settings.setValue( "eas comport" , ui->eas_comport->currentText());
@@ -282,11 +294,6 @@ void MainWindow::on_set_mux_defaults_clicked()
     settings.setValue("default Mux Debug Comport", ui->mux_debug_comport->currentText());
 }
 
-void MainWindow::on_mux_advanced_toggled(bool checked)
-{
-    ui->set_mux_defaults->setEnabled(checked);
-}
-
 void MainWindow::on_ch1_clicked(bool checked)
 {
     if(!eas_ch.contains(1)&&checked)
@@ -351,6 +358,17 @@ void MainWindow::on_ch8_clicked(bool checked)
         eas_ch.removeAll(8);
 }
 
+void MainWindow::on_mux_advanced_toggled(bool checked)
+{
+    ui->set_mux_defaults->setEnabled(checked);
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(int index)
+{
+    ad_ch.clear();
+    ad_ch.append(index);
+}
+
 void MainWindow::send_eas_config()
 {
     automation->send_eas_config(eas_ch);
@@ -359,12 +377,6 @@ void MainWindow::send_eas_config()
 void MainWindow::on_revert_eas_config_clicked()
 {
     automation->revert_eas_config(eas_ch);
-}
-
-void MainWindow::on_comboBox_currentIndexChanged(int index)
-{
-    ad_ch.clear();
-    ad_ch.append(index);
 }
 
 void MainWindow::ad_insert()

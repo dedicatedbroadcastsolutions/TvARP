@@ -207,15 +207,17 @@ void Automation::capture_eas_message()
     QString inputfile,outputfile;
     QHostAddress stream_addr;
     quint16 stream_port;
+    stream_addr.setAddress("239.0.0.220");
+    stream_port = 1234;
 
     inputfile = "./Video/ew050812-004403SD-h264lb.mov";
+    inputfile = QFileInfo(inputfile).absoluteFilePath();
+
     outputfile = "./EAS Video/";
     outputfile.append(QDateTime::currentDateTime().toString( "ss_dd_mm_yyyy" ));
     outputfile.append(".ts");
     outputfile = QFileInfo(outputfile).absoluteFilePath();
-    inputfile = QFileInfo(inputfile).absoluteFilePath();
-    stream_addr.setAddress("239.0.0.220");
-    stream_port = 1234;
+
     emit stream_eas( stream_addr, stream_port, outputfile);
     ffmpeg->encode(inputfile,outputfile);
     ffmpeg->ffplay( "udp://@239.0.0.220:1234" );
