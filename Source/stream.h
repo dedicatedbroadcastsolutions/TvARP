@@ -55,6 +55,7 @@ class Worker : public QObject
     void done_streaming();
     void datagram_sent(QByteArray datagram);
     void ts_info(QString filename);
+    void work_status( QString );
   private slots:
     void read_datagram();
     bool stream_init(QString source_filename );
@@ -90,13 +91,16 @@ class stream : public QObject
     void stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename);
     void ts_info(QString filename);
     void set_kbitrate(int kbitrate);
+    void worker_status(QString string);
   signals:
     void done_with_stream();
     void get_ts_info(QString filename);
     void start_streaming( QHostAddress stream_addr, quint16 stream_port, QString source_filename );
-
+    void status( QString );
   private:
     Worker *worker;
+  private slots:
+
 
 };
 #endif // STREAM_H

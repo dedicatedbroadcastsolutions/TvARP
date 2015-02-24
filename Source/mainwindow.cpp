@@ -79,6 +79,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encoder_display->moveCursor(QTextCursor::End);
     ui->encoder_display->verticalScrollBar()->setValue( ui->encoder_display->verticalScrollBar()->maximum() );
     connect(automation,SIGNAL(encoder_display(QString)),ui->encoder_display,SLOT(insertPlainText(QString)));
+
+    ui->eas_detect->ensureCursorVisible();
+    ui->eas_detect->moveCursor(QTextCursor::End);
+    ui->eas_detect->verticalScrollBar()->setValue( ui->eas_detect->verticalScrollBar()->maximum() );
+    connect(automation,SIGNAL(eas_status(QString)),ui->eas_detect,SLOT(insertPlainText(QString)));
+
+
+    ui->stream_status_display->ensureCursorVisible();
+    ui->stream_status_display->moveCursor(QTextCursor::End);
+    ui->stream_status_display->verticalScrollBar()->setValue( ui->stream_status_display->verticalScrollBar()->maximum() );
+    connect(automation,SIGNAL(stream_status(QString)),ui->stream_status_display,SLOT(insertPlainText(QString)));
 }
 
 MainWindow::~MainWindow()
@@ -218,6 +229,28 @@ void MainWindow::on_encoder_display_textChanged()
         ui->encoder_display->verticalScrollBar()->setValue( ui->encoder_display->verticalScrollBar()->maximum() );
     }
     encoder_scroll_maximum = ui->encoder_display->verticalScrollBar()->maximum();
+}
+
+void MainWindow::on_eas_detect_textChanged()
+{
+
+    if ( eas_status_scroll_maximum == ui->eas_detect->verticalScrollBar()->value() )
+    {
+        ui->eas_detect->moveCursor(QTextCursor::End);
+        ui->eas_detect->verticalScrollBar()->setValue( ui->eas_detect->verticalScrollBar()->maximum() );
+    }
+    eas_status_scroll_maximum = ui->eas_detect->verticalScrollBar()->maximum();
+}
+
+void MainWindow::on_stream_status_display_textChanged()
+{
+
+    if ( stream_status_scroll_maximum == ui->stream_status_display->verticalScrollBar()->value() )
+    {
+        ui->stream_status_display->moveCursor(QTextCursor::End);
+        ui->stream_status_display->verticalScrollBar()->setValue( ui->stream_status_display->verticalScrollBar()->maximum() );
+    }
+    stream_status_scroll_maximum = ui->stream_status_display->verticalScrollBar()->maximum();
 }
 
 void MainWindow::on_update_mux_settings_clicked()

@@ -37,7 +37,7 @@ public:
     ~TS_Info();
     Transport_Stream ts_properties;
 signals:
-
+    void status( QString );
 public slots:
     Transport_Stream process_file(QString source_filename) ;
     PCR getPCR(QByteArray packet);

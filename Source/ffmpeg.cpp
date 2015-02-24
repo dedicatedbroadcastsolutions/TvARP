@@ -23,12 +23,14 @@ void FFmpeg::processStarted()
 
 void FFmpeg::encode(QString inputfile,QString outputfile)
 {
-    QString program = "C:/Users/Zach/Development/ffmpeg-20150124-git-1f13348-win64-static/bin/ffmpeg.exe";
+    QString program;
+    program = "./FFmpeg/bin/ffmpeg.exe";
+    program = QFileInfo(program).absoluteFilePath();
     encode_fileName = outputfile;
     QStringList arguments;
 
     arguments.clear();
-    arguments << "-v" << "9" << "-loglevel" << "99" //<< "-re"
+    arguments << "-v" << "9" << "-loglevel" << "99" << "-re"
     << "-i" << inputfile
 
     << "-f" << "mpegts"
@@ -51,7 +53,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile)
     << "-mpegts_service_id" << "1"
     << "-mpegts_original_network_id" << "7654"
     << "-tables_version" << "10"
-    << "-threads" << "0"
+    << "-threads" << "1"
     << outputfile;
 
     mTranscodingProcess->setProcessChannelMode(QProcess::MergedChannels);
@@ -79,8 +81,12 @@ void FFmpeg::encodingFinished()
 
 void FFmpeg::ffplay(QString inputfile)
 {
-    QString program = "C://Users/Zach/Development/ffmpeg-20150124-git-1f13348-win64-static/bin/ffplay.exe";
+    QString program;
+    program = "./FFmpeg/bin/ffplay.exe";
+    program = QFileInfo(program).absoluteFilePath();
     QStringList arguments;
+    //arguments << "video_size" << "172x120";
     arguments << inputfile;
-    mInputPlayProcess->start(program, arguments);
+    if(mInputPlayProcess->state()==0)
+        mInputPlayProcess->start(program, arguments);
 }

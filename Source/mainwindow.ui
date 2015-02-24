@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>837</width>
-    <height>452</height>
+    <width>838</width>
+    <height>494</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -267,6 +267,12 @@
                 <height>0</height>
                </size>
               </property>
+              <property name="maximumSize">
+               <size>
+                <width>176</width>
+                <height>16777215</height>
+               </size>
+              </property>
               <property name="title">
                <string>Input Preview</string>
               </property>
@@ -324,44 +330,47 @@
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Enable Preview</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_7">
+                  <widget class="QLabel" name="label_20">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
-                    <string>Streaming Status</string>
+                    <string>Ring Detect Status</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QTextBrowser" name="textBrowser_2">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
+                  <widget class="QTextBrowser" name="eas_detect">
                    <property name="minimumSize">
                     <size>
-                     <width>176</width>
-                     <height>50</height>
+                     <width>0</width>
+                     <height>0</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>176</width>
+                     <width>16777215</width>
                      <height>16777215</height>
                     </size>
                    </property>
                    <property name="baseSize">
                     <size>
-                     <width>176</width>
+                     <width>0</width>
                      <height>0</height>
                     </size>
                    </property>
@@ -402,10 +411,10 @@
                <property name="verticalSpacing">
                 <number>2</number>
                </property>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_6">
-                 <property name="text">
-                  <string>Mux Output</string>
+               <item row="3" column="0">
+                <widget class="QTextBrowser" name="encoder_display">
+                 <property name="enabled">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -416,17 +425,24 @@
                  </property>
                 </widget>
                </item>
-               <item row="3" column="0">
-                <widget class="QTextBrowser" name="encoder_display">
-                 <property name="enabled">
-                  <bool>true</bool>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Streaming Status</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Mux Output</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QTextEdit" name="mux_log_display">
                  <property name="verticalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAlwaysOn</enum>
+                  <enum>Qt::ScrollBarAsNeeded</enum>
                  </property>
                  <property name="autoFormatting">
                   <set>QTextEdit::AutoAll</set>
@@ -439,6 +455,37 @@
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::NoTextInteraction</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QTextBrowser" name="stream_status_display">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>176</width>
+                   <height>0</height>
+                  </size>
                  </property>
                 </widget>
                </item>
@@ -956,7 +1003,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>837</width>
+     <width>838</width>
      <height>18</height>
     </rect>
    </property>

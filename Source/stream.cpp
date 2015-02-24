@@ -43,33 +43,40 @@ stream::stream(QObject *parent) :
     connect(this, &stream::start_streaming , worker, &Worker::start_stream );
     connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
     connect(worker,SIGNAL(ts_info(QString)),this,SLOT(ts_info(QString)),Qt::DirectConnection);
+    connect(worker,SIGNAL(work_status(QString)),this,SLOT(worker_status(QString)));
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
 }
 
 stream::~stream()
 {
-    qDebug("stopping stream");
+    emit status("stopping stream\n");
     worker->quit = true;
     workerThread.quit();
     workerThread.wait();
-    qDebug("Stream destructor finished");
+    emit status("Stream destructor finished\n");
 }
 
 void stream::stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename )
 {
+    emit status("Starting worker thread \n");
     emit start_streaming( stream_addr , stream_port , source_filename);
 }
 
 void stream::done_with_worker()
 {
     emit done_with_stream();
-    qDebug("done with stream signal sent");
+    emit status("done with stream signal sent\n");
 }
 
 void stream::ts_info(QString filename)
 {
     emit get_ts_info(filename);    // blocks until automation slot returns after setting bitrate
+}
+
+void stream::worker_status(QString string)
+{
+    emit status(string);
 }
 
 void stream::set_kbitrate(int kbitrate)
@@ -82,14 +89,12 @@ Worker::Worker()
     packet_size = 188;
     pkts_per_dgm = 7;  // must be between 1 and 7 packets per datagram
     quit = false;
-
-    qDebug("Constructor");
 }
 
 Worker::~Worker()
 {
-    qDebug("Closing Socket");
-    qDebug("worker destructor finished");
+    emit work_status("Closing Stream Socket\n");
+    emit work_status("worker destructor finished\n");
 }
 
 void Worker::read_datagram()
@@ -109,8 +114,8 @@ void Worker::set_packet_period(int kbitrate)
     timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
     timer_period = timer_period*1000000;
     timer_period = timer_period/(kbitrate);
-    one_third_of_timer_period = timer_period/3;
-    sleep_time = timer_period/2000;
+    one_third_of_timer_period = timer_period/4;
+    sleep_time = timer_period/3000;
 }
 
 bool Worker::stream_init(QString source_filename)
@@ -133,7 +138,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             udp_streaming_socket = new QUdpSocket(this);
             read_datagram();
             elapsed_timer.start();
-
+            emit work_status("starting stream\n");
             while( !datagram.isEmpty() && !quit)
             {
                 while(elapsed_timer.nsecsElapsed() <= timer_period)
@@ -161,4 +166,5 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             readfile.close();
             udp_streaming_socket->close();
         }
+        emit work_status("finished stream\n");
 }

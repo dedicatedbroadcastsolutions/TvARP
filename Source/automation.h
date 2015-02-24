@@ -95,6 +95,7 @@ public slots:
     void log_playback(QString message,QString file,QDateTime DateTime);
     void encoder_output(QString output);
     void get_ts_info(QString filename);
+    void streaming_status( QString string );
 signals:
     void bitrate(int kbitrate);
     void event_log_output(QString);
@@ -104,6 +105,8 @@ signals:
     void mux_eas_log(QString);
     void eas_ring();
     void encoder_display(QString);
+    void eas_status(QString);
+    void stream_status(QString);
     void stream_eas(QHostAddress stream_addr, quint16, QString sourcefile);
 private:
     Mux_Control *d2mux;
@@ -113,6 +116,7 @@ private:
     bool eas_test;
     bool eas_live;
     QTimer *check_timer;
+    int ring_init;
 };
 
 #endif // AUTOMATION_H

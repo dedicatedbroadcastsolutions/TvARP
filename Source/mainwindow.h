@@ -65,6 +65,8 @@ private:
     int mux_scroll_maximum;
     int mux_scroll_2_maximum;
     int encoder_scroll_maximum;
+    int eas_status_scroll_maximum;
+    int stream_status_scroll_maximum;
     QList < int > eas_ch , ad_ch;
 private slots:
     void store_mux_settings();
@@ -72,6 +74,8 @@ private slots:
     void on_actionExit_triggered();
     void on_restart_eas_clicked();
 
+    void on_stream_status_display_textChanged();
+    void on_eas_detect_textChanged();
     void on_mux_log_display_textChanged();
     void on_mux_log_display_2_textChanged();
     void on_encoder_display_textChanged();

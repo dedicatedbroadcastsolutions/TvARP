@@ -47,6 +47,7 @@ Automation::Automation(QObject *parent) :
     isOpen=0;
 
     mpeg_stream = new stream(this);
+    connect(mpeg_stream,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
     connect(mpeg_stream,SIGNAL(get_ts_info(QString)),this,SLOT(get_ts_info(QString)),Qt::DirectConnection);
     connect(this,SIGNAL(bitrate(int)),mpeg_stream,SLOT(set_kbitrate(int)),Qt::DirectConnection);
 
@@ -55,6 +56,9 @@ Automation::Automation(QObject *parent) :
     video_dev = settings.value( "eas video device" ).toString();
     audio_dev = settings.value( "eas audio device" ).toString();
     ad_ts = new TS_Info(this);
+
+
+    connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
 
     init_mux_control();
     init_ring_detect();
@@ -78,11 +82,13 @@ void Automation::encoder_output(QString output)
 
 void Automation::close_ring_detect()
 {
+    emit eas_status("Ring Detect Closed\n");
     serial->close();
 }
 
 void Automation::restart_eas_engine()
 {
+    emit eas_status("Restarting EAS Engine\n");
     close_ring_detect();
     init_ring_detect();
 }
@@ -94,6 +100,8 @@ void Automation::start_stream(QHostAddress stream_addr,quint16 stream_port,QStri
 
 void Automation::init_ring_detect()
 {
+    emit eas_status("Initialising Ring Detect\n");
+    ring_init = 0;
     QString port_num = settings.value( "eas comport" ).toString();
     channels.clear();
     channels.append(1);
@@ -118,38 +126,57 @@ void Automation::init_ring_detect()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
     connect(this,SIGNAL(stream_eas(QHostAddress,quint16,QString)),this,SLOT(start_stream(QHostAddress,quint16,QString)));
     check_timer->start(1);                                               // create timer with 1 ms resolution
-    qDebug("finished eas init");
+    emit eas_status("finished eas init\n");
+
 }
 
 void Automation::handleError()
 {
-    qDebug()<< "serial port error" << serial->errorString() << serial->error() << "\n";
+    emit eas_status( "serial port error" + serial->errorString() + QString::number( serial->error() ) + "\n" );
 }
 
 void Automation::check_eas_ring()
 {
-    if(serial->isOpen())
+
+    if(ring_init <= 10)
     {
-        if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live )
+        if(serial->isOpen())
+            if((serial->pinoutSignals() & QSerialPort::RingIndicatorSignal))  // if eas is connected
+            {
+                ring_init++;
+            }
+            else
+            {
+                emit eas_status("Ring not connected\n");
+            }
+        else
+            emit eas_status("Port not connected\n");
+    }
+    else
+    {
+        if(serial->isOpen())
         {
-            qDebug("sensed ring");
-            emit eas_ring();
-            eas_live=true;
-        }
-        else if( (serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live )
-        {
-            qDebug("sensed end of ring");
-            eas_live=false;
-            /// Stop and destroy encoder
-            //restart_encoder();
-            capture_eas_message();
+            if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live )
+            {
+                emit eas_status("sensed ring\n");
+                emit eas_ring();
+                eas_live=true;
+            }
+            else if( (serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live )
+            {
+                emit eas_status("sensed end of ring\n");
+                eas_live=false;
+                /// Stop and destroy encoder
+                //restart_encoder();
+                capture_eas_message();
+            }
         }
     }
 }
 
 void Automation::send_eas_message()
 {
-    qDebug("recieving EAS Message");
+    emit eas_status("recieving EAS Message\n");
     //start_encoder();
     send_eas_config(channels);
 }
@@ -157,7 +184,7 @@ void Automation::send_eas_message()
 void Automation::send_eas_config( QList<int> channel_list )
 {
     d2mux->eas_insert(channel_list);
-    qDebug("sent eas insert");
+    emit eas_status("sent eas insert\n");
 }
 
 void Automation::revert_eas_config( QList<int> channel_list )
@@ -191,6 +218,7 @@ void Automation::capture_eas_message()
     stream_port = 1234;
     emit stream_eas( stream_addr, stream_port, outputfile);
     ffmpeg->encode(inputfile,outputfile);
+    ffmpeg->ffplay( "udp://@239.0.0.220:1234" );
 
 }
 
@@ -201,6 +229,11 @@ void Automation::init_mux_control()
                             settings.value("Mux Debug Comport").toString() ,
                             settings.value("mux_output_port").toInt() ,this);
     connect(d2mux,SIGNAL(process_debug(QString)),this,SLOT(process_mux_debug(QString)));
+}
+void Automation::streaming_status(QString string)
+{
+    //qDebug() << "automation stream status " << string;
+    emit stream_status(string);
 }
 
 void Automation::restart_mux_control()
