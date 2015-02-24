@@ -5,6 +5,7 @@
 *Makefile
 *.Debug
 *.Release
+*.ts
 Windows_Binaries/Sample_Build_Directory/release/moc_automation.cpp
 Windows_Binaries/Sample_Build_Directory/release/moc_configure_eas.cpp
 Windows_Binaries/Sample_Build_Directory/release/moc_eas.cpp
@@ -30,6 +31,5 @@ Windows_Binaries/TS_Analyser_Build_Directory/ui_pcr_analyser_mainwindow.h
 Windows_Binaries/Ingest_Build_Directory/ui_ingest_dialog.h
 Windows_Binaries/Ingest_Build_Directory/release/moc_ffmpeg.cpp
 Windows_Binaries/Ingest_Build_Directory/release/moc_ingest_dialog.cpp
-*.ts
 Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_ffmpeg.cpp
 Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_ts_info.cpp
