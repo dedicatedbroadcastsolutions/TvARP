@@ -32,3 +32,4 @@ Windows_Binaries/Ingest_Build_Directory/release/moc_ffmpeg.cpp
 Windows_Binaries/Ingest_Build_Directory/release/moc_ingest_dialog.cpp
 Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_ffmpeg.cpp
 Windows_Binaries/TvARP_Sample_Build_Directory/release/moc_ts_info.cpp
+Windows_Binaries/TvARP_Sample_Build_Directory/release/Schedule_and_logs/mux_log.txt
