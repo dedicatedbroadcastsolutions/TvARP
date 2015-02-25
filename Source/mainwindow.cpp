@@ -91,7 +91,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->stream_status_display->verticalScrollBar()->setValue( ui->stream_status_display->verticalScrollBar()->maximum() );
     connect(automation,SIGNAL(stream_status(QString)),ui->stream_status_display,SLOT(insertPlainText(QString)));
     automation->restart_eas_engine();
-    automation->restart_mux_control();
+    ///automation->restart_mux_control();
 }
 
 MainWindow::~MainWindow()
@@ -379,6 +379,7 @@ void MainWindow::send_eas_config()
 
 void MainWindow::on_revert_eas_config_clicked()
 {
+    qDebug("sending revert command");
     automation->revert_eas_config(eas_ch);
 }
 
@@ -402,4 +403,10 @@ void MainWindow::on_test_eas_clicked()
 void MainWindow::on_show_vmon_clicked(bool checked)
 {
     automation->show_vmon = checked;
+}
+
+void MainWindow::on_send_eas_config_clicked()
+{
+    qDebug("sending config command");
+    send_eas_config();
 }

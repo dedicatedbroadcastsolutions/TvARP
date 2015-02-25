@@ -98,6 +98,7 @@ private slots:
     void on_ad_return_to_network_clicked();
     void on_test_eas_clicked();
     void on_show_vmon_clicked(bool checked);
+    void on_send_eas_config_clicked();
 };
 
 #endif // MAINWINDOW_H

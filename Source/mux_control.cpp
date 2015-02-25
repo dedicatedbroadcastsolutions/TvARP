@@ -34,6 +34,7 @@
 Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString comport, int out_port , QObject *parent) :
     QObject(parent)
 {
+    qDebug("mux constructor");
     mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
     //qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr << "mux output port" << out_port;
     splice_active = 0;
@@ -58,17 +59,18 @@ Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString compo
 
 Mux_Control::~Mux_Control()
 {
+    qDebug("mux destructor");
     // remove duplicate entries from channels
     QSet<int> ch_set;
     ch_set = channels.toSet();
     channels = QList<int>::fromSet(ch_set);
     if(splice_active&&channels.size()>0)
     {
-        emit mux_debug_status("returning to network");
+        emit mux_debug_status( ("returning to network \n" ));
         return_from_splice( channels );
     }
     udpSocket->close();
-    emit mux_debug_status("mux control destructor");
+    emit mux_debug_status( ("mux control destructor \n" ));
 }
 
 void Mux_Control::read_mux_debug()
@@ -88,12 +90,13 @@ void Mux_Control::read_mux_debug()
 
 void Mux_Control::handleError()
 {
-    emit mux_debug_status( "mux debug port error" + mux_debug->errorString() + QString::number(mux_debug->error()) ) ;
+    emit mux_debug_status( "mux debug port error" + mux_debug->errorString() + QString::number(mux_debug->error()) + "\n" ) ;
 }
 
 void Mux_Control::eas_insert( QList<int> channel_list)
 {
-    emit mux_debug_status( "eas insert on " + QString::number( channel_list[channel_list.size() ] ) ) ;
+    qDebug("eas insert");
+    emit mux_debug_status( "eas insert on " + QString::number( channel_list[channel_list.size()-1 ] )  + "\n") ;
     eas_active = 1;
     // remove duplicate entries from channel_list
     QSet<int> ch_set;
@@ -188,6 +191,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
         ///eas_start_datagram.append( (char)0x10 );
         eas_start_datagram.append( (char) 0x01 << output_port );   // // 0x10 Send on port IP-1    0x1 Send on port ASI-1
         //                                                                                        00000001
+        emit mux_debug_status("Insert EAS on port " + QString::number(output_port)  + "\n");
     //qDebug()<< "output port" << (char) 0x01 << output_port;
      // Reserved – Reserved for future use.     24 bits
         eas_start_datagram.append( (char)0xff );
