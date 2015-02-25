@@ -15,7 +15,7 @@ TS_Info::~TS_Info()
 
 Transport_Stream TS_Info::process_file (QString source_filename)
 {
-    emit status( ("analysing " + source_filename +"\n")) ;
+    emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"analysing " + source_filename +"\n")) ;
     QByteArray ts_packet;
     char packet[188];
     int bytes_read = 188;
@@ -94,7 +94,7 @@ Transport_Stream TS_Info::process_file (QString source_filename)
         ts_properties.kbitrate = kbitrate;
         ts_properties.info = info_list;
 
-    emit status( ("Bitrate Found " + QString::number(kbitrate) + " kbps" + "\n") ) ;
+    emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Bitrate Found " + QString::number(kbitrate) + " kbps" + "\n") ) ;
     return(ts_properties);
 }
 PCR TS_Info::getPCR(QByteArray packet)

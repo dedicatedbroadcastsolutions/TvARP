@@ -78,7 +78,7 @@ public slots:
     void process_mux_debug(QString data);
     void init_mux_control();
     void restart_mux_control();
-
+    void kill_ffmpeg();
     void start_stream(QHostAddress stream_addr, quint16, QString sourcefile);
     void restart_eas_engine();
     void init_ring_detect();
@@ -103,6 +103,7 @@ signals:
     void openFile(QString);
     void get_video_state();
     void mux_eas_log(QString);
+    void mux_log(QString);
     void eas_ring();
     void encoder_display(QString);
     void eas_status(QString);

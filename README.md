@@ -7,7 +7,7 @@ D2Mux 5020 multiplexer to create an ATSC TV Channel.  Initially the feature set 
 relay and insertion in to the digital domain from a standard analog EAS system.  Other features will be 
 added as possible.
 
-Current known bugs: Jitter on EAS UDP stream can be greater then 200ms which causes problems with
-insertion, and audio playback.
-
+To compile, open the .pro project file for the appropriate module with Qt Creator.  Make sure to set the
+build directory to be the sample build directory, and set the working directory to the release subfolder.
+These settings can be found in the projects tab under build and run respectively.
 _________________________________________________________________________________________________________

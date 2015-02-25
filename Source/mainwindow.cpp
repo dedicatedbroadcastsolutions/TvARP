@@ -73,7 +73,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QTextDocument * doc = ui->mux_log_display->document();
     doc->setMaximumBlockCount(maxblock);
     connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display,SLOT( insertPlainText(QString) ) );
-    connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
+    connect(automation,SIGNAL(mux_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
 
     ui->encoder_display->ensureCursorVisible();
     ui->encoder_display->moveCursor(QTextCursor::End);
@@ -134,12 +134,12 @@ void MainWindow::readSettings()
         settings.setValue("Mux Debug Comport", ui->mux_debug_comport->currentText());
 
     if( settings.contains("EAS Stream Address") )
-        ui->mux_ctrl_addr->setText( settings.value("EAS Stream Address").toString() );
+        ui->eas_stream_address->setText( settings.value("EAS Stream Address").toString() );
     else
         settings.setValue("EAS Stream Address", ui->mux_ctrl_addr->text() );
 
     if( settings.contains("EAS Stream Port") )
-        ui->mux_ctrl_port->setValue( settings.value("EAS Stream Port").toInt() );
+        ui->eas_stream_port->setValue( settings.value("EAS Stream Port").toInt() );
     else
         settings.setValue("EAS Stream Port", ui->mux_ctrl_port->value());
 
@@ -201,6 +201,7 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_restart_eas_clicked()
 {
+    automation->kill_ffmpeg();
     settings.setValue( "EAS Stream Address",ui->eas_stream_address->text());
     settings.setValue( "EAS Stream Port" ,ui->eas_stream_port->value());
     settings.setValue( "eas video device",ui->eas_video_device->currentText() );
@@ -391,5 +392,7 @@ void MainWindow::on_ad_return_to_network_clicked()
 
 void MainWindow::on_test_eas_clicked()
 {
+    automation->kill_ffmpeg();
+    QThread::usleep(150);
     automation->capture_eas_message();
 }

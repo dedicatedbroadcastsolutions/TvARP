@@ -4,16 +4,43 @@ FFmpeg::FFmpeg( QObject *parent) :
     QObject(parent)
 {
     mInputPlayProcess = new QProcess(this);
-    mOutputPlayProcess = new QProcess(this);
+    //mOutputPlayProcess = new QProcess(this);
     mTranscodingProcess = new QProcess(this);
     connect(mTranscodingProcess, SIGNAL(started()), this, SLOT(processStarted()));
     connect(mTranscodingProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(readyReadStandardOutput()));
     connect(mTranscodingProcess, SIGNAL(finished(int)), this, SLOT(encodingFinished()));
+
+    connect(mInputPlayProcess, SIGNAL(started()), this, SLOT(ffplay_processStarted()));
+    connect(mInputPlayProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(readyread_ffplay()));
+    connect(mInputPlayProcess, SIGNAL(finished(int)), this, SLOT(playFinished()));
 }
 
 FFmpeg::~FFmpeg()
 {
+    kill();
+}
 
+void FFmpeg::playFinished()
+{
+    emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss") + "  "+"play finished\n");
+}
+
+void FFmpeg::ffplay_processStarted()
+{
+    emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss") + "  "+"ffplay process started\n");
+}
+
+void FFmpeg::readyread_ffplay()
+{
+    emit ffplay_stdout(mInputPlayProcess->readAllStandardOutput());
+}
+
+void FFmpeg::kill()
+{
+    mInputPlayProcess->kill();
+    mInputPlayProcess->waitForFinished();
+    mTranscodingProcess->kill();
+    mTranscodingProcess->waitForFinished();
 }
 
 void FFmpeg::processStarted()
@@ -69,13 +96,11 @@ void FFmpeg::encodingFinished()
 {
     if (QFile::exists(encode_fileName))
     {
-        qDebug("encoding successful");
-        emit transcode_status(1,"Transcoding Status: Successful!");
+        emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Transcoding Status: Successful! \n");
     }
     else
     {
-        qDebug("encoding failed");
-        emit transcode_status(0,"Transcoding Status: Failed!");
+        emit ffmpeg_status( QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Transcoding Status: Failed! \n");
     }
 }
 
@@ -86,7 +111,10 @@ void FFmpeg::ffplay(QString inputfile)
     program = QFileInfo(program).absoluteFilePath();
     QStringList arguments;
     //arguments << "video_size" << "172x120";
+
     arguments << inputfile;
+
+    emit ffmpeg_status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss") + "  "+ "FFplay " + inputfile + "\n" ));
     if(mInputPlayProcess->state()==0)
         mInputPlayProcess->start(program, arguments);
 }

@@ -15,13 +15,18 @@ class FFmpeg : public QObject
   public slots:
     void encode(QString inputfile,QString outputfile);
     void ffplay(QString inputfile);
+    void kill();
   signals:
-    void transcode_status( int , QString );
+    void ffmpeg_status( QString );
     void ffmpeg_stdout(QString);
     void encode_started();
+    void ffplay_stdout(QString);
   private slots:
      void readyReadStandardOutput();
      void processStarted();
+     void ffplay_processStarted();
+     void readyread_ffplay();
+     void playFinished();
      void encodingFinished();
   private:
     QProcess *mTranscodingProcess;

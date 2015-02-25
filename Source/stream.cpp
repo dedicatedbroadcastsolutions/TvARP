@@ -50,23 +50,23 @@ stream::stream(QObject *parent) :
 
 stream::~stream()
 {
-    emit status("stopping stream\n");
+    emit status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"stopping stream\n");
     worker->quit = true;
     workerThread.quit();
     workerThread.wait();
-    emit status("Stream destructor finished\n");
+    emit status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Stream destructor finished\n");
 }
 
 void stream::stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename )
 {
-    emit status("Starting worker thread \n");
+    emit status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Starting worker thread \n");
     emit start_streaming( stream_addr , stream_port , source_filename);
 }
 
 void stream::done_with_worker()
 {
     emit done_with_stream();
-    emit status("done with stream signal sent\n");
+    emit status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"done with stream signal sent\n");
 }
 
 void stream::ts_info(QString filename)
@@ -93,8 +93,8 @@ Worker::Worker()
 
 Worker::~Worker()
 {
-    emit work_status("Closing Stream Socket\n");
-    emit work_status("worker destructor finished\n");
+    emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Closing Stream Socket\n");
+    emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"worker destructor finished\n");
 }
 
 void Worker::read_datagram()
@@ -138,7 +138,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             udp_streaming_socket = new QUdpSocket(this);
             read_datagram();
             elapsed_timer.start();
-            emit work_status("starting stream\n");
+            emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"starting stream\n");
             while( !datagram.isEmpty() && !quit)
             {
                 while(elapsed_timer.nsecsElapsed() <= timer_period)
@@ -166,5 +166,5 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             readfile.close();
             udp_streaming_socket->close();
         }
-        emit work_status("finished stream\n");
+        emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"finished stream\n");
 }

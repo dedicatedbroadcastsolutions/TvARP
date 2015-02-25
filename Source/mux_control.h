@@ -53,6 +53,7 @@ public slots:
     void read_mux_debug();
 signals:
     void process_debug(QString);
+    void mux_debug_status(QString);
 private slots:
 
 private:

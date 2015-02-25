@@ -35,7 +35,7 @@ Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString compo
     QObject(parent)
 {
     mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
-    qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr << "mux output port" << out_port;
+    //qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr << "mux output port" << out_port;
     splice_active = 0;
     eas_active = 0;
     udpSocket = new QUdpSocket(this);
@@ -64,11 +64,11 @@ Mux_Control::~Mux_Control()
     channels = QList<int>::fromSet(ch_set);
     if(splice_active&&channels.size()>0)
     {
-        qDebug("returning to network");
+        emit mux_debug_status("returning to network");
         return_from_splice( channels );
     }
     udpSocket->close();
-    qDebug("mux control destructor");
+    emit mux_debug_status("mux control destructor");
 }
 
 void Mux_Control::read_mux_debug()
@@ -88,12 +88,12 @@ void Mux_Control::read_mux_debug()
 
 void Mux_Control::handleError()
 {
-    qDebug() << "mux debug port error" << mux_debug->errorString() << mux_debug->error();
+    emit mux_debug_status( "mux debug port error" + mux_debug->errorString() + QString::number(mux_debug->error()) ) ;
 }
 
 void Mux_Control::eas_insert( QList<int> channel_list)
 {
-    qDebug()<< "eas insert on "<< channel_list;
+    emit mux_debug_status( "eas insert on " + QString::number( channel_list[channel_list.size() ] ) ) ;
     eas_active = 1;
     // remove duplicate entries from channel_list
     QSet<int> ch_set;
@@ -188,7 +188,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
         ///eas_start_datagram.append( (char)0x10 );
         eas_start_datagram.append( (char) 0x01 << output_port );   // // 0x10 Send on port IP-1    0x1 Send on port ASI-1
         //                                                                                        00000001
-    qDebug()<< "output port" << (char) 0x01 << output_port;
+    //qDebug()<< "output port" << (char) 0x01 << output_port;
      // Reserved – Reserved for future use.     24 bits
         eas_start_datagram.append( (char)0xff );
         eas_start_datagram.append( (char)0xff );
