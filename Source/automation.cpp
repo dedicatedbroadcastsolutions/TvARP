@@ -254,7 +254,7 @@ void Automation::restart_mux_control()
 void Automation::process_mux_debug(QString data)
 {
     emit mux_log(data);
-    if(!data.contains( QRegExp("arp")) )
+    //if(!data.contains( QRegExp("arp")) )
         emit mux_eas_log(data);
 }
 
