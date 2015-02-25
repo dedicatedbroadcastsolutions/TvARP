@@ -13,7 +13,7 @@ class FFmpeg : public QObject
     ~FFmpeg();
 
   public slots:
-    void encode(QString inputfile,QString outputfile);
+    void encode(QString inputfile, QString outputfile, bool eas);
     void ffplay(QString inputfile);
     void kill();
   signals:

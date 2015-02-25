@@ -90,6 +90,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->stream_status_display->moveCursor(QTextCursor::End);
     ui->stream_status_display->verticalScrollBar()->setValue( ui->stream_status_display->verticalScrollBar()->maximum() );
     connect(automation,SIGNAL(stream_status(QString)),ui->stream_status_display,SLOT(insertPlainText(QString)));
+    automation->restart_eas_engine();
+    automation->restart_mux_control();
 }
 
 MainWindow::~MainWindow()
@@ -394,5 +396,10 @@ void MainWindow::on_test_eas_clicked()
 {
     automation->kill_ffmpeg();
     QThread::usleep(150);
-    automation->capture_eas_message();
+    automation->capture_eas_message(true);
+}
+
+void MainWindow::on_show_vmon_clicked(bool checked)
+{
+    automation->show_vmon = checked;
 }

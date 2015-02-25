@@ -97,6 +97,7 @@ private slots:
     void ad_insert();
     void on_ad_return_to_network_clicked();
     void on_test_eas_clicked();
+    void on_show_vmon_clicked(bool checked);
 };
 
 #endif // MAINWINDOW_H

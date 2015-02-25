@@ -48,7 +48,7 @@ void FFmpeg::processStarted()
     emit encode_started();
 }
 
-void FFmpeg::encode(QString inputfile,QString outputfile)
+void FFmpeg::encode(QString inputfile,QString outputfile, bool test)
 {
     QString program;
     program = "./FFmpeg/bin/ffmpeg.exe";
@@ -57,10 +57,16 @@ void FFmpeg::encode(QString inputfile,QString outputfile)
     QStringList arguments;
 
     arguments.clear();
-    arguments << "-v" << "9" << "-loglevel" << "99" << "-re"
-    << "-i" << inputfile
+    //arguments << "-v" << "9" << "-loglevel" << "99" ;
+    arguments  << "-re" << "-rtbufsize" << "10000k";
 
-    << "-f" << "mpegts"
+    if(!test)
+        arguments <<"-f" << "dshow" <<"-crossbar_video_input_pin_number" <<"1"
+                  << "-i" <<  "video=WDM 2861 Capture:audio=Line (USB EMP Audio Device)";
+    else
+        arguments << "-i" << inputfile;       // to read from a file
+
+    arguments << "-f" << "mpegts"
     << "-muxrate" << "4000k"
     << "-mpegts_transport_stream_id" << "8471"
     << "-metadata" << "service_provider=\"K33EJ-D\""
@@ -82,6 +88,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile)
     << "-tables_version" << "10"
     << "-threads" << "1"
     << outputfile;
+
 
     mTranscodingProcess->setProcessChannelMode(QProcess::MergedChannels);
     mTranscodingProcess->start(program, arguments);

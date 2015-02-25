@@ -62,7 +62,7 @@ public:
     bool visible;
     QTimer *timer;
     int state,isOpen;
-
+    bool show_vmon;
     QString audio_dev ;
     QString video_dev ;
     QList<int> channels;
@@ -85,7 +85,7 @@ public slots:
     void close_ring_detect();
     void handleError();
     void check_eas_ring();
-    void capture_eas_message();
+    void capture_eas_message(bool test);
     void send_eas_message();
     void check_time();
     void video_state(int);
@@ -97,6 +97,7 @@ public slots:
     void get_ts_info(QString filename);
     void streaming_status( QString string );
 signals:
+    void init();
     void bitrate(int kbitrate);
     void event_log_output(QString);
     void play();

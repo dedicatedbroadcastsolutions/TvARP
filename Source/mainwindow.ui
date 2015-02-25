@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>838</width>
+    <width>857</width>
     <height>494</height>
    </rect>
   </property>
@@ -57,16 +57,6 @@
              <string>EAS Configuration</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_3">
-             <item row="0" column="5">
-              <widget class="QPushButton" name="get_input_devices">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="text">
-                <string>Detect Input Devices</string>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="4">
               <widget class="QLabel" name="label_5">
                <property name="text">
@@ -111,7 +101,7 @@
                </item>
               </widget>
              </item>
-             <item row="0" column="6">
+             <item row="0" column="7">
               <widget class="QPushButton" name="test_eas">
                <property name="enabled">
                 <bool>true</bool>
@@ -124,23 +114,13 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="5">
+             <item row="1" column="6">
               <widget class="QPushButton" name="config_eas">
                <property name="enabled">
                 <bool>false</bool>
                </property>
                <property name="text">
                 <string>Detailed Config</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="6">
-              <widget class="QPushButton" name="restart_eas">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="text">
-                <string>Restart EAS Engine</string>
                </property>
               </widget>
              </item>
@@ -174,6 +154,26 @@
                  <string>WDM 2861 Capture</string>
                 </property>
                </item>
+              </widget>
+             </item>
+             <item row="1" column="7">
+              <widget class="QPushButton" name="restart_eas">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="text">
+                <string>Restart EAS Engine</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="QPushButton" name="get_input_devices">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Detect Input Devices</string>
+               </property>
               </widget>
              </item>
              <item row="0" column="2">
@@ -260,6 +260,13 @@
               <widget class="QLabel" name="label_18">
                <property name="text">
                 <string>EAS Ring Detect</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="5">
+              <widget class="QRadioButton" name="show_vmon">
+               <property name="text">
+                <string>Show Video Monitor</string>
                </property>
               </widget>
              </item>
@@ -1022,7 +1029,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>838</width>
+     <width>857</width>
      <height>18</height>
     </rect>
    </property>
