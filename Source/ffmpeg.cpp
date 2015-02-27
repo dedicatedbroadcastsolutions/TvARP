@@ -41,6 +41,7 @@ void FFmpeg::kill()
     mInputPlayProcess->waitForFinished();
     mTranscodingProcess->kill();
     mTranscodingProcess->waitForFinished();
+    qDebug("transcode processes finished");
 }
 
 void FFmpeg::processStarted()

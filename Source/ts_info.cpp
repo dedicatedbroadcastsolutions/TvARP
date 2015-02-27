@@ -35,19 +35,23 @@ Transport_Stream TS_Info::process_file (QString source_filename)
     QString packet_info;
     QStringList info_list;
     PCR pcr;
-
+    int pcr_count;
+    pcr_count = 60;
+    int bitrate_count;
+    bitrate_count = 0;
+    quint64 msec_per_pkt = 0;
         while(!file.open(QIODevice::ReadOnly))
         {
            // qDebug("File not opened");
             QThread::msleep(100);
         }
-        QThread::msleep(1000);
+        QThread::msleep(50);
         packets_read=0;
 
-        while(pcr_read<=5)
+        while(pcr_read<pcr_count)
         {
            // qDebug("reading packets");
-            QThread::usleep( 750 );
+            QThread::msleep( msec_per_pkt+1 );
             ts_packet.clear();
             bytes_read  = file.read(packet,188);
             packets_read++;
@@ -68,11 +72,25 @@ Transport_Stream TS_Info::process_file (QString source_filename)
                     packet_info.clear();
                     pcr = getPCR( ts_packet );
                     pcr_read++;
-                    packets_since_pcr = packets_read - last_pcr_packet;
-                    bytes = packets_since_pcr*188;
-                    delta_pcr = pcr.composite - last_pcr;
-                    ms_between_pcr = delta_pcr/27000;
-                    kbitrate = (8*bytes)/ms_between_pcr;
+                    packets_since_pcr = packets_read-2 - last_pcr_packet;
+                    if(pcr_read>2)
+                    {
+                        bitrate_count++;
+                        //qDebug()<< packets_since_pcr;
+                        bytes = packets_since_pcr*188;
+                        delta_pcr = pcr.composite - last_pcr;
+                        ms_between_pcr = delta_pcr/27000;
+                        //qDebug() << "ms" << ms_between_pcr;
+                        msec_per_pkt = ms_between_pcr/packets_since_pcr;
+                        kbitrate = kbitrate + (8*bytes)/ms_between_pcr;
+                    }
+
+                    if(pcr_read==pcr_count)
+                    {
+                        qDebug()<< "bitrate count " << bitrate_count << "bitrate" << kbitrate;
+                        bitrate_count = bitrate_count;
+                        kbitrate = kbitrate/bitrate_count;
+
                     packet_info = " Bitrate (kbps) " + QString::number(kbitrate) +
                                   " Packets since last PCR " + QString::number(packets_since_pcr) +
                                   " bytes since last PCR "   + QString::number(bytes) +
@@ -84,9 +102,9 @@ Transport_Stream TS_Info::process_file (QString source_filename)
                                   " PID = "            + QString::number(pid)            +
                                   " from packet "      + QString::number(packets_read+1)        ;
                     info_list.append(packet_info);
+                    }
                     last_pcr_packet = packets_read;
                     last_pcr = pcr.composite;
-
                 }
             }
         }

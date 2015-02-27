@@ -1,938 +1,878 @@
-Header = dead 40
-Arp Packet RcvdPktCnt =  35
-Header = dead 40
-Arp Packet RcvdPktCnt =  36
-Header = dead 40
-Arp Packet RcvdPktCnt =  37
-Header = dead 40
-Arp Packet RcvdPktCnt =  38
-Header = dead 40
-Arp Packet RcvdPktCnt =  39
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b
-Header = dead 40
-Arp Packet RcvdPktCnt =  3c
-Header = dead 40
-Arp Packet RcvdPktCnt =  3d
-Header = dead 40
-Arp Packet RcvdPktCnt =  3e
+02/25/15 21:12:05 DEBUG- EAS Msg Received sourceAddr: C0A8002D, destAddr: C0A80096
+
 Header = dead 40
-Arp Packet RcvdPktCnt =  3f
+Arp Packet RcvdPktCnt =  822
+02/25/15 21:12:07 DEBUG- Start EAS Insert
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
+
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
+
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
+
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
+
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
+
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
+
+02/25/15 21:12:07 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
+
+02/25/15 21:12:07 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
+
+02/25/15 21:12:07 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
+
+02/25/15 21:12:07 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
+
+02/25/15 21:12:07 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
+
 Header = dead 40
-Arp Packet RcvdPktCnt =  40
+Arp Packet RcvdPktCnt =  823
 Header = dead 40
-Arp Packet RcvdPktCnt =  41
+Arp Packet RcvdPktCnt =  824
+02/25/15 21:12:12 DEBUG- Stop EAS Insert
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
+
+02/25/15 21:12:12 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
+
 Header = dead 40
-Arp Packet RcvdPktCnt =  42
+Arp Packet RcvdPktCnt =  825
 Header = dead 40
-Arp Packet RcvdPktCnt =  43
+Arp Packet RcvdPktCnt =  826
 Header = dead 40
-Arp Packet RcvdPktCnt =  44
-02/25/15 19:21:43 DEBUG- Start EAS Insert
-02/25/15 19:21:43 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
+Arp Packet RcvdPktCnt =  827
+02/25/15 21:12:18 DEBUG- Start EAS Insert
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
 
-02/25/15 19:21:43 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
 
-02/25/15 19:21:43 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
 
-02/25/15 19:21:43 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
 
-02/25/15 19:21:43 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
 
-02/25/15 19:21:43 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
 
-02/25/15 19:21:43 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
 
-02/25/15 19:21:43 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
 
-02/25/15 19:21:43 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
 
-02/25/15 19:21:43 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
 
-02/25/15 19:21:43 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
 
-02/25/15 19:21:43 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
 
-02/25/15 19:21:43 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
 
-02/25/15 19:21:44 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
+Header = dead 40
+Arp Packet RcvdPktCnt =  828
+02/25/15 21:12:18 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
 
-02/25/15 19:21:44 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
+02/25/15 21:12:18 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
 
-02/25/15 19:21:44 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
+02/25/15 21:12:18 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
 
-02/25/15 19:21:44 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
+02/25/15 21:12:18 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
 
-02/25/15 19:21:44 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
+02/25/15 21:12:18 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
 
 Header = dead 40
-Arp Packet RcvdPktCnt =  45
+Arp Packet RcvdPktCnt =  829
 Header = dead 40
-Arp Packet RcvdPktCnt =  46
+Arp Packet RcvdPktCnt =  82a
 Header = dead 40
-Arp Packet RcvdPktCnt =  47
+Arp Packet RcvdPktCnt =  82b
 Header = dead 40
-Arp Packet RcvdPktCnt =  48
+Arp Packet RcvdPktCnt =  82c
 Header = dead 40
-Arp Packet RcvdPktCnt =  49
+Arp Packet RcvdPktCnt =  82d
 Header = dead 40
-Arp Packet RcvdPktCnt =  4a
+Arp Packet RcvdPktCnt =  82e
 Header = dead 40
-Arp Packet RcvdPktCnt =  4b
+Arp Packet RcvdPktCnt =  82f
 Header = dead 40
-Arp Packet RcvdPktCnt =  4c
+Arp Packet RcvdPktCnt =  830
 Header = dead 40
-Arp Packet RcvdPktCnt =  4d
+Arp Packet RcvdPktCnt =  831
 Header = dead 40
-Arp Packet RcvdPktCnt =  4e
+Arp Packet RcvdPktCnt =  832
 Header = dead 40
-Arp Packet RcvdPktCnt =  4f
+Arp Packet RcvdPktCnt =  833
 Header = dead 40
-Arp Packet RcvdPktCnt =  50
+Arp Packet RcvdPktCnt =  834
 Header = dead 40
-Arp Packet RcvdPktCnt =  51
+Arp Packet RcvdPktCnt =  835
 Header = dead 40
-Arp Packet RcvdPktCnt =  52
+Arp Packet RcvdPktCnt =  836
 Header = dead 40
-Arp Packet RcvdPktCnt =  53
+Arp Packet RcvdPktCnt =  837
 Header = dead 40
-Arp Packet RcvdPktCnt =  54
+Arp Packet RcvdPktCnt =  838
 Header = dead 40
-Arp Packet RcvdPktCnt =  55
+Arp Packet RcvdPktCnt =  839
 Header = dead 40
-Arp Packet RcvdPktCnt =  56
+Arp Packet RcvdPktCnt =  83a
 Header = dead 40
-Arp Packet RcvdPktCnt =  57
+Arp Packet RcvdPktCnt =  83b
 Header = dead 40
-Arp Packet RcvdPktCnt =  58
+Arp Packet RcvdPktCnt =  83c
 Header = dead 40
-Arp Packet RcvdPktCnt =  59
+Arp Packet RcvdPktCnt =  83d
 Header = dead 40
-Arp Packet RcvdPktCnt =  5a
+Arp Packet RcvdPktCnt =  83e
 Header = dead 40
-Arp Packet RcvdPktCnt =  5b
+Arp Packet RcvdPktCnt =  83f
 Header = dead 40
-Arp Packet RcvdPktCnt =  5c
-02/25/15 19:22:41 DEBUG- Stop EAS Insert
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
+Arp Packet RcvdPktCnt =  840
+02/25/15 21:13:08 DEBUG- Stop EAS Insert
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
 
-02/25/15 19:22:41 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
+02/25/15 21:13:08 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
 
-Header = dead 40
-Arp Packet RcvdPktCnt =  5d
-Header = dead 40
-Arp Packet RcvdPktCnt =  5e
-Header = dead 40
-Arp Packet RcvdPktCnt =  5f
-Header = dead 40
-Arp Packet RcvdPktCnt =  60
 Header = dead 40
-Arp Packet RcvdPktCnt =  61
+Arp Packet RcvdPktCnt =  841
 Header = dead 40
-Arp Packet RcvdPktCnt =  62
+Arp Packet RcvdPktCnt =  842
 Header = dead 40
-Arp Packet RcvdPktCnt =  63
+Arp Packet RcvdPktCnt =  843
 Header = dead 40
-Arp Packet RcvdPktCnt =  64
+Arp Packet RcvdPktCnt =  844
 Header = dead 40
-Arp Packet RcvdPktCnt =  65
+Arp Packet RcvdPktCnt =  845
 Header = dead 40
-Arp Packet RcvdPktCnt =  66
+Arp Packet RcvdPktCnt =  846
 Header = dead 40
-Arp Packet RcvdPktCnt =  67
+Arp Packet RcvdPktCnt =  847
 Header = dead 40
-Arp Packet RcvdPktCnt =  68
+Arp Packet RcvdPktCnt =  848
 Header = dead 40
-Arp Packet RcvdPktCnt =  69
+Arp Packet RcvdPktCnt =  849
 Header = dead 40
-Arp Packet RcvdPktCnt =  6a
+Arp Packet RcvdPktCnt =  84a
 Header = dead 40
-Arp Packet RcvdPktCnt =  6b
+Arp Packet RcvdPktCnt =  84b
 Header = dead 40
-Arp Packet RcvdPktCnt =  6c
+Arp Packet RcvdPktCnt =  84c
 Header = dead 40
-Arp Packet RcvdPktCnt =  6d
+Arp Packet RcvdPktCnt =  84d
 Header = dead 40
-Arp Packet RcvdPktCnt =  6e
+Arp Packet RcvdPktCnt =  84e
 Header = dead 40
-Arp Packet RcvdPktCnt =  6f
+Arp Packet RcvdPktCnt =  84f
 Header = dead 40
-Arp Packet RcvdPktCnt =  70
+Arp Packet RcvdPktCnt =  850
 Header = dead 40
-Arp Packet RcvdPktCnt =  71
+Arp Packet RcvdPktCnt =  851
 Header = dead 40
-Arp Packet RcvdPktCnt =  72
+Arp Packet RcvdPktCnt =  852
 Header = dead 40
-Arp Packet RcvdPktCnt =  73
+Arp Packet RcvdPktCnt =  853
 Header = dead 40
-Arp Packet RcvdPktCnt =  74
+Arp Packet RcvdPktCnt =  854
 Header = dead 40
-Arp Packet RcvdPktCnt =  75
+Arp Packet RcvdPktCnt =  855
 Header = dead 40
-Arp Packet RcvdPktCnt =  76
+Arp Packet RcvdPktCnt =  856
 Header = dead 40
-Arp Packet RcvdPktCnt =  77
+Arp Packet RcvdPktCnt =  857
 Header = dead 40
-Arp Packet RcvdPktCnt =  78
+Arp Packet RcvdPktCnt =  858
 Header = dead 40
-Arp Packet RcvdPktCnt =  79
+Arp Packet RcvdPktCnt =  859
 Header = dead 40
-Arp Packet RcvdPktCnt =  7a
+Arp Packet RcvdPktCnt =  85a
 Header = dead 40
-Arp Packet RcvdPktCnt =  7b
-Header = dead 40
-Arp Packet RcvdPktCnt =  7c
+Arp Packet RcvdPktCnt =  97e
+02/25/15 21:26:19 DEBUG- EAS Msg Received sourceAddr: C0A86405, destAddr: C0A80096
+
 Header = dead 40
-Arp Packet RcvdPktCnt =  7d
+Arp Packet RcvdPktCnt =  97f
 Header = dead 40
-Arp Packet RcvdPktCnt =  7e
+Arp Packet RcvdPktCnt =  980
 Header = dead 40
-Arp Packet RcvdPktCnt =  7f
+Arp Packet RcvdPktCnt =  981
+02/25/15 21:26:21 DEBUG- Start EAS Insert
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
+
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
+
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
+
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
+
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
+
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
+
+02/25/15 21:26:21 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
+
+02/25/15 21:26:21 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
+
+02/25/15 21:26:21 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
+
+02/25/15 21:26:21 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
+
+02/25/15 21:26:21 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
+
 Header = dead 40
-Arp Packet RcvdPktCnt =  80
+Arp Packet RcvdPktCnt =  982
 Header = dead 40
-Arp Packet RcvdPktCnt =  81
+Arp Packet RcvdPktCnt =  983
 Header = dead 40
-Arp Packet RcvdPktCnt =  82
+Arp Packet RcvdPktCnt =  984
 Header = dead 40
-Arp Packet RcvdPktCnt =  83
+Arp Packet RcvdPktCnt =  985
+02/25/15 21:26:30 DEBUG- Stop EAS Insert
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
+
+02/25/15 21:26:30 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
+
 Header = dead 40
-Arp Packet RcvdPktCnt =  84
+Arp Packet RcvdPktCnt =  986
 Header = dead 40
-Arp Packet RcvdPktCnt =  85
+Arp Packet RcvdPktCnt =  987
 Header = dead 40
-Arp Packet RcvdPktCnt =  86
+Arp Packet RcvdPktCnt =  988
 Header = dead 40
-Arp Packet RcvdPktCnt =  87
+Arp Packet RcvdPktCnt =  989
 Header = dead 40
-Arp Packet RcvdPktCnt =  88
+Arp Packet RcvdPktCnt =  98a
 Header = dead 40
-Arp Packet RcvdPktCnt =  89
+Arp Packet RcvdPktCnt =  98b
 Header = dead 40
-Arp Packet RcvdPktCnt =  8a
+Arp Packet RcvdPktCnt =  98c
 Header = dead 40
-Arp Packet RcvdPktCnt =  8b
+Arp Packet RcvdPktCnt =  98d
 Header = dead 40
-Arp Packet RcvdPktCnt =  8c
+Arp Packet RcvdPktCnt =  98e
 Header = dead 40
-Arp Packet RcvdPktCnt =  8d
+Arp Packet RcvdPktCnt =  98f
 Header = dead 40
-Arp Packet RcvdPktCnt =  8e
+Arp Packet RcvdPktCnt =  990
 Header = dead 40
-Arp Packet RcvdPktCnt =  8f
+Arp Packet RcvdPktCnt =  991
 Header = dead 40
-Arp Packet RcvdPktCnt =  90
+Arp Packet RcvdPktCnt =  992
 Header = dead 40
-Arp Packet RcvdPktCnt =  91
+Arp Packet RcvdPktCnt =  993
 Header = dead 40
-Arp Packet RcvdPktCnt =  92
+Arp Packet RcvdPktCnt =  994
 Header = dead 40
-Arp Packet RcvdPktCnt =  93
+Arp Packet RcvdPktCnt =  995
 Header = dead 40
-Arp Packet RcvdPktCnt =  94
+Arp Packet RcvdPktCnt =  996
 Header = dead 40
-Arp Packet RcvdPktCnt =  95
+Arp Packet RcvdPktCnt =  997
 Header = dead 40
-Arp Packet RcvdPktCnt =  96
+Arp Packet RcvdPktCnt =  998
 Header = dead 40
-Arp Packet RcvdPktCnt =  97
+Arp Packet RcvdPktCnt =  999
 Header = dead 40
-Arp Packet RcvdPktCnt =  98
+Arp Packet RcvdPktCnt =  99a
 Header = dead 40
-Arp Packet RcvdPktCnt =  99
+Arp Packet RcvdPktCnt =  99b
 Header = dead 40
-Arp Packet RcvdPktCnt =  9a
+Arp Packet RcvdPktCnt =  99c
 Header = dead 40
-Arp Packet RcvdPktCnt =  9b
+Arp Packet RcvdPktCnt =  99d
 Header = dead 40
-Arp Packet RcvdPktCnt =  9c
+Arp Packet RcvdPktCnt =  99e
 Header = dead 40
-Arp Packet RcvdPktCnt =  9d
+Arp Packet RcvdPktCnt =  99f
 Header = dead 40
-Arp Packet RcvdPktCnt =  9e
+Arp Packet RcvdPktCnt =  9a0
 Header = dead 40
-Arp Packet RcvdPktCnt =  9f
+Arp Packet RcvdPktCnt =  9a1
 Header = dead 40
-Arp Packet RcvdPktCnt =  a0
+Arp Packet RcvdPktCnt =  9a2
 Header = dead 40
-Arp Packet RcvdPktCnt =  a1
+Arp Packet RcvdPktCnt =  9a3
 Header = dead 40
-Arp Packet RcvdPktCnt =  a2
+Arp Packet RcvdPktCnt =  9a4
 Header = dead 40
-Arp Packet RcvdPktCnt =  a3
+Arp Packet RcvdPktCnt =  9a5
 Header = dead 40
-Arp Packet RcvdPktCnt =  a4
+Arp Packet RcvdPktCnt =  9a6
 Header = dead 40
-Arp Packet RcvdPktCnt =  a5
+Arp Packet RcvdPktCnt =  9a7
 Header = dead 40
-Arp Packet RcvdPktCnt =  a6
+Arp Packet RcvdPktCnt =  9a8
 Header = dead 40
-Arp Packet RcvdPktCnt =  a7
+Arp Packet RcvdPktCnt =  9a9
 Header = dead 40
-Arp Packet RcvdPktCnt =  a8
+Arp Packet RcvdPktCnt =  9aa
 Header = dead 40
-Arp Packet RcvdPktCnt =  a9
+Arp Packet RcvdPktCnt =  9ab
 Header = dead 40
-Arp Packet RcvdPktCnt =  aa
+Arp Packet RcvdPktCnt =  9ac
 Header = dead 40
-Arp Packet RcvdPktCnt =  ab
+Arp Packet RcvdPktCnt =  9ad
 Header = dead 40
-Arp Packet RcvdPktCnt =  ac
+Arp Packet RcvdPktCnt =  9ae
 Header = dead 40
-Arp Packet RcvdPktCnt =  ad
+Arp Packet RcvdPktCnt =  9af
 Header = dead 40
-Arp Packet RcvdPktCnt =  ae
+Arp Packet RcvdPktCnt =  9b0
 Header = dead 40
-Arp Packet RcvdPktCnt =  af
+Arp Packet RcvdPktCnt =  9b1
 Header = dead 40
-Arp Packet RcvdPktCnt =  b0
+Arp Packet RcvdPktCnt =  9b2
 Header = dead 40
-Arp Packet RcvdPktCnt =  b1
+Arp Packet RcvdPktCnt =  9b3
 Header = dead 40
-Arp Packet RcvdPktCnt =  b2
+Arp Packet RcvdPktCnt =  9b4
 Header = dead 40
-Arp Packet RcvdPktCnt =  b3
+Arp Packet RcvdPktCnt =  9b5
 Header = dead 40
-Arp Packet RcvdPktCnt =  b4
+Arp Packet RcvdPktCnt =  9b6
 Header = dead 40
-Arp Packet RcvdPktCnt =  b5
+Arp Packet RcvdPktCnt =  9b7
 Header = dead 40
-Arp Packet RcvdPktCnt =  b6
+Arp Packet RcvdPktCnt =  9b8
 Header = dead 40
-Arp Packet RcvdPktCnt =  b7
+Arp Packet RcvdPktCnt =  9b9
 Header = dead 40
-Arp Packet RcvdPktCnt =  b8
+Arp Packet RcvdPktCnt =  9ba
 Header = dead 40
-Arp Packet RcvdPktCnt =  b9
+Arp Packet RcvdPktCnt =  9bb
 Header = dead 40
-Arp Packet RcvdPktCnt =  ba
+Arp Packet RcvdPktCnt =  9bc
 Header = dead 40
-Arp Packet RcvdPktCnt =  bb
+Arp Packet RcvdPktCnt =  9bd
 Header = dead 40
-Arp Packet RcvdPktCnt =  bc
+Arp Packet RcvdPktCnt =  9be
 Header = dead 40
-Arp Packet RcvdPktCnt =  bd
+Arp Packet RcvdPktCnt =  9bf
 Header = dead 40
-Arp Packet RcvdPktCnt =  be
+Arp Packet RcvdPktCnt =  9c0
 Header = dead 40
-Arp Packet RcvdPktCnt =  bf
+Arp Packet RcvdPktCnt =  9c1
 Header = dead 40
-Arp Packet RcvdPktCnt =  c0
+Arp Packet RcvdPktCnt =  9c2
 Header = dead 40
-Arp Packet RcvdPktCnt =  c1
+Arp Packet RcvdPktCnt =  9c3
 Header = dead 40
-Arp Packet RcvdPktCnt =  c2
+Arp Packet RcvdPktCnt =  9c4
 Header = dead 40
-Arp Packet RcvdPktCnt =  c3
+Arp Packet RcvdPktCnt =  9c5
 Header = dead 40
-Arp Packet RcvdPktCnt =  c4
+Arp Packet RcvdPktCnt =  9c6
 Header = dead 40
-Arp Packet RcvdPktCnt =  c5
+Arp Packet RcvdPktCnt =  9c7
 Header = dead 40
-Arp Packet RcvdPktCnt =  c6
+Arp Packet RcvdPktCnt =  9c8
 Header = dead 40
-Arp Packet RcvdPktCnt =  c7
+Arp Packet RcvdPktCnt =  9c9
 Header = dead 40
-Arp Packet RcvdPktCnt =  c8
+Arp Packet RcvdPktCnt =  9ca
 Header = dead 40
-Arp Packet RcvdPktCnt =  c9
+Arp Packet RcvdPktCnt =  9cb
 Header = dead 40
-Arp Packet RcvdPktCnt =  ca
+Arp Packet RcvdPktCnt =  9cc
 Header = dead 40
-Arp Packet RcvdPktCnt =  cb
+Arp Packet RcvdPktCnt =  9cd
 Header = dead 40
-Arp Packet RcvdPktCnt =  cc
+Arp Packet RcvdPktCnt =  9ce
 Header = dead 40
-Arp Packet RcvdPktCnt =  cd
+Arp Packet RcvdPktCnt =  9cf
 Header = dead 40
-Arp Packet RcvdPktCnt =  ce
+Arp Packet RcvdPktCnt =  9d0
 Header = dead 40
-Arp Packet RcvdPktCnt =  cf
+Arp Packet RcvdPktCnt =  9d1
 Header = dead 40
-Arp Packet RcvdPktCnt =  d0
+Arp Packet RcvdPktCnt =  9d2
 Header = dead 40
-Arp Packet RcvdPktCnt =  d1
+Arp Packet RcvdPktCnt =  9d3
 Header = dead 40
-Arp Packet RcvdPktCnt =  d2
+Arp Packet RcvdPktCnt =  9d4
 Header = dead 40
-Arp Packet RcvdPktCnt =  d3
+Arp Packet RcvdPktCnt =  9d5
 Header = dead 40
-Arp Packet RcvdPktCnt =  d4
+Arp Packet RcvdPktCnt =  9d6
 Header = dead 40
-Arp Packet RcvdPktCnt =  d5
+Arp Packet RcvdPktCnt =  9d7
 Header = dead 40
-Arp Packet RcvdPktCnt =  d6
+Arp Packet RcvdPktCnt =  9d8
 Header = dead 40
-Arp Packet RcvdPktCnt =  d7
+Arp Packet RcvdPktCnt =  9d9
 Header = dead 40
-Arp Packet RcvdPktCnt =  d8
+Arp Packet RcvdPktCnt =  9da
 Header = dead 40
-Arp Packet RcvdPktCnt =  d9
+Arp Packet RcvdPktCnt =  9db
 Header = dead 40
-Arp Packet RcvdPktCnt =  da
+Arp Packet RcvdPktCnt =  9dc
 Header = dead 40
-Arp Packet RcvdPktCnt =  db
+Arp Packet RcvdPktCnt =  9dd
 Header = dead 40
-Arp Packet RcvdPktCnt =  dc
+Arp Packet RcvdPktCnt =  9de
 Header = dead 40
-Arp Packet RcvdPktCnt =  dd
+Arp Packet RcvdPktCnt =  9df
 Header = dead 40
-Arp Packet RcvdPktCnt =  de
+Arp Packet RcvdPktCnt =  9e0
 Header = dead 40
-Arp Packet RcvdPktCnt =  df
+Arp Packet RcvdPktCnt =  9e1
 Header = dead 40
-Arp Packet RcvdPktCnt =  e0
+Arp Packet RcvdPktCnt =  9e2
 Header = dead 40
-Arp Packet RcvdPktCnt =  e1
+Arp Packet RcvdPktCnt =  9e3
 Header = dead 40
-Arp Packet RcvdPktCnt =  e2
+Arp Packet RcvdPktCnt =  9e4
 Header = dead 40
-Arp Packet RcvdPktCnt =  e3
+Arp Packet RcvdPktCnt =  9e5
 Header = dead 40
-Arp Packet RcvdPktCnt =  e4
+Arp Packet RcvdPktCnt =  9e6
 Header = dead 40
-Arp Packet RcvdPktCnt =  e5
+Arp Packet RcvdPktCnt =  9e7
 Header = dead 40
-Arp Packet RcvdPktCnt =  e6
+Arp Packet RcvdPktCnt =  9e8
 Header = dead 40
-Arp Packet RcvdPktCnt =  e7
-02/25/15 19:28:09 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
-
-02/25/15 19:28:09 DEBUG- Splice Start Recieved
-
+Arp Packet RcvdPktCnt =  9e9
 Header = dead 40
-Arp Packet RcvdPktCnt =  e8
+Arp Packet RcvdPktCnt =  9ea
 Header = dead 40
-Arp Packet RcvdPktCnt =  e9
+Arp Packet RcvdPktCnt =  9eb
 Header = dead 40
-Arp Packet RcvdPktCnt =  ea
+Arp Packet RcvdPktCnt =  9ec
 Header = dead 40
-Arp Packet RcvdPktCnt =  eb
+Arp Packet RcvdPktCnt =  9ed
 Header = dead 40
-Arp Packet RcvdPktCnt =  ec
+Arp Packet RcvdPktCnt =  9ee
 Header = dead 40
-Arp Packet RcvdPktCnt =  ed
-02/25/15 19:28:29 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
-
-02/25/15 19:28:29 DEBUG- Splice Stop Recieved
-
+Arp Packet RcvdPktCnt =  9ef
 Header = dead 40
-Arp Packet RcvdPktCnt =  ee
+Arp Packet RcvdPktCnt =  9f0
 Header = dead 40
-Arp Packet RcvdPktCnt =  ef
+Arp Packet RcvdPktCnt =  9f1
 Header = dead 40
-Arp Packet RcvdPktCnt =  f0
+Arp Packet RcvdPktCnt =  9f2
 Header = dead 40
-Arp Packet RcvdPktCnt =  f1
+Arp Packet RcvdPktCnt =  9f3
 Header = dead 40
-Arp Packet RcvdPktCnt =  f2
+Arp Packet RcvdPktCnt =  9f4
 Header = dead 40
-Arp Packet RcvdPktCnt =  f3
+Arp Packet RcvdPktCnt =  9f5
 Header = dead 40
-Arp Packet RcvdPktCnt =  f4
+Arp Packet RcvdPktCnt =  9f6
 Header = dead 40
-Arp Packet RcvdPktCnt =  f5
+Arp Packet RcvdPktCnt =  9f7
 Header = dead 40
-Arp Packet RcvdPktCnt =  f6
+Arp Packet RcvdPktCnt =  9f8
 Header = dead 40
-Arp Packet RcvdPktCnt =  f7
+Arp Packet RcvdPktCnt =  9f9
 Header = dead 40
-Arp Packet RcvdPktCnt =  f8
+Arp Packet RcvdPktCnt =  9fa
 Header = dead 40
-Arp Packet RcvdPktCnt =  f9
+Arp Packet RcvdPktCnt =  9fb
 Header = dead 40
-Arp Packet RcvdPktCnt =  fa
+Arp Packet RcvdPktCnt =  9fc
 Header = dead 40
-Arp Packet RcvdPktCnt =  fb
+Arp Packet RcvdPktCnt =  9fd
 Header = dead 40
-Arp Packet RcvdPktCnt =  fc
+Arp Packet RcvdPktCnt =  9fe
 Header = dead 40
-Arp Packet RcvdPktCnt =  fd
+Arp Packet RcvdPktCnt =  9ff
 Header = dead 40
-Arp Packet RcvdPktCnt =  fe
+Arp Packet RcvdPktCnt =  a00
 Header = dead 40
-Arp Packet RcvdPktCnt =  ff
+Arp Packet RcvdPktCnt =  a01
 Header = dead 40
-Arp Packet RcvdPktCnt =  100
+Arp Packet RcvdPktCnt =  a02
 Header = dead 40
-Arp Packet RcvdPktCnt =  101
+Arp Packet RcvdPktCnt =  a03
 Header = dead 40
-Arp Packet RcvdPktCnt =  102
+Arp Packet RcvdPktCnt =  a04
 Header = dead 40
-Arp Packet RcvdPktCnt =  103
+Arp Packet RcvdPktCnt =  a05
 Header = dead 40
-Arp Packet RcvdPktCnt =  104
+Arp Packet RcvdPktCnt =  a06
 Header = dead 40
-Arp Packet RcvdPktCnt =  105
+Arp Packet RcvdPktCnt =  a07
 Header = dead 40
-Arp Packet RcvdPktCnt =  106
+Arp Packet RcvdPktCnt =  a08
 Header = dead 40
-Arp Packet RcvdPktCnt =  107
+Arp Packet RcvdPktCnt =  a09
 Header = dead 40
-Arp Packet RcvdPktCnt =  108
+Arp Packet RcvdPktCnt =  a0a
 Header = dead 40
-Arp Packet RcvdPktCnt =  109
+Arp Packet RcvdPktCnt =  a0b
 Header = dead 40
-Arp Packet RcvdPktCnt =  10a
+Arp Packet RcvdPktCnt =  a0c
 Header = dead 40
-Arp Packet RcvdPktCnt =  10b
+Arp Packet RcvdPktCnt =  a0d
 Header = dead 40
-Arp Packet RcvdPktCnt =  10c
+Arp Packet RcvdPktCnt =  a0e
 Header = dead 40
-Arp Packet RcvdPktCnt =  10d
+Arp Packet RcvdPktCnt =  a0f
 Header = dead 40
-Arp Packet RcvdPktCnt =  10e
+Arp Packet RcvdPktCnt =  a10
 Header = dead 40
-Arp Packet RcvdPktCnt =  10f
+Arp Packet RcvdPktCnt =  a11
 Header = dead 40
-Arp Packet RcvdPktCnt =  110
+Arp Packet RcvdPktCnt =  a12
 Header = dead 40
-Arp Packet RcvdPktCnt =  111
+Arp Packet RcvdPktCnt =  a13
 Header = dead 40
-Arp Packet RcvdPktCnt =  112
+Arp Packet RcvdPktCnt =  a14
 Header = dead 40
-Arp Packet RcvdPktCnt =  113
+Arp Packet RcvdPktCnt =  a15
 Header = dead 40
-Arp Packet RcvdPktCnt =  114
+Arp Packet RcvdPktCnt =  a16
 Header = dead 40
-Arp Packet RcvdPktCnt =  115
+Arp Packet RcvdPktCnt =  a17
 Header = dead 40
-Arp Packet RcvdPktCnt =  116
+Arp Packet RcvdPktCnt =  a18
 Header = dead 40
-Arp Packet RcvdPktCnt =  117
+Arp Packet RcvdPktCnt =  a19
 Header = dead 40
-Arp Packet RcvdPktCnt =  118
+Arp Packet RcvdPktCnt =  a1a
 Header = dead 40
-Arp Packet RcvdPktCnt =  119
+Arp Packet RcvdPktCnt =  a1b
 Header = dead 40
-Arp Packet RcvdPktCnt =  11a
+Arp Packet RcvdPktCnt =  a1c
 Header = dead 40
-Arp Packet RcvdPktCnt =  11b
+Arp Packet RcvdPktCnt =  a1d
 Header = dead 40
-Arp Packet RcvdPktCnt =  11c
+Arp Packet RcvdPktCnt =  a1e
 Header = dead 40
-Arp Packet RcvdPktCnt =  11d
+Arp Packet RcvdPktCnt =  a1f
 Header = dead 40
-Arp Packet RcvdPktCnt =  11e
+Arp Packet RcvdPktCnt =  a20
 Header = dead 40
-Arp Packet RcvdPktCnt =  11f
+Arp Packet RcvdPktCnt =  a21
 Header = dead 40
-Arp Packet RcvdPktCnt =  120
+Arp Packet RcvdPktCnt =  a22
 Header = dead 40
-Arp Packet RcvdPktCnt =  121
+Arp Packet RcvdPktCnt =  a23
 Header = dead 40
-Arp Packet RcvdPktCnt =  122
+Arp Packet RcvdPktCnt =  a24
 Header = dead 40
-Arp Packet RcvdPktCnt =  123
+Arp Packet RcvdPktCnt =  a25
 Header = dead 40
-Arp Packet RcvdPktCnt =  124
+Arp Packet RcvdPktCnt =  a26
 Header = dead 40
-Arp Packet RcvdPktCnt =  125
+Arp Packet RcvdPktCnt =  a27
 Header = dead 40
-Arp Packet RcvdPktCnt =  126
+Arp Packet RcvdPktCnt =  a28
 Header = dead 40
-Arp Packet RcvdPktCnt =  127
+Arp Packet RcvdPktCnt =  a29
 Header = dead 40
-Arp Packet RcvdPktCnt =  128
+Arp Packet RcvdPktCnt =  a2a
 Header = dead 40
-Arp Packet RcvdPktCnt =  129
+Arp Packet RcvdPktCnt =  a2b
 Header = dead 40
-Arp Packet RcvdPktCnt =  12a
+Arp Packet RcvdPktCnt =  a2c
 Header = dead 40
-Arp Packet RcvdPktCnt =  12b
+Arp Packet RcvdPktCnt =  a2d
 Header = dead 40
-Arp Packet RcvdPktCnt =  12c
+Arp Packet RcvdPktCnt =  a2e
 Header = dead 40
-Arp Packet RcvdPktCnt =  12d
+Arp Packet RcvdPktCnt =  a2f
 Header = dead 40
-Arp Packet RcvdPktCnt =  12e
-02/25/15 19:30:45 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
-
-02/25/15 19:30:45 DEBUG- Splice Start Recieved
-
-02/25/15 19:30:45 DEBUG- Splice on Port: 0, Program: 1
-
-02/25/15 19:30:45 DEBUG- Enable Splice Remap Port: 10, Index: 0, PID: 31
-
-02/25/15 19:30:45 DEBUG- Write Filter Ext: 2
+Arp Packet RcvdPktCnt =  a30
+02/25/15 21:33:22 DEBUG- EAS Msg Received sourceAddr: C0A86405, destAddr: C0A80096
 
-02/25/15 19:30:45 DEBUG- Write Filter: A07D1
+Header = dead 40
+Arp Packet RcvdPktCnt =  a31
+02/25/15 21:33:24 DEBUG- Start EAS Insert
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
 
-02/25/15 19:30:45 DEBUG- Enable Splice Network Filter Port: 0, Index: 0
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
 
-02/25/15 19:30:45 DEBUG- Ad Stream Type: 2, Network Stream Type: 2
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
 
-02/25/15 19:30:45 DEBUG- Ad PID: 44
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
 
-02/25/15 19:30:45 DEBUG- Set Splice Entry Port: 7, Index: 0, Stream Type: 2, Program#: 1
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
 
-02/25/15 19:30:45 DEBUG- Enable Ad Remap Port: 7, Index: 0, PID: 44
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
 
-02/25/15 19:30:45 DEBUG- Set Ad Filter Port: 7, Index: 0
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
 
-02/25/15 19:30:45 DEBUG- FilterUpper, E720204 
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
 
-02/25/15 19:30:45 DEBUG- FilterLower, 700A0044 
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
 
-02/25/15 19:30:45 DEBUG- Enable Splice Remap Port: 10, Index: 1, PID: 34
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
 
-02/25/15 19:30:45 DEBUG- Write Filter Ext: 2
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
 
-02/25/15 19:30:45 DEBUG- Write Filter: 2A0FA1
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
 
-02/25/15 19:30:45 DEBUG- Enable Splice Network Filter Port: 0, Index: 2
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
 
-02/25/15 19:30:45 DEBUG- Ad Stream Type: 2, Network Stream Type: 129
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
 
-02/25/15 19:30:45 DEBUG- Ad Stream Type: 129, Network Stream Type: 129
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
 
-02/25/15 19:30:45 DEBUG- Ad PID: 45
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
 
-02/25/15 19:30:45 DEBUG- Set Splice Entry Port: 7, Index: 1, Stream Type: 129, Program#: 1
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
 
-02/25/15 19:30:45 DEBUG- Enable Ad Remap Port: 7, Index: 1, PID: 45
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
 
-02/25/15 19:30:45 DEBUG- Set Ad Filter Port: 7, Index: 1
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
 
-02/25/15 19:30:45 DEBUG- FilterUpper, E720204 
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
 
-02/25/15 19:30:45 DEBUG- FilterLower, 701A0045 
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
 
-Header = dead 40
-Arp Packet RcvdPktCnt =  12f
-Header = dead 40
-Arp Packet RcvdPktCnt =  130
-Header = dead 40
-Arp Packet RcvdPktCnt =  131
-Header = dead 40
-Arp Packet RcvdPktCnt =  132
-Header = dead 40
-Arp Packet RcvdPktCnt =  133
-Header = dead 40
-Arp Packet RcvdPktCnt =  134
-Header = dead 40
-Arp Packet RcvdPktCnt =  135
-Header = dead 40
-Arp Packet RcvdPktCnt =  136
-Header = dead 40
-Arp Packet RcvdPktCnt =  137
-Header = dead 40
-Arp Packet RcvdPktCnt =  138
-Header = dead 40
-Arp Packet RcvdPktCnt =  139
-Header = dead 40
-Arp Packet RcvdPktCnt =  13a
-Header = dead 40
-Arp Packet RcvdPktCnt =  13b
-Header = dead 40
-Arp Packet RcvdPktCnt =  13c
-Header = dead 40
-Arp Packet RcvdPktCnt =  13d
-Header = dead 40
-Arp Packet RcvdPktCnt =  13e
-Header = dead 40
-Arp Packet RcvdPktCnt =  13f
-Header = dead 40
-Arp Packet RcvdPktCnt =  140
-Header = dead 40
-Arp Packet RcvdPktCnt =  141
-Header = dead 40
-Arp Packet RcvdPktCnt =  142
-Header = dead 40
-Arp Packet RcvdPktCnt =  143
-Header = dead 40
-Arp Packet RcvdPktCnt =  144
-Header = dead 40
-Arp Packet RcvdPktCnt =  145
-02/25/15 19:31:45 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
 
-02/25/15 19:31:45 DEBUG- Splice Stop Recieved
+02/25/15 21:33:24 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
 
-02/25/15 19:31:45 DEBUG- Disable Ad Filter Port: 7, Program: 1, Index: 0
+02/25/15 21:33:24 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
 
-02/25/15 19:31:45 DEBUG- Disable Ad Filter Port: 7, Program: 1, Index: 1
+02/25/15 21:33:24 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
 
-02/25/15 19:31:45 DEBUG- Disable Ad Filter Port: 0, Program: 1, Index: 0
+02/25/15 21:33:24 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
 
-02/25/15 19:31:45 DEBUG- Disable Ad Filter Port: 0, Program: 1, Index: 2
+02/25/15 21:33:24 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
 
-Header = dead 40
-Arp Packet RcvdPktCnt =  146
-Header = dead 40
-Arp Packet RcvdPktCnt =  147
-Header = dead 40
-Arp Packet RcvdPktCnt =  148
-Header = dead 40
-Arp Packet RcvdPktCnt =  149
-Header = dead 40
-Arp Packet RcvdPktCnt =  14a
-Header = dead 40
-Arp Packet RcvdPktCnt =  14b
-Header = dead 40
-Arp Packet RcvdPktCnt =  14c
-Header = dead 40
-Arp Packet RcvdPktCnt =  14d
-Header = dead 40
-Arp Packet RcvdPktCnt =  14e
-Header = dead 40
-Arp Packet RcvdPktCnt =  14f
-Header = dead 40
-Arp Packet RcvdPktCnt =  150
-Header = dead 40
-Arp Packet RcvdPktCnt =  151
-Header = dead 40
-Arp Packet RcvdPktCnt =  152
-Header = dead 40
-Arp Packet RcvdPktCnt =  153
-Header = dead 40
-Arp Packet RcvdPktCnt =  154
-Header = dead 40
-Arp Packet RcvdPktCnt =  155
-Header = dead 40
-Arp Packet RcvdPktCnt =  156
-Header = dead 40
-Arp Packet RcvdPktCnt =  157
 Header = dead 40
-Arp Packet RcvdPktCnt =  158
+Arp Packet RcvdPktCnt =  a32
 Header = dead 40
-Arp Packet RcvdPktCnt =  159
+Arp Packet RcvdPktCnt =  a33
 Header = dead 40
-Arp Packet RcvdPktCnt =  15a
+Arp Packet RcvdPktCnt =  a34
 Header = dead 40
-Arp Packet RcvdPktCnt =  15b
+Arp Packet RcvdPktCnt =  a35
 Header = dead 40
-Arp Packet RcvdPktCnt =  15c
+Arp Packet RcvdPktCnt =  a36
 Header = dead 40
-Arp Packet RcvdPktCnt =  15d
+Arp Packet RcvdPktCnt =  a37
 Header = dead 40
-Arp Packet RcvdPktCnt =  15e
+Arp Packet RcvdPktCnt =  a38
 Header = dead 40
-Arp Packet RcvdPktCnt =  15f
+Arp Packet RcvdPktCnt =  a39
 Header = dead 40
-Arp Packet RcvdPktCnt =  160
+Arp Packet RcvdPktCnt =  a3a
 Header = dead 40
-Arp Packet RcvdPktCnt =  161
+Arp Packet RcvdPktCnt =  a3b
 Header = dead 40
-Arp Packet RcvdPktCnt =  162
+Arp Packet RcvdPktCnt =  a3c
 Header = dead 40
-Arp Packet RcvdPktCnt =  163
+Arp Packet RcvdPktCnt =  a3d
 Header = dead 40
-Arp Packet RcvdPktCnt =  164
+Arp Packet RcvdPktCnt =  a3e
 Header = dead 40
-Arp Packet RcvdPktCnt =  165
+Arp Packet RcvdPktCnt =  a3f
 Header = dead 40
-Arp Packet RcvdPktCnt =  166
+Arp Packet RcvdPktCnt =  a40
 Header = dead 40
-Arp Packet RcvdPktCnt =  167
+Arp Packet RcvdPktCnt =  a41
 Header = dead 40
-Arp Packet RcvdPktCnt =  168
-Header = dead 40
-Arp Packet RcvdPktCnt =  169
-Header = dead 40
-Arp Packet RcvdPktCnt =  16a
-Header = dead 40
-Arp Packet RcvdPktCnt =  16b
-Header = dead 40
-Arp Packet RcvdPktCnt =  16c
-Header = dead 40
-Arp Packet RcvdPktCnt =  16d
-Header = dead 40
-Arp Packet RcvdPktCnt =  16e
-Header = dead 40
-Arp Packet RcvdPktCnt =  16f
-Header = dead 40
-Arp Packet RcvdPktCnt =  170
-Header = dead 40
-Arp Packet RcvdPktCnt =  171
-02/25/15 19:33:42 DEBUG- Start EAS Insert
-02/25/15 19:33:42 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
+Arp Packet RcvdPktCnt =  a42
+02/25/15 21:34:01 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
 
-02/25/15 19:33:42 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
+02/25/15 21:34:01 DEBUG- Splice Start Recieved
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
+02/25/15 21:34:01 DEBUG- Splice on Port: 0, Program: 1
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
+02/25/15 21:34:01 DEBUG- Enable Splice Remap Port: 10, Index: 0, PID: 31
 
-02/25/15 19:33:42 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
+02/25/15 21:34:01 DEBUG- Write Filter Ext: 2
 
-02/25/15 19:33:42 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
+02/25/15 21:34:01 DEBUG- Write Filter: 207D1
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
+02/25/15 21:34:01 DEBUG- Enable Splice Network Filter Port: 0, Index: 0
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
+02/25/15 21:34:01 DEBUG- Ad Stream Type: 2, Network Stream Type: 2
 
-02/25/15 19:33:42 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
+02/25/15 21:34:01 DEBUG- Ad PID: 3F
 
-02/25/15 19:33:42 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
+02/25/15 21:34:01 DEBUG- Set Splice Entry Port: 1, Index: 0, Stream Type: 2, Program#: 4
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
+02/25/15 21:34:01 DEBUG- Enable Ad Remap Port: 1, Index: 0, PID: 3f
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
+02/25/15 21:34:01 DEBUG- Set Ad Filter Port: 1, Index: 0
 
-02/25/15 19:33:42 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
+02/25/15 21:34:01 DEBUG- FilterUpper, E720204 
 
-02/25/15 19:33:42 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
+02/25/15 21:34:01 DEBUG- FilterLower, 100A003F 
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
+02/25/15 21:34:01 DEBUG- Enable Splice Remap Port: 10, Index: 1, PID: 34
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
+02/25/15 21:34:01 DEBUG- Write Filter Ext: 2
 
-02/25/15 19:33:42 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
+02/25/15 21:34:01 DEBUG- Write Filter: 220FA1
 
-02/25/15 19:33:42 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
+02/25/15 21:34:01 DEBUG- Enable Splice Network Filter Port: 0, Index: 2
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
+02/25/15 21:34:01 DEBUG- Ad Stream Type: 2, Network Stream Type: 129
 
-02/25/15 19:33:42 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
+02/25/15 21:34:01 DEBUG- Ad Stream Type: 129, Network Stream Type: 129
 
-02/25/15 19:33:42 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
+02/25/15 21:34:01 DEBUG- Ad PID: 40
 
-02/25/15 19:33:42 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
+02/25/15 21:34:01 DEBUG- Set Splice Entry Port: 1, Index: 1, Stream Type: 129, Program#: 4
 
-02/25/15 19:33:43 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
+02/25/15 21:34:01 DEBUG- Enable Ad Remap Port: 1, Index: 1, PID: 40
 
-02/25/15 19:33:43 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
+02/25/15 21:34:01 DEBUG- Set Ad Filter Port: 1, Index: 1
 
-02/25/15 19:33:43 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
+02/25/15 21:34:01 DEBUG- FilterUpper, E720204 
 
-02/25/15 19:33:43 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
+02/25/15 21:34:01 DEBUG- FilterLower, 101A0040 
 
-02/25/15 19:33:43 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  172
-Header = dead 40
-Arp Packet RcvdPktCnt =  173
-Header = dead 40
-Arp Packet RcvdPktCnt =  174
-Header = dead 40
-Arp Packet RcvdPktCnt =  175
-Header = dead 40
-Arp Packet RcvdPktCnt =  176
-Header = dead 40
-Arp Packet RcvdPktCnt =  177
-Header = dead 40
-Arp Packet RcvdPktCnt =  178
-Header = dead 40
-Arp Packet RcvdPktCnt =  179
-Header = dead 40
-Arp Packet RcvdPktCnt =  17a
-Header = dead 40
-Arp Packet RcvdPktCnt =  17b
-Header = dead 40
-Arp Packet RcvdPktCnt =  17c
-Header = dead 40
-Arp Packet RcvdPktCnt =  17d
-Header = dead 40
-Arp Packet RcvdPktCnt =  17e
-Header = dead 40
-Arp Packet RcvdPktCnt =  17f
 Header = dead 40
-Arp Packet RcvdPktCnt =  180
-Header = dead 40
-Arp Packet RcvdPktCnt =  181
-Header = dead 40
-Arp Packet RcvdPktCnt =  182
-Header = dead 40
-Arp Packet RcvdPktCnt =  183
-Header = dead 40
-Arp Packet RcvdPktCnt =  184
-Header = dead 40
-Arp Packet RcvdPktCnt =  185
-Header = dead 40
-Arp Packet RcvdPktCnt =  186
-Header = dead 40
-Arp Packet RcvdPktCnt =  187
-Header = dead 40
-Arp Packet RcvdPktCnt =  188
-Header = dead 40
-Arp Packet RcvdPktCnt =  189
-Header = dead 40
-Arp Packet RcvdPktCnt =  18a
-Header = dead 40
-Arp Packet RcvdPktCnt =  18b
-Header = dead 40
-Arp Packet RcvdPktCnt =  18c
-02/25/15 19:34:45 DEBUG- Stop EAS Insert
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
+Arp Packet RcvdPktCnt =  a43
+02/25/15 21:34:02 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
 
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
+02/25/15 21:34:02 DEBUG- Splice Stop Recieved
 
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
+02/25/15 21:34:02 DEBUG- Disable Ad Filter Port: 1, Program: 4, Index: 0
 
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
+02/25/15 21:34:02 DEBUG- Disable Ad Filter Port: 1, Program: 4, Index: 1
 
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
+02/25/15 21:34:02 DEBUG- Disable Ad Filter Port: 0, Program: 1, Index: 0
 
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
+02/25/15 21:34:02 DEBUG- Disable Ad Filter Port: 0, Program: 1, Index: 2
 
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:34:45 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  18d
-Header = dead 40
-Arp Packet RcvdPktCnt =  18e
-Header = dead 40
-Arp Packet RcvdPktCnt =  18f
-Header = dead 40
-Arp Packet RcvdPktCnt =  190
-Header = dead 40
-Arp Packet RcvdPktCnt =  191
-Header = dead 40
-Arp Packet RcvdPktCnt =  192
-Header = dead 40
-Arp Packet RcvdPktCnt =  193
 Header = dead 40
-Arp Packet RcvdPktCnt =  194
+Arp Packet RcvdPktCnt =  a44
 Header = dead 40
-Arp Packet RcvdPktCnt =  195
-Waiting 2sec to start 'A' to abort
+Arp Packet RcvdPktCnt =  a45
+ Send SYN and ACK from listen state 
+ Send ?Waiting 2sec to start 'A' to abort
 Configured IP = 192.168.0.150
 Configured Mask = 255.255.255.0
 MAC Address= 00:03:f4:08:20:a2
@@ -945,5219 +885,4 @@ Opening file test: D2MUX.bit
 Byte Count: 1286280
 Closing file D2MUX.bit
 
-FPGA Done = 42430
---------------------------------------------------
-                Address in use: FALSE
---------------------------------------------------
---------------------------------------------------
-             Announcing Address
---------------------------------------------------
-  SENDING GRATUITOUS ARP
-01/01/70 00:00:08 INFO- TimeZone 0 
-
-01/01/70 00:00:08 INFO- TableProc 0 
-
-01/01/70 00:00:08 INFO- DSTRegion 0 
-
-cfg gige func port: 0, value = 1
-set gige func port: 0, value = 1
-cfg gige func port: 1, value = 0
-set gige func port: 1, value = 0
-cfg gige func port: 2, value = 0
-set gige func port: 2, value = 0
-cfg gige func port: 3, value = 0
-set gige func port: 3, value = 0
-01/01/70 00:00:08 INFO- FPGA Version 01040010 
-
-01/01/70 00:00:09 INFO- Verifying License 
-
-01/01/70 00:00:09 DEBUG- Valid license found for GIGE:
-
-01/01/70 00:00:09 DEBUG- Valid license found for IMUX4:
-
-01/01/70 00:00:09 DEBUG- Valid license found for ASI2:
-
-Started FTP Server
-You can use Internet Explorer to drag and drop files to url "ftp://192.168.0.150"
-Long file names are not supported- only 8.3 format
-Task Time launced
-Task Time get dst region
-Task Time check dst
-Task Time update time
-207.200.81.113Header = dead 40
-Arp Packet RcvdPktCnt =  1
-Gig_init_IP_ADDR.
-Auto Negotiate mac set.
-IP Addr set for static
-Header = dead 40
-Arp Packet RcvdPktCnt =  2
-hash[8] = 34 
-portData = 804D2, MC IP = ef0000dc
-hash[8] = 30 
-portData = 904D2, MC IP = ef0000e1
-hash[8] = 12 
-portData = A04D2, MC IP = ef0000e6
-Unicast IP = c0a80097 
-portData = B0000, MC IP = 0
-Gig_init_ports clear.
-McReg[0] = 0 
-McReg[1] = 0 
-McReg[2] = 4 
-McReg[3] = 0 
-McReg[4] = 0 
-McReg[5] = 0 
-  SENDING GRATUITOUS ARP
-McReg[6] = 11 
-McReg[7] = 80 
-Auto Negotiate mac set.
-Header = dead 40
-Arp Packet RcvdPktCnt =  3
-Header = dead 40
-Arp Packet RcvdPktCnt =  4
-Gige Options 1, result = 0
-ARP Setup MAC Upper  = 14 
-ARP Setup MAC Middle = f400 
-ARP Setup MAC Lower  = 8451 
-ARP Setup IPA = c0a800bf 
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  5
-Header = dead 40
-Arp Packet RcvdPktCnt =  6
-Header = dead 40
-Arp Packet RcvdPktCnt =  7
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  8
-Failed Static IP NTP
-Verify you have correct IP address, mask, gateway AND DNS set
-NTP failed, setting time from RTC
-timedOut = 1
-timedOut = 1
-RTC Secs Reg = 49413519
-timedOut = 1
-RTC Months Reg = 4250215
-Task Time display
-Current time: Wed Feb 25 19:35:41 2015
-
-Formatted time string:  7:35:41 PM
-Formatted Date/Time string: 02/25/15 19:35:41
-02/25/15 19:35:41 INFO- Last reset due to power on reset
-
-02/25/15 19:35:41 INFO- FPGA Version 01040010 
-
-Application started
-02/25/15 19:35:41 ERROR- UDP Injection Port: 0
-
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  9
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  a
-Header = dead 40
-Arp Packet RcvdPktCnt =  b
-Header = dead 40
-Arp Packet RcvdPktCnt =  c
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-02/25/15 19:35:56 DEBUG- Start EAS Insert
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:35:56 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:35:56 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:35:56 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:35:56 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:35:56 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  d
-Header = dead 40
-Arp Packet RcvdPktCnt =  e
-Header = dead 40
-Arp Packet RcvdPktCnt =  f
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  10
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  11
-Header = dead 40
-Arp Packet RcvdPktCnt =  12
-Header = dead 40
-Arp Packet RcvdPktCnt =  13
-Header = dead 40
-Arp Packet RcvdPktCnt =  14
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  15
-Header = dead 40
-Arp Packet RcvdPktCnt =  16
-Header = dead 40
-Arp Packet RcvdPktCnt =  17
-Header = dead 40
-Arp Packet RcvdPktCnt =  18
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  19
-Header = dead 40
-Arp Packet RcvdPktCnt =  1a
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  1b
-Header = dead 40
-Arp Packet RcvdPktCnt =  1c
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  1d
-Header = dead 40
-Arp Packet RcvdPktCnt =  1e
-Header = dead 40
-Arp Packet RcvdPktCnt =  1f
-Header = dead 40
-Arp Packet RcvdPktCnt =  20
-Header = dead 40
-Arp Packet RcvdPktCnt =  21
-Header = dead 40
-Arp Packet RcvdPktCnt =  22
-Header = dead 40
-Arp Packet RcvdPktCnt =  23
-Header = dead 40
-Arp Packet RcvdPktCnt =  24
-Header = dead 40
-Arp Packet RcvdPktCnt =  25
-Header = dead 40
-Arp Packet RcvdPktCnt =  26
-Header = dead 40
-Arp Packet RcvdPktCnt =  27
-02/25/15 19:36:34 DEBUG- Stop EAS Insert
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:36:34 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  28
-Header = dead 40
-Arp Packet RcvdPktCnt =  29
-Header = dead 40
-Arp Packet RcvdPktCnt =  2a
-Header = dead 40
-Arp Packet RcvdPktCnt =  2b
-Header = dead 40
-Arp Packet RcvdPktCnt =  2c
-Header = dead 40
-Arp Packet RcvdPktCnt =  2d
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f
-Header = dead 40
-Arp Packet RcvdPktCnt =  30
-Header = dead 40
-Arp Packet RcvdPktCnt =  31
-Header = dead 40
-Arp Packet RcvdPktCnt =  32
-Header = dead 40
-Arp Packet RcvdPktCnt =  33
-Header = dead 40
-Arp Packet RcvdPktCnt =  34
-Header = dead 40
-Arp Packet RcvdPktCnt =  35
-Header = dead 40
-Arp Packet RcvdPktCnt =  36
-Header = dead 40
-Arp Packet RcvdPktCnt =  37
-Header = dead 40
-Arp Packet RcvdPktCnt =  38
-Header = dead 40
-Arp Packet RcvdPktCnt =  39
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b
-Header = dead 40
-Arp Packet RcvdPktCnt =  3c
-Header = dead 40
-Arp Packet RcvdPktCnt =  3d
-Header = dead 40
-Arp Packet RcvdPktCnt =  3e
-Header = dead 40
-Arp Packet RcvdPktCnt =  3f
-Header = dead 40
-Arp Packet RcvdPktCnt =  40
-Header = dead 40
-Arp Packet RcvdPktCnt =  41
-Header = dead 40
-Arp Packet RcvdPktCnt =  42
-Header = dead 40
-Arp Packet RcvdPktCnt =  43
-Header = dead 40
-Arp Packet RcvdPktCnt =  44
-Header = dead 40
-Arp Packet RcvdPktCnt =  45
-Header = dead 40
-Arp Packet RcvdPktCnt =  46
-Header = dead 40
-Arp Packet RcvdPktCnt =  47
-Header = dead 40
-Arp Packet RcvdPktCnt =  48
-Header = dead 40
-Arp Packet RcvdPktCnt =  49
-Header = dead 40
-Arp Packet RcvdPktCnt =  4a
-02/25/15 19:38:17 DEBUG- Start EAS Insert
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:38:17 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:38:17 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:38:17 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:38:17 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:38:17 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  4b
-Header = dead 40
-Arp Packet RcvdPktCnt =  4c
-Header = dead 40
-Arp Packet RcvdPktCnt =  4d
-Header = dead 40
-Arp Packet RcvdPktCnt =  4e
-Header = dead 40
-Arp Packet RcvdPktCnt =  4f
-Header = dead 40
-Arp Packet RcvdPktCnt =  50
-Header = dead 40
-Arp Packet RcvdPktCnt =  51
-Header = dead 40
-Arp Packet RcvdPktCnt =  52
-Header = dead 40
-Arp Packet RcvdPktCnt =  53
-Header = dead 40
-Arp Packet RcvdPktCnt =  54
-Header = dead 40
-Arp Packet RcvdPktCnt =  55
-Header = dead 40
-Arp Packet RcvdPktCnt =  56
-Header = dead 40
-Arp Packet RcvdPktCnt =  57
-Header = dead 40
-Arp Packet RcvdPktCnt =  58
-Header = dead 40
-Arp Packet RcvdPktCnt =  59
-Header = dead 40
-Arp Packet RcvdPktCnt =  5a
-Header = dead 40
-Arp Packet RcvdPktCnt =  5b
-02/25/15 19:39:00 DEBUG- Stop EAS Insert
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:39:00 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  5c
-Header = dead 40
-Arp Packet RcvdPktCnt =  5d
-Header = dead 40
-Arp Packet RcvdPktCnt =  5e
-02/25/15 19:39:08 DEBUG- Start EAS Insert
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:39:08 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:39:08 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:39:08 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:39:08 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:39:08 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  5f
-Header = dead 40
-Arp Packet RcvdPktCnt =  60
-02/25/15 19:39:18 DEBUG- Stop EAS Insert
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:39:18 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  61
-Header = dead 40
-Arp Packet RcvdPktCnt =  62
-Header = dead 40
-Arp Packet RcvdPktCnt =  63
-Header = dead 40
-Arp Packet RcvdPktCnt =  64
-Header = dead 40
-Arp Packet RcvdPktCnt =  65
-Header = dead 40
-Arp Packet RcvdPktCnt =  66
-Header = dead 40
-Arp Packet RcvdPktCnt =  67
-Header = dead 40
-Arp Packet RcvdPktCnt =  68
-Header = dead 40
-Arp Packet RcvdPktCnt =  69
-Header = dead 40
-Arp Packet RcvdPktCnt =  6a
-Header = dead 40
-Arp Packet RcvdPktCnt =  6b
-Header = dead 40
-Arp Packet RcvdPktCnt =  6c
-Header = dead 40
-Arp Packet RcvdPktCnt =  6d
-Header = dead 40
-Arp Packet RcvdPktCnt =  6e
-Header = dead 40
-Arp Packet RcvdPktCnt =  6f
-Header = dead 40
-Arp Packet RcvdPktCnt =  70
-Header = dead 40
-Arp Packet RcvdPktCnt =  71
-Header = dead 40
-Arp Packet RcvdPktCnt =  72
-Header = dead 40
-Arp Packet RcvdPktCnt =  73
-Header = dead 40
-Arp Packet RcvdPktCnt =  74
-Header = dead 40
-Arp Packet RcvdPktCnt =  75
-Header = dead 40
-Arp Packet RcvdPktCnt =  76
-Header = dead 40
-Arp Packet RcvdPktCnt =  77
-Header = dead 40
-Arp Packet RcvdPktCnt =  78
-Header = dead 40
-Arp Packet RcvdPktCnt =  79
-Header = dead 40
-Arp Packet RcvdPktCnt =  7a
-Header = dead 40
-Arp Packet RcvdPktCnt =  7b
-Header = dead 40
-Arp Packet RcvdPktCnt =  7c
-Header = dead 40
-Arp Packet RcvdPktCnt =  7d
-Header = dead 40
-Arp Packet RcvdPktCnt =  7e
-Header = dead 40
-Arp Packet RcvdPktCnt =  7f
-Header = dead 40
-Arp Packet RcvdPktCnt =  80
-Header = dead 40
-Arp Packet RcvdPktCnt =  81
-Header = dead 40
-Arp Packet RcvdPktCnt =  82
-Header = dead 40
-Arp Packet RcvdPktCnt =  83
-Header = dead 40
-Arp Packet RcvdPktCnt =  84
-Header = dead 40
-Arp Packet RcvdPktCnt =  85
-Header = dead 40
-Arp Packet RcvdPktCnt =  86
-Header = dead 40
-Arp Packet RcvdPktCnt =  87
-Header = dead 40
-Arp Packet RcvdPktCnt =  88
-Header = dead 40
-Arp Packet RcvdPktCnt =  89
-Header = dead 40
-Arp Packet RcvdPktCnt =  8a
-Header = dead 40
-Arp Packet RcvdPktCnt =  8b
-Header = dead 40
-Arp Packet RcvdPktCnt =  8c
-Header = dead 40
-Arp Packet RcvdPktCnt =  8d
-Header = dead 40
-Arp Packet RcvdPktCnt =  8e
-Header = dead 40
-Arp Packet RcvdPktCnt =  8f
-Header = dead 40
-Arp Packet RcvdPktCnt =  90
-Header = dead 40
-Arp Packet RcvdPktCnt =  91
-Header = dead 40
-Arp Packet RcvdPktCnt =  92
-Header = dead 40
-Arp Packet RcvdPktCnt =  93
- Send SYN and ACK from listen state 
-Header = dead 40
-Arp Packet RcvdPktCnt =  94
- Send ACK from Close wait 
- Send SYN and ACK from listen state 
- Send ACK from OpenWindow 
-Msg ?Waiting 2sec to start 'A' to abort
-Configured IP = 192.168.0.150
-Configured Mask = 255.255.255.0
-MAC Address= 00:03:f4:08:20:a2
-
-===== Starting D2Mux Program =====
-write protect on 
-FAT mount to SD/MMC successful
-SD/MMC drive change successful
-Opening file test: D2MUX.bit
-Byte Count: 1286280
-Closing file D2MUX.bit
-
-FPGA Done = 42433
---------------------------------------------------
-                Address in use: FALSE
---------------------------------------------------
---------------------------------------------------
-             Announcing Address
---------------------------------------------------
-  SENDING GRATUITOUS ARP
-01/01/70 00:00:08 INFO- TimeZone 0 
-
-01/01/70 00:00:08 INFO- TableProc 0 
-
-01/01/70 00:00:08 INFO- DSTRegion 0 
-
-cfg gige func port: 0, value = 1
-set gige func port: 0, value = 1
-cfg gige func port: 1, value = 0
-set gige func port: 1, value = 0
-cfg gige func port: 2, value = 0
-set gige func port: 2, value = 0
-cfg gige func port: 3, value = 0
-set gige func port: 3, value = 0
-01/01/70 00:00:08 INFO- FPGA Version 01040010 
-
-01/01/70 00:00:08 INFO- Verifying License 
-
-01/01/70 00:00:08 DEBUG- Valid license found for GIGE:
-
-01/01/70 00:00:08 DEBUG- Valid license found for IMUX4:
-
-01/01/70 00:00:08 DEBUG- Valid license found for ASI2:
-
-Started FTP Server
-You can use Internet Explorer to drag and drop files to url "ftp://192.168.0.150"
-Long file names are not supported- only 8.3 format
-Task Time launced
-Task Time get dst region
-Task Time check dst
-Task Time update time
-207.200.81.113Header = dead 40
-Arp Packet RcvdPktCnt =  1
-Gig_init_IP_ADDR.
-Auto Negotiate mac set.
-IP Addr set for static
-Header = dead 40
-Arp Packet RcvdPktCnt =  2
-hash[8] = 34 
-portData = 804D2, MC IP = ef0000dc
-hash[8] = 30 
-portData = 904D2, MC IP = ef0000e1
-hash[8] = 12 
-portData = A04D2, MC IP = ef0000e6
-Unicast IP = c0a80097 
-portData = B0000, MC IP = 0
-Gig_init_ports clear.
-McReg[0] = 0 
-McReg[1] = 0 
-McReg[2] = 4 
-McReg[3] = 0 
-McReg[4] = 0 
-McReg[5] = 0 
-McReg[6] = 11 
-  SENDING GRATUITOUS ARP
-McReg[7] = 80 
-Auto Negotiate mac set.
-Header = dead 40
-Arp Packet RcvdPktCnt =  3
-Gige Options 1, result = 0
-ARP Setup MAC Upper  = 14 
-ARP Setup MAC Middle = f400 
-ARP Setup MAC Lower  = 8451 
-ARP Setup IPA = c0a800bf 
-Header = dead 40
-Arp Packet RcvdPktCnt =  4
-Header = dead 40
-Arp Packet RcvdPktCnt =  5
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  6
-Header = dead 40
-Arp Packet RcvdPktCnt =  7
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  8
-Header = dead 40
-Arp Packet RcvdPktCnt =  9
-Failed Static IP NTP
-Verify you have correct IP address, mask, gateway AND DNS set
-NTP failed, setting time from RTC
-timedOut = 1
-timedOut = 1
-RTC Secs Reg = 34564119
-timedOut = 1
-RTC Months Reg = 4250215
-Task Time display
-Current time: Wed Feb 25 19:41:56 2015
-
-Formatted time string:  7:41:56 PM
-Formatted Date/Time string: 02/25/15 19:41:56
-02/25/15 19:41:57 INFO- Last reset due to software reset 
-
-02/25/15 19:41:57 INFO- FPGA Version 01040010 
-
-Application started
-02/25/15 19:41:57 ERROR- UDP Injection Port: 0
-
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  a
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  b
-Header = dead 40
-Arp Packet RcvdPktCnt =  c
-Header = dead 40
-Arp Packet RcvdPktCnt =  d
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  e
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  f
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  10
-ARP to 64010a0c failed, from c0a80097
- Send SYN and ACK from listen state 
- Send ACK from zero window probe 
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Msg ID: 807A 
-Msg ID: 8000 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8001 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
- Send ACK from Process Timer 
-Msg ID: 8003 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8073 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 6
-
-Msg ID: 8068 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8069 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8079 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 806E 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 806C 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8063 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:24 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 61 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:25 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:25 DEBUG- FilterLower, 7E90000 
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:25 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:25 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 61 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:25 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:25 DEBUG- FilterLower, 7E903E9 
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:25 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:25 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:25 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:25 DEBUG- FilterLower, 7E903EA 
-
-02/25/15 19:42:25 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E903EB 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E903F2 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: c4
-
-ARP to 64010a0c failed, from c0a80097
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E903F3 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:26 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:26 DEBUG- FilterLower, 7E903F4 
-
-02/25/15 19:42:26 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E903F5 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E90425 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E9042F 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: c4
-
- Send ACK from OpenWindow 
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:27 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:27 DEBUG- FilterLower, 7E90433 
-
-02/25/15 19:42:27 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:28 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:28 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:28 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:28 DEBUG- FilterLower, 7E90434 
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:28 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:28 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:28 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:28 DEBUG- FilterLower, 7E90457 
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: c4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  11
-Msg ID: 60 
-02/25/15 19:42:28 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:28 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:28 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:28 DEBUG- FilterLower, 7E90458 
-
-02/25/15 19:42:28 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:29 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:29 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:29 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:29 DEBUG- FilterLower, 7E9012C 
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-ARP to 64010a0c failed, from c0a80097
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:29 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:29 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:29 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:29 DEBUG- FilterLower, 7E90462 
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:29 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:29 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:29 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:29 DEBUG- FilterLower, 7E9046D 
-
-02/25/15 19:42:29 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:30 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:30 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:30 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:30 DEBUG- FilterLower, 7E904B1 
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  12
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:30 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:30 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:30 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:30 DEBUG- FilterLower, 7E904B2 
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:30 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:30 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:30 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:30 DEBUG- FilterLower, 7E904BA 
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:30 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:31 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:31 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:31 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:31 DEBUG- FilterLower, 7E91FFB 
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:31 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:31 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  13
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:31 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  14
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:32 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:32 DEBUG- FilterLower, 7E91FFB 
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  15
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:32 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:32 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:32 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:33 DEBUG- Sent Msg - msg length: 0
-
- Send SYN and ACK from listen state 
-02/25/15 19:42:33 ERROR- FTPDSessionStart: Start FTP Session.
-
-02/25/15 19:42:33 ERROR- FTPD_DirectoryExists: Directory CFG exists
-
- Send SYN and ACK from listen state 
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Dir Listing for  CFG
-
-Displaying time/date information
-     MM_CFG.XML   |00:00:08   |01/01/1980   |     1695 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  MM_CFG.XML
-      D2GUI.XML   |19:15:24   |02/25/2015   |    12601 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  D2GUI.XML
-     REMAPS.DAT   |19:16:00   |02/25/2015   |    11264 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  REMAPS.DAT
-     TABLES.DAT   |19:16:00   |02/25/2015   |    12544 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  TABLES.DAT
-      FLAGS.DAT   |19:16:00   |02/25/2015   |       72 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  FLAGS.DAT
-   FILTERSX.DAT   |19:16:00   |02/25/2015   |    22528 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  FILTERSX.DAT
-        EAS.DAT   |19:16:00   |02/25/2015   |    11264 Bytes
-02/25/15 19:42:33 ERROR- FTPD_ListFile: Found file  EAS.DAT
-
- Send SYN and ACK from listen state 
-02/25/15 19:42:33 ERROR- FTPD_FileExists: File Exists D2GUI.XML
-
-Send File D2GUI.XML
-Directory CFG exists 
-D2GUI.XML opened 
-D2GUI.XML sent 
-02/25/15 19:42:33 ERROR- FTPDSessionEnd: End FTP Session.
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  16
-Header = dead 40
-Arp Packet RcvdPktCnt =  17
-Header = dead 40
-Arp Packet RcvdPktCnt =  18
-Header = dead 40
-Arp Packet RcvdPktCnt =  19
- Send ACK from Close wait 
- Send SYN and ACK from listen state 
- Send ACK from OpenWindow 
-Msg ID: 807A 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8000 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8001 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8003 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8073 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 6
-
-Msg ID: 8068 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8069 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8079 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 806E 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 806C 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8063 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:40 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 85 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8072 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8071 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8070 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8084 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1a
-Msg ID: 8077 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 75 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 8076 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 8077 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: f
-
-Msg ID: 8087 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 4
-
-Msg ID: 61 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:41 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:41 DEBUG- FilterLower, 7E90000 
-
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:41 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:41 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:41 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:41 DEBUG- FilterLower, 17E90000 
-
-02/25/15 19:42:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:42 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:42 DEBUG- FilterLower, 17E00000 
-
-02/25/15 19:42:42 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:43 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:43 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:43 DEBUG- FilterLower, 67E90000 
-
-02/25/15 19:42:43 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:44 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:44 DEBUG- FilterLower, 67E00000 
-
-02/25/15 19:42:44 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:44 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:44 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:44 DEBUG- FilterLower, 77E90000 
-
-02/25/15 19:42:44 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:45 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:45 DEBUG- FilterLower, 77E00000 
-
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:45 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:45 DEBUG- FilterLower, 87E90000 
-
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:45 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:45 DEBUG- FilterLower, 87E00000 
-
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:45 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:45 DEBUG- FilterLower, 97E90000 
-
-02/25/15 19:42:45 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:46 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:46 DEBUG- FilterLower, 97E00000 
-
-02/25/15 19:42:46 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:46 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:46 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:46 DEBUG- FilterLower, 7E903E9 
-
-02/25/15 19:42:46 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:47 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:47 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:47 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:47 DEBUG- FilterLower, 7E903EA 
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:47 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:47 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:47 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:47 DEBUG- FilterLower, 7E903EB 
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:47 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:47 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:47 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:47 DEBUG- FilterLower, 7E903F2 
-
-02/25/15 19:42:47 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
- Send ACK from OpenWindow 
-Msg ID: 61 
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E903F3 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E903F4 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E903F5 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:48 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:48 DEBUG- FilterLower, 7E90425 
-
-02/25/15 19:42:48 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:49 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:49 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:49 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:49 DEBUG- FilterLower, 7E9042F 
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1b
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:49 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:49 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:49 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:49 DEBUG- FilterLower, 7E90433 
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1c
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:49 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:49 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:49 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:49 DEBUG- FilterLower, 7E90434 
-
-02/25/15 19:42:49 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E90457 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E90458 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E9012C 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:50 DEBUG- FilterLower, 7E90462 
-
-02/25/15 19:42:50 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E9046D 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: c4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1d
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E904B1 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E904B2 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:51 DEBUG- FilterLower, 7E904BA 
-
-02/25/15 19:42:51 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:52 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:52 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:52 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:52 DEBUG- FilterLower, 87E90040 
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:52 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:52 DEBUG- FilterLower, 87E00000 
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:52 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:52 DEBUG- FilterLower, 7E91FFB 
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1e
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:42:52 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:52 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:42:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:53 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1f
-Msg ID: 60 
-02/25/15 19:42:53 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:53 DEBUG- FilterLower, 17E91FFB 
-
-02/25/15 19:42:53 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:55 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:55 DEBUG- FilterLower, 17E00000 
-
-02/25/15 19:42:55 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:55 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:55 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:55 DEBUG- FilterLower, 67E91FFB 
-
-02/25/15 19:42:55 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  20
-Header = dead 40
-Arp Packet RcvdPktCnt =  21
-Msg ID: 60 
-02/25/15 19:42:57 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:57 DEBUG- FilterLower, 67E00000 
-
-02/25/15 19:42:57 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:57 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:57 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:57 DEBUG- FilterLower, 77E91FFB 
-
-02/25/15 19:42:57 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  22
-Msg ID: 60 
-02/25/15 19:42:59 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:59 DEBUG- FilterLower, 77E00000 
-
-02/25/15 19:42:59 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:42:59 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:42:59 DEBUG- FilterUpper, 0 
-
-02/25/15 19:42:59 DEBUG- FilterLower, 87E91FFB 
-
-02/25/15 19:42:59 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  23
-Msg ID: 60 
-02/25/15 19:43:01 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:01 DEBUG- FilterLower, 87E00000 
-
-02/25/15 19:43:01 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:01 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:01 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:01 DEBUG- FilterLower, 97E91FFB 
-
-02/25/15 19:43:01 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  24
- Send ACK from OpenWindow 
-Msg ID: 60 
-02/25/15 19:43:03 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:03 DEBUG- FilterLower, 97E00000 
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:03 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:03 DEBUG- FilterLower, 7E91FFB 
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-Msg ID: 60 
-02/25/15 19:43:03 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:03 DEBUG- FilterLower, 7E00000 
-
-02/25/15 19:43:03 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: c4
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:04 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:04 DEBUG- FilterLower, 17E91FFB 
-
-02/25/15 19:43:04 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:06 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:06 DEBUG- FilterLower, 17E00000 
-
-02/25/15 19:43:06 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:07 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:07 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:07 DEBUG- FilterLower, 67E91FFB 
-
-02/25/15 19:43:07 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:09 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:09 DEBUG- FilterLower, 67E00000 
-
-02/25/15 19:43:09 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:09 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:09 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:09 DEBUG- FilterLower, 77E91FFB 
-
-02/25/15 19:43:09 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  25
-Msg ID: 60 
-02/25/15 19:43:11 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:11 DEBUG- FilterLower, 77E00000 
-
-02/25/15 19:43:11 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:11 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:11 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:11 DEBUG- FilterLower, 87E91FFB 
-
-02/25/15 19:43:11 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:13 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:13 DEBUG- FilterLower, 87E00000 
-
-02/25/15 19:43:13 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:43:13 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:13 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:13 DEBUG- FilterLower, 97E91FFB 
-
-02/25/15 19:43:13 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:43:15 DEBUG- FilterUpper, 0 
-
-02/25/15 19:43:15 DEBUG- FilterLower, 97E00000 
-
-02/25/15 19:43:15 DEBUG- Sent Msg - msg length: 0
-
- Send SYN and ACK from listen state 
-02/25/15 19:43:15 ERROR- FTPDSessionStart: Start FTP Session.
-
-02/25/15 19:43:15 ERROR- FTPD_DirectoryExists: Directory CFG exists
-
-02/25/15 19:43:15 ERROR- FTPD_DirectoryExists: Directory CFG exists
-
- Send SYN and ACK from listen state 
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Dir Listing for  CFG
-
-Displaying time/date information
-     MM_CFG.XML   |00:00:08   |01/01/1980   |     1695 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  MM_CFG.XML
-      D2GUI.XML   |19:15:24   |02/25/2015   |    12601 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  D2GUI.XML
-     REMAPS.DAT   |19:16:00   |02/25/2015   |    11264 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  REMAPS.DAT
-     TABLES.DAT   |19:16:00   |02/25/2015   |    12544 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  TABLES.DAT
-      FLAGS.DAT   |19:16:00   |02/25/2015   |       72 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  FLAGS.DAT
-   FILTERSX.DAT   |19:16:00   |02/25/2015   |    22528 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  FILTERSX.DAT
-        EAS.DAT   |19:16:00   |02/25/2015   |    11264 Bytes
-02/25/15 19:43:15 ERROR- FTPD_ListFile: Found file  EAS.DAT
-
- Send SYN and ACK from listen state 
-02/25/15 19:43:15 ERROR- FTPD_FileExists: File Exists D2GUI.XML
-
-Send File D2GUI.XML
-Directory CFG exists 
-D2GUI.XML opened 
-D2GUI.XML sent 
-02/25/15 19:43:15 ERROR- FTPDSessionEnd: End FTP Session.
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  26
- Send ACK from Close wait 
- Send SYN and ACK from listen state 
- Send ACK from OpenWindow 
-Msg Waiting 2sec to start 'A' to abort
-Configured IP = 192.168.0.150
-Configured Mask = 255.255.255.0
-MAC Address= 00:03:f4:08:20:a2
-
-===== Starting D2Mux Program =====
-write protect on 
-FAT mount to SD/MMC successful
-SD/MMC drive change successful
-Opening file test: D2MUX.bit
-Byte Count: 1286280
-Closing file D2MUX.bit
-
-FPGA Done = 42449
---------------------------------------------------
-                Address in use: FALSE
---------------------------------------------------
---------------------------------------------------
-             Announcing Address
---------------------------------------------------
-  SENDING GRATUITOUS ARP
-01/01/70 00:00:08 INFO- TimeZone 0 
-
-01/01/70 00:00:08 INFO- TableProc 0 
-
-01/01/70 00:00:08 INFO- DSTRegion 0 
-
-cfg gige func port: 0, value = 1
-set gige func port: 0, value = 1
-cfg gige func port: 1, value = 0
-set gige func port: 1, value = 0
-cfg gige func port: 2, value = 0
-set gige func port: 2, value = 0
-cfg gige func port: 3, value = 0
-set gige func port: 3, value = 0
-01/01/70 00:00:08 INFO- FPGA Version 01040010 
-
-01/01/70 00:00:08 INFO- Verifying License 
-
-01/01/70 00:00:08 DEBUG- Valid license found for GIGE:
-
-01/01/70 00:00:08 DEBUG- Valid license found for IMUX4:
-
-01/01/70 00:00:08 DEBUG- Valid license found for ASI2:
-
-Started FTP Server
-You can use Internet Explorer to drag and drop files to url "ftp://192.168.0.150"
-Long file names are not supported- only 8.3 format
-Task Time launced
-Task Time get dst region
-Task Time check dst
-Task Time update time
-207.200.81.113Header = dead 40
-Arp Packet RcvdPktCnt =  1
-Gig_init_IP_ADDR.
-Auto Negotiate mac set.
-IP Addr set for static
-Header = dead 40
-Arp Packet RcvdPktCnt =  2
-hash[8] = 34 
-portData = 804D2, MC IP = ef0000dc
-hash[8] = 30 
-portData = 904D2, MC IP = ef0000e1
-hash[8] = 12 
-portData = A04D2, MC IP = ef0000e6
-Unicast IP = c0a80097 
-portData = B0000, MC IP = 0
-Gig_init_ports clear.
-McReg[0] = 0 
-McReg[1] = 0 
-McReg[2] = 4 
-McReg[3] = 0 
-McReg[4] = 0 
-McReg[5] = 0 
-McReg[6] = 11 
-  SENDING GRATUITOUS ARP
-McReg[7] = 80 
-Auto Negotiate mac set.
-Header = dead 40
-Arp Packet RcvdPktCnt =  3
-Header = dead 40
-Arp Packet RcvdPktCnt =  4
-Gige Options 1, result = 0
-ARP Setup MAC Upper  = 14 
-ARP Setup MAC Middle = f400 
-ARP Setup MAC Lower  = 8451 
-ARP Setup IPA = c0a800bf 
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  5
-Header = dead 40
-Arp Packet RcvdPktCnt =  6
-Failed Static IP NTP
-Verify you have correct IP address, mask, gateway AND DNS set
-NTP failed, setting time from RTC
-timedOut = 1
-timedOut = 1
-RTC Secs Reg = 66504319
-timedOut = 1
-RTC Months Reg = 4250215
-Task Time display
-Current time: Wed Feb 25 19:43:50 2015
-
-Formatted time string:  7:43:50 PM
-Formatted Date/Time string: 02/25/15 19:43:50
-02/25/15 19:43:51 INFO- Last reset due to software reset 
-
-02/25/15 19:43:51 INFO- FPGA Version 01040010 
-
-Application started
-02/25/15 19:43:51 ERROR- UDP Injection Port: 0
-
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  7
-Header = dead 40
-Arp Packet RcvdPktCnt =  8
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  9
-Header = dead 40
-Arp Packet RcvdPktCnt =  a
-Header = dead 40
-Arp Packet RcvdPktCnt =  b
-Header = dead 40
-Arp Packet RcvdPktCnt =  c
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  d
-Header = dead 40
-Arp Packet RcvdPktCnt =  e
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  f
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  10
-Header = dead 40
-Arp Packet RcvdPktCnt =  11
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  12
-Header = dead 40
-Arp Packet RcvdPktCnt =  13
-Header = dead 40
-Arp Packet RcvdPktCnt =  14
-Header = dead 40
-Arp Packet RcvdPktCnt =  15
-Header = dead 40
-Arp Packet RcvdPktCnt =  16
-Header = dead 40
-Arp Packet RcvdPktCnt =  17
-Header = dead 40
-Arp Packet RcvdPktCnt =  18
-Header = dead 40
-Arp Packet RcvdPktCnt =  19
- Send SYN and ACK from listen state 
- Send SYN and ACK from listen state 
-02/25/15 19:44:39 ERROR- FTPDSessionStart: Start FTP Session.
-
-02/25/15 19:44:39 ERROR- FTPD_DirectoryExists: Directory CFG exists
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1a
-Header = dead 40
-Arp Packet RcvdPktCnt =  1b
-02/25/15 19:44:40 ERROR- FTPD_DirectoryExists: Directory CFG exists
-
- Send SYN and ACK from listen state 
- Send ACK from zero window probe 
- Send ACK from process data segment 
-Time stamping successful
-Header = dead 40
-Arp Packet RcvdPktCnt =  1c
- Send ACK from Process Timer 
- Send ACK from gflags need to ack 
- Send ACK from OpenWindow 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from OpenWindow 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from OpenWindow 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from gflags need to ack 
- Send ACK from OpenWindow 
- Send ACK from gflags need to ack 
- Send ACK from Close wait 
-wrote 13036 bytes
-02/25/15 19:44:44 ERROR- FTPD_GetFileFromClient: wrote 13036 bytes to D2GUI.XML 
-
-Read: <?xml version="1.0"?>
-<D2Mux_Setup>
-  <System Tables_Mode="2" />
-  <Port>
-    <Stream_Info Port_Num="0" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="1" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="2" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="3" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="4" Transpo
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-    <Program>
-      <Program_Info Program_Name_Out="K33EJ-D&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Name_In="3ABN-EN&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="3" PMT_PID_Out="48" PCR_PID_Out="49" PCR_PID_In="2001" EIT_Title="" Program_Num_In="1" Port_Num_In="0" />
-      <VCT_Info Short_Name="3ABN-EN" Extended_Name="&#x17;&#x1;eng&#x1;&#x0;&#x0;&#xF;3ABN English T&#x0;" Major_Channel_Num="33" Minor_Channel_Num="1" Modulation_Mode="4" Carrier_Freq="587000000" Channel_TSID="1001" ETM_Location="0" Access_Controlled="0" Hidden="0" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Service_Type="2" Source_ID="1" />
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="3" />
-      <Elementary_Stream PID_In="2001" PID_Out="49" Stream_Type="2" Enabled="True" Language="" />
-      <Elementary_Stream PID_In="3001" PID_Out="3001" Stream_Type="4" Enabled="False" Language="" />
-      <Elementary_Stream PID_In="4001" PID_Out="52" Stream_Type="129" Enabled="True" Language="eng" />
-    </Program>
-    <Program>
-      <Progr&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="4" PMT_PID_Out="64" PCR_PID_Out="65" PCR_PID_In="2075" EIT_Title="" Program_Num_In="75" Port_Num_In="0" />
-      <VCT_Info Short_Name="Prg 75" Major_Channel_Num="33" Minor_Channel_Num="2" Modulation_Mode="0" Carrier_Freq="587000000" Channel_TSID="0" ETM_Location="0" Access_Controlled="0" Hidden="0" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Service_Type="0" Source_ID="0" />
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="4" />
-      <Elementary_Stream PID_In="2075" PID_Out="65" Stream_Type="2" Enabled="True" Language="" />
-      <Elementary_Stream PID_In="3075" PID_Out="3075" Stream_Type="4" Enabled="False" Language="" />
-      <Elementary_Stream PID_In="4075" PID_Out="68" Stream_Type="129" Enabled="True" Language="" />
-    </Program>
-    <Program>
-      <Program_Info Program_Name_Out="3ABN-DD&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Name_In="3ABN-PR&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="5" PMT_PID_Out="80" PCR_PID_Out="81" PCR_PID_In="2002" EIT_Title="" Program_Num_In="2" Port_Num_In="0" />
-      <VCT_Info Short_Name="3ABN-PR" Extended_Name="&#x18;&#x1;eng&#x1;&#x0;&#x0;&#x10;3ABN Teaching T&#x0;" Major_Channel_Num="33" Minor_Channel_Num="3" Modulation_Mode="4" Carrier_Freq="587000000" Channel_TSID="1001" ETM_Location="0" Access_Controlled="0" Hidden="0" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Ser
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="5" />
-      <Elementary_Stream PID_In="2002" PID_Out="81" Stream_Type="2" Enabled="True" Language="" />
-      <Elementary_Stream PID_In="3002" PID_Out="3002" Stream_Type="4" Enabled="False" Language="" />
-      <Elementary_Stream PID_In="4002" PID_Out="84" Stream_Type="129" Enabled="True" Language="" />
-    </Program>
-    <Program>
-      <Program_Info Program_Name_Out="3ABN-ES&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Name_In="3ABN-ES&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="6" PMT_PID_Out="96" PCR_PID_Out="97" PCR_PID_In="2003" EIT_Title="" Program_Num_In="3" Port_Num_In="0" />
-      <VCT_Info Short_Name="3ABN-ES" Extended_Name="&#x16;&#x1;eng&#x1;&#x0;&#x0;&#xE;3ABN Latino T&#x0;" Major_Channel_Num="33" Minor_Channel_Num="4" Modulation_Mode="4" Carrier_Freq="587000000" Channel_TSID="1001" ETM_Location="1" Access_Controlled="0" Hidden="0" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Service_Type="2" Source_ID="3" />
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="6" />
-      <Elementary_Stream PID_In="2003" PID_Out="97" Stream_Type="2" Enabled="True" Language="" />
-      <Elementary_Stream PID_In="3003" PID_Out="3003" Stream_Type="4" Enabled="False" Language="" />
-      <Ele
-    </Program>
-    <Program>
-      <Program_Info Program_Name_Out="3ABN-RD&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Name_In="3ABN-RD&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="7" PMT_PID_Out="112" PCR_PID_Out="116" PCR_PID_In="3111" EIT_Title="" Program_Num_In="111" Port_Num_In="0" />
-      <VCT_Info Short_Name="3ABN-RD" Extended_Name="&#x1C;&#x1;eng&#x1;&#x0;&#x0;&#x14;3ABN Christian Radi&#x0;" Major_Channel_Num="33" Minor_Channel_Num="5" Modulation_Mode="4" Carrier_Freq="587000000" Channel_TSID="1001" ETM_Location="1" Access_Controlled="0" Hidden="0" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Service_Type="3" Source_ID="5" />
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="7" />
-      <Elementary_Stream PID_In="3111" PID_Out="3111" Stream_Type="4" Enabled="False" Language="" />
-      <Elementary_Stream PID_In="4111" PID_Out="116" Stream_Type="129" Enabled="True" Language="eng" />
-    </Program>
-    <Program>
-      <Program_Info Program_Name_Out="3ABN-LR&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Name_In="3ABN-LR&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="8" PMT_PID_Out="128" PCR_PID_Out="132" PCR_PID_In="3133" EIT_Title="" Program_Num_In="133" Port_Num_In="0" />
-      <VCT_Info Short_Name="3ABN-LR" Extended_Name="#&#x1;eng&#x1;&#x0;&#x0;&#x1B;3ABN Latino Christian Radi&#x0;" Major_Channel_Num="33" Minor_Channel_Num="6" Modulation_Mode="4" Ca
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="8" />
-      <Elementary_Stream PID_In="3133" PID_Out="3133" Stream_Type="4" Enabled="False" Language="" />
-      <Elementary_Stream PID_In="4133" PID_Out="132" Stream_Type="129" Enabled="True" Language="spa" />
-    </Program>
-    <Program>
-      <Program_Info Program_Name_Out="Radio74&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Name_In="Radio74&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;" Program_Num_Out="9" PMT_PID_Out="144" PCR_PID_Out="148" PCR_PID_In="3122" EIT_Title="" Program_Num_In="122" Port_Num_In="0" />
-      <VCT_Info Short_Name="Radio74" Extended_Name="&#x1F;&#x1;eng&#x1;&#x0;&#x0;&#x17;Radio 74 International&#x0;" Major_Channel_Num="33" Minor_Channel_Num="7" Modulation_Mode="4" Carrier_Freq="587000000" Channel_TSID="1001" ETM_Location="1" Access_Controlled="0" Hidden="0" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Service_Type="3" Source_ID="6" />
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="9" />
-      <Elementary_Stream PID_In="3122" PID_Out="3122" Stream_Type="4" Enabled="False" Language="" />
-      <Elementary_Stream PID_In="4122" PID_Out="148" Stream_Type="129" Enabled="True" Language="eng" />
-    </Program>
-    <Program>
-      <Program_Info Program_Name_Out="Test1" Program_
-      <VCT_Info Short_Name="Prg 1" Major_Channel_Num="33" Minor_Channel_Num="8" Modulation_Mode="0" Carrier_Freq="0" Channel_TSID="0" ETM_Location="0" Access_Controlled="0" Hidden="1" Hide_Guide="0" Path_Select="0" Out_Of_Band="0" Service_Type="0" Source_ID="2048" />
-      <SDT_Info Service_Name="" Service_Provider="" EIT_Schedule="0" EIT_Present_Follow="0" Running_Status="0" Free_CA_Mode="0" Service_Type="0" Logical_Channel_Num="0" Service_ID="10" />
-      <Elementary_Stream PID_In="68" PID_Out="161" Stream_Type="2" Enabled="True" Language="" />
-      <Elementary_Stream PID_In="69" PID_Out="164" Stream_Type="129" Enabled="True" Language="" />
-    </Program>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="5" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="6" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" OrbitSystem="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-  <Port>
-    <Stream_Info Port_Num="7" Transport_Stream_ID="0" Network_PID="0" Dynamic_EIT="False" Static_EIT="False" Generate_STT="False" Use_TVCT="True" Use_CVCT="False" />
-    <NIT_Info Network_Name="D2D Network" Network_ID="0" Delivery_Mode="0">
-      <NIT_Satellite Frequency="0" Orbital_Position="0" West_East_Flag="0" Polarization="0" Rolloff="0" Modulation_System="0" Modulation_Tpe="0" Symbol_Rate="0" FEC_Inner="0" />
-      <NIT_Cable Frequency="0" FEC_Outer="0" FEC_Inner="0" Modulation="0" Symbol_Rate="0" />
-    </NIT_Info>
-  </Port>
-</D2Mux_Setup>
- Send ACK from zero window probe 
-02/25/15 19:44:45 ERROR- FTPDSessionEnd: End FTP Session.
-
-Msg ID: 0 
-Msg ID: 1 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 78 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 2 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 4 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6A 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 300 
-PSIP Idx = 0, PID: 0, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 301 
-PSIP Idx = 1, PID: 30, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 302 
-PSIP Idx = 2, PID: 40, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 303 
-PSIP Idx = 3, PID: 50, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 304 
-PSIP Idx = 4, PID: 60, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
- Send ACK from OpenWindow 
-Msg ID: 305 
-PSIP Idx = 5, PID: 70, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 306 
-PSIP Idx = 6, PID: 80, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 307 
-PSIP Idx = 7, PID: 90, sync: 47
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:48 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 308 
-PSIP Idx = 8, PID: A0, sync: 47
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6B 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 33E 
-PSIP Idx = 62, PID: 1FFB, sync: 47
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 309 
-PSIP Idx = 9, PID: 1FFB, sync: 47
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 30A 
-PSIP Idx = 10, PID: 1FFB, sync: 47
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
- Send ACK from OpenWindow 
-Msg ID: 30B 
-PSIP Idx = 11, PID: 1FFB, sync: 47
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 30C 
-PSIP Idx = 12, PID: 1FFB, sync: 47
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 85 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 72 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 71 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 70 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 84 
-Task cmd gige opts port: 0, value = 1
-set gige func port: 0, value = 1
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 85 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 72 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 71 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 70 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 84 
-Task cmd gige opts port: 1, value = 0
-set gige func port: 1, value = 0
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 85 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 72 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 71 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 70 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 84 
-Task cmd gige opts port: 2, value = 0
-set gige func port: 2, value = 0
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 85 
-02/25/15 19:44:49 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 72 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 71 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 70 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 84 
-Task cmd gige opts port: 3, value = 0
-set gige func port: 3, value = 0
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 2 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 4 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 8080001 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, A07D1 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 2A0FA1 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 8180002 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1d
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 3A07D2 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 5A0FA2 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 8280003 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 6A07D3 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 8A0FA3 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 8380000 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, 9A081B 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:50 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:50 DEBUG- FilterLower, BA0FEB 
-
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
- Send ACK from OpenWindow 
-Msg ID: 6F 
-02/25/15 19:44:50 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 8480005 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, DA100F 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 8580006 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, FA101A 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 8680007 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 11A1025 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 45EFF00 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 7DEFE00 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 7CEFE01 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 7BEFE02 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 7AEFE03 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 61EFE80 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1e
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 60EFE81 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 5FEFE82 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 61 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 5EEFE83 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 1282012 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 88080000 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 800A0044 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 801A0045 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6F 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 0 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 10082203 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1f
-Msg ID: 60 
-02/25/15 19:44:51 DEBUG- FilterUpper, 1 
-
-02/25/15 19:44:51 DEBUG- FilterLower, 7FAFFFB 
-
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 75 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 76 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 77 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 87 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 75 
-02/25/15 19:44:51 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 76 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 77 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 87 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 75 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 76 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 77 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 87 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 75 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 76 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 77 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 87 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 68 
-02/25/15 19:44:52 INFO- TimeZone 0 
-
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 79 
-02/25/15 19:44:52 INFO- DSTRegion 0 
-
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 66 
-02/25/15 19:44:52 DEBUG- Sent Msg - msg length: 0
-
-Timezone:EST+0
-Current time: Wed Feb 25 19:44:41 2015
-
-Formatted time string:  7:44:41 PM
-Formatted Date/Time string: 02/25/15 19:44:41
-Msg ID: 69 
-02/25/15 19:44:41 INFO- 207.200.081.113
-02/25/15 19:44:41 DEBUG- Sent Msg - msg length: 0
-
-Msg ID: 6C 
- Send ACK from TCP STATE Established 
- Send ACK from porcess data bad sequence 
-02/25/15 19:44:41 DEBUG- Sent Msg - msg length: 0
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  20
-Header = dead 40
-Arp Packet RcvdPktCnt =  21
-Header = dead 40
-Arp Packet RcvdPktCnt =  22
-Msg ID: 67 
-02/25/15 19:44:44 INFO- Start GUI save
-Retrieving external flash usage...
- Send ACK from Process Timer 
-Flash card memory usage (bytes):
-3956801536 total, 3901718528 free, 55083008 used, 0 bad
-02/25/15 19:44:45 INFO- Start remaps
-02/25/15 19:44:45 DEBUG- Attribute 20
-
-02/25/15 19:44:45 INFO- Start tables
-02/25/15 19:44:45 INFO- Start filters
-02/25/15 19:44:45 INFO- Save Eas Array
-02/25/15 19:44:45 INFO- Start cfg save
-02/25/15 19:44:45 INFO- End GUI save
-02/25/15 19:44:45 DEBUG- Sent Msg - msg length: 0
-
-Box IP Address = 87654321
-Header = dead 40
-Arp Packet RcvdPktCnt =  23
-Header = dead 40
-Arp Packet RcvdPktCnt =  24
-02/25/15 19:44:49 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  25
-Header = dead 40
-Arp Packet RcvdPktCnt =  26
-Header = dead 40
-Arp Packet RcvdPktCnt =  27
-Header = dead 40
-Arp Packet RcvdPktCnt =  28
-Header = dead 40
-Arp Packet RcvdPktCnt =  29
-Header = dead 40
-Arp Packet RcvdPktCnt =  2a
-Header = dead 40
-Arp Packet RcvdPktCnt =  2b
-Header = dead 40
-Arp Packet RcvdPktCnt =  2c
-Header = dead 40
-Arp Packet RcvdPktCnt =  2d
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f
-Header = dead 40
-Arp Packet RcvdPktCnt =  30
-Header = dead 40
-Arp Packet RcvdPktCnt =  31
-Header = dead 40
-Arp Packet RcvdPktCnt =  32
-Header = dead 40
-Arp Packet RcvdPktCnt =  33
-Header = dead 40
-Arp Packet RcvdPktCnt =  34
-Header = dead 40
-Arp Packet RcvdPktCnt =  35
-Header = dead 40
-Arp Packet RcvdPktCnt =  36
-Header = dead 40
-Arp Packet RcvdPktCnt =  37
-Header = dead 40
-Arp Packet RcvdPktCnt =  38
-Header = dead 40
-Arp Packet RcvdPktCnt =  39
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a
-02/25/15 19:45:50 DEBUG- Start EAS Insert
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:45:50 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:45:50 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:45:50 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:45:50 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:45:50 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b
-Header = dead 40
-Arp Packet RcvdPktCnt =  3c
-Header = dead 40
-Arp Packet RcvdPktCnt =  3d
-02/25/15 19:45:54 DEBUG- Stop EAS Insert
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:45:54 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  3e
-Header = dead 40
-Arp Packet RcvdPktCnt =  3f
-Header = dead 40
-Arp Packet RcvdPktCnt =  40
-02/25/15 19:46:15 DEBUG- Start EAS Insert
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:46:15 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:46:15 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:46:15 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:46:15 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:46:15 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  41
-Header = dead 40
-Arp Packet RcvdPktCnt =  42
-Header = dead 40
-Arp Packet RcvdPktCnt =  43
-Header = dead 40
-Arp Packet RcvdPktCnt =  44
-Header = dead 40
-Arp Packet RcvdPktCnt =  45
-Header = dead 40
-Arp Packet RcvdPktCnt =  46
-Header = dead 40
-Arp Packet RcvdPktCnt =  47
-Header = dead 40
-Arp Packet RcvdPktCnt =  48
-Header = dead 40
-Arp Packet RcvdPktCnt =  49
-Header = dead 40
-Arp Packet RcvdPktCnt =  4a
-Header = dead 40
-Arp Packet RcvdPktCnt =  4b
-Header = dead 40
-Arp Packet RcvdPktCnt =  4c
-Header = dead 40
-Arp Packet RcvdPktCnt =  4d
-Header = dead 40
-Arp Packet RcvdPktCnt =  4e
-Header = dead 40
-Arp Packet RcvdPktCnt =  4f
-Header = dead 40
-Arp Packet RcvdPktCnt =  50
-Header = dead 40
-Arp Packet RcvdPktCnt =  51
-Header = dead 40
-Arp Packet RcvdPktCnt =  52
-Header = dead 40
-Arp Packet RcvdPktCnt =  53
-Waiting 2sec to start 'A' to abort
-Configured IP = 192.168.0.150
-Configured Mask = 255.255.255.0
-MAC Address= 00:03:f4:08:20:a2
-
-===== Starting D2Mux Program =====
-write protect on 
-FAT mount to SD/MMC successful
-SD/MMC drive change successful
-Opening file test: D2MUX.bit
-Byte Count: 1286280
-Closing file D2MUX.bit
-
-FPGA Done = 42413
---------------------------------------------------
-                Address in use: FALSE
---------------------------------------------------
---------------------------------------------------
-             Announcing Address
---------------------------------------------------
-  SENDING GRATUITOUS ARP
-01/01/70 00:00:08 INFO- TimeZone 0 
-
-01/01/70 00:00:08 INFO- TableProc 0 
-
-01/01/70 00:00:08 INFO- DSTRegion 0 
-
-cfg gige func port: 0, value = 1
-set gige func port: 0, value = 1
-cfg gige func port: 1, value = 0
-set gige func port: 1, value = 0
-cfg gige func port: 2, value = 0
-set gige func port: 2, value = 0
-cfg gige func port: 3, value = 0
-set gige func port: 3, value = 0
-01/01/70 00:00:08 INFO- FPGA Version 01040010 
-
-01/01/70 00:00:09 INFO- Verifying License 
-
-01/01/70 00:00:09 DEBUG- Valid license found for GIGE:
-
-01/01/70 00:00:09 DEBUG- Valid license found for IMUX4:
-
-01/01/70 00:00:09 DEBUG- Valid license found for ASI2:
-
-Started FTP Server
-You can use Internet Explorer to drag and drop files to url "ftp://192.168.0.150"
-Long file names are not supported- only 8.3 format
-Task Time launced
-Task Time get dst region
-Task Time check dst
-Task Time update time
-207.200.81.113Header = dead 40
-Arp Packet RcvdPktCnt =  1
-Gig_init_IP_ADDR.
-Auto Negotiate mac set.
-IP Addr set for static
-hash[8] = 34 
-portData = 804D2, MC IP = ef0000dc
-hash[8] = 30 
-portData = 904D2, MC IP = ef0000e1
-hash[8] = 12 
-portData = A04D2, MC IP = ef0000e6
-Unicast IP = c0a80097 
-portData = B0000, MC IP = 0
-Gig_init_ports clear.
-McReg[0] = 0 
-McReg[1] = 0 
-McReg[2] = 4 
-McReg[3] = 0 
-McReg[4] = 0 
-McReg[5] = 0 
-  SENDING GRATUITOUS ARP
-McReg[6] = 11 
-McReg[7] = 80 
-Auto Negotiate mac set.
-Header = dead 40
-Arp Packet RcvdPktCnt =  2
-Gige Options 1, result = 0
-ARP Setup MAC Upper  = 14 
-ARP Setup MAC Middle = f400 
-ARP Setup MAC Lower  = 8451 
-ARP Setup IPA = c0a800bf 
-Header = dead 40
-Arp Packet RcvdPktCnt =  3
-Header = dead 40
-Arp Packet RcvdPktCnt =  4
-Header = dead 40
-Arp Packet RcvdPktCnt =  5
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Failed Static IP NTP
-Verify you have correct IP address, mask, gateway AND DNS set
-NTP failed, setting time from RTC
-timedOut = 1
-timedOut = 1
-RTC Secs Reg = 89144719
-timedOut = 1
-RTC Months Reg = 4250215
-Task Time display
-Current time: Wed Feb 25 19:47:14 2015
-
-Formatted time string:  7:47:14 PM
-Formatted Date/Time string: 02/25/15 19:47:14
-02/25/15 19:47:14 INFO- Last reset due to power on reset
-
-02/25/15 19:47:14 INFO- FPGA Version 01040010 
-
-Application started
-02/25/15 19:47:14 ERROR- UDP Injection Port: 0
-
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  6
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  7
-Header = dead 40
-Arp Packet RcvdPktCnt =  8
-Header = dead 40
-Arp Packet RcvdPktCnt =  9
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  a
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  b
-Header = dead 40
-Arp Packet RcvdPktCnt =  c
-Header = dead 40
-Arp Packet RcvdPktCnt =  d
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  e
-Header = dead 40
-Arp Packet RcvdPktCnt =  f
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  10
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  11
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  12
-Header = dead 40
-Arp Packet RcvdPktCnt =  13
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-ARP to 64010a0c failed, from c0a80097
-Header = dead 40
-Arp Packet RcvdPktCnt =  14
-Header = dead 40
-Arp Packet RcvdPktCnt =  15
-02/25/15 19:47:48 DEBUG- Start EAS Insert
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:47:48 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:47:48 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:47:48 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:47:48 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:47:48 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  16
-Header = dead 40
-Arp Packet RcvdPktCnt =  17
-Header = dead 40
-Arp Packet RcvdPktCnt =  18
-Header = dead 40
-Arp Packet RcvdPktCnt =  19
-Header = dead 40
-Arp Packet RcvdPktCnt =  1a
-02/25/15 19:48:06 DEBUG- Stop EAS Insert
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:48:06 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  1b
-Header = dead 40
-Arp Packet RcvdPktCnt =  1c
-Header = dead 40
-Arp Packet RcvdPktCnt =  1d
-Header = dead 40
-Arp Packet RcvdPktCnt =  1e
-Header = dead 40
-Arp Packet RcvdPktCnt =  1f
-Header = dead 40
-Arp Packet RcvdPktCnt =  20
-Header = dead 40
-Arp Packet RcvdPktCnt =  21
-Header = dead 40
-Arp Packet RcvdPktCnt =  22
-Header = dead 40
-Arp Packet RcvdPktCnt =  23
-Header = dead 40
-Arp Packet RcvdPktCnt =  24
-Header = dead 40
-Arp Packet RcvdPktCnt =  25
-Header = dead 40
-Arp Packet RcvdPktCnt =  26
-Header = dead 40
-Arp Packet RcvdPktCnt =  27
-Header = dead 40
-Arp Packet RcvdPktCnt =  28
-Header = dead 40
-Arp Packet RcvdPktCnt =  29
-Header = dead 40
-Arp Packet RcvdPktCnt =  2a
-Header = dead 40
-Arp Packet RcvdPktCnt =  2b
-Header = dead 40
-Arp Packet RcvdPktCnt =  2c
-Header = dead 40
-Arp Packet RcvdPktCnt =  2d
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f
-Header = dead 40
-Arp Packet RcvdPktCnt =  30
-Header = dead 40
-Arp Packet RcvdPktCnt =  31
-Header = dead 40
-Arp Packet RcvdPktCnt =  32
-Header = dead 40
-Arp Packet RcvdPktCnt =  33
-Header = dead 40
-Arp Packet RcvdPktCnt =  34
-Header = dead 40
-Arp Packet RcvdPktCnt =  35
-Header = dead 40
-Arp Packet RcvdPktCnt =  36
-Header = dead 40
-Arp Packet RcvdPktCnt =  37
-Header = dead 40
-Arp Packet RcvdPktCnt =  38
-Header = dead 40
-Arp Packet RcvdPktCnt =  39
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b
-Header = dead 40
-Arp Packet RcvdPktCnt =  3c
-Header = dead 40
-Arp Packet RcvdPktCnt =  3d
-Header = dead 40
-Arp Packet RcvdPktCnt =  3e
-02/25/15 19:49:28 DEBUG- Start EAS Insert
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:49:28 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:49:28 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:49:28 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:49:28 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:49:28 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  3f
-Header = dead 40
-Arp Packet RcvdPktCnt =  40
-Header = dead 40
-Arp Packet RcvdPktCnt =  41
-Header = dead 40
-Arp Packet RcvdPktCnt =  42
-Header = dead 40
-Arp Packet RcvdPktCnt =  43
-Header = dead 40
-Arp Packet RcvdPktCnt =  44
-Header = dead 40
-Arp Packet RcvdPktCnt =  45
-Header = dead 40
-Arp Packet RcvdPktCnt =  46
-Header = dead 40
-Arp Packet RcvdPktCnt =  47
-Header = dead 40
-Arp Packet RcvdPktCnt =  48
-Header = dead 40
-Arp Packet RcvdPktCnt =  49
-Header = dead 40
-Arp Packet RcvdPktCnt =  4a
-Header = dead 40
-Arp Packet RcvdPktCnt =  4b
-Header = dead 40
-Arp Packet RcvdPktCnt =  4c
-Header = dead 40
-Arp Packet RcvdPktCnt =  4d
-Header = dead 40
-Arp Packet RcvdPktCnt =  4e
-Header = dead 40
-Arp Packet RcvdPktCnt =  4f
-Header = dead 40
-Arp Packet RcvdPktCnt =  50
-Header = dead 40
-Arp Packet RcvdPktCnt =  51
-Header = dead 40
-Arp Packet RcvdPktCnt =  52
-Header = dead 40
-Arp Packet RcvdPktCnt =  53
-Header = dead 40
-Arp Packet RcvdPktCnt =  54
-02/25/15 19:50:28 DEBUG- Stop EAS Insert
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:50:28 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  55
-Header = dead 40
-Arp Packet RcvdPktCnt =  56
-Header = dead 40
-Arp Packet RcvdPktCnt =  57
-Header = dead 40
-Arp Packet RcvdPktCnt =  58
-Header = dead 40
-Arp Packet RcvdPktCnt =  59
-Header = dead 40
-Arp Packet RcvdPktCnt =  5a
-Header = dead 40
-Arp Packet RcvdPktCnt =  5b
-Header = dead 40
-Arp Packet RcvdPktCnt =  5c
-Header = dead 40
-Arp Packet RcvdPktCnt =  5d
-Header = dead 40
-Arp Packet RcvdPktCnt =  5e
-Header = dead 40
-Arp Packet RcvdPktCnt =  5f
-Header = dead 40
-Arp Packet RcvdPktCnt =  60
-Header = dead 40
-Arp Packet RcvdPktCnt =  61
-Header = dead 40
-Arp Packet RcvdPktCnt =  62
-Header = dead 40
-Arp Packet RcvdPktCnt =  63
-Header = dead 40
-Arp Packet RcvdPktCnt =  64
-Header = dead 40
-Arp Packet RcvdPktCnt =  65
-Header = dead 40
-Arp Packet RcvdPktCnt =  66
-Header = dead 40
-Arp Packet RcvdPktCnt =  67
-Header = dead 40
-Arp Packet RcvdPktCnt =  68
-Header = dead 40
-Arp Packet RcvdPktCnt =  69
-Header = dead 40
-Arp Packet RcvdPktCnt =  6a
-Header = dead 40
-Arp Packet RcvdPktCnt =  6b
-02/25/15 19:51:32 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
-
-02/25/15 19:51:32 DEBUG- Splice Start Recieved
-
-02/25/15 19:51:32 DEBUG- Splice on Port: 0, Program: 1
-
-02/25/15 19:51:32 DEBUG- Enable Splice Remap Port: 10, Index: 0, PID: 31
-
-02/25/15 19:51:32 DEBUG- Write Filter Ext: 2
-
-02/25/15 19:51:32 DEBUG- Write Filter: A07D1
-
-02/25/15 19:51:32 DEBUG- Enable Splice Network Filter Port: 0, Index: 0
-
-02/25/15 19:51:32 DEBUG- Ad Stream Type: 2, Network Stream Type: 2
-
-02/25/15 19:51:32 DEBUG- Ad PID: 44
-
-02/25/15 19:51:32 DEBUG- Set Splice Entry Port: 7, Index: 0, Stream Type: 2, Program#: 1
-
-02/25/15 19:51:32 DEBUG- Enable Ad Remap Port: 7, Index: 0, PID: 44
-
-02/25/15 19:51:32 DEBUG- Set Ad Filter Port: 7, Index: 0
-
-02/25/15 19:51:32 DEBUG- FilterUpper, E720204 
-
-02/25/15 19:51:32 DEBUG- FilterLower, 700A0044 
-
-02/25/15 19:51:32 DEBUG- Enable Splice Remap Port: 10, Index: 1, PID: 34
-
-02/25/15 19:51:32 DEBUG- Write Filter Ext: 2
-
-02/25/15 19:51:32 DEBUG- Write Filter: 2A0FA1
-
-02/25/15 19:51:32 DEBUG- Enable Splice Network Filter Port: 0, Index: 2
-
-02/25/15 19:51:32 DEBUG- Ad Stream Type: 2, Network Stream Type: 129
-
-02/25/15 19:51:32 DEBUG- Ad Stream Type: 129, Network Stream Type: 129
-
-02/25/15 19:51:32 DEBUG- Ad PID: 45
-
-02/25/15 19:51:32 DEBUG- Set Splice Entry Port: 7, Index: 1, Stream Type: 129, Program#: 1
-
-02/25/15 19:51:32 DEBUG- Enable Ad Remap Port: 7, Index: 1, PID: 45
-
-02/25/15 19:51:32 DEBUG- Set Ad Filter Port: 7, Index: 1
-
-02/25/15 19:51:32 DEBUG- FilterUpper, E720204 
-
-02/25/15 19:51:32 DEBUG- FilterLower, 701A0045 
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  6c
-Header = dead 40
-Arp Packet RcvdPktCnt =  6d
-Header = dead 40
-Arp Packet RcvdPktCnt =  6e
-Header = dead 40
-Arp Packet RcvdPktCnt =  6f
-Header = dead 40
-Arp Packet RcvdPktCnt =  70
-Header = dead 40
-Arp Packet RcvdPktCnt =  71
-Header = dead 40
-Arp Packet RcvdPktCnt =  72
-Header = dead 40
-Arp Packet RcvdPktCnt =  73
-Header = dead 40
-Arp Packet RcvdPktCnt =  74
-Header = dead 40
-Arp Packet RcvdPktCnt =  75
-Header = dead 40
-Arp Packet RcvdPktCnt =  76
-Header = dead 40
-Arp Packet RcvdPktCnt =  77
-Header = dead 40
-Arp Packet RcvdPktCnt =  78
-Header = dead 40
-Arp Packet RcvdPktCnt =  79
-Header = dead 40
-Arp Packet RcvdPktCnt =  7a
-Header = dead 40
-Arp Packet RcvdPktCnt =  7b
-Header = dead 40
-Arp Packet RcvdPktCnt =  7c
-Header = dead 40
-Arp Packet RcvdPktCnt =  7d
-Header = dead 40
-Arp Packet RcvdPktCnt =  7e
-Header = dead 40
-Arp Packet RcvdPktCnt =  7f
-Header = dead 40
-Arp Packet RcvdPktCnt =  80
-02/25/15 19:52:33 DEBUG- EAS Msg Received sourceAddr: C0A864A5, destAddr: C0A80096
-
-02/25/15 19:52:33 DEBUG- Splice Stop Recieved
-
-02/25/15 19:52:33 DEBUG- Disable Ad Filter Port: 7, Program: 1, Index: 0
-
-02/25/15 19:52:33 DEBUG- Disable Ad Filter Port: 7, Program: 1, Index: 1
-
-02/25/15 19:52:33 DEBUG- Disable Ad Filter Port: 0, Program: 1, Index: 0
-
-02/25/15 19:52:33 DEBUG- Disable Ad Filter Port: 0, Program: 1, Index: 2
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  81
-Header = dead 40
-Arp Packet RcvdPktCnt =  82
-Header = dead 40
-Arp Packet RcvdPktCnt =  83
-Header = dead 40
-Arp Packet RcvdPktCnt =  84
-Header = dead 40
-Arp Packet RcvdPktCnt =  85
-Header = dead 40
-Arp Packet RcvdPktCnt =  86
-Header = dead 40
-Arp Packet RcvdPktCnt =  87
-Header = dead 40
-Arp Packet RcvdPktCnt =  88
-Header = dead 40
-Arp Packet RcvdPktCnt =  89
-Header = dead 40
-Arp Packet RcvdPktCnt =  8a
-Header = dead 40
-Arp Packet RcvdPktCnt =  8b
-Header = dead 40
-Arp Packet RcvdPktCnt =  8c
-Header = dead 40
-Arp Packet RcvdPktCnt =  8d
-Header = dead 40
-Arp Packet RcvdPktCnt =  8e
-Header = dead 40
-Arp Packet RcvdPktCnt =  8f
-Header = dead 40
-Arp Packet RcvdPktCnt =  90
-02/25/15 19:52:46 DEBUG- Start EAS Insert
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:52:46 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:52:46 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:52:46 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:52:46 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:52:46 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  91
-Header = dead 40
-Arp Packet RcvdPktCnt =  92
-Header = dead 40
-Arp Packet RcvdPktCnt =  93
-Header = dead 40
-Arp Packet RcvdPktCnt =  94
-Header = dead 40
-Arp Packet RcvdPktCnt =  95
-Header = dead 40
-Arp Packet RcvdPktCnt =  96
-Header = dead 40
-Arp Packet RcvdPktCnt =  97
-Header = dead 40
-Arp Packet RcvdPktCnt =  98
-Header = dead 40
-Arp Packet RcvdPktCnt =  99
-Header = dead 40
-Arp Packet RcvdPktCnt =  9a
-Header = dead 40
-Arp Packet RcvdPktCnt =  9b
-Header = dead 40
-Arp Packet RcvdPktCnt =  9c
-Header = dead 40
-Arp Packet RcvdPktCnt =  9d
-Header = dead 40
-Arp Packet RcvdPktCnt =  9e
-Header = dead 40
-Arp Packet RcvdPktCnt =  9f
-Header = dead 40
-Arp Packet RcvdPktCnt =  a0
-Header = dead 40
-Arp Packet RcvdPktCnt =  a1
-Header = dead 40
-Arp Packet RcvdPktCnt =  a2
-Header = dead 40
-Arp Packet RcvdPktCnt =  a3
-Header = dead 40
-Arp Packet RcvdPktCnt =  a4
-Header = dead 40
-Arp Packet RcvdPktCnt =  a5
-02/25/15 19:53:40 DEBUG- Stop EAS Insert
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:53:40 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  a6
-Header = dead 40
-Arp Packet RcvdPktCnt =  a7
-Header = dead 40
-Arp Packet RcvdPktCnt =  a8
-Header = dead 40
-Arp Packet RcvdPktCnt =  a9
-Header = dead 40
-Arp Packet RcvdPktCnt =  aa
-Header = dead 40
-Arp Packet RcvdPktCnt =  ab
-Header = dead 40
-Arp Packet RcvdPktCnt =  ac
-Header = dead 40
-Arp Packet RcvdPktCnt =  ad
-Header = dead 40
-Arp Packet RcvdPktCnt =  f9
-Header = dead 40
-Arp Packet RcvdPktCnt =  fa
-Header = dead 40
-Arp Packet RcvdPktCnt =  fb
-Header = dead 40
-Arp Packet RcvdPktCnt =  fc
-Header = dead 40
-Arp Packet RcvdPktCnt =  fd
-02/25/15 19:57:39 DEBUG- Start EAS Insert
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:57:39 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:57:39 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:57:39 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:57:39 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:57:39 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  fe
-Header = dead 40
-Arp Packet RcvdPktCnt =  ff
-Header = dead 40
-Arp Packet RcvdPktCnt =  100
-Header = dead 40
-Arp Packet RcvdPktCnt =  101
-Header = dead 40
-Arp Packet RcvdPktCnt =  102
-Header = dead 40
-Arp Packet RcvdPktCnt =  103
-Header = dead 40
-Arp Packet RcvdPktCnt =  104
-Header = dead 40
-Arp Packet RcvdPktCnt =  105
-Header = dead 40
-Arp Packet RcvdPktCnt =  106
-Header = dead 40
-Arp Packet RcvdPktCnt =  107
-Header = dead 40
-Arp Packet RcvdPktCnt =  108
-02/25/15 19:57:53 DEBUG- Stop EAS Insert
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:57:53 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  109
-Header = dead 40
-Arp Packet RcvdPktCnt =  10a
-Header = dead 40
-Arp Packet RcvdPktCnt =  10b
-Header = dead 40
-Arp Packet RcvdPktCnt =  10c
-Header = dead 40
-Arp Packet RcvdPktCnt =  10d
-Header = dead 40
-Arp Packet RcvdPktCnt =  10e
-Header = dead 40
-Arp Packet RcvdPktCnt =  10f
-Header = dead 40
-Arp Packet RcvdPktCnt =  110
-Header = dead 40
-Arp Packet RcvdPktCnt =  11a
-Header = dead 40
-Arp Packet RcvdPktCnt =  11b
-Header = dead 40
-Arp Packet RcvdPktCnt =  11c
-Header = dead 40
-Arp Packet RcvdPktCnt =  11d
-Header = dead 40
-Arp Packet RcvdPktCnt =  11e
-Header = dead 40
-Arp Packet RcvdPktCnt =  11f
-Header = dead 40
-Arp Packet RcvdPktCnt =  120
-Header = dead 40
-Arp Packet RcvdPktCnt =  121
-Header = dead 40
-Arp Packet RcvdPktCnt =  122
-Header = dead 40
-Arp Packet RcvdPktCnt =  123
-02/25/15 19:58:50 DEBUG- Start EAS Insert
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 1, Idx: 0, PID 51
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 1, Idx: 1, PID 54
-
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 2, Idx: 0, PID 61
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 2, Idx: 1, PID 64
-
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 3, Idx: 0, PID 41
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 3, Idx: 1, PID 44
-
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 5, Idx: 1, PID 94
-
-02/25/15 19:58:50 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 19:58:50 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 19:58:50 DEBUG- EAS Remap Port: 6, Idx: 1, PID 84
-
-02/25/15 19:58:50 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 19:58:50 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  124
-02/25/15 19:58:57 DEBUG- Stop EAS Insert
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-02/25/15 19:58:57 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  125
-Header = dead 40
-Arp Packet RcvdPktCnt =  126
-Header = dead 40
-Arp Packet RcvdPktCnt =  127
-Header = dead 40
-Arp Packet RcvdPktCnt =  128
-Header = dead 40
-Arp Packet RcvdPktCnt =  129
-Header = dead 40
-Arp Packet RcvdPktCnt =  12a
-Header = dead 40
-Arp Packet RcvdPktCnt =  12b
-Header = dead 40
-Arp Packet RcvdPktCnt =  12c
-Header = dead 40
-Arp Packet RcvdPktCnt =  12d
-Header = dead 40
-Arp Packet RcvdPktCnt =  12e
-Header = dead 40
-Arp Packet RcvdPktCnt =  12f
-Header = dead 40
-Arp Packet RcvdPktCnt =  130
-Header = dead 40
-Arp Packet RcvdPktCnt =  2d8
-02/25/15 20:18:57 DEBUG- EAS Msg Received sourceAddr: C0A86405, destAddr: C0A80096
-
-02/25/15 20:18:59 DEBUG- Start EAS Insert
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
-
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
-
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
-
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
-
-02/25/15 20:18:59 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 20:18:59 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 20:18:59 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
-
-02/25/15 20:18:59 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 20:18:59 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  2d9
-Header = dead 40
-Arp Packet RcvdPktCnt =  2da
-Header = dead 40
-Arp Packet RcvdPktCnt =  2db
-Header = dead 40
-Arp Packet RcvdPktCnt =  2dc
-Header = dead 40
-Arp Packet RcvdPktCnt =  2dd
-Header = dead 40
-Arp Packet RcvdPktCnt =  2de
-Header = dead 40
-Arp Packet RcvdPktCnt =  2df
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e0
-02/25/15 20:19:26 DEBUG- Stop EAS Insert
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-02/25/15 20:19:26 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e1
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e2
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e3
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e4
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e5
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e6
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e7
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e8
-Header = dead 40
-Arp Packet RcvdPktCnt =  2e9
-Header = dead 40
-Arp Packet RcvdPktCnt =  2ea
-Header = dead 40
-Arp Packet RcvdPktCnt =  2eb
-Header = dead 40
-Arp Packet RcvdPktCnt =  2ec
-Header = dead 40
-Arp Packet RcvdPktCnt =  2ed
-Header = dead 40
-Arp Packet RcvdPktCnt =  2ee
-Header = dead 40
-Arp Packet RcvdPktCnt =  2ef
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f0
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f1
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f2
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f3
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f4
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f5
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f6
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f7
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f8
-Header = dead 40
-Arp Packet RcvdPktCnt =  2f9
-Header = dead 40
-Arp Packet RcvdPktCnt =  2fa
-Header = dead 40
-Arp Packet RcvdPktCnt =  2fb
-Header = dead 40
-Arp Packet RcvdPktCnt =  2fc
-Header = dead 40
-Arp Packet RcvdPktCnt =  2fd
-Header = dead 40
-Arp Packet RcvdPktCnt =  2fe
-Header = dead 40
-Arp Packet RcvdPktCnt =  2ff
-Header = dead 40
-Arp Packet RcvdPktCnt =  300
-Header = dead 40
-Arp Packet RcvdPktCnt =  301
-Header = dead 40
-Arp Packet RcvdPktCnt =  302
-Header = dead 40
-Arp Packet RcvdPktCnt =  303
-Header = dead 40
-Arp Packet RcvdPktCnt =  304
-Header = dead 40
-Arp Packet RcvdPktCnt =  305
-Header = dead 40
-Arp Packet RcvdPktCnt =  306
-Header = dead 40
-Arp Packet RcvdPktCnt =  307
-Header = dead 40
-Arp Packet RcvdPktCnt =  367
-Header = dead 40
-Arp Packet RcvdPktCnt =  368
-02/25/15 20:25:28 DEBUG- EAS Msg Received sourceAddr: C0A86405, destAddr: C0A80096
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  369
-Header = dead 40
-Arp Packet RcvdPktCnt =  36a
-Header = dead 40
-Arp Packet RcvdPktCnt =  36b
-Header = dead 40
-Arp Packet RcvdPktCnt =  36c
-Header = dead 40
-Arp Packet RcvdPktCnt =  36d
-Header = dead 40
-Arp Packet RcvdPktCnt =  36e
-Header = dead 40
-Arp Packet RcvdPktCnt =  36f
-Header = dead 40
-Arp Packet RcvdPktCnt =  370
-Header = dead 40
-Arp Packet RcvdPktCnt =  371
-Header = dead 40
-Arp Packet RcvdPktCnt =  372
-Header = dead 40
-Arp Packet RcvdPktCnt =  373
-Header = dead 40
-Arp Packet RcvdPktCnt =  374
-02/25/15 20:25:40 DEBUG- EAS Msg Received sourceAddr: C0A86405, destAddr: C0A80096
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  375
-Header = dead 40
-Arp Packet RcvdPktCnt =  376
-02/25/15 20:25:42 DEBUG- Start EAS Insert
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
-
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
-
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
-
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
-
-02/25/15 20:25:42 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 20:25:42 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 20:25:42 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
-
-02/25/15 20:25:42 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 20:25:42 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  377
-Header = dead 40
-Arp Packet RcvdPktCnt =  378
-Header = dead 40
-Arp Packet RcvdPktCnt =  379
-Header = dead 40
-Arp Packet RcvdPktCnt =  37a
-Header = dead 40
-Arp Packet RcvdPktCnt =  37b
-02/25/15 20:26:02 DEBUG- Stop EAS Insert
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-02/25/15 20:26:02 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  37c
-Header = dead 40
-Arp Packet RcvdPktCnt =  37d
-Header = dead 40
-Arp Packet RcvdPktCnt =  37e
-Header = dead 40
-Arp Packet RcvdPktCnt =  37f
-Header = dead 40
-Arp Packet RcvdPktCnt =  380
-Header = dead 40
-Arp Packet RcvdPktCnt =  381
-Header = dead 40
-Arp Packet RcvdPktCnt =  382
-Header = dead 40
-Arp Packet RcvdPktCnt =  383
-Header = dead 40
-Arp Packet RcvdPktCnt =  384
-Header = dead 40
-Arp Packet RcvdPktCnt =  385
-Header = dead 40
-Arp Packet RcvdPktCnt =  386
-Header = dead 40
-Arp Packet RcvdPktCnt =  387
-Header = dead 40
-Arp Packet RcvdPktCnt =  388
-Header = dead 40
-Arp Packet RcvdPktCnt =  389
-Header = dead 40
-Arp Packet RcvdPktCnt =  38a
-Header = dead 40
-Arp Packet RcvdPktCnt =  38b
-Header = dead 40
-Arp Packet RcvdPktCnt =  38c
- Send SYN and ACK from listen state 
-02/25/15 20:26:43 ERROR- FTPDSessionStart: Start FTP Session.
-
-02/25/15 20:26:44 ERROR- FTPD_DirectoryExists: Directory EAS/ exists
-
- Send SYN and ACK from listen state 
-02/25/15 20:26:44 ERROR- FTPD_ListFile: Dir Listing for  EAS/
-
-Displaying time/date information
-        EAS.BIN   |20:25:40   |02/25/2015   |       68 Bytes
-02/25/15 20:26:44 ERROR- FTPD_ListFile: Found file  EAS.BIN
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  38d
-Header = dead 40
-Arp Packet RcvdPktCnt =  38e
-02/25/15 20:26:49 ERROR- FTPD_DirectoryExists: Directory CFG/ exists
-
- Send SYN and ACK from listen state 
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Dir Listing for  CFG/
-
-Displaying time/date information
-     MM_CFG.XML   |00:00:08   |01/01/1980   |     1695 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  MM_CFG.XML
-      D2GUI.XML   |19:44:44   |02/25/2015   |    13036 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  D2GUI.XML
-     REMAPS.DAT   |19:44:44   |02/25/2015   |    11264 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  REMAPS.DAT
-     TABLES.DAT   |19:44:44   |02/25/2015   |    12544 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  TABLES.DAT
-      FLAGS.DAT   |19:44:44   |02/25/2015   |       72 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  FLAGS.DAT
-   FILTERSX.DAT   |19:44:44   |02/25/2015   |    22528 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  FILTERSX.DAT
-        EAS.DAT   |19:44:44   |02/25/2015   |    11264 Bytes
-02/25/15 20:26:49 ERROR- FTPD_ListFile: Found file  EAS.DAT
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  38f
-Header = dead 40
-Arp Packet RcvdPktCnt =  390
-Header = dead 40
-Arp Packet RcvdPktCnt =  391
-Header = dead 40
-Arp Packet RcvdPktCnt =  392
-Header = dead 40
-Arp Packet RcvdPktCnt =  393
-02/25/15 20:27:13 DEBUG- Start EAS Insert
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 1, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 0, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 0, Idx: 0, PID 31
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 0, Idx: 1, PID 34
-
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 75, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 1, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 1, Idx: 0, PID 41
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 1, Idx: 1, PID 44
-
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 2, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 2, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 2, Idx: 0, PID 51
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 2, Idx: 1, PID 54
-
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 3, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 3, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 3, Idx: 0, PID 61
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 3, Idx: 1, PID 64
-
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 111, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 4, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 4, Idx: 1, PID 74
-
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 133, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 5, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 5, Idx: 1, PID 84
-
-02/25/15 20:27:13 DEBUG- EAS Enable Search, Port: 0, program: 122, dest: 10 
-
-02/25/15 20:27:13 DEBUG- EAS Enable, EAS Index: 6, destIdx: 0 
-
-02/25/15 20:27:13 DEBUG- EAS Remap Port: 6, Idx: 1, PID 94
-
-02/25/15 20:27:13 DEBUG- EAS Filter Port: 6, Idx: 0, PID 44
-
-02/25/15 20:27:13 DEBUG- EAS Filter Port: 6, Idx: 1, PID 45
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  394
-Header = dead 40
-Arp Packet RcvdPktCnt =  395
-Header = dead 40
-Arp Packet RcvdPktCnt =  396
-Header = dead 40
-Arp Packet RcvdPktCnt =  397
-Header = dead 40
-Arp Packet RcvdPktCnt =  398
-Header = dead 40
-Arp Packet RcvdPktCnt =  399
-Header = dead 40
-Arp Packet RcvdPktCnt =  39a
-Header = dead 40
-Arp Packet RcvdPktCnt =  39b
-Header = dead 40
-Arp Packet RcvdPktCnt =  39c
-Header = dead 40
-Arp Packet RcvdPktCnt =  39d
-Header = dead 40
-Arp Packet RcvdPktCnt =  39e
-Header = dead 40
-Arp Packet RcvdPktCnt =  39f
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a0
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a1
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a2
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a3
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a4
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a5
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a6
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a7
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a8
-Header = dead 40
-Arp Packet RcvdPktCnt =  3a9
-Header = dead 40
-Arp Packet RcvdPktCnt =  3aa
-02/25/15 20:28:13 DEBUG- Stop EAS Insert
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 0
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 2
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 9
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 11
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 3
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 5
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 6
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 8
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 13
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 17
-
-02/25/15 20:28:13 DEBUG- EAS Stop Enable Filter Port: 0, Idx: 15
-
-Header = dead 40
-Arp Packet RcvdPktCnt =  3ab
-Header = dead 40
-Arp Packet RcvdPktCnt =  3ac
-Header = dead 40
-Arp Packet RcvdPktCnt =  3ad
-Header = dead 40
-Arp Packet RcvdPktCnt =  3ae
-Header = dead 40
-Arp Packet RcvdPktCnt =  3af
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b0
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b1
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b2
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b3
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b4
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b5
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b6
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b7
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b8
-Header = dead 40
-Arp Packet RcvdPktCnt =  3b9
-Header = dead 40
-Arp Packet RcvdPktCnt =  3ba
-Header = dead 40
-Arp Packet RcvdPktCnt =  3bb
-Header = dead 40
-Arp Packet RcvdPktCnt =  3bc
+FPGA Done = 42437

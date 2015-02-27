@@ -46,6 +46,7 @@ private slots:
 
 private:
     unsigned char  ts_packet[188];
+
     long long pcr;
 };
 
