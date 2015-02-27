@@ -31,7 +31,7 @@
        <item>
         <widget class="QLineEdit" name="fromLineEdit">
          <property name="text">
-          <string>C:/Users/Zach/Development/Test Files/ew050812-004403SD-h264lb.mov</string>
+          <string>Video/ew050812-004403SD-h264lb.mov</string>
          </property>
         </widget>
        </item>
@@ -63,7 +63,7 @@
        <item>
         <widget class="QLineEdit" name="toLineEdit">
          <property name="text">
-          <string>encode_test.ts</string>
+          <string>Video/encode_test.ts</string>
          </property>
         </widget>
        </item>

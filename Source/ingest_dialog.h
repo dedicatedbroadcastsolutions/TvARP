@@ -28,7 +28,8 @@ private slots:
      void on_startButton_clicked();
      void display_stdout(QString ffmpeg_stdout);
      void processStarted();
-     void encodingFinished(int encode_status, QString transcode_status);
+     void encodingFinished(QString transcode_status);
+     void enable_output_play_button(bool status);
      void on_fileOpenButton_clicked();
      void on_playInputButton_clicked();
      void on_playOutputButton_clicked();

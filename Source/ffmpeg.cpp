@@ -95,7 +95,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossba
     << "-threads" << "1"
     << outputfile;
 
-    qDebug()<< arguments;
+    //qDebug()<< arguments;
     mTranscodingProcess->setProcessChannelMode(QProcess::MergedChannels);
     mTranscodingProcess->start(program, arguments);
 }

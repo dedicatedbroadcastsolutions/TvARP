@@ -23,7 +23,8 @@ Dialog::Dialog(QWidget *parent) :
 
     ffmpeg = new FFmpeg(this);
     connect(ffmpeg,SIGNAL(ffmpeg_stdout(QString)),this,SLOT(display_stdout(QString)));
-    connect(ffmpeg,SIGNAL(transcode_status(int,QString)),this,SLOT(encodingFinished(int,QString)));
+    connect(ffmpeg,SIGNAL(ffmpeg_status(QString)),this,SLOT(encodingFinished(QString)));
+    connect(ffmpeg,SIGNAL(ffmpeg_finished(bool)),this,SLOT(enable_output_play_button(bool)));
 }
 
 Dialog::~Dialog()
@@ -68,7 +69,7 @@ void Dialog::on_startButton_clicked()
          }
      }
 
-    ffmpeg->encode(inputfile,outputfile);
+    ffmpeg->encode( inputfile, outputfile, true,false,0,"","");
 }
 
 void Dialog::display_stdout(QString ffmpeg_stdout)
@@ -81,12 +82,15 @@ void Dialog::display_stdout(QString ffmpeg_stdout)
                 ui->textEdit->verticalScrollBar()->maximum());
 }
 
-void Dialog::encodingFinished(int encode_status,QString transcode_status)
+void Dialog::encodingFinished(QString transcode_status)
 {
     ui->transcodingStatusLabel->setText(transcode_status);
-    if (encode_status)
+}
+
+void Dialog::enable_output_play_button(bool status)
+{
+    if (status)
     {
-        qDebug("encode_status is true");
         ui->playOutputButton->setEnabled(true);
     }
 }
@@ -98,7 +102,7 @@ void Dialog::on_fileOpenButton_clicked()
         QFileDialog::getOpenFileName(
                 this,
                 tr("Open File"),
-                "C:/TEST",
+                "Video",
                 tr("videoss (*.mp4 *.mov *.avi *.mpg *.ts)"));
     if (!fileName.isEmpty()) {
         ui->fromLineEdit->setText(fileName);
