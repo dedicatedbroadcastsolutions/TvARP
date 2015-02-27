@@ -141,7 +141,6 @@ void Automation::init_ring_detect()
 
     check_timer->start(1);                                               // create timer with 1 ms resolution
     emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"finished eas init\n");
-
 }
 
 void Automation::handleError()
