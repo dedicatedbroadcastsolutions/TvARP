@@ -6,10 +6,5 @@
 *.Release
 *.ts
 release/*.cpp
-ui_configure_eas.h
-ui_mainwindow.h
-ui_configure_eas.h
-ui_mainwindow.h
-ui_pcr_analyser_mainwindow.h
-ui_ingest_dialog.h
+ui*
 release/Schedule_and_logs/mux_log.txt
