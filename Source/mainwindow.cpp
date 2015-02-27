@@ -145,6 +145,21 @@ void MainWindow::readSettings()
     else
         settings.setValue("EAS Stream Port", ui->mux_ctrl_port->value());
 
+    if( settings.contains("eas crossbar enable") )
+        ui->crossbar_enable->setChecked( settings.value("eas crossbar enable").toBool() );
+    else
+    settings.setValue( "eas crossbar enable" , ui->crossbar_enable->isChecked());
+
+    if( settings.contains("eas crossbar pin") )
+        ui->crossbar_pin->setValue( settings.value("eas crossbar pin").toInt() );
+    else
+    settings.setValue( "eas crossbar pin" , ui->crossbar_pin->value());
+
+    if( settings.contains("eas test file") )
+        ui->stream_file->setChecked( settings.value("eas test file").toBool() );
+    else
+    settings.setValue( "eas test file" , ui->stream_file->isChecked());
+
     if(settings.contains("eas video device"))
     {
         int index = ui->eas_video_device->findText( settings.value( "eas video device" ).toString() );
@@ -209,7 +224,9 @@ void MainWindow::on_restart_eas_clicked()
     settings.setValue( "eas video device",ui->eas_video_device->currentText() );
     settings.setValue( "eas audio device",ui->eas_audio_device->currentText() );
     settings.setValue( "eas comport" , ui->eas_comport->currentText());
-    qDebug()<< "video = " <<settings.value("eas video device") << "audio = " << settings.value("eas audio device");
+    settings.setValue( "eas crossbar enable" , ui->crossbar_enable->isChecked());
+    settings.setValue( "eas crossbar pin" , ui->crossbar_pin->value());
+    settings.setValue( "eas test file" , ui->stream_file->isChecked());
     automation->restart_eas_engine();
 }
 
@@ -393,13 +410,6 @@ void MainWindow::on_ad_return_to_network_clicked()
     automation->ad_splice_return_to_network(ad_ch);
 }
 
-void MainWindow::on_test_eas_clicked()
-{
-    automation->kill_ffmpeg();
-    QThread::usleep(150);
-    automation->capture_eas_message(true);
-}
-
 void MainWindow::on_show_vmon_clicked(bool checked)
 {
     automation->show_vmon = checked;
@@ -409,4 +419,19 @@ void MainWindow::on_send_eas_config_clicked()
 {
     qDebug("sending config command");
     send_eas_config();
+}
+
+void MainWindow::on_test_eas_clicked(bool checked)
+{
+    if(!checked)
+    {
+        ui->test_eas->setText("Test EAS Stream");
+        automation->kill_ffmpeg();
+    }
+    else
+    {
+        on_restart_eas_clicked();
+        automation->capture_eas_message();
+        ui->test_eas->setText("Stop Test");
+    }
 }

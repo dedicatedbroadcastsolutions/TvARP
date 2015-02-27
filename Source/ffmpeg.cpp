@@ -49,7 +49,7 @@ void FFmpeg::processStarted()
     emit encode_started();
 }
 
-void FFmpeg::encode(QString inputfile,QString outputfile, bool test)
+void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossbar,int crossbar_pin,QString vdev,QString adev)
 {
     QString program;
     program = "./FFmpeg/bin/ffmpeg.exe";
@@ -59,11 +59,16 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool test)
 
     arguments.clear();
     //arguments << "-v" << "9" << "-loglevel" << "99" ;
-    arguments  << "-re" << "-rtbufsize" << "10000k";
+    arguments  << "-re" << "-rtbufsize" << "100000k";
 
     if(!test)
-        arguments <<"-f" << "dshow" <<"-crossbar_video_input_pin_number" <<"1"
-                  << "-i" <<  "video=WDM 2861 Capture:audio=Line (USB EMP Audio Device)";
+    {
+        arguments <<"-f" << "dshow" ;
+        if(crossbar)
+            arguments <<"-crossbar_video_input_pin_number" << QString::number(crossbar_pin);
+
+        arguments << "-i" << ( "video=" + vdev + ":audio=" + adev );
+    }
     else
         arguments << "-i" << inputfile;       // to read from a file
 
@@ -90,7 +95,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool test)
     << "-threads" << "1"
     << outputfile;
 
-
+    qDebug()<< arguments;
     mTranscodingProcess->setProcessChannelMode(QProcess::MergedChannels);
     mTranscodingProcess->start(program, arguments);
 }
@@ -104,10 +109,12 @@ void FFmpeg::encodingFinished()
 {
     if (QFile::exists(encode_fileName))
     {
+        emit ffmpeg_finished( true );
         emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Transcoding Status: Successful! \n");
     }
     else
     {
+        emit ffmpeg_finished( false );
         emit ffmpeg_status( QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Transcoding Status: Failed! \n");
     }
 }

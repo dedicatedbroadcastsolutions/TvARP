@@ -111,11 +111,16 @@ void Worker::read_datagram()
 
 void Worker::set_packet_period(int kbitrate)
 {
-    timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
-    timer_period = timer_period*1000000;
-    timer_period = timer_period/(kbitrate);
-    one_third_of_timer_period = timer_period/4;
-    sleep_time = timer_period/3000;
+    if(kbitrate!=0)
+    {
+        timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
+        timer_period = timer_period*1000000;
+        timer_period = timer_period/(kbitrate);
+        one_third_of_timer_period = timer_period/4;
+        sleep_time = timer_period/3000;
+    }
+    else
+        timer_period = 0;
 }
 
 bool Worker::stream_init(QString source_filename)
@@ -135,6 +140,11 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
         if( stream_init(source_filename) )  // get bitrate from stream and block until file is ready to stream.
 
         {
+            if( timer_period == 0)
+            {
+                emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"stream failed\n");
+                return;
+            }
             udp_streaming_socket = new QUdpSocket(this);
             read_datagram();
             elapsed_timer.start();
@@ -165,6 +175,6 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             }
             readfile.close();
             udp_streaming_socket->close();
+            emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"finished stream\n");
         }
-        emit work_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"finished stream\n");
 }

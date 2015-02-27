@@ -23,6 +23,7 @@ struct Program {
 };
 
 struct Transport_Stream {
+    bool failed;
     int kbitrate;   // Mux Bitrate in kbps
     quint64 pcr_period_ms;      //  ms between PCR
     QList<Program> program_list;         //  PIDs contained in Mux
@@ -36,6 +37,7 @@ public:
     explicit TS_Info(QObject *parent = 0);
     ~TS_Info();
     Transport_Stream ts_properties;
+    bool kill;
 signals:
     void status( QString );
 public slots:

@@ -85,7 +85,7 @@ public slots:
     void close_ring_detect();
     void handleError();
     void check_eas_ring();
-    void capture_eas_message(bool test);
+    void capture_eas_message();
     void send_eas_message();
     void check_time();
     void video_state(int);
@@ -96,7 +96,9 @@ public slots:
     void encoder_output(QString output);
     void get_ts_info(QString filename);
     void streaming_status( QString string );
+    void encoder_finished(bool state);
 signals:
+    void encoder_done();
     void init();
     void bitrate(int kbitrate);
     void event_log_output(QString);

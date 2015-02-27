@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
+    <width>980</width>
     <height>494</height>
    </rect>
   </property>
@@ -57,6 +57,13 @@
              <string>EAS Configuration</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_3">
+             <item row="1" column="6">
+              <widget class="QSpinBox" name="crossbar_pin">
+               <property name="value">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="4">
               <widget class="QLabel" name="label_5">
                <property name="text">
@@ -67,7 +74,7 @@
              <item row="1" column="4">
               <widget class="QComboBox" name="eas_audio_device">
                <property name="enabled">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -101,7 +108,7 @@
                </item>
               </widget>
              </item>
-             <item row="0" column="7">
+             <item row="0" column="8">
               <widget class="QPushButton" name="test_eas">
                <property name="enabled">
                 <bool>true</bool>
@@ -110,11 +117,11 @@
                 <string>Test EAS Stream</string>
                </property>
                <property name="checkable">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
               </widget>
              </item>
-             <item row="1" column="6">
+             <item row="1" column="7">
               <widget class="QPushButton" name="config_eas">
                <property name="enabled">
                 <bool>false</bool>
@@ -127,7 +134,7 @@
              <item row="1" column="3">
               <widget class="QComboBox" name="eas_video_device">
                <property name="enabled">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -156,7 +163,7 @@
                </item>
               </widget>
              </item>
-             <item row="1" column="7">
+             <item row="1" column="8">
               <widget class="QPushButton" name="restart_eas">
                <property name="enabled">
                 <bool>true</bool>
@@ -166,7 +173,7 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="6">
+             <item row="0" column="7">
               <widget class="QPushButton" name="get_input_devices">
                <property name="enabled">
                 <bool>false</bool>
@@ -263,10 +270,42 @@
                </property>
               </widget>
              </item>
+             <item row="1" column="5">
+              <widget class="QRadioButton" name="crossbar_enable">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="text">
+                <string>Crossbar Pin</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="5">
               <widget class="QRadioButton" name="show_vmon">
                <property name="text">
                 <string>Show Video Monitor</string>
+               </property>
+               <property name="autoExclusive">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="QRadioButton" name="stream_file">
+               <property name="text">
+                <string>Stream File</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>false</bool>
                </property>
               </widget>
              </item>
@@ -1029,7 +1068,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>857</width>
+     <width>980</width>
      <height>18</height>
     </rect>
    </property>

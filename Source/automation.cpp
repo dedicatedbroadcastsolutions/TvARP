@@ -60,8 +60,7 @@ Automation::Automation(QObject *parent) :
     connect(ffmpeg,SIGNAL(ffmpeg_stdout(QString)),this,SLOT(encoder_output(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_status(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffplay_stdout(QString)),this,SLOT(streaming_status(QString)));
-    video_dev = settings.value( "eas video device" ).toString();
-    audio_dev = settings.value( "eas audio device" ).toString();
+    connect(ffmpeg,SIGNAL(ffmpeg_finished(bool )),this,SLOT(encoder_finished(bool)));
     ad_ts = new TS_Info(this);
 
     connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
@@ -71,6 +70,7 @@ Automation::Automation(QObject *parent) :
 
 Automation::~Automation()
 {
+    ad_ts->kill=true;
     if( serial->isOpen() )
         close_ring_detect();
 }
@@ -88,6 +88,13 @@ void Automation::get_ts_info(QString filename)
 void Automation::encoder_output(QString output)
 {
     emit encoder_display(output);
+}
+
+void Automation::encoder_finished( bool state)
+{
+    if(!state)
+        ad_ts->kill=true;
+    emit encoder_done();
 }
 
 void Automation::close_ring_detect()
@@ -185,7 +192,7 @@ void Automation::check_eas_ring()
 void Automation::send_eas_message()
 {
     emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Start EAS Encode\n");
-    capture_eas_message(false);
+    capture_eas_message();
 }
 
 void Automation::send_eas_config( QList<int> channel_list )
@@ -209,7 +216,7 @@ void Automation::ad_splice_return_to_network( QList<int> channel_list )
     d2mux->return_from_splice( channel_list );
 }
 
-void Automation::capture_eas_message( bool test)
+void Automation::capture_eas_message( )
 {
     QString inputfile,outputfile;
     QHostAddress stream_addr;
@@ -228,7 +235,12 @@ void Automation::capture_eas_message( bool test)
     outputfile = QFileInfo(outputfile).absoluteFilePath();
     emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Starting Encoder\n");
     emit stream_eas( stream_addr, stream_port, outputfile);
-    ffmpeg->encode(inputfile,outputfile,test);
+    ffmpeg->encode(inputfile,outputfile,
+                   settings.value("eas test file").toBool(),
+                   settings.value("eas crossbar enable").toBool(),
+                   settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
+                   settings.value("eas audio device").toString() );
+
     if(show_vmon)
         ffmpeg->ffplay( "udp://@" + stream_addr.toString() + ":" + QString::number(stream_port) );
 }

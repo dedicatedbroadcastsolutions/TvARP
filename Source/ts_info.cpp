@@ -5,6 +5,7 @@
 TS_Info::TS_Info(QObject *parent) :
     QObject(parent)
 {
+    kill = false;
     //qDebug("constructor");
 }
 
@@ -40,8 +41,15 @@ Transport_Stream TS_Info::process_file (QString source_filename)
     int bitrate_count;
     bitrate_count = 0;
     quint64 msec_per_pkt = 0;
+    ts_properties.kbitrate = 0;
         while(!file.open(QIODevice::ReadOnly))
         {
+            if(kill)
+            {
+                qDebug("kill");
+                emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " + "Analysis Failed" + "\n") ) ;
+                return(ts_properties);
+            }
            // qDebug("File not opened");
             QThread::msleep(100);
         }
@@ -50,6 +58,12 @@ Transport_Stream TS_Info::process_file (QString source_filename)
 
         while(pcr_read<pcr_count)
         {
+            if(kill)
+            {
+                qDebug("kill");
+                emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " + "Analysis Failed" + "\n") ) ;
+                return(ts_properties);
+            }
            // qDebug("reading packets");
             QThread::msleep( msec_per_pkt+1 );
             ts_packet.clear();
@@ -87,11 +101,11 @@ Transport_Stream TS_Info::process_file (QString source_filename)
 
                     if(pcr_read==pcr_count)
                     {
-                        qDebug()<< "bitrate count " << bitrate_count << "bitrate" << kbitrate;
+                       // qDebug()<< "bitrate count " << bitrate_count << "bitrate" << kbitrate;
                         bitrate_count = bitrate_count;
                         kbitrate = kbitrate/bitrate_count;
 
-                    packet_info = " Bitrate (kbps) " + QString::number(kbitrate) +
+                        packet_info = " Bitrate (kbps) " + QString::number(kbitrate) +
                                   " Packets since last PCR " + QString::number(packets_since_pcr) +
                                   " bytes since last PCR "   + QString::number(bytes) +
                                   " PCR Ticks between PCR "  + QString::number(delta_pcr) +
@@ -101,18 +115,19 @@ Transport_Stream TS_Info::process_file (QString source_filename)
                                   " pcr remainder = "  + QString::number(pcr.remainder)  +
                                   " PID = "            + QString::number(pid)            +
                                   " from packet "      + QString::number(packets_read+1)        ;
-                    info_list.append(packet_info);
+                        info_list.append(packet_info);
+                        ts_properties.pcr_period_ms = ms_between_pcr;
+                        ts_properties.kbitrate = kbitrate;
+                        ts_properties.info = info_list;
+
+                    emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Bitrate Found " + QString::number(kbitrate) + " kbps" + "\n") ) ;
+
                     }
                     last_pcr_packet = packets_read;
                     last_pcr = pcr.composite;
                 }
             }
         }
-        ts_properties.pcr_period_ms = ms_between_pcr;
-        ts_properties.kbitrate = kbitrate;
-        ts_properties.info = info_list;
-
-    emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Bitrate Found " + QString::number(kbitrate) + " kbps" + "\n") ) ;
     return(ts_properties);
 }
 PCR TS_Info::getPCR(QByteArray packet)
