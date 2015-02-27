@@ -47,6 +47,7 @@ Automation::Automation(QObject *parent) :
     isOpen=0;
     show_vmon=false;
 
+
     mpeg_stream = new stream(this);
     connect(mpeg_stream,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
     connect(mpeg_stream,SIGNAL(get_ts_info(QString)),this,SLOT(get_ts_info(QString)),Qt::DirectConnection);
