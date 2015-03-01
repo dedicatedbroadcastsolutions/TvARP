@@ -16,6 +16,7 @@ class FFmpeg : public QObject
     void encode(QString inputfile, QString outputfile, bool eas, bool crossbar, int crossbar_pin, QString vdev, QString adev);
     void ffplay(QString inputfile);
     void kill();
+    void kill_encoder();
   signals:
     void ffmpeg_finished( bool );
     void ffmpeg_status( QString );

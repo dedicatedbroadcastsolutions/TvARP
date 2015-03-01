@@ -35,13 +35,18 @@ void FFmpeg::readyread_ffplay()
     emit ffplay_stdout(mInputPlayProcess->readAllStandardOutput());
 }
 
+void FFmpeg::kill_encoder()
+{
+    mTranscodingProcess->kill();
+    mTranscodingProcess->waitForFinished();
+    qDebug("transcode processes finished");
+}
+
 void FFmpeg::kill()
 {
     mInputPlayProcess->kill();
     mInputPlayProcess->waitForFinished();
-    mTranscodingProcess->kill();
-    mTranscodingProcess->waitForFinished();
-    qDebug("transcode processes finished");
+    kill_encoder();
 }
 
 void FFmpeg::processStarted()

@@ -82,7 +82,7 @@ Automation::~Automation()
 void Automation::kill_ffmpeg()
 {
     if(ffmpeg!=NULL)
-    ffmpeg->kill();
+    ffmpeg->kill_encoder();
 }
 
 void Automation::kill_ts_info()
