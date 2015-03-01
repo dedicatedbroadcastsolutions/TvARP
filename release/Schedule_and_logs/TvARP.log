@@ -43,3 +43,227 @@
 2015/03/01 10:55:40:486 serial errorUnknown error0
 2015/03/01 10:55:40:488 serial errorNo such file or directory1
 2015/03/01 10:55:40:489 finished eas init
+2015/03/01 11:00:38:663 Restarting EAS Engine
+2015/03/01 11:00:38:669 Ring Detect Closed
+2015/03/01 11:00:38:670 serial errorUnknown error13
+2015/03/01 11:00:38:670 Initialising Ring Detect
+2015/03/01 11:00:38:671 serial errorUnknown error0
+2015/03/01 11:00:38:671 serial errorNo such file or directory1
+2015/03/01 11:00:38:672 finished eas init
+2015/03/01 11:00:47:052 Restarting EAS Engine
+2015/03/01 11:00:47:053 Ring Detect Closed
+2015/03/01 11:00:47:053 serial errorUnknown error13
+2015/03/01 11:00:47:054 Initialising Ring Detect
+2015/03/01 11:00:47:054 serial errorUnknown error0
+2015/03/01 11:00:47:055 serial errorNo such file or directory1
+2015/03/01 11:00:47:055 finished eas init
+2015/03/01 11:00:49:633 Restarting EAS Engine
+2015/03/01 11:00:49:635 Ring Detect Closed
+2015/03/01 11:00:49:635 serial errorUnknown error13
+2015/03/01 11:00:49:636 Initialising Ring Detect
+2015/03/01 11:00:49:637 serial errorUnknown error0
+2015/03/01 11:00:49:638 serial errorNo such file or directory1
+2015/03/01 11:00:49:642 finished eas init
+2015/03/01 11:00:49:645 eas insert on 7
+2015/03/01 11:00:49:646 Insert EAS on port 4
+2015/03/01 11:00:49:647 Insert EAS on port 4
+2015/03/01 11:00:49:648 Insert EAS on port 4
+2015/03/01 11:00:49:649 Insert EAS on port 4
+2015/03/01 11:00:49:649 Insert EAS on port 4
+2015/03/01 11:00:49:650 Insert EAS on port 4
+2015/03/01 11:00:49:670 Insert EAS on port 4
+2015/03/01 11:00:49:683 sent eas insert
+2015/03/01 11:00:49:685 Starting Encoder
+2015/03/01 11:00:49:686 Start Streaming
+2015/03/01 11:00:50:357  FFplay udp://@239.0.0.220:1234
+2015/03/01 11:00:51:018  ffplay process started
+2015/03/01 11:00:49:687 set bitrate to 4000
+2015/03/01 11:01:24:455 Restarting EAS Engine
+2015/03/01 11:01:24:630  play finished
+2015/03/01 11:01:24:659  Transcoding Status: Stopped!
+2015/03/01 11:01:24:660 Ring Detect Closed
+2015/03/01 11:01:24:661 serial errorUnknown error13
+2015/03/01 11:01:24:663 Initialising Ring Detect
+2015/03/01 11:01:24:664 serial errorUnknown error0
+2015/03/01 11:01:24:665 serial errorNo such file or directory1
+2015/03/01 11:01:24:666 finished eas init
+2015/03/01 11:02:14:811 Restarting EAS Engine
+2015/03/01 11:02:14:812 Ring Detect Closed
+2015/03/01 11:02:14:812 serial errorUnknown error13
+2015/03/01 11:02:14:812 Initialising Ring Detect
+2015/03/01 11:02:14:813 serial errorUnknown error0
+2015/03/01 11:02:14:813 serial errorNo such file or directory1
+2015/03/01 11:02:14:814 finished eas init
+2015/03/01 11:02:16:514 Restarting EAS Engine
+2015/03/01 11:02:16:516 Ring Detect Closed
+2015/03/01 11:02:16:518 serial errorUnknown error13
+2015/03/01 11:02:16:522 Initialising Ring Detect
+2015/03/01 11:02:16:524 serial errorUnknown error0
+2015/03/01 11:02:16:526 serial errorNo such file or directory1
+2015/03/01 11:02:16:537 finished eas init
+2015/03/01 11:02:16:543 eas insert on 7
+2015/03/01 11:02:16:545 Insert EAS on port 4
+2015/03/01 11:02:16:548 Insert EAS on port 4
+2015/03/01 11:02:16:549 Insert EAS on port 4
+2015/03/01 11:02:16:550 Insert EAS on port 4
+2015/03/01 11:02:16:551 Insert EAS on port 4
+2015/03/01 11:02:16:552 Insert EAS on port 4
+2015/03/01 11:02:16:554 Insert EAS on port 4
+2015/03/01 11:02:16:567 sent eas insert
+2015/03/01 11:02:16:568 Starting Encoder
+2015/03/01 11:02:16:569 Start Streaming
+2015/03/01 11:02:16:570 set bitrate to 4000
+2015/03/01 11:02:22:683 Restarting EAS Engine
+2015/03/01 11:02:22:698  Transcoding Status: Stopped!
+2015/03/01 11:02:22:748 Ring Detect Closed
+2015/03/01 11:02:22:749 serial errorUnknown error13
+2015/03/01 11:02:22:750 Initialising Ring Detect
+2015/03/01 11:02:22:752 serial errorUnknown error0
+2015/03/01 11:02:22:753 serial errorNo such file or directory1
+2015/03/01 11:02:22:754 finished eas init
+2015/03/01 11:03:16:997 Restarting EAS Engine
+2015/03/01 11:03:16:998 Ring Detect Closed
+2015/03/01 11:03:16:998 serial errorUnknown error13
+2015/03/01 11:03:16:998 Initialising Ring Detect
+2015/03/01 11:03:16:999 serial errorUnknown error0
+2015/03/01 11:03:16:999 serial errorNo such file or directory1
+2015/03/01 11:03:16:999 finished eas init
+2015/03/01 11:03:19:573 Restarting EAS Engine
+2015/03/01 11:03:19:576 Ring Detect Closed
+2015/03/01 11:03:19:577 serial errorUnknown error13
+2015/03/01 11:03:19:579 Initialising Ring Detect
+2015/03/01 11:03:19:580 serial errorUnknown error0
+2015/03/01 11:03:19:581 serial errorNo such file or directory1
+2015/03/01 11:03:19:586 finished eas init
+2015/03/01 11:03:19:588 eas insert on 7
+2015/03/01 11:03:19:589 Insert EAS on port 4
+2015/03/01 11:03:19:590 Insert EAS on port 4
+2015/03/01 11:03:19:592 Insert EAS on port 4
+2015/03/01 11:03:19:593 Insert EAS on port 4
+2015/03/01 11:03:19:594 Insert EAS on port 4
+2015/03/01 11:03:19:595 Insert EAS on port 4
+2015/03/01 11:03:19:598 Insert EAS on port 4
+2015/03/01 11:03:19:620 sent eas insert
+2015/03/01 11:03:19:621 Starting Encoder
+2015/03/01 11:03:19:622 Start Streaming
+2015/03/01 11:03:19:623 set bitrate to 4000
+2015/03/01 11:03:56:431 Restarting EAS Engine
+2015/03/01 11:03:56:431 Ring Detect Closed
+2015/03/01 11:03:56:432 serial errorUnknown error13
+2015/03/01 11:03:56:432 Initialising Ring Detect
+2015/03/01 11:03:56:433 serial errorUnknown error0
+2015/03/01 11:03:56:433 serial errorNo such file or directory1
+2015/03/01 11:03:56:433 finished eas init
+2015/03/01 11:04:11:556 Restarting EAS Engine
+2015/03/01 11:04:11:557 Ring Detect Closed
+2015/03/01 11:04:11:558 serial errorUnknown error13
+2015/03/01 11:04:11:558 Initialising Ring Detect
+2015/03/01 11:04:11:559 serial errorUnknown error0
+2015/03/01 11:04:11:560 serial errorNo such file or directory1
+2015/03/01 11:04:11:563 finished eas init
+2015/03/01 11:04:11:564 eas insert on 7
+2015/03/01 11:04:11:565 Insert EAS on port 4
+2015/03/01 11:04:11:565 Insert EAS on port 4
+2015/03/01 11:04:11:566 Insert EAS on port 4
+2015/03/01 11:04:11:567 Insert EAS on port 4
+2015/03/01 11:04:11:568 Insert EAS on port 4
+2015/03/01 11:04:11:569 Insert EAS on port 4
+2015/03/01 11:04:11:571 Insert EAS on port 4
+2015/03/01 11:04:11:588 sent eas insert
+2015/03/01 11:04:11:589 Starting Encoder
+2015/03/01 11:04:11:590 Start Streaming
+2015/03/01 11:04:11:591 set bitrate to 4000
+2015/03/01 11:05:05:773 Restarting EAS Engine
+2015/03/01 11:05:05:774 Ring Detect Closed
+2015/03/01 11:05:05:774 serial errorUnknown error13
+2015/03/01 11:05:05:774 Initialising Ring Detect
+2015/03/01 11:05:05:775 serial errorUnknown error0
+2015/03/01 11:05:05:775 serial errorNo such file or directory1
+2015/03/01 11:05:05:775 finished eas init
+2015/03/01 11:05:09:048 Restarting EAS Engine
+2015/03/01 11:05:09:049 Ring Detect Closed
+2015/03/01 11:05:09:050 serial errorUnknown error13
+2015/03/01 11:05:09:051 Initialising Ring Detect
+2015/03/01 11:05:09:051 serial errorUnknown error0
+2015/03/01 11:05:09:052 serial errorNo such file or directory1
+2015/03/01 11:05:09:056 finished eas init
+2015/03/01 11:05:09:057 eas insert on 7
+2015/03/01 11:05:09:057 Insert EAS on port 4
+2015/03/01 11:05:09:058 Insert EAS on port 4
+2015/03/01 11:05:09:058 Insert EAS on port 4
+2015/03/01 11:05:09:059 Insert EAS on port 4
+2015/03/01 11:05:09:060 Insert EAS on port 4
+2015/03/01 11:05:09:060 Insert EAS on port 4
+2015/03/01 11:05:09:062 Insert EAS on port 4
+2015/03/01 11:05:09:113 sent eas insert
+2015/03/01 11:05:09:301 Starting Encoder
+2015/03/01 11:05:09:302 Start Streaming
+2015/03/01 11:05:09:305 set bitrate to 4000
+2015/03/01 11:07:07:268 Restarting EAS Engine
+2015/03/01 11:07:07:269 Ring Detect Closed
+2015/03/01 11:07:07:270 serial errorUnknown error13
+2015/03/01 11:07:07:270 Initialising Ring Detect
+2015/03/01 11:07:07:270 serial errorUnknown error0
+2015/03/01 11:07:07:273 serial errorNo such file or directory1
+2015/03/01 11:07:07:274 finished eas init
+2015/03/01 11:07:09:625 Restarting EAS Engine
+2015/03/01 11:07:09:627 Ring Detect Closed
+2015/03/01 11:07:09:629 serial errorUnknown error13
+2015/03/01 11:07:09:631 Initialising Ring Detect
+2015/03/01 11:07:09:633 serial errorUnknown error0
+2015/03/01 11:07:09:635 serial errorNo such file or directory1
+2015/03/01 11:07:09:648 finished eas init
+2015/03/01 11:07:09:650 eas insert on 7
+2015/03/01 11:07:09:652 Insert EAS on port 4
+2015/03/01 11:07:09:653 Insert EAS on port 4
+2015/03/01 11:07:09:655 Insert EAS on port 4
+2015/03/01 11:07:09:656 Insert EAS on port 4
+2015/03/01 11:07:09:657 Insert EAS on port 4
+2015/03/01 11:07:09:658 Insert EAS on port 4
+2015/03/01 11:07:09:661 Insert EAS on port 4
+2015/03/01 11:07:09:676 sent eas insert
+2015/03/01 11:07:09:677 Starting Encoder
+2015/03/01 11:07:09:679 Start Streaming
+2015/03/01 11:07:09:680 set bitrate to 4000
+2015/03/01 11:07:14:681 starting stream (worker)
+2015/03/01 11:07:17:522 Restarting EAS Engine
+2015/03/01 11:07:17:537  Transcoding Status: Stopped!
+2015/03/01 11:07:17:539 Ring Detect Closed
+2015/03/01 11:07:17:541 serial errorUnknown error13
+2015/03/01 11:07:17:542 Initialising Ring Detect
+2015/03/01 11:07:17:543 serial errorUnknown error0
+2015/03/01 11:07:17:544 serial errorNo such file or directory1
+2015/03/01 11:07:17:546 finished eas init
+2015/03/01 11:07:20:502 Restarting EAS Engine
+2015/03/01 11:07:20:503 Ring Detect Closed
+2015/03/01 11:07:20:504 serial errorUnknown error13
+2015/03/01 11:07:20:505 Initialising Ring Detect
+2015/03/01 11:07:20:507 serial errorUnknown error0
+2015/03/01 11:07:20:508 serial errorNo such file or directory1
+2015/03/01 11:07:20:509 finished eas init
+2015/03/01 11:07:20:510 eas insert on 7
+2015/03/01 11:07:20:511 Insert EAS on port 4
+2015/03/01 11:07:20:513 Insert EAS on port 4
+2015/03/01 11:07:20:514 Insert EAS on port 4
+2015/03/01 11:07:20:515 Insert EAS on port 4
+2015/03/01 11:07:20:516 Insert EAS on port 4
+2015/03/01 11:07:20:517 Insert EAS on port 4
+2015/03/01 11:07:20:518 Insert EAS on port 4
+2015/03/01 11:07:20:519 sent eas insert
+2015/03/01 11:07:20:520 Starting Encoder
+2015/03/01 11:07:20:523 Start Streaming
+2015/03/01 11:07:21:046  FFplay udp://@239.0.0.220:1234
+2015/03/01 11:07:21:674  ffplay process started
+2015/03/01 11:07:22:516 finished stream
+2015/03/01 11:07:22:516 set bitrate to 4000
+2015/03/01 11:07:27:517 starting stream (worker)
+2015/03/01 11:08:02:823 Restarting EAS Engine
+2015/03/01 11:08:02:994  play finished
+2015/03/01 11:08:03:005  Transcoding Status: Stopped!
+2015/03/01 11:08:03:006 Ring Detect Closed
+2015/03/01 11:08:03:007 serial errorUnknown error13
+2015/03/01 11:08:03:008 Initialising Ring Detect
+2015/03/01 11:08:03:010 serial errorUnknown error0
+2015/03/01 11:08:03:011 serial errorNo such file or directory1
+2015/03/01 11:08:03:012 finished eas init
+2015/03/01 11:08:14:073 finished stream

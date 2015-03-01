@@ -65,7 +65,7 @@ stream::~stream()
 
 void stream::stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename )
 {
-    log("Should start worker thread");
+    log("Start Streaming");
     emit start_streaming( stream_addr , stream_port , source_filename);
 }
 
@@ -79,6 +79,7 @@ void stream::ts_info(QString filename)
 {
     log("set bitrate to 4000");
     set_kbitrate(4000);
+    QThread::sleep(5);
     //emit get_ts_info(filename);    // blocks until automation slot returns after setting bitrate
 }
 
@@ -145,7 +146,10 @@ bool Worker::stream_init(QString source_filename)
         return true;
     }
     else
+    {
+        log("filed to open file to stream");
         return false;
+    }
 }
 
 void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString source_filename)
@@ -153,6 +157,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
         if( stream_init(source_filename) )  // get bitrate from stream and block until file is ready to stream.
 
         {
+            qDebug("initialised stream, opening socket");
             if( timer_period == 0)
             {
                 log("stream failed");
@@ -161,7 +166,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             udp_streaming_socket = new QUdpSocket(this);
             read_datagram();
             elapsed_timer.start();
-            log("starting stream");
+            log("starting stream (worker)");
             while( !datagram.isEmpty() && !quit)
             {
                 while(elapsed_timer.nsecsElapsed() <= timer_period)
