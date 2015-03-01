@@ -218,7 +218,6 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_restart_eas_clicked()
 {
-    automation->kill_ffmpeg();
     settings.setValue( "EAS Stream Address",ui->eas_stream_address->text());
     settings.setValue( "EAS Stream Port" ,ui->eas_stream_port->value());
     settings.setValue( "eas video device",ui->eas_video_device->currentText() );
@@ -227,7 +226,10 @@ void MainWindow::on_restart_eas_clicked()
     settings.setValue( "eas crossbar enable" , ui->crossbar_enable->isChecked());
     settings.setValue( "eas crossbar pin" , ui->crossbar_pin->value());
     settings.setValue( "eas test file" , ui->stream_file->isChecked());
-    automation->restart_eas_engine();
+    if(ui->test_eas->isChecked())
+        ui->test_eas->click();
+    else
+        automation->restart_eas_engine();
 }
 
 void MainWindow::on_mux_log_display_textChanged()
@@ -426,11 +428,11 @@ void MainWindow::on_test_eas_clicked(bool checked)
     if(!checked)
     {
         ui->test_eas->setText("Test EAS Stream");
-        automation->kill_ffmpeg();
+        automation->restart_eas_engine();
     }
     else
     {
-        on_restart_eas_clicked();
+        automation->restart_eas_engine();
         automation->capture_eas_message();
         ui->test_eas->setText("Stop Test");
     }

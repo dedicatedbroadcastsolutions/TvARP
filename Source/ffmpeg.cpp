@@ -102,7 +102,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossba
 
 void FFmpeg::readyReadStandardOutput()
 {
-    emit ffmpeg_stdout(mTranscodingProcess->readAllStandardOutput());
+    log_ffmpeg_stdout(mTranscodingProcess->readAllStandardOutput());
 }
 
 void FFmpeg::encodingFinished()
@@ -110,10 +110,12 @@ void FFmpeg::encodingFinished()
     if (QFile::exists(encode_fileName))
     {
         emit ffmpeg_finished( true );
-        log("Transcoding Status: Successful!");
+        ffmpeg_stdout("Transcoding Status: Stopped!");
+        log("Transcoding Status: Stopped!");
     }
     else
     {
+        ffmpeg_stdout("Transcoding Status: Failed!");
         emit ffmpeg_finished( false );
         log("Transcoding Status: Failed!");
     }
@@ -136,5 +138,11 @@ void FFmpeg::ffplay(QString inputfile)
 
 void FFmpeg::log(QString logdata)
 {
-    emit ffmpeg_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
+    emit ffmpeg_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz  ") + logdata + "\n") ) ;
+}
+
+void FFmpeg::log_ffmpeg_stdout(QString logdata)
+{
+    if(logdata!= "\r")
+    emit ffmpeg_stdout( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz  ") + logdata + "\n") ) ;
 }

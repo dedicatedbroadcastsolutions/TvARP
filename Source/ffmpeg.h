@@ -30,6 +30,7 @@ class FFmpeg : public QObject
      void playFinished();
      void encodingFinished();
      void log(QString logdata);
+     void log_ffmpeg_stdout(QString logdata);
   private:
     QProcess *mTranscodingProcess;
     QProcess *mInputPlayProcess;
