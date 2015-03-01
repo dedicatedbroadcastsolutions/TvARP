@@ -89,14 +89,14 @@ public slots:
     void send_eas_message();
     void check_time();
     void video_state(int);
-    void print_log(QString log);
-    void log_channel(int channel,QDateTime DateTime);
+
     void is_open(bool);
-    void log_playback(QString message,QString file,QDateTime DateTime);
+
     void encoder_output(QString output);
     void get_ts_info(QString filename);
     void streaming_status( QString string );
     void encoder_finished(bool state);
+    void kill_ts_info();
 signals:
     void encoder_done();
     void init();
@@ -121,6 +121,11 @@ private:
     bool eas_live;
     QTimer *check_timer;
     int ring_init;
+private slots:
+    void log_eas(QString logdata);
+    void print_log(QString log);
+    void log_channel(int channel,QDateTime DateTime);
+    void log_playback(QString message,QString file,QDateTime DateTime);
 };
 
 #endif // AUTOMATION_H

@@ -22,12 +22,12 @@ FFmpeg::~FFmpeg()
 
 void FFmpeg::playFinished()
 {
-    emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss") + "  "+"play finished\n");
+    log("play finished");
 }
 
 void FFmpeg::ffplay_processStarted()
 {
-    emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss") + "  "+"ffplay process started\n");
+    log("ffplay process started");
 }
 
 void FFmpeg::readyread_ffplay()
@@ -110,12 +110,12 @@ void FFmpeg::encodingFinished()
     if (QFile::exists(encode_fileName))
     {
         emit ffmpeg_finished( true );
-        emit ffmpeg_status(QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Transcoding Status: Successful! \n");
+        log("Transcoding Status: Successful!");
     }
     else
     {
         emit ffmpeg_finished( false );
-        emit ffmpeg_status( QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Transcoding Status: Failed! \n");
+        log("Transcoding Status: Failed!");
     }
 }
 
@@ -129,7 +129,12 @@ void FFmpeg::ffplay(QString inputfile)
 
     arguments << inputfile;
 
-    emit ffmpeg_status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss") + "  "+ "FFplay " + inputfile + "\n" ));
+    log("FFplay " + inputfile);
     if(mInputPlayProcess->state()==0)
         mInputPlayProcess->start(program, arguments);
+}
+
+void FFmpeg::log(QString logdata)
+{
+    emit ffmpeg_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
 }

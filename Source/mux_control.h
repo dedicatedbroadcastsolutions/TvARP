@@ -51,6 +51,7 @@ public slots:
     void return_from_splice( QList<int> channel_list );
     void handleError();
     void read_mux_debug();
+    void log(QString logdata);
 signals:
     void process_debug(QString);
     void mux_debug_status(QString);

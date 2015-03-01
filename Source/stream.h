@@ -59,7 +59,7 @@ class Worker : public QObject
   private slots:
     void read_datagram();
     bool stream_init(QString source_filename );
-
+    void log(QString logdata);
   private:
   // variables for reading datagrams from file
     QFile readfile;
@@ -100,7 +100,7 @@ class stream : public QObject
   private:
     Worker *worker;
   private slots:
-
+    void log(QString logdata);
 
 };
 #endif // STREAM_H

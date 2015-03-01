@@ -16,7 +16,7 @@ TS_Info::~TS_Info()
 
 Transport_Stream TS_Info::process_file (QString source_filename)
 {
-    emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"analysing " + source_filename +"\n")) ;
+    log("analysing " + source_filename) ;
     QByteArray ts_packet;
     char packet[188];
     int bytes_read = 188;
@@ -37,17 +37,17 @@ Transport_Stream TS_Info::process_file (QString source_filename)
     QStringList info_list;
     PCR pcr;
     int pcr_count;
-    pcr_count = 60;
+    pcr_count = 50;
     int bitrate_count;
     bitrate_count = 0;
-    quint64 msec_per_pkt = 0;
+    quint64 msec_per_pkt = 5;
     ts_properties.kbitrate = 0;
         while(!file.open(QIODevice::ReadOnly))
         {
             if(kill)
             {
                 qDebug("kill");
-                emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " + "Analysis Failed" + "\n") ) ;
+                log("Analysis Failed") ;
                 return(ts_properties);
             }
            // qDebug("File not opened");
@@ -61,7 +61,7 @@ Transport_Stream TS_Info::process_file (QString source_filename)
             if(kill)
             {
                 qDebug("kill");
-                emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " + "Analysis Failed" + "\n") ) ;
+                log("Analysis Failed");
                 return(ts_properties);
             }
            // qDebug("reading packets");
@@ -120,7 +120,7 @@ Transport_Stream TS_Info::process_file (QString source_filename)
                         ts_properties.kbitrate = kbitrate;
                         ts_properties.info = info_list;
 
-                    emit status( (QDateTime::currentDateTime().toString("yyyy:mm:dd:ss")+ "  " +"Bitrate Found " + QString::number(kbitrate) + " kbps" + "\n") ) ;
+                    log( "Bitrate Found " + QString::number(kbitrate) + " kbps") ;
 
                     }
                     last_pcr_packet = packets_read;
@@ -150,4 +150,10 @@ PCR TS_Info::getPCR(QByteArray packet)
     pcr.composite = (300*pcr.base) + pcr.remainder;
 
     return pcr;
+}
+
+void TS_Info::log(QString logdata)
+{
+    emit status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
+
 }

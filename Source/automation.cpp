@@ -70,19 +70,27 @@ Automation::Automation(QObject *parent) :
 
 Automation::~Automation()
 {
-    ad_ts->kill=true;
+    kill_ts_info();
     if( serial->isOpen() )
         close_ring_detect();
 }
 
 void Automation::kill_ffmpeg()
 {
+    if(ffmpeg!=NULL)
     ffmpeg->kill();
+}
+
+void Automation::kill_ts_info()
+{
+    if(ad_ts!=NULL)
+        ad_ts->kill=true;
 }
 
 void Automation::get_ts_info(QString filename)
 {
-    emit bitrate(ad_ts->process_file(filename).kbitrate);  // blocks until bitrate in the worker thread is set.
+    if(ad_ts!=NULL)
+        emit bitrate(ad_ts->process_file(filename).kbitrate);  // blocks until bitrate in the worker thread is set.
 }
 
 void Automation::encoder_output(QString output)
@@ -93,20 +101,22 @@ void Automation::encoder_output(QString output)
 void Automation::encoder_finished( bool state)
 {
     if(!state)
-        ad_ts->kill=true;
+        kill_ffmpeg();
     emit encoder_done();
 }
 
 void Automation::close_ring_detect()
 {
     check_timer->stop();
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Ring Detect Closed\n");
+    log_eas("Ring Detect Closed");
     serial->close();
 }
 
 void Automation::restart_eas_engine()
 {
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Restarting EAS Engine\n");
+    log_eas("Restarting EAS Engine");
+    kill_ts_info();
+    kill_ffmpeg();
     close_ring_detect();
     init_ring_detect();
 }
@@ -118,7 +128,7 @@ void Automation::start_stream(QHostAddress stream_addr,quint16 stream_port,QStri
 
 void Automation::init_ring_detect()
 {
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Initialising Ring Detect\n");
+    log_eas("Initialising Ring Detect");
     ring_init = 0;
     QString port_num = settings.value( "eas comport" ).toString();
     channels.clear();
@@ -140,12 +150,12 @@ void Automation::init_ring_detect()
     serial->open(QIODevice::ReadOnly);
 
     check_timer->start(1);                                               // create timer with 1 ms resolution
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"finished eas init\n");
+    log_eas("finished eas init");
 }
 
 void Automation::handleError()
 {
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " + "serial port error" + serial->errorString() + QString::number( serial->error() ) + "\n" );
+    log_eas("serial error" + serial->errorString() + QString::number( serial->error() ));
 }
 
 void Automation::check_eas_ring()
@@ -160,10 +170,10 @@ void Automation::check_eas_ring()
             }
             else
             {
-                emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Ring not connected\n");
+                log_eas("Ring not connected");
             }
         //else
-            //emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Port not connected\n");
+            //log_eas("Port not connected");
     }
     else
     {
@@ -172,7 +182,7 @@ void Automation::check_eas_ring()
             if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live )
             {
                 eas_live=true;
-                emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"sensed ring\n");
+                log_eas("sensed ring");
                 emit eas_ring();
             }
             else
@@ -180,7 +190,7 @@ void Automation::check_eas_ring()
                 if( (serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && eas_live )
                 {
                     eas_live=false;
-                    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Stop Encoder\n");
+                    log_eas("Stop Encoder");
                     kill_ffmpeg();
                 }
             }
@@ -190,14 +200,14 @@ void Automation::check_eas_ring()
 
 void Automation::send_eas_message()
 {
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Start EAS Encode\n");
+    log_eas("Start EAS Encode");
     capture_eas_message();
 }
 
 void Automation::send_eas_config( QList<int> channel_list )
 {
     d2mux->eas_insert(channel_list);
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"sent eas insert\n");
+    log_eas("sent eas insert");
 }
 
 void Automation::revert_eas_config( QList<int> channel_list )
@@ -232,7 +242,7 @@ void Automation::capture_eas_message( )
     outputfile.append(QDateTime::currentDateTime().toString( "yyyy_mm_dd_ss" ));
     outputfile.append(".ts");
     outputfile = QFileInfo(outputfile).absoluteFilePath();
-    emit eas_status(QDateTime::currentDateTime().toString("dd:hh:mm:ss")+ "  " +"Starting Encoder\n");
+    log_eas("Starting Encoder");
     emit stream_eas( stream_addr, stream_port, outputfile);
     ffmpeg->encode(inputfile,outputfile,
                    settings.value("eas test file").toBool(),
@@ -362,6 +372,12 @@ void Automation::log_playback(QString message,QString file,QDateTime DateTime)
     log.append(DateTime.toString());
     this->print_log(log);
 }
+
+void Automation::log_eas(QString logdata)
+{
+    emit eas_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
+}
+
 /// Log Function
 void Automation::print_log(QString log)
  {

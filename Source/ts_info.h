@@ -43,7 +43,7 @@ signals:
 public slots:
     Transport_Stream process_file(QString source_filename) ;
     PCR getPCR(QByteArray packet);
-
+    void log(QString logdata);
 private slots:
 
 private:

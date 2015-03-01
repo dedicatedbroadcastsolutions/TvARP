@@ -66,11 +66,11 @@ Mux_Control::~Mux_Control()
     channels = QList<int>::fromSet(ch_set);
     if(splice_active&&channels.size()>0)
     {
-        emit mux_debug_status( ("returning to network \n" ));
+        log("returning to network");
         return_from_splice( channels );
     }
     udpSocket->close();
-    emit mux_debug_status( ("mux control destructor \n" ));
+    log("mux control destructor");
 }
 
 void Mux_Control::read_mux_debug()
@@ -90,13 +90,13 @@ void Mux_Control::read_mux_debug()
 
 void Mux_Control::handleError()
 {
-    emit mux_debug_status( "mux debug port error" + mux_debug->errorString() + QString::number(mux_debug->error()) + "\n" ) ;
+    log( "mux debug port error" + mux_debug->errorString() + QString::number(mux_debug->error()) ) ;
 }
 
 void Mux_Control::eas_insert( QList<int> channel_list)
 {
     qDebug("eas insert");
-    emit mux_debug_status( "eas insert on " + QString::number( channel_list[channel_list.size()-1 ] )  + "\n") ;
+    log( "eas insert on " + QString::number( channel_list[channel_list.size()-1 ] ) ) ;
     eas_active = 1;
     // remove duplicate entries from channel_list
     QSet<int> ch_set;
@@ -191,7 +191,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
         ///eas_start_datagram.append( (char)0x10 );
         eas_start_datagram.append( (char) 0x01 << output_port );   // // 0x10 Send on port IP-1    0x1 Send on port ASI-1
         //                                                                                        00000001
-        emit mux_debug_status("Insert EAS on port " + QString::number(output_port)  + "\n");
+        log("Insert EAS on port " + QString::number(output_port));
     //qDebug()<< "output port" << (char) 0x01 << output_port;
      // Reserved – Reserved for future use.     24 bits
         eas_start_datagram.append( (char)0xff );
@@ -599,4 +599,10 @@ void Mux_Control::return_from_splice( QList<int> channel_list )
            splice_stop_datagram.append(adProgLow);
     }
     udpSocket->writeDatagram(splice_stop_datagram.data(), splice_stop_datagram.size(),control_address , control_port);
+}
+
+void Mux_Control::log(QString logdata)
+{
+    emit mux_debug_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
+
 }
