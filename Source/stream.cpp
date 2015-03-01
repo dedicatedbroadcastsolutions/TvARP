@@ -37,7 +37,7 @@ stream::stream(QObject *parent) :
     log("stream constructor");
     qRegisterMetaType<QHostAddress>("QHostAddress");
     qRegisterMetaType<BufferList>("BufferList");
-/*
+
     worker = new Worker;
 
     connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
@@ -47,23 +47,26 @@ stream::stream(QObject *parent) :
     connect(worker,SIGNAL(work_status(QString)),this,SLOT(worker_status(QString)));
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
-    */
+
     log("finished log constructor");
 }
 
 stream::~stream()
 {
     log("stopping stream");
-    //worker->quit = true;
-    //workerThread.quit();
-    //workerThread.wait();
+    if(worker!=NULL)
+    {
+        worker->quit = true;
+        workerThread.quit();
+        workerThread.wait();
+    }
     log("Stream destructor finished");
 }
 
 void stream::stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename )
 {
     log("Should start worker thread");
-  //  emit start_streaming( stream_addr , stream_port , source_filename);
+    emit start_streaming( stream_addr , stream_port , source_filename);
 }
 
 void stream::done_with_worker()
@@ -74,6 +77,8 @@ void stream::done_with_worker()
 
 void stream::ts_info(QString filename)
 {
+    log("set bitrate to 4000");
+    set_kbitrate(4000);
     //emit get_ts_info(filename);    // blocks until automation slot returns after setting bitrate
 }
 
@@ -190,5 +195,4 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
 void Worker::log(QString logdata)
 {
     emit work_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
-
 }

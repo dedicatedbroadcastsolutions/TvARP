@@ -1,0 +1,45 @@
+2015/03/01 10:51:19:736 eas insert on 7
+2015/03/01 10:51:19:744 Insert EAS on port 4
+2015/03/01 10:51:19:745 Insert EAS on port 4
+2015/03/01 10:51:19:746 Insert EAS on port 4
+2015/03/01 10:51:19:746 Insert EAS on port 4
+2015/03/01 10:51:19:747 Insert EAS on port 4
+2015/03/01 10:51:19:754 Insert EAS on port 4
+2015/03/01 10:51:19:756 Insert EAS on port 4
+2015/03/01 10:51:19:771 Should start worker thread
+2015/03/01 10:51:19:773 set bitrate to 4000
+2015/03/01 10:51:27:990  Transcoding Status: Stopped!
+2015/03/01 10:55:33:780 Restarting EAS Engine
+2015/03/01 10:55:33:782 Ring Detect Closed
+2015/03/01 10:55:33:782 serial errorUnknown error13
+2015/03/01 10:55:33:783 Initialising Ring Detect
+2015/03/01 10:55:33:783 serial errorUnknown error0
+2015/03/01 10:55:33:784 serial errorNo such file or directory1
+2015/03/01 10:55:33:784 finished eas init
+2015/03/01 10:55:35:613 Restarting EAS Engine
+2015/03/01 10:55:35:615 Ring Detect Closed
+2015/03/01 10:55:35:615 serial errorUnknown error13
+2015/03/01 10:55:35:616 Initialising Ring Detect
+2015/03/01 10:55:35:617 serial errorUnknown error0
+2015/03/01 10:55:35:617 serial errorNo such file or directory1
+2015/03/01 10:55:35:622 finished eas init
+2015/03/01 10:55:35:623 eas insert on 7
+2015/03/01 10:55:35:624 Insert EAS on port 4
+2015/03/01 10:55:35:625 Insert EAS on port 4
+2015/03/01 10:55:35:625 Insert EAS on port 4
+2015/03/01 10:55:35:626 Insert EAS on port 4
+2015/03/01 10:55:35:626 Insert EAS on port 4
+2015/03/01 10:55:35:627 Insert EAS on port 4
+2015/03/01 10:55:35:629 Insert EAS on port 4
+2015/03/01 10:55:35:644 sent eas insert
+2015/03/01 10:55:35:646 Starting Encoder
+2015/03/01 10:55:35:647 Should start worker thread
+2015/03/01 10:55:35:648 set bitrate to 4000
+2015/03/01 10:55:40:466 Restarting EAS Engine
+2015/03/01 10:55:40:477  Transcoding Status: Stopped!
+2015/03/01 10:55:40:483 Ring Detect Closed
+2015/03/01 10:55:40:484 serial errorUnknown error13
+2015/03/01 10:55:40:485 Initialising Ring Detect
+2015/03/01 10:55:40:486 serial errorUnknown error0
+2015/03/01 10:55:40:488 serial errorNo such file or directory1
+2015/03/01 10:55:40:489 finished eas init

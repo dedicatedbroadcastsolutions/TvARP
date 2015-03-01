@@ -64,8 +64,12 @@ Automation::Automation(QObject *parent) :
     ad_ts = new TS_Info(this);
 
     connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
+
     init_mux_control();
     init_ring_detect();
+    connect(this,SIGNAL(mux_eas_log(QString)),this,SLOT(save_log(QString)));
+    connect(this,SIGNAL(stream_status(QString)),this,SLOT(save_log(QString)));
+    connect(this,SIGNAL(eas_status(QString)),this,SLOT(save_log(QString)));
 }
 
 Automation::~Automation()
@@ -374,11 +378,22 @@ void Automation::log_playback(QString message,QString file,QDateTime DateTime)
 }
 
 void Automation::log_eas(QString logdata)
-{
+{   
     emit eas_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
 }
 
 /// Log Function
+void Automation::save_log(QString log)
+{
+    QFile file("Schedule_and_logs/TvARP.log");  // Open file in write append text mode
+    if (!file.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text))
+        return;
+    //initiate text stream, output and close file
+    QTextStream out(&file);
+    out << log;
+    file.close();
+}
+
 void Automation::print_log(QString log)
  {
      QFile file("Schedule_and_logs/Switcher.log");  // Open file in write append text mode

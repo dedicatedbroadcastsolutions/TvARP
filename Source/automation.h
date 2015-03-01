@@ -126,6 +126,7 @@ private slots:
     void print_log(QString log);
     void log_channel(int channel,QDateTime DateTime);
     void log_playback(QString message,QString file,QDateTime DateTime);
+    void save_log(QString log);
 };
 
 #endif // AUTOMATION_H
