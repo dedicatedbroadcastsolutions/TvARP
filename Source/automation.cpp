@@ -252,7 +252,7 @@ void Automation::capture_eas_message( )
                    settings.value("eas test file").toBool(),
                    settings.value("eas crossbar enable").toBool(),
                    settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
-                   settings.value("eas audio device").toString() );
+                   settings.value("eas audio device").toString() , -31 );
 
     if(show_vmon)
         ffmpeg->ffplay( "udp://@" + stream_addr.toString() + ":" + QString::number(stream_port) );

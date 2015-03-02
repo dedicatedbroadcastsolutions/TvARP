@@ -54,16 +54,15 @@ void FFmpeg::processStarted()
     emit encode_started();
 }
 
-void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossbar,int crossbar_pin,QString vdev,QString adev)
+void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossbar,int crossbar_pin,QString vdev,QString adev,int dialnorm)
 {
     QString program;
     program = "./FFmpeg/bin/ffmpeg.exe";
     program = QFileInfo(program).absoluteFilePath();
     encode_fileName = outputfile;
     QStringList arguments;
-
     arguments.clear();
-    //arguments << "-v" << "9" << "-loglevel" << "99" ;
+    arguments << "-v" << "9" << "-loglevel" << "99" ;
     arguments  << "-re" << "-rtbufsize" << "100000k";
 
     if(!test)
@@ -89,7 +88,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossba
 
     << "-acodec" <<"ac3"
     << "-af" << "pan=stereo|c0=c0|c1=c1"
-    << "-ar" << "48000" << "-b:a" << "120k"
+    << "-ar" << "48000" << "-b:a" << "120k" << "-dialnorm" << QString::number(dialnorm)
 
     << "-mpegts_pmt_start_pid" <<  "0x40"
     << "-mpegts_start_pid" << "0x44"
@@ -136,9 +135,12 @@ void FFmpeg::ffplay(QString inputfile)
 
     arguments << inputfile;
 
-    log("FFplay " + inputfile);
+
     if(mInputPlayProcess->state()==0)
+    {
+        log("FFplay " + inputfile);
         mInputPlayProcess->start(program, arguments);
+    }
 }
 
 void FFmpeg::log(QString logdata)
