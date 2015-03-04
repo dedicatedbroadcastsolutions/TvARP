@@ -2891,3 +2891,10 @@
 2015/03/04 13:05:57:352 serial errorUnknown error0
 2015/03/04 13:05:57:353 serial errorNo such file or directory1
 2015/03/04 13:05:57:353 finished eas init
+2015/03/04 13:09:24:467 Restarting EAS Engine
+2015/03/04 13:09:24:468 Ring Detect Closed
+2015/03/04 13:09:24:469 serial errorUnknown error13
+2015/03/04 13:09:24:469 Initialising Ring Detect
+2015/03/04 13:09:24:469 serial errorUnknown error0
+2015/03/04 13:09:24:470 serial errorNo such file or directory1
+2015/03/04 13:09:24:470 finished eas init

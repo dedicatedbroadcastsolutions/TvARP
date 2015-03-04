@@ -264,7 +264,7 @@ void Automation::capture_eas_message( )
     inputfile = QFileInfo(inputfile).absoluteFilePath();
 
     outputfile = "./EAS Video/eas_";
-    outputfile.append(QDateTime::currentDateTime().toString( "yyyy/MM/dd_hh:mm:ss:zzz" ));
+    outputfile.append(QDateTime::currentDateTime().toString( "yyyy_MM_dd_hh_mm_ss_zzz" ));
     outputfile.append(".ts");
     outputfile = QFileInfo(outputfile).absoluteFilePath();
     log_eas("Starting Encoder");
