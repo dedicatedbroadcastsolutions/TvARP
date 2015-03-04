@@ -96,7 +96,7 @@ void Mux_Control::handleError()
 void Mux_Control::eas_insert( QList<int> channel_list)
 {
     qDebug("eas insert");
-    log( "eas insert on " + QString::number( channel_list[channel_list.size()-1 ] ) ) ;
+    //log( "eas insert on " + QString::number( channel_list[channel_list.size()-1 ] ) ) ;
     eas_active = 1;
     // remove duplicate entries from channel_list
     QSet<int> ch_set;
@@ -172,6 +172,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
     for (int index = 0; index < ProgramCount ; index++) // till end of channel list or max channels
     {                                                                                     // so as not to overflow on minorChans index
         channel = channel_list[index];
+        log("EAS splice config on " + QString::number(channel));
      // PortNumber – Input port of program to receive EAS message injection.
         netPort    = minorChans[channel][0];           // ATSC Minor Channel Selection Look-up Table (Array)
         netPortHigh  = (netPort >> 8) & 0xff ;
@@ -232,7 +233,7 @@ void Mux_Control::eas_insert( QList<int> channel_list)
 
 void Mux_Control::revert_eas_config(QList<int> channel_list)
 {
-
+    //log("revert eas config");
 
     // remove duplicate entries from channel_list
     QSet<int> ch_set;
@@ -308,6 +309,7 @@ void Mux_Control::revert_eas_config(QList<int> channel_list)
     for (int index = 0; index < ProgramCount ; index++) // till end of channel list or max channels
     {                                                                                     // so as not to overflow on minorChans index
         channel = channel_list[index];
+        log("revert EAS splice config on " + QString::number(channel));
      // PortNumber – Input port of program to receive EAS message injection.
         netPort    = minorChans[channel][0];           // ATSC Minor Channel Selection Look-up Table (Array)
         netPortHigh  = (netPort >> 8) & 0xff ;
@@ -357,6 +359,7 @@ void Mux_Control::revert_eas_config(QList<int> channel_list)
 
 void Mux_Control::program_splice( QList<int> channel_list )
 {
+   // log("ad program splice");
     splice_active = 1;
     // remove duplicate entries from channel_list
     channels.clear();
@@ -433,12 +436,14 @@ void Mux_Control::program_splice( QList<int> channel_list )
 
     for (int index = 0; index < channel_list.size() && index <= MAX_CHANNELS ; index++) // till end of channel list or max channels
     {                                                                                     // so as not to overflow on minorChans index
-     // Splice Channel – First Splice Module is Splice Channel 0.
+
+        // Splice Channel – First Splice Module is Splice Channel 0.
      // Splice Channel increments by 1 for each other splice module, when implemented.
         spliceChan = index;
         splice_start_datagram.append((char)spliceChan);
 
         channel = channel_list[index];
+        log("ad splice on channel " + QString::number(channel));
      // NetworkPortNumber – Input port of network program.  (port on mux)
         netPort    = minorChans[channel][0];           // ATSC Minor Channel Selection Look-up Table (Array)
         netPortHigh  = (netPort >> 8) & 0xff ;
@@ -498,6 +503,7 @@ void Mux_Control::program_splice( QList<int> channel_list )
 
 void Mux_Control::return_from_splice( QList<int> channel_list )
 {
+    //log("return from ad splice");
     splice_active = 0;
     // remove duplicate entries from channel_list
     QSet<int> ch_set;
@@ -565,7 +571,7 @@ void Mux_Control::return_from_splice( QList<int> channel_list )
     for (int index = 0; index < spliceCount ; index++) // till end of channel list or max channels
     {
            channel = channel_list[index];
-
+            log("ad splice return on " + QString::number(channel));
         // NetworkPortNumber – Input port of network program.  (port on mux)
            netPort    = minorChans[channel][0];           // ATSC Minor Channel Selection Look-up Table (Array)
            netPortHigh  = (netPort >> 8) & 0xff ;

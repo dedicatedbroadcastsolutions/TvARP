@@ -490,3 +490,2397 @@
 2015/03/02 08:33:04:636 finished eas init
 2015/03/02 08:33:07:632 starting stream (worker)
 2015/03/02 08:33:08:705 finished stream
+2015/03/02 08:50:34:988 Restarting EAS Engine
+2015/03/02 08:50:34:988 Ring Detect Closed
+2015/03/02 08:50:34:989 serial errorUnknown error13
+2015/03/02 08:50:34:989 Initialising Ring Detect
+2015/03/02 08:50:34:989 serial errorUnknown error0
+2015/03/02 08:50:34:990 serial errorNo such file or directory1
+2015/03/02 08:50:34:990 finished eas init
+2015/03/02 08:50:49:778 Restarting EAS Engine
+2015/03/02 08:50:49:780 Ring Detect Closed
+2015/03/02 08:50:49:782 serial errorUnknown error13
+2015/03/02 08:50:49:784 Initialising Ring Detect
+2015/03/02 08:50:49:785 serial errorUnknown error0
+2015/03/02 08:50:49:787 serial errorNo such file or directory1
+2015/03/02 08:50:49:796 finished eas init
+2015/03/02 08:50:49:798 eas insert on 7
+2015/03/02 08:50:49:799 Insert EAS on port 4
+2015/03/02 08:50:49:801 Insert EAS on port 4
+2015/03/02 08:50:49:801 Insert EAS on port 4
+2015/03/02 08:50:49:802 Insert EAS on port 4
+2015/03/02 08:50:49:803 Insert EAS on port 4
+2015/03/02 08:50:49:803 Insert EAS on port 4
+2015/03/02 08:50:49:807 Insert EAS on port 4
+2015/03/02 08:50:49:814 sent eas insert
+2015/03/02 08:50:49:816 Starting Encoder
+2015/03/02 08:50:49:817 Start Streaming
+2015/03/02 08:50:49:818 set bitrate to 4000
+2015/03/02 08:50:51:060 Restarting EAS Engine
+2015/03/02 08:50:51:079  Transcoding Status: Failed!
+2015/03/02 08:50:51:081 Ring Detect Closed
+2015/03/02 08:50:51:084 serial errorUnknown error13
+2015/03/02 08:50:51:086 Initialising Ring Detect
+2015/03/02 08:50:51:089 serial errorUnknown error0
+2015/03/02 08:50:51:091 serial errorNo such file or directory1
+2015/03/02 08:50:51:092 finished eas init
+2015/03/02 08:50:54:819 filed to open file to stream
+2015/03/02 09:37:02:648 Restarting EAS Engine
+2015/03/02 09:37:02:648 Ring Detect Closed
+2015/03/02 09:37:02:649 serial errorUnknown error13
+2015/03/02 09:37:02:649 Initialising Ring Detect
+2015/03/02 09:37:02:649 serial errorUnknown error0
+2015/03/02 09:37:02:650 serial errorNo such file or directory1
+2015/03/02 09:37:02:650 finished eas init
+2015/03/02 09:42:55:490  analysis started
+2015/03/02 09:42:55:645  analysis finished
+2015/03/02 09:47:17:971 Restarting EAS Engine
+2015/03/02 09:47:17:972 Ring Detect Closed
+2015/03/02 09:47:17:972 serial errorUnknown error13
+2015/03/02 09:47:17:972 Initialising Ring Detect
+2015/03/02 09:47:17:973 serial errorUnknown error0
+2015/03/02 09:47:17:973 serial errorNo such file or directory1
+2015/03/02 09:47:17:973 finished eas init
+2015/03/02 09:47:22:561  analysis started
+2015/03/02 09:47:22:708  analysis finished
+2015/03/02 09:48:24:154 Restarting EAS Engine
+2015/03/02 09:48:24:155 Ring Detect Closed
+2015/03/02 09:48:24:155 serial errorUnknown error13
+2015/03/02 09:48:24:155 Initialising Ring Detect
+2015/03/02 09:48:24:156 serial errorUnknown error0
+2015/03/02 09:48:24:156 serial errorNo such file or directory1
+2015/03/02 09:48:24:156 finished eas init
+2015/03/02 09:48:27:638  analysis started
+2015/03/02 09:48:27:805  analysis finished
+2015/03/02 09:50:56:579 Restarting EAS Engine
+2015/03/02 09:50:56:585 Ring Detect Closed
+2015/03/02 09:50:56:586 serial errorUnknown error13
+2015/03/02 09:50:56:586 Initialising Ring Detect
+2015/03/02 09:50:56:586 serial errorUnknown error0
+2015/03/02 09:50:56:587 serial errorNo such file or directory1
+2015/03/02 09:50:56:587 finished eas init
+2015/03/02 09:51:01:495  analysis started
+2015/03/02 09:51:01:644  analysis finished
+2015/03/02 09:53:57:227 Restarting EAS Engine
+2015/03/02 09:53:57:227 Ring Detect Closed
+2015/03/02 09:53:57:228 serial errorUnknown error13
+2015/03/02 09:53:57:228 Initialising Ring Detect
+2015/03/02 09:53:57:228 serial errorUnknown error0
+2015/03/02 09:53:57:229 serial errorNo such file or directory1
+2015/03/02 09:53:57:229 finished eas init
+2015/03/02 09:54:02:233  analysis started
+2015/03/02 09:54:02:341  analysis finished
+2015/03/02 09:55:29:906 Restarting EAS Engine
+2015/03/02 09:55:29:907 Ring Detect Closed
+2015/03/02 09:55:29:908 serial errorUnknown error13
+2015/03/02 09:55:29:908 Initialising Ring Detect
+2015/03/02 09:55:29:909 serial errorUnknown error0
+2015/03/02 09:55:29:909 serial errorNo such file or directory1
+2015/03/02 09:55:29:909 finished eas init
+2015/03/02 09:55:57:900  analysis started
+2015/03/02 09:55:58:092  analysis finished
+2015/03/02 09:56:18:799 Restarting EAS Engine
+2015/03/02 09:56:18:799 Ring Detect Closed
+2015/03/02 09:56:18:800 serial errorUnknown error13
+2015/03/02 09:56:18:800 Initialising Ring Detect
+2015/03/02 09:56:18:801 serial errorUnknown error0
+2015/03/02 09:56:18:801 serial errorNo such file or directory1
+2015/03/02 09:56:18:801 finished eas init
+2015/03/02 09:56:21:968  analysis started
+2015/03/02 09:56:22:138  analysis finished
+2015/03/02 09:56:41:188 Restarting EAS Engine
+2015/03/02 09:56:41:189 Ring Detect Closed
+2015/03/02 09:56:41:189 serial errorUnknown error13
+2015/03/02 09:56:41:189 Initialising Ring Detect
+2015/03/02 09:56:41:190 serial errorUnknown error0
+2015/03/02 09:56:41:190 serial errorNo such file or directory1
+2015/03/02 09:56:41:190 finished eas init
+2015/03/02 09:56:44:852  analysis started
+2015/03/02 09:56:45:063  analysis finished
+2015/03/02 10:03:38:699 Restarting EAS Engine
+2015/03/02 10:03:38:699 Ring Detect Closed
+2015/03/02 10:03:38:700 serial errorUnknown error13
+2015/03/02 10:03:38:700 Initialising Ring Detect
+2015/03/02 10:03:38:700 serial errorUnknown error0
+2015/03/02 10:03:38:701 serial errorNo such file or directory1
+2015/03/02 10:03:38:701 finished eas init
+2015/03/02 10:03:43:606  analysis started
+2015/03/02 10:03:43:819  analysis finished
+2015/03/02 10:04:48:434 Restarting EAS Engine
+2015/03/02 10:04:48:434 Ring Detect Closed
+2015/03/02 10:04:48:435 serial errorUnknown error13
+2015/03/02 10:04:48:435 Initialising Ring Detect
+2015/03/02 10:04:48:435 serial errorUnknown error0
+2015/03/02 10:04:48:436 serial errorNo such file or directory1
+2015/03/02 10:04:48:436 finished eas init
+2015/03/02 10:04:52:553  analysis started
+2015/03/02 10:04:52:702  analysis finished
+2015/03/02 10:08:09:335 Restarting EAS Engine
+2015/03/02 10:08:09:336 Ring Detect Closed
+2015/03/02 10:08:09:336 serial errorUnknown error13
+2015/03/02 10:08:09:337 Initialising Ring Detect
+2015/03/02 10:08:09:337 serial errorUnknown error0
+2015/03/02 10:08:09:337 serial errorNo such file or directory1
+2015/03/02 10:08:09:338 finished eas init
+2015/03/02 10:08:12:386  analysis started
+2015/03/02 10:08:12:508  analysis finished
+2015/03/02 10:09:15:666 Restarting EAS Engine
+2015/03/02 10:09:15:667 Ring Detect Closed
+2015/03/02 10:09:15:668 serial errorUnknown error13
+2015/03/02 10:09:15:668 Initialising Ring Detect
+2015/03/02 10:09:15:668 serial errorUnknown error0
+2015/03/02 10:09:15:669 serial errorNo such file or directory1
+2015/03/02 10:09:15:669 finished eas init
+2015/03/02 10:09:18:470  analysis started
+2015/03/02 10:09:18:574  analysis finished
+2015/03/02 10:11:09:803 Restarting EAS Engine
+2015/03/02 10:11:09:804 Ring Detect Closed
+2015/03/02 10:11:09:804 serial errorUnknown error13
+2015/03/02 10:11:09:805 Initialising Ring Detect
+2015/03/02 10:11:09:805 serial errorUnknown error0
+2015/03/02 10:11:09:805 serial errorNo such file or directory1
+2015/03/02 10:11:09:806 finished eas init
+2015/03/02 10:11:12:408  analysis started
+2015/03/02 10:11:12:613  analysis finished
+2015/03/02 10:12:29:817 Restarting EAS Engine
+2015/03/02 10:12:29:817 Ring Detect Closed
+2015/03/02 10:12:29:818 serial errorUnknown error13
+2015/03/02 10:12:29:818 Initialising Ring Detect
+2015/03/02 10:12:29:818 serial errorUnknown error0
+2015/03/02 10:12:29:819 serial errorNo such file or directory1
+2015/03/02 10:12:29:819 finished eas init
+2015/03/02 10:12:32:166  analysis started
+2015/03/02 10:12:32:760  analysis finished
+2015/03/02 10:57:36:834 Restarting EAS Engine
+2015/03/02 10:57:36:834 Ring Detect Closed
+2015/03/02 10:57:36:835 serial errorUnknown error13
+2015/03/02 10:57:36:835 Initialising Ring Detect
+2015/03/02 10:57:36:835 serial errorUnknown error0
+2015/03/02 10:57:36:837 serial errorNo such file or directory1
+2015/03/02 10:57:36:837 finished eas init
+2015/03/02 10:57:39:385  analysis started
+2015/03/02 10:57:39:760  analysis finished
+2015/03/02 10:58:21:948 Restarting EAS Engine
+2015/03/02 10:58:21:949 Ring Detect Closed
+2015/03/02 10:58:21:949 serial errorUnknown error13
+2015/03/02 10:58:21:950 Initialising Ring Detect
+2015/03/02 10:58:21:950 serial errorUnknown error0
+2015/03/02 10:58:21:950 serial errorNo such file or directory1
+2015/03/02 10:58:21:951 finished eas init
+2015/03/02 10:58:24:099  analysis started
+2015/03/02 10:58:24:480  analysis finished
+2015/03/02 10:59:14:660 Restarting EAS Engine
+2015/03/02 10:59:14:662 Ring Detect Closed
+2015/03/02 10:59:14:664 serial errorUnknown error13
+2015/03/02 10:59:14:665 Initialising Ring Detect
+2015/03/02 10:59:14:668 serial errorUnknown error0
+2015/03/02 10:59:14:670 serial errorNo such file or directory1
+2015/03/02 10:59:14:679 finished eas init
+2015/03/02 10:59:19:169 Restarting EAS Engine
+2015/03/02 10:59:19:171 Ring Detect Closed
+2015/03/02 10:59:19:176 serial errorUnknown error13
+2015/03/02 10:59:19:178 Initialising Ring Detect
+2015/03/02 10:59:19:179 serial errorUnknown error0
+2015/03/02 10:59:19:180 serial errorNo such file or directory1
+2015/03/02 10:59:19:181 finished eas init
+2015/03/02 10:59:19:183 eas insert on 7
+2015/03/02 10:59:19:184 Insert EAS on port 4
+2015/03/02 10:59:19:184 Insert EAS on port 4
+2015/03/02 10:59:19:185 Insert EAS on port 4
+2015/03/02 10:59:19:185 Insert EAS on port 4
+2015/03/02 10:59:19:187 Insert EAS on port 4
+2015/03/02 10:59:19:188 Insert EAS on port 4
+2015/03/02 10:59:19:190 Insert EAS on port 4
+2015/03/02 10:59:19:196 sent eas insert
+2015/03/02 10:59:19:198 Starting Encoder
+2015/03/02 10:59:19:199 Start Streaming
+2015/03/02 10:59:19:200 set bitrate to 4000
+2015/03/02 10:59:24:200 starting stream (worker)
+2015/03/02 11:00:14:208 Restarting EAS Engine
+2015/03/02 11:00:14:220  Transcoding Status: Stopped!
+2015/03/02 11:00:14:221 Ring Detect Closed
+2015/03/02 11:00:14:222 serial errorUnknown error13
+2015/03/02 11:00:14:223 Initialising Ring Detect
+2015/03/02 11:00:14:225 serial errorUnknown error0
+2015/03/02 11:00:14:226 serial errorNo such file or directory1
+2015/03/02 11:00:14:227 finished eas init
+2015/03/02 11:00:16:509 Restarting EAS Engine
+2015/03/02 11:00:16:511 Ring Detect Closed
+2015/03/02 11:00:16:512 serial errorUnknown error13
+2015/03/02 11:00:16:513 Initialising Ring Detect
+2015/03/02 11:00:16:517 serial errorUnknown error0
+2015/03/02 11:00:16:519 serial errorNo such file or directory1
+2015/03/02 11:00:16:521 finished eas init
+2015/03/02 11:00:16:522 eas insert on 7
+2015/03/02 11:00:16:524 Insert EAS on port 4
+2015/03/02 11:00:16:530 Insert EAS on port 4
+2015/03/02 11:00:16:533 Insert EAS on port 4
+2015/03/02 11:00:16:534 Insert EAS on port 4
+2015/03/02 11:00:16:536 Insert EAS on port 4
+2015/03/02 11:00:16:537 Insert EAS on port 4
+2015/03/02 11:00:16:539 Insert EAS on port 4
+2015/03/02 11:00:16:540 sent eas insert
+2015/03/02 11:00:16:541 Starting Encoder
+2015/03/02 11:00:16:545 Start Streaming
+2015/03/02 11:00:21:746 finished stream
+2015/03/02 11:00:21:746 set bitrate to 4000
+2015/03/02 11:00:24:581 Restarting EAS Engine
+2015/03/02 11:00:24:591  Transcoding Status: Stopped!
+2015/03/02 11:00:24:595 Ring Detect Closed
+2015/03/02 11:00:24:596 serial errorUnknown error13
+2015/03/02 11:00:24:598 Initialising Ring Detect
+2015/03/02 11:00:24:599 serial errorUnknown error0
+2015/03/02 11:00:24:602 serial errorNo such file or directory1
+2015/03/02 11:00:24:603 finished eas init
+2015/03/02 11:00:26:747 starting stream (worker)
+2015/03/02 11:00:31:166 Restarting EAS Engine
+2015/03/02 11:00:31:168 Ring Detect Closed
+2015/03/02 11:00:31:169 serial errorUnknown error13
+2015/03/02 11:00:31:170 Initialising Ring Detect
+2015/03/02 11:00:31:172 serial errorUnknown error0
+2015/03/02 11:00:31:173 serial errorNo such file or directory1
+2015/03/02 11:00:31:175 finished eas init
+2015/03/02 11:00:34:083 finished stream
+2015/03/02 11:00:37:745 Restarting EAS Engine
+2015/03/02 11:00:37:748 Ring Detect Closed
+2015/03/02 11:00:37:751 serial errorUnknown error13
+2015/03/02 11:00:37:753 Initialising Ring Detect
+2015/03/02 11:00:37:756 serial errorUnknown error0
+2015/03/02 11:00:37:759 serial errorNo such file or directory1
+2015/03/02 11:00:37:762 finished eas init
+2015/03/02 11:00:37:765 eas insert on 7
+2015/03/02 11:00:37:774 Insert EAS on port 4
+2015/03/02 11:00:37:775 Insert EAS on port 4
+2015/03/02 11:00:37:776 Insert EAS on port 4
+2015/03/02 11:00:37:777 Insert EAS on port 4
+2015/03/02 11:00:37:779 Insert EAS on port 4
+2015/03/02 11:00:37:781 Insert EAS on port 4
+2015/03/02 11:00:37:782 Insert EAS on port 4
+2015/03/02 11:00:37:784 sent eas insert
+2015/03/02 11:00:37:785 Starting Encoder
+2015/03/02 11:00:37:786 Start Streaming
+2015/03/02 11:00:37:788 set bitrate to 4000
+2015/03/02 11:00:42:789 starting stream (worker)
+2015/03/02 11:00:51:131 Restarting EAS Engine
+2015/03/02 11:00:51:603  Transcoding Status: Stopped!
+2015/03/02 11:00:51:605 Ring Detect Closed
+2015/03/02 11:00:51:606 serial errorUnknown error13
+2015/03/02 11:00:51:608 Initialising Ring Detect
+2015/03/02 11:00:51:609 serial errorUnknown error0
+2015/03/02 11:00:51:610 serial errorNo such file or directory1
+2015/03/02 11:00:51:612 finished eas init
+2015/03/02 11:00:54:900 finished stream
+2015/03/02 11:01:23:779 Restarting EAS Engine
+2015/03/02 11:01:23:780 Ring Detect Closed
+2015/03/02 11:01:23:780 serial errorUnknown error13
+2015/03/02 11:01:23:780 Initialising Ring Detect
+2015/03/02 11:01:23:781 serial errorUnknown error0
+2015/03/02 11:01:23:781 serial errorNo such file or directory1
+2015/03/02 11:01:23:781 finished eas init
+2015/03/02 11:01:28:877 Restarting EAS Engine
+2015/03/02 11:01:28:878 Ring Detect Closed
+2015/03/02 11:01:28:879 serial errorUnknown error13
+2015/03/02 11:01:28:880 Initialising Ring Detect
+2015/03/02 11:01:28:881 serial errorUnknown error0
+2015/03/02 11:01:28:881 serial errorNo such file or directory1
+2015/03/02 11:01:28:885 finished eas init
+2015/03/02 11:01:28:886 eas insert on 7
+2015/03/02 11:01:28:887 Insert EAS on port 4
+2015/03/02 11:01:28:887 Insert EAS on port 4
+2015/03/02 11:01:28:888 Insert EAS on port 4
+2015/03/02 11:01:28:889 Insert EAS on port 4
+2015/03/02 11:01:28:889 Insert EAS on port 4
+2015/03/02 11:01:28:890 Insert EAS on port 4
+2015/03/02 11:01:28:892 Insert EAS on port 4
+2015/03/02 11:01:28:897 sent eas insert
+2015/03/02 11:01:28:898 Starting Encoder
+2015/03/02 11:01:28:899 Start Streaming
+2015/03/02 11:01:28:900 set bitrate to 4000
+2015/03/02 11:01:33:900 starting stream (worker)
+2015/03/02 11:05:57:839 Restarting EAS Engine
+2015/03/02 11:05:57:840 Ring Detect Closed
+2015/03/02 11:05:57:840 serial errorUnknown error13
+2015/03/02 11:05:57:841 Initialising Ring Detect
+2015/03/02 11:05:57:841 serial errorUnknown error0
+2015/03/02 11:05:57:841 serial errorNo such file or directory1
+2015/03/02 11:05:57:842 finished eas init
+2015/03/02 11:08:26:603 Restarting EAS Engine
+2015/03/02 11:08:26:603 Ring Detect Closed
+2015/03/02 11:08:26:604 serial errorUnknown error13
+2015/03/02 11:08:26:604 Initialising Ring Detect
+2015/03/02 11:08:26:604 serial errorUnknown error0
+2015/03/02 11:08:26:605 serial errorNo such file or directory1
+2015/03/02 11:08:26:605 finished eas init
+2015/03/02 11:30:41:511 Restarting EAS Engine
+2015/03/02 11:30:41:512 Ring Detect Closed
+2015/03/02 11:30:41:512 serial errorUnknown error13
+2015/03/02 11:30:41:513 Initialising Ring Detect
+2015/03/02 11:30:41:513 serial errorUnknown error0
+2015/03/02 11:30:41:514 serial errorNo such file or directory1
+2015/03/02 11:30:41:514 finished eas init
+2015/03/02 11:30:51:801  analysis started
+2015/03/02 11:30:52:628  analysis finished
+2015/03/02 11:31:35:697  analysis started
+2015/03/02 11:31:36:013  analysis finished
+2015/03/02 11:31:44:244  analysis started
+2015/03/02 11:31:44:567  analysis finished
+2015/03/02 11:31:47:874  analysis started
+2015/03/02 11:31:48:219  analysis finished
+2015/03/02 11:31:55:076  analysis started
+2015/03/02 11:31:55:720  analysis finished
+2015/03/02 11:32:32:378 Restarting EAS Engine
+2015/03/02 11:32:32:920  Transcoding Status: Stopped!
+2015/03/02 11:32:32:922 Ring Detect Closed
+2015/03/02 11:32:32:924 serial errorUnknown error13
+2015/03/02 11:32:32:925 Initialising Ring Detect
+2015/03/02 11:32:32:927 serial errorUnknown error0
+2015/03/02 11:32:32:928 serial errorNo such file or directory1
+2015/03/02 11:32:32:937 finished eas init
+2015/03/02 11:32:46:781 Restarting EAS Engine
+2015/03/02 11:32:46:781 Ring Detect Closed
+2015/03/02 11:32:46:782 serial errorUnknown error13
+2015/03/02 11:32:46:782 Initialising Ring Detect
+2015/03/02 11:32:46:782 serial errorUnknown error0
+2015/03/02 11:32:46:783 serial errorNo such file or directory1
+2015/03/02 11:32:46:783 finished eas init
+2015/03/02 11:32:51:556  analysis started
+2015/03/02 11:32:52:103  analysis finished
+2015/03/02 11:32:59:150 Restarting EAS Engine
+2015/03/02 11:32:59:747  Transcoding Status: Stopped!
+2015/03/02 11:32:59:748 Ring Detect Closed
+2015/03/02 11:32:59:749 serial errorUnknown error13
+2015/03/02 11:32:59:750 Initialising Ring Detect
+2015/03/02 11:32:59:751 serial errorUnknown error0
+2015/03/02 11:32:59:752 serial errorNo such file or directory1
+2015/03/02 11:32:59:756 finished eas init
+2015/03/02 11:33:46:069 Restarting EAS Engine
+2015/03/02 11:33:46:069 Ring Detect Closed
+2015/03/02 11:33:46:070 serial errorUnknown error13
+2015/03/02 11:33:46:070 Initialising Ring Detect
+2015/03/02 11:33:46:070 serial errorUnknown error0
+2015/03/02 11:33:46:071 serial errorNo such file or directory1
+2015/03/02 11:33:46:071 finished eas init
+2015/03/02 11:35:23:733 Restarting EAS Engine
+2015/03/02 11:35:23:734 Ring Detect Closed
+2015/03/02 11:35:23:735 serial errorUnknown error13
+2015/03/02 11:35:23:735 Initialising Ring Detect
+2015/03/02 11:35:23:735 serial errorUnknown error0
+2015/03/02 11:35:23:736 serial errorNo such file or directory1
+2015/03/02 11:35:23:736 finished eas init
+2015/03/02 11:35:33:634  analysis started
+2015/03/02 11:35:34:423  analysis finished
+2015/03/02 11:36:23:699 Restarting EAS Engine
+2015/03/02 11:36:23:699 Ring Detect Closed
+2015/03/02 11:36:23:700 serial errorUnknown error13
+2015/03/02 11:36:23:700 Initialising Ring Detect
+2015/03/02 11:36:23:701 serial errorUnknown error0
+2015/03/02 11:36:23:701 serial errorNo such file or directory1
+2015/03/02 11:36:23:701 finished eas init
+2015/03/02 11:36:29:902  analysis started
+2015/03/02 11:36:30:431  analysis finished
+2015/03/02 11:37:19:080 Restarting EAS Engine
+2015/03/02 11:37:19:086 Ring Detect Closed
+2015/03/02 11:37:19:087 serial errorUnknown error13
+2015/03/02 11:37:19:087 Initialising Ring Detect
+2015/03/02 11:37:19:087 serial errorUnknown error0
+2015/03/02 11:37:19:088 serial errorNo such file or directory1
+2015/03/02 11:37:19:088 finished eas init
+2015/03/02 11:37:22:043  analysis started
+2015/03/02 11:37:22:369  analysis finished
+2015/03/02 11:38:11:137 Restarting EAS Engine
+2015/03/02 11:38:11:138 Ring Detect Closed
+2015/03/02 11:38:11:138 serial errorUnknown error13
+2015/03/02 11:38:11:139 Initialising Ring Detect
+2015/03/02 11:38:11:139 serial errorUnknown error0
+2015/03/02 11:38:11:139 serial errorNo such file or directory1
+2015/03/02 11:38:11:140 finished eas init
+2015/03/02 11:38:16:906  analysis started
+2015/03/02 11:38:17:127  analysis finished
+2015/03/02 11:38:50:439 Restarting EAS Engine
+2015/03/02 11:38:50:440 Ring Detect Closed
+2015/03/02 11:38:50:440 serial errorUnknown error13
+2015/03/02 11:38:50:441 Initialising Ring Detect
+2015/03/02 11:38:50:441 serial errorUnknown error0
+2015/03/02 11:38:50:441 serial errorNo such file or directory1
+2015/03/02 11:38:50:442 finished eas init
+2015/03/02 11:39:59:087  analysis started
+2015/03/02 11:39:59:411  analysis finished
+2015/03/02 11:41:34:597 Restarting EAS Engine
+2015/03/02 11:41:34:597 Ring Detect Closed
+2015/03/02 11:41:34:598 serial errorUnknown error13
+2015/03/02 11:41:34:598 Initialising Ring Detect
+2015/03/02 11:41:34:598 serial errorUnknown error0
+2015/03/02 11:41:34:599 serial errorNo such file or directory1
+2015/03/02 11:41:34:599 finished eas init
+2015/03/02 11:41:41:210  analysis started
+2015/03/02 11:41:41:388  analysis finished
+2015/03/02 11:42:38:970  Transcoding Status: Stopped!
+2015/03/02 11:43:41:964 Restarting EAS Engine
+2015/03/02 11:43:41:964 Ring Detect Closed
+2015/03/02 11:43:41:965 serial errorUnknown error13
+2015/03/02 11:43:41:965 Initialising Ring Detect
+2015/03/02 11:43:41:966 serial errorUnknown error0
+2015/03/02 11:43:41:966 serial errorNo such file or directory1
+2015/03/02 11:43:41:966 finished eas init
+2015/03/02 11:43:47:694  analysis started
+2015/03/02 11:43:47:917  analysis finished
+2015/03/02 11:44:45:476  Transcoding Status: Stopped!
+2015/03/02 11:45:18:087 Restarting EAS Engine
+2015/03/02 11:45:18:088 Ring Detect Closed
+2015/03/02 11:45:18:088 serial errorUnknown error13
+2015/03/02 11:45:18:089 Initialising Ring Detect
+2015/03/02 11:45:18:089 serial errorUnknown error0
+2015/03/02 11:45:18:089 serial errorNo such file or directory1
+2015/03/02 11:45:18:090 finished eas init
+2015/03/02 11:45:24:151  analysis started
+2015/03/02 11:45:24:586  analysis finished
+2015/03/02 11:46:43:412 Restarting EAS Engine
+2015/03/02 11:46:43:413 Ring Detect Closed
+2015/03/02 11:46:43:413 serial errorUnknown error13
+2015/03/02 11:46:43:413 Initialising Ring Detect
+2015/03/02 11:46:43:414 serial errorUnknown error0
+2015/03/02 11:46:43:414 serial errorNo such file or directory1
+2015/03/02 11:46:43:414 finished eas init
+2015/03/02 11:46:47:200  analysis started
+2015/03/02 11:46:47:526  analysis finished
+2015/03/02 11:51:49:572 Restarting EAS Engine
+2015/03/02 11:51:49:573 Ring Detect Closed
+2015/03/02 11:51:49:573 serial errorUnknown error13
+2015/03/02 11:51:49:573 Initialising Ring Detect
+2015/03/02 11:51:49:574 serial errorUnknown error0
+2015/03/02 11:51:49:574 serial errorNo such file or directory1
+2015/03/02 11:51:49:574 finished eas init
+2015/03/02 11:51:52:314  analysis started
+2015/03/02 11:51:52:618  analysis finished
+2015/03/02 11:52:04:387  analysis started
+2015/03/02 11:52:04:697  analysis finished
+2015/03/02 11:52:20:941 Restarting EAS Engine
+2015/03/02 11:52:20:941 Ring Detect Closed
+2015/03/02 11:52:20:942 serial errorUnknown error13
+2015/03/02 11:52:20:942 Initialising Ring Detect
+2015/03/02 11:52:20:942 serial errorUnknown error0
+2015/03/02 11:52:20:943 serial errorNo such file or directory1
+2015/03/02 11:52:20:943 finished eas init
+2015/03/02 11:52:24:588  analysis started
+2015/03/02 11:52:24:896  analysis finished
+2015/03/02 11:53:03:903 Restarting EAS Engine
+2015/03/02 11:53:03:904 Ring Detect Closed
+2015/03/02 11:53:03:904 serial errorUnknown error13
+2015/03/02 11:53:03:904 Initialising Ring Detect
+2015/03/02 11:53:03:905 serial errorUnknown error0
+2015/03/02 11:53:03:905 serial errorNo such file or directory1
+2015/03/02 11:53:03:905 finished eas init
+2015/03/02 11:53:06:901  analysis started
+2015/03/02 11:53:07:203  analysis finished
+2015/03/02 11:53:38:591 Restarting EAS Engine
+2015/03/02 11:53:38:592 Ring Detect Closed
+2015/03/02 11:53:38:592 serial errorUnknown error13
+2015/03/02 11:53:38:592 Initialising Ring Detect
+2015/03/02 11:53:38:593 serial errorUnknown error0
+2015/03/02 11:53:38:593 serial errorNo such file or directory1
+2015/03/02 11:53:38:593 finished eas init
+2015/03/02 11:53:41:781  analysis started
+2015/03/02 11:53:42:107  analysis finished
+2015/03/02 11:58:03:795 Restarting EAS Engine
+2015/03/02 11:58:03:795 Ring Detect Closed
+2015/03/02 11:58:03:796 serial errorUnknown error13
+2015/03/02 11:58:03:796 Initialising Ring Detect
+2015/03/02 11:58:03:796 serial errorUnknown error0
+2015/03/02 11:58:03:797 serial errorNo such file or directory1
+2015/03/02 11:58:03:797 finished eas init
+2015/03/02 11:58:08:639  analysis started
+2015/03/02 11:58:08:723  analysis finished
+2015/03/02 11:59:30:884 Restarting EAS Engine
+2015/03/02 11:59:30:885 Ring Detect Closed
+2015/03/02 11:59:30:885 serial errorUnknown error13
+2015/03/02 11:59:30:886 Initialising Ring Detect
+2015/03/02 11:59:30:886 serial errorUnknown error0
+2015/03/02 11:59:30:886 serial errorNo such file or directory1
+2015/03/02 11:59:30:887 finished eas init
+2015/03/02 11:59:33:342  analysis started
+2015/03/02 11:59:33:407  analysis finished
+2015/03/02 12:01:19:801 Restarting EAS Engine
+2015/03/02 12:01:19:802 Ring Detect Closed
+2015/03/02 12:01:19:808 serial errorUnknown error13
+2015/03/02 12:01:19:808 Initialising Ring Detect
+2015/03/02 12:01:19:809 serial errorUnknown error0
+2015/03/02 12:01:19:809 serial errorNo such file or directory1
+2015/03/02 12:01:19:809 finished eas init
+2015/03/02 12:01:22:496  analysis started
+2015/03/02 12:01:22:594  analysis finished
+2015/03/02 12:04:07:966 Restarting EAS Engine
+2015/03/02 12:04:07:966 Ring Detect Closed
+2015/03/02 12:04:07:967 serial errorUnknown error13
+2015/03/02 12:04:07:967 Initialising Ring Detect
+2015/03/02 12:04:07:967 serial errorUnknown error0
+2015/03/02 12:04:07:969 serial errorNo such file or directory1
+2015/03/02 12:04:07:969 finished eas init
+2015/03/02 12:04:11:554  analysis started
+2015/03/02 12:04:11:812  analysis finished
+2015/03/02 12:07:34:640 Restarting EAS Engine
+2015/03/02 12:07:34:641 Ring Detect Closed
+2015/03/02 12:07:34:641 serial errorUnknown error13
+2015/03/02 12:07:34:642 Initialising Ring Detect
+2015/03/02 12:07:34:642 serial errorUnknown error0
+2015/03/02 12:07:34:642 serial errorNo such file or directory1
+2015/03/02 12:07:34:643 finished eas init
+2015/03/02 12:07:37:493  analysis started
+2015/03/02 12:07:37:598  analysis finished
+2015/03/02 12:08:32:625 Restarting EAS Engine
+2015/03/02 12:08:32:626 Ring Detect Closed
+2015/03/02 12:08:32:626 serial errorUnknown error13
+2015/03/02 12:08:32:626 Initialising Ring Detect
+2015/03/02 12:08:32:627 serial errorUnknown error0
+2015/03/02 12:08:32:627 serial errorNo such file or directory1
+2015/03/02 12:08:32:627 finished eas init
+2015/03/02 12:08:34:591  analysis started
+2015/03/02 12:08:34:716  analysis finished
+2015/03/02 12:09:04:088 Restarting EAS Engine
+2015/03/02 12:09:04:089 Ring Detect Closed
+2015/03/02 12:09:04:090 serial errorUnknown error13
+2015/03/02 12:09:04:090 Initialising Ring Detect
+2015/03/02 12:09:04:090 serial errorUnknown error0
+2015/03/02 12:09:04:091 serial errorNo such file or directory1
+2015/03/02 12:09:04:091 finished eas init
+2015/03/02 12:09:06:126  analysis started
+2015/03/02 12:09:06:323  analysis finished
+2015/03/02 12:10:10:541 Restarting EAS Engine
+2015/03/02 12:10:10:542 Ring Detect Closed
+2015/03/02 12:10:10:542 serial errorUnknown error13
+2015/03/02 12:10:10:542 Initialising Ring Detect
+2015/03/02 12:10:10:543 serial errorUnknown error0
+2015/03/02 12:10:10:543 serial errorNo such file or directory1
+2015/03/02 12:10:10:544 finished eas init
+2015/03/02 12:10:12:049  analysis started
+2015/03/02 12:10:12:161  analysis finished
+2015/03/02 12:20:40:234 Restarting EAS Engine
+2015/03/02 12:20:40:235 Ring Detect Closed
+2015/03/02 12:20:40:235 serial errorUnknown error13
+2015/03/02 12:20:40:235 Initialising Ring Detect
+2015/03/02 12:20:40:236 serial errorUnknown error0
+2015/03/02 12:20:40:236 serial errorNo such file or directory1
+2015/03/02 12:20:40:236 finished eas init
+2015/03/02 12:20:43:419  analysis started
+2015/03/02 12:20:43:506  analysis finished
+2015/03/02 12:21:13:440 Restarting EAS Engine
+2015/03/02 12:21:13:441 Ring Detect Closed
+2015/03/02 12:21:13:441 serial errorUnknown error13
+2015/03/02 12:21:13:441 Initialising Ring Detect
+2015/03/02 12:21:13:442 serial errorUnknown error0
+2015/03/02 12:21:13:442 serial errorNo such file or directory1
+2015/03/02 12:21:13:442 finished eas init
+2015/03/02 12:21:15:672  analysis started
+2015/03/02 12:21:15:780  analysis finished
+2015/03/02 12:22:10:924 Restarting EAS Engine
+2015/03/02 12:22:10:926 Ring Detect Closed
+2015/03/02 12:22:10:926 serial errorUnknown error13
+2015/03/02 12:22:10:927 Initialising Ring Detect
+2015/03/02 12:22:10:928 serial errorUnknown error0
+2015/03/02 12:22:10:930 serial errorNo such file or directory1
+2015/03/02 12:22:10:930 finished eas init
+2015/03/02 12:22:13:160  analysis started
+2015/03/02 12:22:13:350  analysis finished
+2015/03/02 12:34:40:342 Restarting EAS Engine
+2015/03/02 12:34:40:343 Ring Detect Closed
+2015/03/02 12:34:40:343 serial errorUnknown error13
+2015/03/02 12:34:40:344 Initialising Ring Detect
+2015/03/02 12:34:40:344 serial errorUnknown error0
+2015/03/02 12:34:40:345 serial errorNo such file or directory1
+2015/03/02 12:34:40:345 finished eas init
+2015/03/02 12:34:44:680  analysis started
+2015/03/02 12:34:44:769  analysis finished
+2015/03/02 12:40:30:000 Restarting EAS Engine
+2015/03/02 12:40:30:001 Ring Detect Closed
+2015/03/02 12:40:30:002 serial errorUnknown error13
+2015/03/02 12:40:30:002 Initialising Ring Detect
+2015/03/02 12:40:30:002 serial errorUnknown error0
+2015/03/02 12:40:30:003 serial errorNo such file or directory1
+2015/03/02 12:40:30:003 finished eas init
+2015/03/02 12:40:32:484  analysis started
+2015/03/02 12:40:32:674  analysis finished
+2015/03/02 12:41:58:722 Restarting EAS Engine
+2015/03/02 12:41:58:723 Ring Detect Closed
+2015/03/02 12:41:58:723 serial errorUnknown error13
+2015/03/02 12:41:58:723 Initialising Ring Detect
+2015/03/02 12:41:58:724 serial errorUnknown error0
+2015/03/02 12:41:58:724 serial errorNo such file or directory1
+2015/03/02 12:41:58:725 finished eas init
+2015/03/02 12:42:01:047  analysis started
+2015/03/02 12:42:01:190  analysis finished
+2015/03/02 12:42:53:350 Restarting EAS Engine
+2015/03/02 12:42:53:351 Ring Detect Closed
+2015/03/02 12:42:53:351 serial errorUnknown error13
+2015/03/02 12:42:53:352 Initialising Ring Detect
+2015/03/02 12:42:53:352 serial errorUnknown error0
+2015/03/02 12:42:53:352 serial errorNo such file or directory1
+2015/03/02 12:42:53:353 finished eas init
+2015/03/02 12:42:56:256  analysis started
+2015/03/02 12:42:56:338  analysis finished
+2015/03/02 12:43:47:318 Restarting EAS Engine
+2015/03/02 12:43:47:319 Ring Detect Closed
+2015/03/02 12:43:47:319 serial errorUnknown error13
+2015/03/02 12:43:47:319 Initialising Ring Detect
+2015/03/02 12:43:47:320 serial errorUnknown error0
+2015/03/02 12:43:47:320 serial errorNo such file or directory1
+2015/03/02 12:43:47:320 finished eas init
+2015/03/02 12:43:50:063  analysis started
+2015/03/02 12:43:50:151  analysis finished
+2015/03/02 12:49:46:669 Restarting EAS Engine
+2015/03/02 12:49:46:670 Ring Detect Closed
+2015/03/02 12:49:46:670 serial errorUnknown error13
+2015/03/02 12:49:46:670 Initialising Ring Detect
+2015/03/02 12:49:46:671 serial errorUnknown error0
+2015/03/02 12:49:46:671 serial errorNo such file or directory1
+2015/03/02 12:49:46:671 finished eas init
+2015/03/02 12:49:49:114  analysis started
+2015/03/02 12:49:49:194  analysis finished
+2015/03/02 12:50:21:693 Restarting EAS Engine
+2015/03/02 12:50:21:694 Ring Detect Closed
+2015/03/02 12:50:21:694 serial errorUnknown error13
+2015/03/02 12:50:21:694 Initialising Ring Detect
+2015/03/02 12:50:21:695 serial errorUnknown error0
+2015/03/02 12:50:21:695 serial errorNo such file or directory1
+2015/03/02 12:50:21:695 finished eas init
+2015/03/02 12:50:24:761  analysis started
+2015/03/02 12:50:24:950  analysis finished
+2015/03/02 12:51:17:889 Restarting EAS Engine
+2015/03/02 12:51:17:889 Ring Detect Closed
+2015/03/02 12:51:17:890 serial errorUnknown error13
+2015/03/02 12:51:17:890 Initialising Ring Detect
+2015/03/02 12:51:17:890 serial errorUnknown error0
+2015/03/02 12:51:17:891 serial errorNo such file or directory1
+2015/03/02 12:51:17:891 finished eas init
+2015/03/02 12:51:20:317  analysis started
+2015/03/02 12:51:40:916 Restarting EAS Engine
+2015/03/02 12:51:40:917 Ring Detect Closed
+2015/03/02 12:51:40:917 serial errorUnknown error13
+2015/03/02 12:51:40:918 Initialising Ring Detect
+2015/03/02 12:51:40:918 serial errorUnknown error0
+2015/03/02 12:51:40:918 serial errorNo such file or directory1
+2015/03/02 12:51:40:923 finished eas init
+2015/03/02 12:51:43:793  analysis started
+2015/03/02 12:52:48:398 Restarting EAS Engine
+2015/03/02 12:52:48:399 Ring Detect Closed
+2015/03/02 12:52:48:399 serial errorUnknown error13
+2015/03/02 12:52:48:399 Initialising Ring Detect
+2015/03/02 12:52:48:400 serial errorUnknown error0
+2015/03/02 12:52:48:400 serial errorNo such file or directory1
+2015/03/02 12:52:48:400 finished eas init
+2015/03/02 12:52:50:499  analysis started
+2015/03/02 12:54:40:824 Restarting EAS Engine
+2015/03/02 12:54:40:825 Ring Detect Closed
+2015/03/02 12:54:40:825 serial errorUnknown error13
+2015/03/02 12:54:40:825 Initialising Ring Detect
+2015/03/02 12:54:40:826 serial errorUnknown error0
+2015/03/02 12:54:40:826 serial errorNo such file or directory1
+2015/03/02 12:54:40:826 finished eas init
+2015/03/02 12:54:43:560  analysis started
+2015/03/02 12:54:43:738  analysis finished
+2015/03/02 12:55:47:145 Restarting EAS Engine
+2015/03/02 12:55:47:146 Ring Detect Closed
+2015/03/02 12:55:47:146 serial errorUnknown error13
+2015/03/02 12:55:47:146 Initialising Ring Detect
+2015/03/02 12:55:47:147 serial errorUnknown error0
+2015/03/02 12:55:47:147 serial errorNo such file or directory1
+2015/03/02 12:55:47:147 finished eas init
+2015/03/02 12:55:48:966  analysis started
+2015/03/02 12:55:49:074  analysis finished
+2015/03/02 12:56:43:486 Restarting EAS Engine
+2015/03/02 12:56:43:487 Ring Detect Closed
+2015/03/02 12:56:43:487 serial errorUnknown error13
+2015/03/02 12:56:43:488 Initialising Ring Detect
+2015/03/02 12:56:43:488 serial errorUnknown error0
+2015/03/02 12:56:43:489 serial errorNo such file or directory1
+2015/03/02 12:56:43:489 finished eas init
+2015/03/02 12:59:28:680  analysis started
+2015/03/02 12:59:28:808  analysis finished
+2015/03/02 12:59:47:688 Restarting EAS Engine
+2015/03/02 12:59:47:689 Ring Detect Closed
+2015/03/02 12:59:47:689 serial errorUnknown error13
+2015/03/02 12:59:47:689 Initialising Ring Detect
+2015/03/02 12:59:47:690 serial errorUnknown error0
+2015/03/02 12:59:47:690 serial errorNo such file or directory1
+2015/03/02 12:59:47:690 finished eas init
+2015/03/02 12:59:59:307  analysis started
+2015/03/02 12:59:59:506  analysis finished
+2015/03/02 16:39:36:803 Restarting EAS Engine
+2015/03/02 16:39:36:830 Ring Detect Closed
+2015/03/02 16:39:36:831 serial errorUnknown error13
+2015/03/02 16:39:36:831 Initialising Ring Detect
+2015/03/02 16:39:36:831 serial errorUnknown error0
+2015/03/02 16:39:36:832 serial errorNo such file or directory1
+2015/03/02 16:39:36:832 finished eas init
+2015/03/02 16:39:43:416  analysis started
+2015/03/02 16:39:43:610  analysis finished
+2015/03/02 16:40:38:276 Restarting EAS Engine
+2015/03/02 16:40:38:277 Ring Detect Closed
+2015/03/02 16:40:38:277 serial errorUnknown error13
+2015/03/02 16:40:38:278 Initialising Ring Detect
+2015/03/02 16:40:38:278 serial errorUnknown error0
+2015/03/02 16:40:38:278 serial errorNo such file or directory1
+2015/03/02 16:40:38:279 finished eas init
+2015/03/02 16:40:41:703  analysis started
+2015/03/02 16:40:41:809  analysis finished
+2015/03/02 16:41:09:821 Restarting EAS Engine
+2015/03/02 16:41:09:822 Ring Detect Closed
+2015/03/02 16:41:09:822 serial errorUnknown error13
+2015/03/02 16:41:09:823 Initialising Ring Detect
+2015/03/02 16:41:09:823 serial errorUnknown error0
+2015/03/02 16:41:09:824 serial errorNo such file or directory1
+2015/03/02 16:41:09:824 finished eas init
+2015/03/02 16:41:12:506  analysis started
+2015/03/02 16:41:12:636  analysis finished
+2015/03/02 16:42:06:576 Restarting EAS Engine
+2015/03/02 16:42:06:577 Ring Detect Closed
+2015/03/02 16:42:06:579 serial errorUnknown error13
+2015/03/02 16:42:06:579 Initialising Ring Detect
+2015/03/02 16:42:06:579 serial errorUnknown error0
+2015/03/02 16:42:06:580 serial errorNo such file or directory1
+2015/03/02 16:42:06:580 finished eas init
+2015/03/02 16:42:09:236  analysis started
+2015/03/02 16:42:09:458  analysis finished
+2015/03/02 16:44:01:973 Restarting EAS Engine
+2015/03/02 16:44:01:974 Ring Detect Closed
+2015/03/02 16:44:01:974 serial errorUnknown error13
+2015/03/02 16:44:01:974 Initialising Ring Detect
+2015/03/02 16:44:01:975 serial errorUnknown error0
+2015/03/02 16:44:01:975 serial errorNo such file or directory1
+2015/03/02 16:44:01:975 finished eas init
+2015/03/02 16:44:04:416  analysis started
+2015/03/02 16:44:04:542  analysis finished
+2015/03/02 16:44:41:415 Restarting EAS Engine
+2015/03/02 16:44:41:415 Ring Detect Closed
+2015/03/02 16:44:41:416 serial errorUnknown error13
+2015/03/02 16:44:41:416 Initialising Ring Detect
+2015/03/02 16:44:41:416 serial errorUnknown error0
+2015/03/02 16:44:41:417 serial errorNo such file or directory1
+2015/03/02 16:44:41:417 finished eas init
+2015/03/02 16:44:44:320  analysis started
+2015/03/02 16:44:44:478  analysis finished
+2015/03/02 16:47:43:642 Restarting EAS Engine
+2015/03/02 16:47:43:643 Ring Detect Closed
+2015/03/02 16:47:43:643 serial errorUnknown error13
+2015/03/02 16:47:43:644 Initialising Ring Detect
+2015/03/02 16:47:43:644 serial errorUnknown error0
+2015/03/02 16:47:43:644 serial errorNo such file or directory1
+2015/03/02 16:47:43:645 finished eas init
+2015/03/02 16:47:50:447  analysis started
+2015/03/02 16:47:50:550  analysis finished
+2015/03/02 16:48:31:222 Restarting EAS Engine
+2015/03/02 16:48:31:228 Ring Detect Closed
+2015/03/02 16:48:31:228 serial errorUnknown error13
+2015/03/02 16:48:31:229 Initialising Ring Detect
+2015/03/02 16:48:31:229 serial errorUnknown error0
+2015/03/02 16:48:31:230 serial errorNo such file or directory1
+2015/03/02 16:48:31:230 finished eas init
+2015/03/02 16:48:33:459  analysis started
+2015/03/02 16:48:33:575  analysis finished
+2015/03/02 16:48:53:439 Restarting EAS Engine
+2015/03/02 16:48:53:440 Ring Detect Closed
+2015/03/02 16:48:53:440 serial errorUnknown error13
+2015/03/02 16:48:53:440 Initialising Ring Detect
+2015/03/02 16:48:53:441 serial errorUnknown error0
+2015/03/02 16:48:53:441 serial errorNo such file or directory1
+2015/03/02 16:48:53:441 finished eas init
+2015/03/02 16:49:56:797 Restarting EAS Engine
+2015/03/02 16:49:56:798 Ring Detect Closed
+2015/03/02 16:49:56:804 serial errorUnknown error13
+2015/03/02 16:49:56:804 Initialising Ring Detect
+2015/03/02 16:49:56:804 serial errorUnknown error0
+2015/03/02 16:49:56:805 serial errorNo such file or directory1
+2015/03/02 16:49:56:805 finished eas init
+2015/03/02 16:50:04:347 Restarting EAS Engine
+2015/03/02 16:50:04:348 Ring Detect Closed
+2015/03/02 16:50:04:348 serial errorUnknown error13
+2015/03/02 16:50:04:348 Initialising Ring Detect
+2015/03/02 16:50:04:349 serial errorUnknown error0
+2015/03/02 16:50:04:349 serial errorNo such file or directory1
+2015/03/02 16:50:04:349 finished eas init
+2015/03/02 16:50:06:143  analysis started
+2015/03/02 16:50:06:248  analysis finished
+2015/03/02 16:53:55:789 Restarting EAS Engine
+2015/03/02 16:53:55:790 Ring Detect Closed
+2015/03/02 16:53:55:790 serial errorUnknown error13
+2015/03/02 16:53:55:791 Initialising Ring Detect
+2015/03/02 16:53:55:791 serial errorUnknown error0
+2015/03/02 16:53:55:791 serial errorNo such file or directory1
+2015/03/02 16:53:55:792 finished eas init
+2015/03/02 16:53:58:323  analysis started
+2015/03/02 16:53:58:430  analysis finished
+2015/03/02 16:54:20:683 Restarting EAS Engine
+2015/03/02 16:54:20:684 Ring Detect Closed
+2015/03/02 16:54:20:684 serial errorUnknown error13
+2015/03/02 16:54:20:684 Initialising Ring Detect
+2015/03/02 16:54:20:685 serial errorUnknown error0
+2015/03/02 16:54:20:685 serial errorNo such file or directory1
+2015/03/02 16:54:20:686 finished eas init
+2015/03/02 16:54:22:676  analysis started
+2015/03/02 16:54:22:797  analysis finished
+2015/03/02 16:56:56:057 Restarting EAS Engine
+2015/03/02 16:56:56:058 Ring Detect Closed
+2015/03/02 16:56:56:058 serial errorUnknown error13
+2015/03/02 16:56:56:058 Initialising Ring Detect
+2015/03/02 16:56:56:059 serial errorUnknown error0
+2015/03/02 16:56:56:059 serial errorNo such file or directory1
+2015/03/02 16:56:56:059 finished eas init
+2015/03/02 16:56:59:200  analysis started
+2015/03/02 16:56:59:304  analysis finished
+2015/03/02 16:58:25:785 Restarting EAS Engine
+2015/03/02 16:58:25:786 Ring Detect Closed
+2015/03/02 16:58:25:786 serial errorUnknown error13
+2015/03/02 16:58:25:787 Initialising Ring Detect
+2015/03/02 16:58:25:787 serial errorUnknown error0
+2015/03/02 16:58:25:787 serial errorNo such file or directory1
+2015/03/02 16:58:25:788 finished eas init
+2015/03/02 16:58:28:281  analysis started
+2015/03/02 16:58:28:390  analysis finished
+2015/03/02 16:59:41:123 Restarting EAS Engine
+2015/03/02 16:59:41:124 Ring Detect Closed
+2015/03/02 16:59:41:125 serial errorUnknown error13
+2015/03/02 16:59:41:125 Initialising Ring Detect
+2015/03/02 16:59:41:125 serial errorUnknown error0
+2015/03/02 16:59:41:126 serial errorNo such file or directory1
+2015/03/02 16:59:41:126 finished eas init
+2015/03/02 16:59:49:838 Restarting EAS Engine
+2015/03/02 16:59:49:839 Ring Detect Closed
+2015/03/02 16:59:49:839 serial errorUnknown error13
+2015/03/02 16:59:49:839 Initialising Ring Detect
+2015/03/02 16:59:49:840 serial errorUnknown error0
+2015/03/02 16:59:49:840 serial errorNo such file or directory1
+2015/03/02 16:59:49:840 finished eas init
+2015/03/02 16:59:51:878  analysis started
+2015/03/02 16:59:51:984  analysis finished
+2015/03/02 17:00:13:538 Restarting EAS Engine
+2015/03/02 17:00:13:539 Ring Detect Closed
+2015/03/02 17:00:13:539 serial errorUnknown error13
+2015/03/02 17:00:13:540 Initialising Ring Detect
+2015/03/02 17:00:13:540 serial errorUnknown error0
+2015/03/02 17:00:13:540 serial errorNo such file or directory1
+2015/03/02 17:00:13:541 finished eas init
+2015/03/02 17:00:15:634  analysis started
+2015/03/02 17:00:15:741  analysis finished
+2015/03/02 17:00:47:034 Restarting EAS Engine
+2015/03/02 17:00:47:035 Ring Detect Closed
+2015/03/02 17:00:47:035 serial errorUnknown error13
+2015/03/02 17:00:47:035 Initialising Ring Detect
+2015/03/02 17:00:47:036 serial errorUnknown error0
+2015/03/02 17:00:47:036 serial errorNo such file or directory1
+2015/03/02 17:00:47:036 finished eas init
+2015/03/02 17:00:49:254  analysis started
+2015/03/02 17:00:49:367  analysis finished
+2015/03/02 17:01:22:342 Restarting EAS Engine
+2015/03/02 17:01:22:343 Ring Detect Closed
+2015/03/02 17:01:22:343 serial errorUnknown error13
+2015/03/02 17:01:22:344 Initialising Ring Detect
+2015/03/02 17:01:22:344 serial errorUnknown error0
+2015/03/02 17:01:22:344 serial errorNo such file or directory1
+2015/03/02 17:01:22:345 finished eas init
+2015/03/02 17:01:24:787  analysis started
+2015/03/02 17:01:24:892  analysis finished
+2015/03/02 17:33:56:788 Restarting EAS Engine
+2015/03/02 17:33:56:794 Ring Detect Closed
+2015/03/02 17:33:56:795 serial errorUnknown error13
+2015/03/02 17:33:56:796 Initialising Ring Detect
+2015/03/02 17:33:56:796 serial errorUnknown error0
+2015/03/02 17:33:56:796 serial errorNo such file or directory1
+2015/03/02 17:33:56:797 finished eas init
+2015/03/02 17:34:32:423 Restarting EAS Engine
+2015/03/02 17:34:32:425 Ring Detect Closed
+2015/03/02 17:34:32:425 serial errorUnknown error13
+2015/03/02 17:34:32:425 Initialising Ring Detect
+2015/03/02 17:34:32:426 serial errorUnknown error0
+2015/03/02 17:34:32:426 serial errorNo such file or directory1
+2015/03/02 17:34:32:427 finished eas init
+2015/03/02 17:34:38:113 Restarting EAS Engine
+2015/03/02 17:34:38:115 Ring Detect Closed
+2015/03/02 17:34:38:116 serial errorUnknown error13
+2015/03/02 17:34:38:118 Initialising Ring Detect
+2015/03/02 17:34:38:119 serial errorUnknown error0
+2015/03/02 17:34:38:121 serial errorNo such file or directory1
+2015/03/02 17:34:38:130 finished eas init
+2015/03/02 17:34:38:132 eas insert on 7
+2015/03/02 17:34:38:135 Insert EAS on port 4
+2015/03/02 17:34:38:136 Insert EAS on port 4
+2015/03/02 17:34:38:136 Insert EAS on port 4
+2015/03/02 17:34:38:137 Insert EAS on port 4
+2015/03/02 17:34:38:139 Insert EAS on port 4
+2015/03/02 17:34:38:140 Insert EAS on port 4
+2015/03/02 17:34:38:143 Insert EAS on port 4
+2015/03/02 17:34:38:152 sent eas insert
+2015/03/02 17:34:38:154 Starting Encoder
+2015/03/02 17:34:38:155 Start Streaming
+2015/03/02 17:34:38:156 set bitrate to 4000000
+2015/03/02 17:34:43:157 stream failed
+2015/03/02 17:37:36:539 Restarting EAS Engine
+2015/03/02 17:37:36:540 Ring Detect Closed
+2015/03/02 17:37:36:540 serial errorUnknown error13
+2015/03/02 17:37:36:540 Initialising Ring Detect
+2015/03/02 17:37:36:541 serial errorUnknown error0
+2015/03/02 17:37:36:541 serial errorNo such file or directory1
+2015/03/02 17:37:36:541 finished eas init
+2015/03/02 17:37:42:236 Restarting EAS Engine
+2015/03/02 17:37:42:238 Ring Detect Closed
+2015/03/02 17:37:42:240 serial errorUnknown error13
+2015/03/02 17:37:42:242 Initialising Ring Detect
+2015/03/02 17:37:42:243 serial errorUnknown error0
+2015/03/02 17:37:42:244 serial errorNo such file or directory1
+2015/03/02 17:37:42:253 finished eas init
+2015/03/02 17:37:42:259 eas insert on 7
+2015/03/02 17:37:42:260 Insert EAS on port 4
+2015/03/02 17:37:42:262 Insert EAS on port 4
+2015/03/02 17:37:42:263 Insert EAS on port 4
+2015/03/02 17:37:42:265 Insert EAS on port 4
+2015/03/02 17:37:42:266 Insert EAS on port 4
+2015/03/02 17:37:42:267 Insert EAS on port 4
+2015/03/02 17:37:42:271 Insert EAS on port 4
+2015/03/02 17:37:42:277 sent eas insert
+2015/03/02 17:37:42:278 Starting Encoder
+2015/03/02 17:37:42:279 Start Streaming
+2015/03/02 17:37:42:280 set bitrate to 4000000
+2015/03/02 17:37:47:280 starting stream (worker)
+2015/03/02 17:42:01:294 Restarting EAS Engine
+2015/03/02 17:42:01:295 Ring Detect Closed
+2015/03/02 17:42:01:296 serial errorUnknown error13
+2015/03/02 17:42:01:296 Initialising Ring Detect
+2015/03/02 17:42:01:296 serial errorUnknown error0
+2015/03/02 17:42:01:297 serial errorNo such file or directory1
+2015/03/02 17:42:01:297 finished eas init
+2015/03/02 17:42:07:237  analysis started
+2015/03/02 17:42:07:450  analysis finished
+2015/03/02 17:42:16:481 Restarting EAS Engine
+2015/03/02 17:42:16:483 Ring Detect Closed
+2015/03/02 17:42:16:484 serial errorUnknown error13
+2015/03/02 17:42:16:485 Initialising Ring Detect
+2015/03/02 17:42:16:486 serial errorUnknown error0
+2015/03/02 17:42:16:487 serial errorNo such file or directory1
+2015/03/02 17:42:16:492 finished eas init
+2015/03/02 17:42:16:494 eas insert on 7
+2015/03/02 17:42:16:495 Insert EAS on port 4
+2015/03/02 17:42:16:496 Insert EAS on port 4
+2015/03/02 17:42:16:497 Insert EAS on port 4
+2015/03/02 17:42:16:497 Insert EAS on port 4
+2015/03/02 17:42:16:502 Insert EAS on port 4
+2015/03/02 17:42:16:502 Insert EAS on port 4
+2015/03/02 17:42:16:504 Insert EAS on port 4
+2015/03/02 17:42:16:511 sent eas insert
+2015/03/02 17:42:16:512 Starting Encoder
+2015/03/02 17:42:16:513 Start Streaming
+2015/03/02 17:42:16:515 set bitrate to 4000000
+2015/03/02 17:42:17:794  Transcoding Status: Failed!
+2015/03/02 17:42:22:039  analysis started
+2015/03/02 17:42:22:112  analysis finished
+2015/03/02 17:42:22:111 filed to open file to stream
+2015/03/02 17:44:17:799 Restarting EAS Engine
+2015/03/02 17:44:17:804 Ring Detect Closed
+2015/03/02 17:44:17:805 serial errorUnknown error13
+2015/03/02 17:44:17:805 Initialising Ring Detect
+2015/03/02 17:44:17:806 serial errorUnknown error0
+2015/03/02 17:44:17:807 serial errorNo such file or directory1
+2015/03/02 17:44:17:807 finished eas init
+2015/03/02 17:44:21:687 Restarting EAS Engine
+2015/03/02 17:44:21:688 Ring Detect Closed
+2015/03/02 17:44:21:689 serial errorUnknown error13
+2015/03/02 17:44:21:690 Initialising Ring Detect
+2015/03/02 17:44:21:691 serial errorUnknown error0
+2015/03/02 17:44:21:692 serial errorNo such file or directory1
+2015/03/02 17:44:21:696 finished eas init
+2015/03/02 17:44:21:697 eas insert on 7
+2015/03/02 17:44:21:698 Insert EAS on port 4
+2015/03/02 17:44:21:699 Insert EAS on port 4
+2015/03/02 17:44:21:700 Insert EAS on port 4
+2015/03/02 17:44:21:700 Insert EAS on port 4
+2015/03/02 17:44:21:701 Insert EAS on port 4
+2015/03/02 17:44:21:702 Insert EAS on port 4
+2015/03/02 17:44:21:711 Insert EAS on port 4
+2015/03/02 17:44:21:718 sent eas insert
+2015/03/02 17:44:21:721 Starting Encoder
+2015/03/02 17:44:21:722 Start Streaming
+2015/03/02 17:44:21:723 set bitrate to 4000000
+2015/03/02 17:44:22:653  Transcoding Status: Failed!
+2015/03/02 17:44:27:140  analysis started
+2015/03/02 17:44:34:998 Restarting EAS Engine
+2015/03/02 17:44:34:998 Ring Detect Closed
+2015/03/02 17:44:34:999 serial errorUnknown error13
+2015/03/02 17:44:34:999 Initialising Ring Detect
+2015/03/02 17:44:35:000 serial errorUnknown error0
+2015/03/02 17:44:35:000 serial errorNo such file or directory1
+2015/03/02 17:44:35:000 finished eas init
+2015/03/02 17:44:39:074 Restarting EAS Engine
+2015/03/02 17:44:39:075 Ring Detect Closed
+2015/03/02 17:44:39:077 serial errorUnknown error13
+2015/03/02 17:44:39:078 Initialising Ring Detect
+2015/03/02 17:44:39:079 serial errorUnknown error0
+2015/03/02 17:44:39:080 serial errorNo such file or directory1
+2015/03/02 17:44:39:083 finished eas init
+2015/03/02 17:44:39:084 eas insert on 7
+2015/03/02 17:44:39:085 Insert EAS on port 4
+2015/03/02 17:44:39:086 Insert EAS on port 4
+2015/03/02 17:44:39:087 Insert EAS on port 4
+2015/03/02 17:44:39:087 Insert EAS on port 4
+2015/03/02 17:44:39:088 Insert EAS on port 4
+2015/03/02 17:44:39:088 Insert EAS on port 4
+2015/03/02 17:44:39:091 Insert EAS on port 4
+2015/03/02 17:44:39:096 sent eas insert
+2015/03/02 17:44:39:098 Starting Encoder
+2015/03/02 17:44:39:099 Start Streaming
+2015/03/02 17:44:39:100 set bitrate to 4000000
+2015/03/02 17:44:40:045  Transcoding Status: Failed!
+2015/03/02 17:44:44:539  analysis started
+2015/03/02 17:44:44:609  analysis finished
+2015/03/02 17:44:44:609 failed to open file to stream
+2015/03/02 17:45:04:749 Restarting EAS Engine
+2015/03/02 17:45:04:750 Ring Detect Closed
+2015/03/02 17:45:04:750 serial errorUnknown error13
+2015/03/02 17:45:04:751 Initialising Ring Detect
+2015/03/02 17:45:04:751 serial errorUnknown error0
+2015/03/02 17:45:04:751 serial errorNo such file or directory1
+2015/03/02 17:45:04:752 finished eas init
+2015/03/02 17:45:10:828 Restarting EAS Engine
+2015/03/02 17:45:10:830 Ring Detect Closed
+2015/03/02 17:45:10:831 serial errorUnknown error13
+2015/03/02 17:45:10:833 Initialising Ring Detect
+2015/03/02 17:45:10:834 serial errorUnknown error0
+2015/03/02 17:45:10:838 serial errorNo such file or directory1
+2015/03/02 17:45:10:848 finished eas init
+2015/03/02 17:45:10:850 eas insert on 7
+2015/03/02 17:45:10:851 Insert EAS on port 4
+2015/03/02 17:45:10:853 Insert EAS on port 4
+2015/03/02 17:45:10:854 Insert EAS on port 4
+2015/03/02 17:45:10:855 Insert EAS on port 4
+2015/03/02 17:45:10:856 Insert EAS on port 4
+2015/03/02 17:45:10:857 Insert EAS on port 4
+2015/03/02 17:45:10:861 Insert EAS on port 4
+2015/03/02 17:45:10:867 sent eas insert
+2015/03/02 17:45:10:868 Starting Encoder
+2015/03/02 17:45:10:869 Start Streaming
+2015/03/02 17:45:10:870 set bitrate to 4000000
+2015/03/02 17:45:16:289  analysis started
+2015/03/02 17:46:35:919 Restarting EAS Engine
+2015/03/02 17:46:35:919 Ring Detect Closed
+2015/03/02 17:46:35:920 serial errorUnknown error13
+2015/03/02 17:46:35:920 Initialising Ring Detect
+2015/03/02 17:46:35:920 serial errorUnknown error0
+2015/03/02 17:46:35:921 serial errorNo such file or directory1
+2015/03/02 17:46:35:921 finished eas init
+2015/03/02 17:47:20:473 Restarting EAS Engine
+2015/03/02 17:47:20:473 Ring Detect Closed
+2015/03/02 17:47:20:474 serial errorUnknown error13
+2015/03/02 17:47:20:474 Initialising Ring Detect
+2015/03/02 17:47:20:475 serial errorUnknown error0
+2015/03/02 17:47:20:475 serial errorNo such file or directory1
+2015/03/02 17:47:20:475 finished eas init
+2015/03/02 17:47:25:447 Restarting EAS Engine
+2015/03/02 17:47:25:449 Ring Detect Closed
+2015/03/02 17:47:25:451 serial errorUnknown error13
+2015/03/02 17:47:25:453 Initialising Ring Detect
+2015/03/02 17:47:25:455 serial errorUnknown error0
+2015/03/02 17:47:25:456 serial errorNo such file or directory1
+2015/03/02 17:47:25:466 finished eas init
+2015/03/02 17:47:25:468 eas insert on 7
+2015/03/02 17:47:25:470 Insert EAS on port 4
+2015/03/02 17:47:25:471 Insert EAS on port 4
+2015/03/02 17:47:25:472 Insert EAS on port 4
+2015/03/02 17:47:25:473 Insert EAS on port 4
+2015/03/02 17:47:25:474 Insert EAS on port 4
+2015/03/02 17:47:25:475 Insert EAS on port 4
+2015/03/02 17:47:25:477 Insert EAS on port 4
+2015/03/02 17:47:25:482 sent eas insert
+2015/03/02 17:47:25:484 Starting Encoder
+2015/03/02 17:47:25:485 Start Streaming
+2015/03/02 17:47:25:486 set bitrate to 4000000
+2015/03/02 17:47:30:905  analysis started
+2015/03/02 17:49:17:128 Restarting EAS Engine
+2015/03/02 17:49:17:128 Ring Detect Closed
+2015/03/02 17:49:17:129 serial errorUnknown error13
+2015/03/02 17:49:17:129 Initialising Ring Detect
+2015/03/02 17:49:17:130 serial errorUnknown error0
+2015/03/02 17:49:17:130 serial errorNo such file or directory1
+2015/03/02 17:49:17:130 finished eas init
+2015/03/02 17:49:31:563 Restarting EAS Engine
+2015/03/02 17:49:31:565 Ring Detect Closed
+2015/03/02 17:49:31:566 serial errorUnknown error13
+2015/03/02 17:49:31:567 Initialising Ring Detect
+2015/03/02 17:49:31:568 serial errorUnknown error0
+2015/03/02 17:49:31:569 serial errorNo such file or directory1
+2015/03/02 17:49:31:574 finished eas init
+2015/03/02 17:49:31:575 eas insert on 7
+2015/03/02 17:49:31:576 Insert EAS on port 4
+2015/03/02 17:49:31:577 Insert EAS on port 4
+2015/03/02 17:49:31:578 Insert EAS on port 4
+2015/03/02 17:49:31:578 Insert EAS on port 4
+2015/03/02 17:49:31:579 Insert EAS on port 4
+2015/03/02 17:49:31:580 Insert EAS on port 4
+2015/03/02 17:49:31:583 Insert EAS on port 4
+2015/03/02 17:49:31:589 sent eas insert
+2015/03/02 17:49:31:591 Starting Encoder
+2015/03/02 17:49:31:592 Start Streaming
+2015/03/02 17:49:31:593 set bitrate to 4000000
+2015/03/02 17:49:37:100 Restarting EAS Engine
+2015/03/02 17:49:37:731  Transcoding Status: Stopped!
+2015/03/02 17:49:37:733 Ring Detect Closed
+2015/03/02 17:49:37:735 serial errorUnknown error13
+2015/03/02 17:49:37:737 Initialising Ring Detect
+2015/03/02 17:49:37:742 serial errorUnknown error0
+2015/03/02 17:49:37:743 serial errorNo such file or directory1
+2015/03/02 17:49:37:745 finished eas init
+2015/03/02 17:49:37:746  analysis started
+2015/03/02 17:49:37:771  analysis finished
+2015/03/02 17:49:37:292 stream failed
+2015/03/02 17:49:39:561 Restarting EAS Engine
+2015/03/02 17:49:39:564 Ring Detect Closed
+2015/03/02 17:49:39:566 serial errorUnknown error13
+2015/03/02 17:49:39:568 Initialising Ring Detect
+2015/03/02 17:49:39:573 serial errorUnknown error0
+2015/03/02 17:49:39:576 serial errorNo such file or directory1
+2015/03/02 17:49:39:578 finished eas init
+2015/03/02 17:49:39:581 eas insert on 7
+2015/03/02 17:49:39:583 Insert EAS on port 4
+2015/03/02 17:49:39:585 Insert EAS on port 4
+2015/03/02 17:49:39:587 Insert EAS on port 4
+2015/03/02 17:49:39:589 Insert EAS on port 4
+2015/03/02 17:49:39:591 Insert EAS on port 4
+2015/03/02 17:49:39:593 Insert EAS on port 4
+2015/03/02 17:49:39:596 Insert EAS on port 4
+2015/03/02 17:49:39:598 sent eas insert
+2015/03/02 17:49:39:601 Starting Encoder
+2015/03/02 17:49:39:602 Start Streaming
+2015/03/02 17:49:39:604 set bitrate to 4000000
+2015/03/02 17:49:45:017  analysis started
+2015/03/02 17:49:45:243  analysis finished
+2015/03/02 17:49:45:214 stream failed
+2015/03/04 09:09:28:090 Restarting EAS Engine
+2015/03/04 09:09:28:140 Ring Detect Closed
+2015/03/04 09:09:28:140 serial errorUnknown error13
+2015/03/04 09:09:28:140 Initialising Ring Detect
+2015/03/04 09:09:28:141 serial errorUnknown error0
+2015/03/04 09:09:28:141 serial errorNo such file or directory1
+2015/03/04 09:09:28:142 finished eas init
+2015/03/04 09:09:30:867 ad program splice
+2015/03/04 09:09:38:091 return from ad splice
+2015/03/04 09:10:29:621 Restarting EAS Engine
+2015/03/04 09:10:29:622 Ring Detect Closed
+2015/03/04 09:10:29:629 serial errorUnknown error13
+2015/03/04 09:10:29:629 Initialising Ring Detect
+2015/03/04 09:10:29:630 serial errorUnknown error0
+2015/03/04 09:10:29:630 serial errorNo such file or directory1
+2015/03/04 09:10:29:631 finished eas init
+2015/03/04 09:10:32:176 ad program splice
+2015/03/04 09:10:39:210 return from ad splice
+2015/03/04 09:10:42:855 eas insert on 7
+2015/03/04 09:10:42:856 Insert EAS on port 4
+2015/03/04 09:10:42:856 Insert EAS on port 4
+2015/03/04 09:10:42:857 Insert EAS on port 4
+2015/03/04 09:10:42:858 Insert EAS on port 4
+2015/03/04 09:10:42:859 Insert EAS on port 4
+2015/03/04 09:10:42:859 Insert EAS on port 4
+2015/03/04 09:10:42:860 Insert EAS on port 4
+2015/03/04 09:10:42:861 sent eas insert
+2015/03/04 09:12:05:853 Restarting EAS Engine
+2015/03/04 09:12:05:854 Ring Detect Closed
+2015/03/04 09:12:05:854 serial errorUnknown error13
+2015/03/04 09:12:05:855 Initialising Ring Detect
+2015/03/04 09:12:05:855 serial errorUnknown error0
+2015/03/04 09:12:05:858 serial errorNo such file or directory1
+2015/03/04 09:12:05:870 finished eas init
+2015/03/04 09:12:07:923 eas insert on 7
+2015/03/04 09:12:07:924 Insert EAS on port 4
+2015/03/04 09:12:07:924 Insert EAS on port 4
+2015/03/04 09:12:07:925 Insert EAS on port 4
+2015/03/04 09:12:07:925 Insert EAS on port 4
+2015/03/04 09:12:07:926 Insert EAS on port 4
+2015/03/04 09:12:07:926 Insert EAS on port 4
+2015/03/04 09:12:07:927 Insert EAS on port 4
+2015/03/04 09:12:07:936 sent eas insert
+2015/03/04 09:12:12:104 revert eas config
+2015/03/04 09:18:41:242 Restarting EAS Engine
+2015/03/04 09:18:41:242 Ring Detect Closed
+2015/03/04 09:18:41:243 serial errorUnknown error13
+2015/03/04 09:18:41:243 Initialising Ring Detect
+2015/03/04 09:18:41:244 serial errorUnknown error0
+2015/03/04 09:18:41:244 serial errorNo such file or directory1
+2015/03/04 09:18:41:244 finished eas init
+2015/03/04 09:18:43:680 EAS splice config on 1
+2015/03/04 09:18:43:682 Insert EAS on port 4
+2015/03/04 09:18:43:683 EAS splice config on 2
+2015/03/04 09:18:43:683 Insert EAS on port 4
+2015/03/04 09:18:43:684 EAS splice config on 3
+2015/03/04 09:18:43:685 Insert EAS on port 4
+2015/03/04 09:18:43:686 EAS splice config on 4
+2015/03/04 09:18:43:686 Insert EAS on port 4
+2015/03/04 09:18:43:687 EAS splice config on 5
+2015/03/04 09:18:43:688 Insert EAS on port 4
+2015/03/04 09:18:43:688 EAS splice config on 6
+2015/03/04 09:18:43:689 Insert EAS on port 4
+2015/03/04 09:18:43:690 EAS splice config on 7
+2015/03/04 09:18:43:691 Insert EAS on port 4
+2015/03/04 09:18:43:702 sent eas insert
+2015/03/04 09:19:00:107 revert EAS splice config on 1
+2015/03/04 09:19:00:109 revert EAS splice config on 2
+2015/03/04 09:19:00:111 revert EAS splice config on 3
+2015/03/04 09:19:00:112 revert EAS splice config on 4
+2015/03/04 09:19:00:114 revert EAS splice config on 5
+2015/03/04 09:19:00:115 revert EAS splice config on 6
+2015/03/04 09:19:00:117 revert EAS splice config on 7
+2015/03/04 09:19:29:987 Restarting EAS Engine
+2015/03/04 09:19:29:988 Ring Detect Closed
+2015/03/04 09:19:29:988 serial errorUnknown error13
+2015/03/04 09:19:29:989 Initialising Ring Detect
+2015/03/04 09:19:29:989 serial errorUnknown error0
+2015/03/04 09:19:29:989 serial errorNo such file or directory1
+2015/03/04 09:19:29:990 finished eas init
+2015/03/04 09:19:31:469 revert EAS splice config on 1
+2015/03/04 09:19:31:471 revert EAS splice config on 2
+2015/03/04 09:19:31:471 revert EAS splice config on 3
+2015/03/04 09:19:31:472 revert EAS splice config on 4
+2015/03/04 09:19:31:473 revert EAS splice config on 5
+2015/03/04 09:19:31:474 revert EAS splice config on 6
+2015/03/04 09:19:31:474 revert EAS splice config on 7
+2015/03/04 09:19:38:907 ad splice on 0
+2015/03/04 09:19:46:280 ad splice return on 0
+2015/03/04 09:20:40:942 Restarting EAS Engine
+2015/03/04 09:20:40:943 Ring Detect Closed
+2015/03/04 09:20:40:943 serial errorUnknown error13
+2015/03/04 09:20:40:944 Initialising Ring Detect
+2015/03/04 09:20:40:944 serial errorUnknown error0
+2015/03/04 09:20:40:944 serial errorNo such file or directory1
+2015/03/04 09:20:40:945 finished eas init
+2015/03/04 09:21:27:149 Restarting EAS Engine
+2015/03/04 09:21:27:150 Ring Detect Closed
+2015/03/04 09:21:27:151 serial errorUnknown error13
+2015/03/04 09:21:27:151 Initialising Ring Detect
+2015/03/04 09:21:27:152 serial errorUnknown error0
+2015/03/04 09:21:27:152 serial errorNo such file or directory1
+2015/03/04 09:21:27:153 finished eas init
+2015/03/04 09:21:29:146 EAS splice config on 1
+2015/03/04 09:21:29:148 Insert EAS on port 4
+2015/03/04 09:21:29:149 EAS splice config on 2
+2015/03/04 09:21:29:149 Insert EAS on port 4
+2015/03/04 09:21:29:150 EAS splice config on 3
+2015/03/04 09:21:29:151 Insert EAS on port 4
+2015/03/04 09:21:29:151 EAS splice config on 4
+2015/03/04 09:21:29:152 Insert EAS on port 4
+2015/03/04 09:21:29:153 EAS splice config on 5
+2015/03/04 09:21:29:154 Insert EAS on port 4
+2015/03/04 09:21:29:154 EAS splice config on 6
+2015/03/04 09:21:29:155 Insert EAS on port 4
+2015/03/04 09:21:29:156 EAS splice config on 7
+2015/03/04 09:21:29:157 Insert EAS on port 4
+2015/03/04 09:21:29:168 sent eas insert
+2015/03/04 09:21:36:078 revert EAS splice config on 1
+2015/03/04 09:21:36:080 revert EAS splice config on 2
+2015/03/04 09:21:36:081 revert EAS splice config on 3
+2015/03/04 09:21:36:084 revert EAS splice config on 4
+2015/03/04 09:21:36:085 revert EAS splice config on 5
+2015/03/04 09:21:36:086 revert EAS splice config on 6
+2015/03/04 09:21:36:088 revert EAS splice config on 7
+2015/03/04 09:21:46:810 ad splice on channel0
+2015/03/04 09:22:00:433 Restarting EAS Engine
+2015/03/04 09:22:00:434 Ring Detect Closed
+2015/03/04 09:22:00:440 serial errorUnknown error13
+2015/03/04 09:22:00:440 Initialising Ring Detect
+2015/03/04 09:22:00:440 serial errorUnknown error0
+2015/03/04 09:22:00:441 serial errorNo such file or directory1
+2015/03/04 09:22:00:441 finished eas init
+2015/03/04 09:22:02:666 ad splice on channel0
+2015/03/04 09:22:07:534 ad splice return on 0
+2015/03/04 09:22:13:956 ad splice on channel2
+2015/03/04 09:22:19:535 ad splice on channel1
+2015/03/04 09:22:59:489 Restarting EAS Engine
+2015/03/04 09:22:59:489 Ring Detect Closed
+2015/03/04 09:22:59:490 serial errorUnknown error13
+2015/03/04 09:22:59:490 Initialising Ring Detect
+2015/03/04 09:22:59:491 serial errorUnknown error0
+2015/03/04 09:22:59:491 serial errorNo such file or directory1
+2015/03/04 09:22:59:491 finished eas init
+2015/03/04 09:23:01:002 ad splice on channel1
+2015/03/04 09:23:05:708 ad splice return on 1
+2015/03/04 09:23:32:265 Restarting EAS Engine
+2015/03/04 09:23:32:266 Ring Detect Closed
+2015/03/04 09:23:32:267 serial errorUnknown error13
+2015/03/04 09:23:32:268 Initialising Ring Detect
+2015/03/04 09:23:32:269 serial errorUnknown error0
+2015/03/04 09:23:32:269 serial errorNo such file or directory1
+2015/03/04 09:23:32:270 finished eas init
+2015/03/04 09:23:33:565 ad splice on channel 1
+2015/03/04 09:23:37:738 ad splice return on 1
+2015/03/04 09:23:45:699 ad splice on channel 7
+2015/03/04 09:23:48:964 ad splice return on 7
+2015/03/04 09:23:58:463 revert EAS splice config on 1
+2015/03/04 09:23:58:465 revert EAS splice config on 3
+2015/03/04 09:23:58:467 revert EAS splice config on 4
+2015/03/04 09:23:58:470 revert EAS splice config on 6
+2015/03/04 09:24:04:543 EAS splice config on 1
+2015/03/04 09:24:04:545 Insert EAS on port 4
+2015/03/04 09:24:04:547 EAS splice config on 3
+2015/03/04 09:24:04:548 Insert EAS on port 4
+2015/03/04 09:24:04:550 EAS splice config on 4
+2015/03/04 09:24:04:552 Insert EAS on port 4
+2015/03/04 09:24:04:553 EAS splice config on 6
+2015/03/04 09:24:04:554 Insert EAS on port 4
+2015/03/04 09:24:04:556 sent eas insert
+2015/03/04 09:25:22:535 Restarting EAS Engine
+2015/03/04 09:25:22:535 Ring Detect Closed
+2015/03/04 09:25:22:536 serial errorUnknown error13
+2015/03/04 09:25:22:536 Initialising Ring Detect
+2015/03/04 09:25:22:537 serial errorUnknown error0
+2015/03/04 09:25:22:537 serial errorNo such file or directory1
+2015/03/04 09:25:22:537 finished eas init
+2015/03/04 09:33:20:904 Restarting EAS Engine
+2015/03/04 09:33:20:905 Ring Detect Closed
+2015/03/04 09:33:20:906 serial errorUnknown error13
+2015/03/04 09:33:20:906 Initialising Ring Detect
+2015/03/04 09:33:20:906 serial errorUnknown error0
+2015/03/04 09:33:20:907 serial errorNo such file or directory1
+2015/03/04 09:33:20:907 finished eas init
+2015/03/04 09:56:54:354 Restarting EAS Engine
+2015/03/04 09:56:54:360 Ring Detect Closed
+2015/03/04 09:56:54:361 serial errorUnknown error13
+2015/03/04 09:56:54:361 Initialising Ring Detect
+2015/03/04 09:56:54:361 serial errorUnknown error0
+2015/03/04 09:56:54:362 serial errorNo such file or directory1
+2015/03/04 09:56:54:362 finished eas init
+2015/03/04 09:57:23:879 Restarting EAS Engine
+2015/03/04 09:57:23:880 Ring Detect Closed
+2015/03/04 09:57:23:880 serial errorUnknown error13
+2015/03/04 09:57:23:881 Initialising Ring Detect
+2015/03/04 09:57:23:881 serial errorUnknown error0
+2015/03/04 09:57:23:881 serial errorNo such file or directory1
+2015/03/04 09:57:23:882 finished eas init
+2015/03/04 09:57:28:375 Restarting EAS Engine
+2015/03/04 09:57:28:377 Ring Detect Closed
+2015/03/04 09:57:28:379 serial errorUnknown error13
+2015/03/04 09:57:28:381 Initialising Ring Detect
+2015/03/04 09:57:28:384 serial errorUnknown error0
+2015/03/04 09:57:28:385 serial errorNo such file or directory1
+2015/03/04 09:57:28:395 finished eas init
+2015/03/04 09:57:28:398 EAS splice config on 1
+2015/03/04 09:57:28:400 Insert EAS on port 4
+2015/03/04 09:57:28:401 EAS splice config on 2
+2015/03/04 09:57:28:403 Insert EAS on port 4
+2015/03/04 09:57:28:404 EAS splice config on 3
+2015/03/04 09:57:28:405 Insert EAS on port 4
+2015/03/04 09:57:28:407 EAS splice config on 4
+2015/03/04 09:57:28:411 Insert EAS on port 4
+2015/03/04 09:57:28:412 EAS splice config on 5
+2015/03/04 09:57:28:413 Insert EAS on port 4
+2015/03/04 09:57:28:413 EAS splice config on 6
+2015/03/04 09:57:28:414 Insert EAS on port 4
+2015/03/04 09:57:28:415 EAS splice config on 7
+2015/03/04 09:57:28:416 Insert EAS on port 4
+2015/03/04 09:57:28:421 sent eas insert
+2015/03/04 09:57:28:422 Starting Encoder
+2015/03/04 09:57:28:423 Start Streaming
+2015/03/04 09:58:16:157 Restarting EAS Engine
+2015/03/04 09:58:16:158 Ring Detect Closed
+2015/03/04 09:58:16:158 serial errorUnknown error13
+2015/03/04 09:58:16:159 Initialising Ring Detect
+2015/03/04 09:58:16:159 serial errorUnknown error0
+2015/03/04 09:58:16:160 serial errorNo such file or directory1
+2015/03/04 09:58:16:160 finished eas init
+2015/03/04 09:58:22:092 Restarting EAS Engine
+2015/03/04 09:58:22:094 Ring Detect Closed
+2015/03/04 09:58:22:096 serial errorUnknown error13
+2015/03/04 09:58:22:098 Initialising Ring Detect
+2015/03/04 09:58:22:100 serial errorUnknown error0
+2015/03/04 09:58:22:101 serial errorNo such file or directory1
+2015/03/04 09:58:22:111 finished eas init
+2015/03/04 09:58:22:112 EAS splice config on 1
+2015/03/04 09:58:22:113 Insert EAS on port 4
+2015/03/04 09:58:22:114 EAS splice config on 2
+2015/03/04 09:58:22:114 Insert EAS on port 4
+2015/03/04 09:58:22:116 EAS splice config on 3
+2015/03/04 09:58:22:117 Insert EAS on port 4
+2015/03/04 09:58:22:118 EAS splice config on 4
+2015/03/04 09:58:22:121 Insert EAS on port 4
+2015/03/04 09:58:22:122 EAS splice config on 5
+2015/03/04 09:58:22:123 Insert EAS on port 4
+2015/03/04 09:58:22:124 EAS splice config on 6
+2015/03/04 09:58:22:125 Insert EAS on port 4
+2015/03/04 09:58:22:126 EAS splice config on 7
+2015/03/04 09:58:22:127 Insert EAS on port 4
+2015/03/04 09:58:22:134 sent eas insert
+2015/03/04 09:58:22:135 Starting Encoder
+2015/03/04 09:58:22:136 Start Streaming
+2015/03/04 09:58:22:138 set bitrate to 4000000
+2015/03/04 09:58:27:139 starting stream (worker)
+2015/03/04 09:58:27:139 finished stream
+2015/03/04 09:59:11:116 Restarting EAS Engine
+2015/03/04 09:59:11:117 Ring Detect Closed
+2015/03/04 09:59:11:118 serial errorUnknown error13
+2015/03/04 09:59:11:119 Initialising Ring Detect
+2015/03/04 09:59:11:120 serial errorUnknown error0
+2015/03/04 09:59:11:121 serial errorNo such file or directory1
+2015/03/04 09:59:11:122 finished eas init
+2015/03/04 09:59:25:351 Restarting EAS Engine
+2015/03/04 09:59:25:352 Ring Detect Closed
+2015/03/04 09:59:25:352 serial errorUnknown error13
+2015/03/04 09:59:25:352 Initialising Ring Detect
+2015/03/04 09:59:25:353 serial errorUnknown error0
+2015/03/04 09:59:25:353 serial errorNo such file or directory1
+2015/03/04 09:59:25:353 finished eas init
+2015/03/04 09:59:31:137 Restarting EAS Engine
+2015/03/04 09:59:31:139 Ring Detect Closed
+2015/03/04 09:59:31:141 serial errorUnknown error13
+2015/03/04 09:59:31:142 Initialising Ring Detect
+2015/03/04 09:59:31:144 serial errorUnknown error0
+2015/03/04 09:59:31:145 serial errorNo such file or directory1
+2015/03/04 09:59:31:154 finished eas init
+2015/03/04 09:59:31:160 EAS splice config on 1
+2015/03/04 09:59:31:162 Insert EAS on port 4
+2015/03/04 09:59:31:164 EAS splice config on 2
+2015/03/04 09:59:31:165 Insert EAS on port 4
+2015/03/04 09:59:31:167 EAS splice config on 3
+2015/03/04 09:59:31:168 Insert EAS on port 4
+2015/03/04 09:59:31:169 EAS splice config on 4
+2015/03/04 09:59:31:172 Insert EAS on port 4
+2015/03/04 09:59:31:173 EAS splice config on 5
+2015/03/04 09:59:31:174 Insert EAS on port 4
+2015/03/04 09:59:31:174 EAS splice config on 6
+2015/03/04 09:59:31:175 Insert EAS on port 4
+2015/03/04 09:59:31:175 EAS splice config on 7
+2015/03/04 09:59:31:176 Insert EAS on port 4
+2015/03/04 09:59:31:181 sent eas insert
+2015/03/04 09:59:31:182 Starting Encoder
+2015/03/04 09:59:31:183 Start Streaming
+2015/03/04 09:59:31:185 set bitrate to 4000000
+2015/03/04 09:59:33:186 starting stream (worker)
+2015/03/04 09:59:33:186 finished stream
+2015/03/04 10:01:39:715 Restarting EAS Engine
+2015/03/04 10:01:39:716 Ring Detect Closed
+2015/03/04 10:01:39:716 serial errorUnknown error13
+2015/03/04 10:01:39:717 Initialising Ring Detect
+2015/03/04 10:01:39:717 serial errorUnknown error0
+2015/03/04 10:01:39:717 serial errorNo such file or directory1
+2015/03/04 10:01:39:718 finished eas init
+2015/03/04 10:02:06:030 Restarting EAS Engine
+2015/03/04 10:02:06:031 Ring Detect Closed
+2015/03/04 10:02:06:031 serial errorUnknown error13
+2015/03/04 10:02:06:032 Initialising Ring Detect
+2015/03/04 10:02:06:032 serial errorUnknown error0
+2015/03/04 10:02:06:033 serial errorNo such file or directory1
+2015/03/04 10:02:06:033 finished eas init
+2015/03/04 10:02:08:163 Restarting EAS Engine
+2015/03/04 10:02:08:165 Ring Detect Closed
+2015/03/04 10:02:08:166 serial errorUnknown error13
+2015/03/04 10:02:08:168 Initialising Ring Detect
+2015/03/04 10:02:08:169 serial errorUnknown error0
+2015/03/04 10:02:08:171 serial errorNo such file or directory1
+2015/03/04 10:02:08:179 finished eas init
+2015/03/04 10:02:08:181 EAS splice config on 1
+2015/03/04 10:02:08:183 Insert EAS on port 4
+2015/03/04 10:02:08:184 EAS splice config on 2
+2015/03/04 10:02:08:186 Insert EAS on port 4
+2015/03/04 10:02:08:188 EAS splice config on 3
+2015/03/04 10:02:08:190 Insert EAS on port 4
+2015/03/04 10:02:08:191 EAS splice config on 4
+2015/03/04 10:02:08:193 Insert EAS on port 4
+2015/03/04 10:02:08:194 EAS splice config on 5
+2015/03/04 10:02:08:195 Insert EAS on port 4
+2015/03/04 10:02:08:196 EAS splice config on 6
+2015/03/04 10:02:08:196 Insert EAS on port 4
+2015/03/04 10:02:08:198 EAS splice config on 7
+2015/03/04 10:02:08:199 Insert EAS on port 4
+2015/03/04 10:02:08:204 sent eas insert
+2015/03/04 10:02:08:205 Starting Encoder
+2015/03/04 10:02:08:206 Start Streaming
+2015/03/04 10:02:08:207 set bitrate to 4000000
+2015/03/04 10:02:09:807 starting stream (worker)
+2015/03/04 10:02:09:807 finished stream
+2015/03/04 10:02:13:953 Restarting EAS Engine
+2015/03/04 10:02:14:567  Transcoding Status: Stopped!
+2015/03/04 10:02:14:570 Ring Detect Closed
+2015/03/04 10:02:14:572 serial errorUnknown error13
+2015/03/04 10:02:14:575 Initialising Ring Detect
+2015/03/04 10:02:14:577 serial errorUnknown error0
+2015/03/04 10:02:14:587 serial errorNo such file or directory1
+2015/03/04 10:02:14:588 finished eas init
+2015/03/04 10:02:19:899 Restarting EAS Engine
+2015/03/04 10:02:19:902 Ring Detect Closed
+2015/03/04 10:02:19:904 serial errorUnknown error13
+2015/03/04 10:02:19:907 Initialising Ring Detect
+2015/03/04 10:02:19:909 serial errorUnknown error0
+2015/03/04 10:02:19:911 serial errorNo such file or directory1
+2015/03/04 10:02:19:914 finished eas init
+2015/03/04 10:02:19:917 EAS splice config on 1
+2015/03/04 10:02:19:919 Insert EAS on port 4
+2015/03/04 10:02:19:922 EAS splice config on 2
+2015/03/04 10:02:19:923 Insert EAS on port 4
+2015/03/04 10:02:19:925 EAS splice config on 3
+2015/03/04 10:02:19:926 Insert EAS on port 4
+2015/03/04 10:02:19:928 EAS splice config on 4
+2015/03/04 10:02:19:929 Insert EAS on port 4
+2015/03/04 10:02:19:930 EAS splice config on 5
+2015/03/04 10:02:19:931 Insert EAS on port 4
+2015/03/04 10:02:19:933 EAS splice config on 6
+2015/03/04 10:02:19:935 Insert EAS on port 4
+2015/03/04 10:02:19:936 EAS splice config on 7
+2015/03/04 10:02:19:937 Insert EAS on port 4
+2015/03/04 10:02:19:939 sent eas insert
+2015/03/04 10:02:19:941 Starting Encoder
+2015/03/04 10:02:19:942 Start Streaming
+2015/03/04 10:02:19:943 set bitrate to 4000000
+2015/03/04 10:02:21:544 starting stream (worker)
+2015/03/04 10:02:21:544 finished stream
+2015/03/04 10:03:16:594 Restarting EAS Engine
+2015/03/04 10:03:16:595 Ring Detect Closed
+2015/03/04 10:03:16:595 serial errorUnknown error13
+2015/03/04 10:03:16:595 Initialising Ring Detect
+2015/03/04 10:03:16:596 serial errorUnknown error0
+2015/03/04 10:03:16:596 serial errorNo such file or directory1
+2015/03/04 10:03:16:597 finished eas init
+2015/03/04 10:03:19:717 Restarting EAS Engine
+2015/03/04 10:03:19:719 Ring Detect Closed
+2015/03/04 10:03:19:720 serial errorUnknown error13
+2015/03/04 10:03:19:722 Initialising Ring Detect
+2015/03/04 10:03:19:724 serial errorUnknown error0
+2015/03/04 10:03:19:726 serial errorNo such file or directory1
+2015/03/04 10:03:19:735 finished eas init
+2015/03/04 10:03:19:741 EAS splice config on 1
+2015/03/04 10:03:19:742 Insert EAS on port 4
+2015/03/04 10:03:19:742 EAS splice config on 2
+2015/03/04 10:03:19:743 Insert EAS on port 4
+2015/03/04 10:03:19:745 EAS splice config on 3
+2015/03/04 10:03:19:746 Insert EAS on port 4
+2015/03/04 10:03:19:747 EAS splice config on 4
+2015/03/04 10:03:19:749 Insert EAS on port 4
+2015/03/04 10:03:19:750 EAS splice config on 5
+2015/03/04 10:03:19:751 Insert EAS on port 4
+2015/03/04 10:03:19:752 EAS splice config on 6
+2015/03/04 10:03:19:753 Insert EAS on port 4
+2015/03/04 10:03:19:754 EAS splice config on 7
+2015/03/04 10:03:19:755 Insert EAS on port 4
+2015/03/04 10:03:19:761 sent eas insert
+2015/03/04 10:03:19:762 Starting Encoder
+2015/03/04 10:03:19:763 Start Streaming
+2015/03/04 10:03:19:764 set bitrate to 4000000
+2015/03/04 10:03:21:365 starting stream (worker)
+2015/03/04 10:03:21:365 finished stream
+2015/03/04 10:06:12:539 Restarting EAS Engine
+2015/03/04 10:06:12:540 Ring Detect Closed
+2015/03/04 10:06:12:540 serial errorUnknown error13
+2015/03/04 10:06:12:541 Initialising Ring Detect
+2015/03/04 10:06:12:541 serial errorUnknown error0
+2015/03/04 10:06:12:542 serial errorNo such file or directory1
+2015/03/04 10:06:12:542 finished eas init
+2015/03/04 10:06:14:269 Restarting EAS Engine
+2015/03/04 10:06:14:272 Ring Detect Closed
+2015/03/04 10:06:14:274 serial errorUnknown error13
+2015/03/04 10:06:14:276 Initialising Ring Detect
+2015/03/04 10:06:14:277 serial errorUnknown error0
+2015/03/04 10:06:14:279 serial errorNo such file or directory1
+2015/03/04 10:06:14:289 finished eas init
+2015/03/04 10:06:14:293 EAS splice config on 1
+2015/03/04 10:06:14:296 Insert EAS on port 4
+2015/03/04 10:06:14:298 EAS splice config on 2
+2015/03/04 10:06:14:299 Insert EAS on port 4
+2015/03/04 10:06:14:300 EAS splice config on 3
+2015/03/04 10:06:14:304 Insert EAS on port 4
+2015/03/04 10:06:14:306 EAS splice config on 4
+2015/03/04 10:06:14:311 Insert EAS on port 4
+2015/03/04 10:06:14:312 EAS splice config on 5
+2015/03/04 10:06:14:312 Insert EAS on port 4
+2015/03/04 10:06:14:313 EAS splice config on 6
+2015/03/04 10:06:14:314 Insert EAS on port 4
+2015/03/04 10:06:14:314 EAS splice config on 7
+2015/03/04 10:06:14:315 Insert EAS on port 4
+2015/03/04 10:06:14:320 sent eas insert
+2015/03/04 10:06:14:321 Starting Encoder
+2015/03/04 10:06:14:322 Start Streaming
+2015/03/04 10:06:14:323 set bitrate to 4000000
+2015/03/04 10:06:16:123 starting stream (worker)
+2015/03/04 10:06:16:123 finished stream
+2015/03/04 10:08:05:995 Restarting EAS Engine
+2015/03/04 10:08:05:996 Ring Detect Closed
+2015/03/04 10:08:05:996 serial errorUnknown error13
+2015/03/04 10:08:05:997 Initialising Ring Detect
+2015/03/04 10:08:05:997 serial errorUnknown error0
+2015/03/04 10:08:05:998 serial errorNo such file or directory1
+2015/03/04 10:08:05:998 finished eas init
+2015/03/04 10:08:08:309 Restarting EAS Engine
+2015/03/04 10:08:08:311 Ring Detect Closed
+2015/03/04 10:08:08:312 serial errorUnknown error13
+2015/03/04 10:08:08:314 Initialising Ring Detect
+2015/03/04 10:08:08:316 serial errorUnknown error0
+2015/03/04 10:08:08:318 serial errorNo such file or directory1
+2015/03/04 10:08:08:327 finished eas init
+2015/03/04 10:08:08:332 EAS splice config on 1
+2015/03/04 10:08:08:336 Insert EAS on port 4
+2015/03/04 10:08:08:338 EAS splice config on 2
+2015/03/04 10:08:08:341 Insert EAS on port 4
+2015/03/04 10:08:08:342 EAS splice config on 3
+2015/03/04 10:08:08:344 Insert EAS on port 4
+2015/03/04 10:08:08:344 EAS splice config on 4
+2015/03/04 10:08:08:347 Insert EAS on port 4
+2015/03/04 10:08:08:347 EAS splice config on 5
+2015/03/04 10:08:08:348 Insert EAS on port 4
+2015/03/04 10:08:08:349 EAS splice config on 6
+2015/03/04 10:08:08:350 Insert EAS on port 4
+2015/03/04 10:08:08:350 EAS splice config on 7
+2015/03/04 10:08:08:351 Insert EAS on port 4
+2015/03/04 10:08:08:356 sent eas insert
+2015/03/04 10:08:08:357 Starting Encoder
+2015/03/04 10:08:08:358 Start Streaming
+2015/03/04 10:08:08:359 set bitrate to 4000000
+2015/03/04 10:08:08:359 failed to open file to stream
+2015/03/04 10:09:36:227 Restarting EAS Engine
+2015/03/04 10:09:36:227 Ring Detect Closed
+2015/03/04 10:09:36:228 serial errorUnknown error13
+2015/03/04 10:09:36:228 Initialising Ring Detect
+2015/03/04 10:09:36:229 serial errorUnknown error0
+2015/03/04 10:09:36:229 serial errorNo such file or directory1
+2015/03/04 10:09:36:229 finished eas init
+2015/03/04 10:09:38:215 Restarting EAS Engine
+2015/03/04 10:09:38:217 Ring Detect Closed
+2015/03/04 10:09:38:219 serial errorUnknown error13
+2015/03/04 10:09:38:221 Initialising Ring Detect
+2015/03/04 10:09:38:223 serial errorUnknown error0
+2015/03/04 10:09:38:224 serial errorNo such file or directory1
+2015/03/04 10:09:38:233 finished eas init
+2015/03/04 10:09:38:238 EAS splice config on 1
+2015/03/04 10:09:38:245 Insert EAS on port 4
+2015/03/04 10:09:38:246 EAS splice config on 2
+2015/03/04 10:09:38:248 Insert EAS on port 4
+2015/03/04 10:09:38:249 EAS splice config on 3
+2015/03/04 10:09:38:250 Insert EAS on port 4
+2015/03/04 10:09:38:251 EAS splice config on 4
+2015/03/04 10:09:38:254 Insert EAS on port 4
+2015/03/04 10:09:38:255 EAS splice config on 5
+2015/03/04 10:09:38:256 Insert EAS on port 4
+2015/03/04 10:09:38:257 EAS splice config on 6
+2015/03/04 10:09:38:258 Insert EAS on port 4
+2015/03/04 10:09:38:259 EAS splice config on 7
+2015/03/04 10:09:38:259 Insert EAS on port 4
+2015/03/04 10:09:38:265 sent eas insert
+2015/03/04 10:09:38:266 Starting Encoder
+2015/03/04 10:09:38:267 Start Streaming
+2015/03/04 10:09:38:268 set bitrate to 4000000
+2015/03/04 10:09:39:869 initialised stream, opening socket
+2015/03/04 10:09:39:869 starting stream (worker)
+2015/03/04 10:09:39:869 finished stream
+2015/03/04 10:10:35:042 Restarting EAS Engine
+2015/03/04 10:10:35:042 Ring Detect Closed
+2015/03/04 10:10:35:043 serial errorUnknown error13
+2015/03/04 10:10:35:043 Initialising Ring Detect
+2015/03/04 10:10:35:043 serial errorUnknown error0
+2015/03/04 10:10:35:044 serial errorNo such file or directory1
+2015/03/04 10:10:35:044 finished eas init
+2015/03/04 10:10:37:227 Restarting EAS Engine
+2015/03/04 10:10:37:229 Ring Detect Closed
+2015/03/04 10:10:37:230 serial errorUnknown error13
+2015/03/04 10:10:37:232 Initialising Ring Detect
+2015/03/04 10:10:37:233 serial errorUnknown error0
+2015/03/04 10:10:37:235 serial errorNo such file or directory1
+2015/03/04 10:10:37:244 finished eas init
+2015/03/04 10:10:37:246 EAS splice config on 1
+2015/03/04 10:10:37:249 Insert EAS on port 4
+2015/03/04 10:10:37:251 EAS splice config on 2
+2015/03/04 10:10:37:254 Insert EAS on port 4
+2015/03/04 10:10:37:255 EAS splice config on 3
+2015/03/04 10:10:37:257 Insert EAS on port 4
+2015/03/04 10:10:37:258 EAS splice config on 4
+2015/03/04 10:10:37:262 Insert EAS on port 4
+2015/03/04 10:10:37:263 EAS splice config on 5
+2015/03/04 10:10:37:264 Insert EAS on port 4
+2015/03/04 10:10:37:265 EAS splice config on 6
+2015/03/04 10:10:37:265 Insert EAS on port 4
+2015/03/04 10:10:37:266 EAS splice config on 7
+2015/03/04 10:10:37:267 Insert EAS on port 4
+2015/03/04 10:10:37:272 sent eas insert
+2015/03/04 10:10:37:273 Starting Encoder
+2015/03/04 10:10:37:274 Start Streaming
+2015/03/04 10:10:37:275 set bitrate to 4000000
+2015/03/04 10:10:38:875 initialised stream, opening socket
+2015/03/04 10:10:38:875 starting stream (worker)
+2015/03/04 10:10:38:875 finished stream
+2015/03/04 10:11:51:523 Restarting EAS Engine
+2015/03/04 10:11:51:524 Ring Detect Closed
+2015/03/04 10:11:51:524 serial errorUnknown error13
+2015/03/04 10:11:51:525 Initialising Ring Detect
+2015/03/04 10:11:51:525 serial errorUnknown error0
+2015/03/04 10:11:51:526 serial errorNo such file or directory1
+2015/03/04 10:11:51:526 finished eas init
+2015/03/04 10:11:54:802 Restarting EAS Engine
+2015/03/04 10:11:54:803 Ring Detect Closed
+2015/03/04 10:11:54:804 serial errorUnknown error13
+2015/03/04 10:11:54:805 Initialising Ring Detect
+2015/03/04 10:11:54:806 serial errorUnknown error0
+2015/03/04 10:11:54:808 serial errorNo such file or directory1
+2015/03/04 10:11:54:812 finished eas init
+2015/03/04 10:11:54:813 EAS splice config on 1
+2015/03/04 10:11:54:814 Insert EAS on port 4
+2015/03/04 10:11:54:815 EAS splice config on 2
+2015/03/04 10:11:54:816 Insert EAS on port 4
+2015/03/04 10:11:54:817 EAS splice config on 3
+2015/03/04 10:11:54:817 Insert EAS on port 4
+2015/03/04 10:11:54:818 EAS splice config on 4
+2015/03/04 10:11:54:822 Insert EAS on port 4
+2015/03/04 10:11:54:822 EAS splice config on 5
+2015/03/04 10:11:54:823 Insert EAS on port 4
+2015/03/04 10:11:54:824 EAS splice config on 6
+2015/03/04 10:11:54:825 Insert EAS on port 4
+2015/03/04 10:11:54:826 EAS splice config on 7
+2015/03/04 10:11:54:826 Insert EAS on port 4
+2015/03/04 10:11:54:833 sent eas insert
+2015/03/04 10:11:54:834 Starting Encoder
+2015/03/04 10:11:54:835 Start Streaming
+2015/03/04 10:11:54:837 set bitrate to 4000000
+2015/03/04 10:11:55:925  Transcoding Status: Failed!
+2015/03/04 10:12:01:623 Restarting EAS Engine
+2015/03/04 10:12:01:625 Ring Detect Closed
+2015/03/04 10:12:01:626 serial errorUnknown error13
+2015/03/04 10:12:01:628 Initialising Ring Detect
+2015/03/04 10:12:01:629 serial errorUnknown error0
+2015/03/04 10:12:01:631 serial errorNo such file or directory1
+2015/03/04 10:12:01:633 finished eas init
+2015/03/04 10:12:27:744 Restarting EAS Engine
+2015/03/04 10:12:27:745 Ring Detect Closed
+2015/03/04 10:12:27:745 serial errorUnknown error13
+2015/03/04 10:12:27:745 Initialising Ring Detect
+2015/03/04 10:12:27:746 serial errorUnknown error0
+2015/03/04 10:12:27:746 serial errorNo such file or directory1
+2015/03/04 10:12:27:746 finished eas init
+2015/03/04 10:12:29:792 Restarting EAS Engine
+2015/03/04 10:12:29:794 Ring Detect Closed
+2015/03/04 10:12:29:796 serial errorUnknown error13
+2015/03/04 10:12:29:798 Initialising Ring Detect
+2015/03/04 10:12:29:801 serial errorUnknown error0
+2015/03/04 10:12:29:803 serial errorNo such file or directory1
+2015/03/04 10:12:29:814 finished eas init
+2015/03/04 10:12:29:816 EAS splice config on 1
+2015/03/04 10:12:29:817 Insert EAS on port 4
+2015/03/04 10:12:29:819 EAS splice config on 2
+2015/03/04 10:12:29:820 Insert EAS on port 4
+2015/03/04 10:12:29:821 EAS splice config on 3
+2015/03/04 10:12:29:822 Insert EAS on port 4
+2015/03/04 10:12:29:824 EAS splice config on 4
+2015/03/04 10:12:29:826 Insert EAS on port 4
+2015/03/04 10:12:29:827 EAS splice config on 5
+2015/03/04 10:12:29:828 Insert EAS on port 4
+2015/03/04 10:12:29:828 EAS splice config on 6
+2015/03/04 10:12:29:829 Insert EAS on port 4
+2015/03/04 10:12:29:830 EAS splice config on 7
+2015/03/04 10:12:29:831 Insert EAS on port 4
+2015/03/04 10:12:29:836 sent eas insert
+2015/03/04 10:12:29:837 Starting Encoder
+2015/03/04 10:12:29:838 Start Streaming
+2015/03/04 10:12:29:839 set bitrate to 4000000
+2015/03/04 10:12:31:439 initialised stream, opening socket
+2015/03/04 10:12:31:439 starting stream (worker)
+2015/03/04 10:12:31:439 finished stream
+2015/03/04 10:13:25:339 Restarting EAS Engine
+2015/03/04 10:13:25:340 Ring Detect Closed
+2015/03/04 10:13:25:340 serial errorUnknown error13
+2015/03/04 10:13:25:341 Initialising Ring Detect
+2015/03/04 10:13:25:341 serial errorUnknown error0
+2015/03/04 10:13:25:342 serial errorNo such file or directory1
+2015/03/04 10:13:25:342 finished eas init
+2015/03/04 10:13:27:250 Restarting EAS Engine
+2015/03/04 10:13:27:252 Ring Detect Closed
+2015/03/04 10:13:27:253 serial errorUnknown error13
+2015/03/04 10:13:27:255 Initialising Ring Detect
+2015/03/04 10:13:27:257 serial errorUnknown error0
+2015/03/04 10:13:27:258 serial errorNo such file or directory1
+2015/03/04 10:13:27:269 finished eas init
+2015/03/04 10:13:27:272 EAS splice config on 1
+2015/03/04 10:13:27:273 Insert EAS on port 4
+2015/03/04 10:13:27:274 EAS splice config on 2
+2015/03/04 10:13:27:274 Insert EAS on port 4
+2015/03/04 10:13:27:275 EAS splice config on 3
+2015/03/04 10:13:27:276 Insert EAS on port 4
+2015/03/04 10:13:27:277 EAS splice config on 4
+2015/03/04 10:13:27:279 Insert EAS on port 4
+2015/03/04 10:13:27:280 EAS splice config on 5
+2015/03/04 10:13:27:281 Insert EAS on port 4
+2015/03/04 10:13:27:282 EAS splice config on 6
+2015/03/04 10:13:27:283 Insert EAS on port 4
+2015/03/04 10:13:27:284 EAS splice config on 7
+2015/03/04 10:13:27:286 Insert EAS on port 4
+2015/03/04 10:13:27:292 sent eas insert
+2015/03/04 10:13:27:293 Starting Encoder
+2015/03/04 10:13:27:295 Start Streaming
+2015/03/04 10:13:27:296 set bitrate to 4000000
+2015/03/04 10:13:28:898 initialised stream, opening socket
+2015/03/04 10:13:28:898 starting stream (worker)
+2015/03/04 10:13:28:898 finished stream
+2015/03/04 10:14:18:423 Restarting EAS Engine
+2015/03/04 10:14:18:423 Ring Detect Closed
+2015/03/04 10:14:18:424 serial errorUnknown error13
+2015/03/04 10:14:18:424 Initialising Ring Detect
+2015/03/04 10:14:18:425 serial errorUnknown error0
+2015/03/04 10:14:18:425 serial errorNo such file or directory1
+2015/03/04 10:14:18:425 finished eas init
+2015/03/04 10:14:33:075 Restarting EAS Engine
+2015/03/04 10:14:33:076 Ring Detect Closed
+2015/03/04 10:14:33:076 serial errorUnknown error13
+2015/03/04 10:14:33:076 Initialising Ring Detect
+2015/03/04 10:14:33:077 serial errorUnknown error0
+2015/03/04 10:14:33:077 serial errorNo such file or directory1
+2015/03/04 10:14:33:078 finished eas init
+2015/03/04 10:14:34:779 Restarting EAS Engine
+2015/03/04 10:14:34:781 Ring Detect Closed
+2015/03/04 10:14:34:783 serial errorUnknown error13
+2015/03/04 10:14:34:785 Initialising Ring Detect
+2015/03/04 10:14:34:787 serial errorUnknown error0
+2015/03/04 10:14:34:788 serial errorNo such file or directory1
+2015/03/04 10:14:34:797 finished eas init
+2015/03/04 10:14:34:800 EAS splice config on 1
+2015/03/04 10:14:34:801 Insert EAS on port 4
+2015/03/04 10:14:34:802 EAS splice config on 2
+2015/03/04 10:14:34:803 Insert EAS on port 4
+2015/03/04 10:14:34:803 EAS splice config on 3
+2015/03/04 10:14:34:805 Insert EAS on port 4
+2015/03/04 10:14:34:807 EAS splice config on 4
+2015/03/04 10:14:34:810 Insert EAS on port 4
+2015/03/04 10:14:34:811 EAS splice config on 5
+2015/03/04 10:14:34:812 Insert EAS on port 4
+2015/03/04 10:14:34:814 EAS splice config on 6
+2015/03/04 10:14:34:815 Insert EAS on port 4
+2015/03/04 10:14:34:816 EAS splice config on 7
+2015/03/04 10:14:34:817 Insert EAS on port 4
+2015/03/04 10:14:34:823 sent eas insert
+2015/03/04 10:14:34:825 Starting Encoder
+2015/03/04 10:14:34:826 Start Streaming
+2015/03/04 10:14:34:828 set bitrate to 4000000
+2015/03/04 10:14:36:428 initialised stream, opening socket
+2015/03/04 10:14:36:428 starting stream (worker)
+2015/03/04 10:14:36:428 finished stream
+2015/03/04 10:15:27:509 Restarting EAS Engine
+2015/03/04 10:15:27:510 Ring Detect Closed
+2015/03/04 10:15:27:510 serial errorUnknown error13
+2015/03/04 10:15:27:510 Initialising Ring Detect
+2015/03/04 10:15:27:511 serial errorUnknown error0
+2015/03/04 10:15:27:511 serial errorNo such file or directory1
+2015/03/04 10:15:27:512 finished eas init
+2015/03/04 10:16:20:210 Restarting EAS Engine
+2015/03/04 10:16:20:212 Ring Detect Closed
+2015/03/04 10:16:20:212 serial errorUnknown error13
+2015/03/04 10:16:20:213 Initialising Ring Detect
+2015/03/04 10:16:20:213 serial errorUnknown error0
+2015/03/04 10:16:20:213 serial errorNo such file or directory1
+2015/03/04 10:16:20:214 finished eas init
+2015/03/04 10:16:22:331 Restarting EAS Engine
+2015/03/04 10:16:22:332 Ring Detect Closed
+2015/03/04 10:16:22:333 serial errorUnknown error13
+2015/03/04 10:16:22:334 Initialising Ring Detect
+2015/03/04 10:16:22:335 serial errorUnknown error0
+2015/03/04 10:16:22:336 serial errorNo such file or directory1
+2015/03/04 10:16:22:339 finished eas init
+2015/03/04 10:16:22:342 EAS splice config on 1
+2015/03/04 10:16:22:343 Insert EAS on port 4
+2015/03/04 10:16:22:344 EAS splice config on 2
+2015/03/04 10:16:22:344 Insert EAS on port 4
+2015/03/04 10:16:22:345 EAS splice config on 3
+2015/03/04 10:16:22:345 Insert EAS on port 4
+2015/03/04 10:16:22:346 EAS splice config on 4
+2015/03/04 10:16:22:349 Insert EAS on port 4
+2015/03/04 10:16:22:350 EAS splice config on 5
+2015/03/04 10:16:22:351 Insert EAS on port 4
+2015/03/04 10:16:22:352 EAS splice config on 6
+2015/03/04 10:16:22:352 Insert EAS on port 4
+2015/03/04 10:16:22:353 EAS splice config on 7
+2015/03/04 10:16:22:354 Insert EAS on port 4
+2015/03/04 10:16:22:358 sent eas insert
+2015/03/04 10:16:22:360 Starting Encoder
+2015/03/04 10:16:22:360 Start Streaming
+2015/03/04 10:16:22:361 set bitrate to 4000000
+2015/03/04 10:16:24:262 initialised stream, opening socket
+2015/03/04 10:16:24:262 reached end of file
+2015/03/04 10:16:24:262 starting stream (worker)
+2015/03/04 10:16:24:262 finished stream
+2015/03/04 10:17:18:515 Restarting EAS Engine
+2015/03/04 10:17:18:516 Ring Detect Closed
+2015/03/04 10:17:18:521 serial errorUnknown error13
+2015/03/04 10:17:18:522 Initialising Ring Detect
+2015/03/04 10:17:18:522 serial errorUnknown error0
+2015/03/04 10:17:18:522 serial errorNo such file or directory1
+2015/03/04 10:17:18:558 finished eas init
+2015/03/04 10:17:29:972 Restarting EAS Engine
+2015/03/04 10:17:29:974 Ring Detect Closed
+2015/03/04 10:17:29:976 serial errorUnknown error13
+2015/03/04 10:17:29:977 Initialising Ring Detect
+2015/03/04 10:17:29:979 serial errorUnknown error0
+2015/03/04 10:17:29:981 serial errorNo such file or directory1
+2015/03/04 10:17:29:990 finished eas init
+2015/03/04 10:17:29:996 EAS splice config on 1
+2015/03/04 10:17:29:997 Insert EAS on port 4
+2015/03/04 10:17:29:999 EAS splice config on 2
+2015/03/04 10:17:30:000 Insert EAS on port 4
+2015/03/04 10:17:30:001 EAS splice config on 3
+2015/03/04 10:17:30:002 Insert EAS on port 4
+2015/03/04 10:17:30:002 EAS splice config on 4
+2015/03/04 10:17:30:004 Insert EAS on port 4
+2015/03/04 10:17:30:005 EAS splice config on 5
+2015/03/04 10:17:30:007 Insert EAS on port 4
+2015/03/04 10:17:30:007 EAS splice config on 6
+2015/03/04 10:17:30:008 Insert EAS on port 4
+2015/03/04 10:17:30:009 EAS splice config on 7
+2015/03/04 10:17:30:010 Insert EAS on port 4
+2015/03/04 10:17:30:015 sent eas insert
+2015/03/04 10:17:30:017 Starting Encoder
+2015/03/04 10:17:30:017 Start Streaming
+2015/03/04 10:17:30:018 set bitrate to 4000000
+2015/03/04 10:17:31:619 initialised stream, opening socket
+2015/03/04 10:17:31:619 reached end of file
+2015/03/04 10:17:31:619 starting stream (worker)
+2015/03/04 10:17:31:619 finished stream
+2015/03/04 10:19:06:399 Restarting EAS Engine
+2015/03/04 10:19:06:400 Ring Detect Closed
+2015/03/04 10:19:06:400 serial errorUnknown error13
+2015/03/04 10:19:06:401 Initialising Ring Detect
+2015/03/04 10:19:06:401 serial errorUnknown error0
+2015/03/04 10:19:06:401 serial errorNo such file or directory1
+2015/03/04 10:19:06:402 finished eas init
+2015/03/04 10:19:08:716 Restarting EAS Engine
+2015/03/04 10:19:08:718 Ring Detect Closed
+2015/03/04 10:19:08:720 serial errorUnknown error13
+2015/03/04 10:19:08:721 Initialising Ring Detect
+2015/03/04 10:19:08:723 serial errorUnknown error0
+2015/03/04 10:19:08:724 serial errorNo such file or directory1
+2015/03/04 10:19:08:735 finished eas init
+2015/03/04 10:19:08:738 EAS splice config on 1
+2015/03/04 10:19:08:740 Insert EAS on port 4
+2015/03/04 10:19:08:741 EAS splice config on 2
+2015/03/04 10:19:08:743 Insert EAS on port 4
+2015/03/04 10:19:08:745 EAS splice config on 3
+2015/03/04 10:19:08:747 Insert EAS on port 4
+2015/03/04 10:19:08:749 EAS splice config on 4
+2015/03/04 10:19:08:754 Insert EAS on port 4
+2015/03/04 10:19:08:755 EAS splice config on 5
+2015/03/04 10:19:08:758 Insert EAS on port 4
+2015/03/04 10:19:08:760 EAS splice config on 6
+2015/03/04 10:19:08:761 Insert EAS on port 4
+2015/03/04 10:19:08:762 EAS splice config on 7
+2015/03/04 10:19:08:763 Insert EAS on port 4
+2015/03/04 10:19:08:768 sent eas insert
+2015/03/04 10:19:08:770 Starting Encoder
+2015/03/04 10:19:08:771 Start Streaming
+2015/03/04 10:19:08:772 set bitrate to 4000000
+2015/03/04 10:19:10:422 initialised stream, opening socket
+2015/03/04 10:19:10:422 reached end of file
+2015/03/04 10:19:10:422 starting stream (worker)
+2015/03/04 10:19:10:422 finished stream
+2015/03/04 10:19:49:606 Restarting EAS Engine
+2015/03/04 10:19:49:607 Ring Detect Closed
+2015/03/04 10:19:49:607 serial errorUnknown error13
+2015/03/04 10:19:49:608 Initialising Ring Detect
+2015/03/04 10:19:49:608 serial errorUnknown error0
+2015/03/04 10:19:49:609 serial errorNo such file or directory1
+2015/03/04 10:19:49:609 finished eas init
+2015/03/04 10:19:51:645 Restarting EAS Engine
+2015/03/04 10:19:51:646 Ring Detect Closed
+2015/03/04 10:19:51:647 serial errorUnknown error13
+2015/03/04 10:19:51:647 Initialising Ring Detect
+2015/03/04 10:19:51:648 serial errorUnknown error0
+2015/03/04 10:19:51:649 serial errorNo such file or directory1
+2015/03/04 10:19:51:653 finished eas init
+2015/03/04 10:19:51:654 EAS splice config on 1
+2015/03/04 10:19:51:654 Insert EAS on port 4
+2015/03/04 10:19:51:655 EAS splice config on 2
+2015/03/04 10:19:51:655 Insert EAS on port 4
+2015/03/04 10:19:51:656 EAS splice config on 3
+2015/03/04 10:19:51:657 Insert EAS on port 4
+2015/03/04 10:19:51:657 EAS splice config on 4
+2015/03/04 10:19:51:660 Insert EAS on port 4
+2015/03/04 10:19:51:661 EAS splice config on 5
+2015/03/04 10:19:51:662 Insert EAS on port 4
+2015/03/04 10:19:51:663 EAS splice config on 6
+2015/03/04 10:19:51:664 Insert EAS on port 4
+2015/03/04 10:19:51:665 EAS splice config on 7
+2015/03/04 10:19:51:665 Insert EAS on port 4
+2015/03/04 10:19:51:672 sent eas insert
+2015/03/04 10:19:51:674 Starting Encoder
+2015/03/04 10:19:51:675 Start Streaming
+2015/03/04 10:19:51:676 set bitrate to 4000000
+2015/03/04 10:19:53:326 initialised stream, opening socket
+2015/03/04 10:19:53:326 reached end of file
+2015/03/04 10:19:53:326 starting stream (worker)
+2015/03/04 10:19:53:326 finished stream
+2015/03/04 10:20:39:250 Restarting EAS Engine
+2015/03/04 10:20:39:251 Ring Detect Closed
+2015/03/04 10:20:39:252 serial errorUnknown error13
+2015/03/04 10:20:39:253 Initialising Ring Detect
+2015/03/04 10:20:39:254 serial errorUnknown error0
+2015/03/04 10:20:39:254 serial errorNo such file or directory1
+2015/03/04 10:20:39:255 finished eas init
+2015/03/04 10:20:40:626 Restarting EAS Engine
+2015/03/04 10:20:40:628 Ring Detect Closed
+2015/03/04 10:20:40:630 serial errorUnknown error13
+2015/03/04 10:20:40:632 Initialising Ring Detect
+2015/03/04 10:20:40:633 serial errorUnknown error0
+2015/03/04 10:20:40:635 serial errorNo such file or directory1
+2015/03/04 10:20:40:644 finished eas init
+2015/03/04 10:20:40:646 EAS splice config on 1
+2015/03/04 10:20:40:651 Insert EAS on port 4
+2015/03/04 10:20:40:653 EAS splice config on 2
+2015/03/04 10:20:40:653 Insert EAS on port 4
+2015/03/04 10:20:40:654 EAS splice config on 3
+2015/03/04 10:20:40:654 Insert EAS on port 4
+2015/03/04 10:20:40:655 EAS splice config on 4
+2015/03/04 10:20:40:657 Insert EAS on port 4
+2015/03/04 10:20:40:658 EAS splice config on 5
+2015/03/04 10:20:40:658 Insert EAS on port 4
+2015/03/04 10:20:40:659 EAS splice config on 6
+2015/03/04 10:20:40:660 Insert EAS on port 4
+2015/03/04 10:20:40:661 EAS splice config on 7
+2015/03/04 10:20:40:662 Insert EAS on port 4
+2015/03/04 10:20:40:668 sent eas insert
+2015/03/04 10:20:40:669 Starting Encoder
+2015/03/04 10:20:40:670 Start Streaming
+2015/03/04 10:20:40:671 set bitrate to 4000000
+2015/03/04 10:20:42:321 initialised stream, opening socket
+2015/03/04 10:20:42:321 reached end of file
+2015/03/04 10:20:42:321 starting stream (worker)
+2015/03/04 10:20:42:321 finished stream
+2015/03/04 12:19:51:103 Restarting EAS Engine
+2015/03/04 12:19:51:104 Ring Detect Closed
+2015/03/04 12:19:51:104 serial errorUnknown error13
+2015/03/04 12:19:51:105 Initialising Ring Detect
+2015/03/04 12:19:51:105 serial errorUnknown error0
+2015/03/04 12:19:51:106 serial errorNo such file or directory1
+2015/03/04 12:19:51:106 finished eas init
+2015/03/04 12:19:53:851 Restarting EAS Engine
+2015/03/04 12:19:53:852 Ring Detect Closed
+2015/03/04 12:19:53:853 serial errorUnknown error13
+2015/03/04 12:19:53:854 Initialising Ring Detect
+2015/03/04 12:19:53:854 serial errorUnknown error0
+2015/03/04 12:19:53:855 serial errorNo such file or directory1
+2015/03/04 12:19:53:859 finished eas init
+2015/03/04 12:19:53:860 EAS splice config on 1
+2015/03/04 12:19:53:860 Insert EAS on port 4
+2015/03/04 12:19:53:861 EAS splice config on 2
+2015/03/04 12:19:53:861 Insert EAS on port 4
+2015/03/04 12:19:53:862 EAS splice config on 3
+2015/03/04 12:19:53:863 Insert EAS on port 4
+2015/03/04 12:19:53:863 EAS splice config on 4
+2015/03/04 12:19:53:866 Insert EAS on port 4
+2015/03/04 12:19:53:866 EAS splice config on 5
+2015/03/04 12:19:53:867 Insert EAS on port 4
+2015/03/04 12:19:53:868 EAS splice config on 6
+2015/03/04 12:19:53:868 Insert EAS on port 4
+2015/03/04 12:19:53:869 EAS splice config on 7
+2015/03/04 12:19:53:870 Insert EAS on port 4
+2015/03/04 12:19:53:880 sent eas insert
+2015/03/04 12:19:53:881 Starting Encoder
+2015/03/04 12:19:53:882 Start Streaming
+2015/03/04 12:19:53:883 set bitrate to 4000000
+2015/03/04 12:20:02:933 initialised stream, opening socket
+2015/03/04 12:20:02:933 starting stream (worker)
+2015/03/04 12:20:18:736 Restarting EAS Engine
+2015/03/04 12:20:19:354  Transcoding Status: Stopped!
+2015/03/04 12:20:19:355 Ring Detect Closed
+2015/03/04 12:20:19:356 serial errorUnknown error13
+2015/03/04 12:20:19:358 Initialising Ring Detect
+2015/03/04 12:20:19:359 serial errorUnknown error0
+2015/03/04 12:20:19:360 serial errorNo such file or directory1
+2015/03/04 12:20:19:361 finished eas init
+2015/03/04 12:20:45:408 Restarting EAS Engine
+2015/03/04 12:20:45:408 Ring Detect Closed
+2015/03/04 12:20:45:409 serial errorUnknown error13
+2015/03/04 12:20:45:409 Initialising Ring Detect
+2015/03/04 12:20:45:409 serial errorUnknown error0
+2015/03/04 12:20:45:411 serial errorNo such file or directory1
+2015/03/04 12:20:45:412 finished eas init
+2015/03/04 12:20:47:543 Restarting EAS Engine
+2015/03/04 12:20:47:545 Ring Detect Closed
+2015/03/04 12:20:47:547 serial errorUnknown error13
+2015/03/04 12:20:47:548 Initialising Ring Detect
+2015/03/04 12:20:47:550 serial errorUnknown error0
+2015/03/04 12:20:47:551 serial errorNo such file or directory1
+2015/03/04 12:20:47:563 finished eas init
+2015/03/04 12:20:47:565 EAS splice config on 1
+2015/03/04 12:20:47:566 Insert EAS on port 4
+2015/03/04 12:20:47:568 EAS splice config on 2
+2015/03/04 12:20:47:570 Insert EAS on port 4
+2015/03/04 12:20:47:571 EAS splice config on 3
+2015/03/04 12:20:47:572 Insert EAS on port 4
+2015/03/04 12:20:47:574 EAS splice config on 4
+2015/03/04 12:20:47:579 Insert EAS on port 4
+2015/03/04 12:20:47:581 EAS splice config on 5
+2015/03/04 12:20:47:581 Insert EAS on port 4
+2015/03/04 12:20:47:582 EAS splice config on 6
+2015/03/04 12:20:47:583 Insert EAS on port 4
+2015/03/04 12:20:47:584 EAS splice config on 7
+2015/03/04 12:20:47:584 Insert EAS on port 4
+2015/03/04 12:20:47:589 sent eas insert
+2015/03/04 12:20:47:592 Starting Encoder
+2015/03/04 12:20:47:593 Start Streaming
+2015/03/04 12:20:47:595 set bitrate to 4000000
+2015/03/04 12:20:49:696 initialised stream, opening socket
+2015/03/04 12:20:49:696 reached end of file
+2015/03/04 12:20:49:697 starting stream (worker)
+2015/03/04 12:20:49:697 finished stream
+2015/03/04 12:21:09:497 Restarting EAS Engine
+2015/03/04 12:21:09:497 Ring Detect Closed
+2015/03/04 12:21:09:498 serial errorUnknown error13
+2015/03/04 12:21:09:498 Initialising Ring Detect
+2015/03/04 12:21:09:499 serial errorUnknown error0
+2015/03/04 12:21:09:499 serial errorNo such file or directory1
+2015/03/04 12:21:09:499 finished eas init
+2015/03/04 12:21:10:952 Restarting EAS Engine
+2015/03/04 12:21:10:954 Ring Detect Closed
+2015/03/04 12:21:10:955 serial errorUnknown error13
+2015/03/04 12:21:10:957 Initialising Ring Detect
+2015/03/04 12:21:10:958 serial errorUnknown error0
+2015/03/04 12:21:10:960 serial errorNo such file or directory1
+2015/03/04 12:21:10:970 finished eas init
+2015/03/04 12:21:10:977 EAS splice config on 1
+2015/03/04 12:21:10:978 Insert EAS on port 4
+2015/03/04 12:21:10:980 EAS splice config on 2
+2015/03/04 12:21:10:981 Insert EAS on port 4
+2015/03/04 12:21:10:982 EAS splice config on 3
+2015/03/04 12:21:10:983 Insert EAS on port 4
+2015/03/04 12:21:10:984 EAS splice config on 4
+2015/03/04 12:21:10:987 Insert EAS on port 4
+2015/03/04 12:21:10:988 EAS splice config on 5
+2015/03/04 12:21:10:989 Insert EAS on port 4
+2015/03/04 12:21:10:990 EAS splice config on 6
+2015/03/04 12:21:10:991 Insert EAS on port 4
+2015/03/04 12:21:10:991 EAS splice config on 7
+2015/03/04 12:21:10:992 Insert EAS on port 4
+2015/03/04 12:21:10:997 sent eas insert
+2015/03/04 12:21:10:999 Starting Encoder
+2015/03/04 12:21:10:999 Start Streaming
+2015/03/04 12:21:11:001 set bitrate to 4000000
+2015/03/04 12:21:14:601 initialised stream, opening socket
+2015/03/04 12:21:14:601 starting stream (worker)
+2015/03/04 12:21:43:443 Restarting EAS Engine
+2015/03/04 12:21:43:445 Ring Detect Closed
+2015/03/04 12:21:43:445 serial errorUnknown error13
+2015/03/04 12:21:43:446 Initialising Ring Detect
+2015/03/04 12:21:43:447 serial errorUnknown error0
+2015/03/04 12:21:43:448 serial errorNo such file or directory1
+2015/03/04 12:21:43:448 finished eas init
+2015/03/04 12:21:45:017 Restarting EAS Engine
+2015/03/04 12:21:45:019 Ring Detect Closed
+2015/03/04 12:21:45:020 serial errorUnknown error13
+2015/03/04 12:21:45:023 Initialising Ring Detect
+2015/03/04 12:21:45:025 serial errorUnknown error0
+2015/03/04 12:21:45:026 serial errorNo such file or directory1
+2015/03/04 12:21:45:033 finished eas init
+2015/03/04 12:21:45:036 EAS splice config on 1
+2015/03/04 12:21:45:039 Insert EAS on port 4
+2015/03/04 12:21:45:040 EAS splice config on 2
+2015/03/04 12:21:45:041 Insert EAS on port 4
+2015/03/04 12:21:45:042 EAS splice config on 3
+2015/03/04 12:21:45:044 Insert EAS on port 4
+2015/03/04 12:21:45:045 EAS splice config on 4
+2015/03/04 12:21:45:048 Insert EAS on port 4
+2015/03/04 12:21:45:050 EAS splice config on 5
+2015/03/04 12:21:45:051 Insert EAS on port 4
+2015/03/04 12:21:45:052 EAS splice config on 6
+2015/03/04 12:21:45:053 Insert EAS on port 4
+2015/03/04 12:21:45:054 EAS splice config on 7
+2015/03/04 12:21:45:055 Insert EAS on port 4
+2015/03/04 12:21:45:061 sent eas insert
+2015/03/04 12:21:45:063 Starting Encoder
+2015/03/04 12:21:45:064 Start Streaming
+2015/03/04 12:21:45:065 set bitrate to 4000000
+2015/03/04 12:21:51:666 initialised stream, opening socket
+2015/03/04 12:21:51:666 starting stream (worker)
+2015/03/04 12:22:27:135 Restarting EAS Engine
+2015/03/04 12:22:27:135 Ring Detect Closed
+2015/03/04 12:22:27:136 serial errorUnknown error13
+2015/03/04 12:22:27:136 Initialising Ring Detect
+2015/03/04 12:22:27:137 serial errorUnknown error0
+2015/03/04 12:22:27:137 serial errorNo such file or directory1
+2015/03/04 12:22:27:137 finished eas init
+2015/03/04 12:22:39:445 Restarting EAS Engine
+2015/03/04 12:22:39:447 Ring Detect Closed
+2015/03/04 12:22:39:447 serial errorUnknown error13
+2015/03/04 12:22:39:448 Initialising Ring Detect
+2015/03/04 12:22:39:448 serial errorUnknown error0
+2015/03/04 12:22:39:449 serial errorNo such file or directory1
+2015/03/04 12:22:39:449 finished eas init
+2015/03/04 12:22:40:619 Restarting EAS Engine
+2015/03/04 12:22:40:621 Ring Detect Closed
+2015/03/04 12:22:40:623 serial errorUnknown error13
+2015/03/04 12:22:40:624 Initialising Ring Detect
+2015/03/04 12:22:40:627 serial errorUnknown error0
+2015/03/04 12:22:40:628 serial errorNo such file or directory1
+2015/03/04 12:22:40:637 finished eas init
+2015/03/04 12:22:40:643 EAS splice config on 1
+2015/03/04 12:22:40:644 Insert EAS on port 4
+2015/03/04 12:22:40:649 EAS splice config on 2
+2015/03/04 12:22:40:651 Insert EAS on port 4
+2015/03/04 12:22:40:651 EAS splice config on 3
+2015/03/04 12:22:40:652 Insert EAS on port 4
+2015/03/04 12:22:40:653 EAS splice config on 4
+2015/03/04 12:22:40:655 Insert EAS on port 4
+2015/03/04 12:22:40:656 EAS splice config on 5
+2015/03/04 12:22:40:657 Insert EAS on port 4
+2015/03/04 12:22:40:658 EAS splice config on 6
+2015/03/04 12:22:40:659 Insert EAS on port 4
+2015/03/04 12:22:40:660 EAS splice config on 7
+2015/03/04 12:22:40:661 Insert EAS on port 4
+2015/03/04 12:22:40:666 sent eas insert
+2015/03/04 12:22:40:667 Starting Encoder
+2015/03/04 12:22:40:668 Start Streaming
+2015/03/04 12:22:40:669 set bitrate to 4000000
+2015/03/04 12:22:43:051 Restarting EAS Engine
+2015/03/04 12:22:43:673  Transcoding Status: Stopped!
+2015/03/04 12:22:43:676 Ring Detect Closed
+2015/03/04 12:22:43:678 serial errorUnknown error13
+2015/03/04 12:22:43:680 Initialising Ring Detect
+2015/03/04 12:22:43:682 serial errorUnknown error0
+2015/03/04 12:22:43:683 serial errorNo such file or directory1
+2015/03/04 12:22:43:684 finished eas init
+2015/03/04 12:22:43:692 Restarting EAS Engine
+2015/03/04 12:22:43:699 Ring Detect Closed
+2015/03/04 12:22:43:703 serial errorUnknown error13
+2015/03/04 12:22:43:705 Initialising Ring Detect
+2015/03/04 12:22:43:706 serial errorUnknown error0
+2015/03/04 12:22:43:709 serial errorNo such file or directory1
+2015/03/04 12:22:43:710 finished eas init
+2015/03/04 12:22:43:712 EAS splice config on 1
+2015/03/04 12:22:43:713 Insert EAS on port 4
+2015/03/04 12:22:43:714 EAS splice config on 2
+2015/03/04 12:22:43:715 Insert EAS on port 4
+2015/03/04 12:22:43:716 EAS splice config on 3
+2015/03/04 12:22:43:717 Insert EAS on port 4
+2015/03/04 12:22:43:718 EAS splice config on 4
+2015/03/04 12:22:43:720 Insert EAS on port 4
+2015/03/04 12:22:43:721 EAS splice config on 5
+2015/03/04 12:22:43:722 Insert EAS on port 4
+2015/03/04 12:22:43:723 EAS splice config on 6
+2015/03/04 12:22:43:724 Insert EAS on port 4
+2015/03/04 12:22:43:725 EAS splice config on 7
+2015/03/04 12:22:43:727 Insert EAS on port 4
+2015/03/04 12:22:43:728 sent eas insert
+2015/03/04 12:22:43:729 Starting Encoder
+2015/03/04 12:22:43:730 Start Streaming
+2015/03/04 12:22:47:270 initialised stream, opening socket
+2015/03/04 12:22:47:270 starting stream (worker)
+2015/03/04 12:22:47:797 reached end of file
+2015/03/04 12:22:47:800 reached end of file
+2015/03/04 12:22:47:808 finished stream
+2015/03/04 12:22:47:808 set bitrate to 4000000
+2015/03/04 12:22:50:771 Restarting EAS Engine
+2015/03/04 12:22:51:404  Transcoding Status: Stopped!
+2015/03/04 12:22:51:407 Ring Detect Closed
+2015/03/04 12:22:51:409 serial errorUnknown error13
+2015/03/04 12:22:51:411 Initialising Ring Detect
+2015/03/04 12:22:51:414 serial errorUnknown error0
+2015/03/04 12:22:51:419 serial errorNo such file or directory1
+2015/03/04 12:22:51:421 finished eas init
+2015/03/04 12:22:52:809 initialised stream, opening socket
+2015/03/04 12:22:52:809 starting stream (worker)
+2015/03/04 12:22:54:485 Restarting EAS Engine
+2015/03/04 12:22:54:487 Ring Detect Closed
+2015/03/04 12:22:54:488 serial errorUnknown error13
+2015/03/04 12:22:54:489 Initialising Ring Detect
+2015/03/04 12:22:54:490 serial errorUnknown error0
+2015/03/04 12:22:54:492 serial errorNo such file or directory1
+2015/03/04 12:22:54:493 finished eas init
+2015/03/04 12:22:54:494 EAS splice config on 1
+2015/03/04 12:22:54:495 Insert EAS on port 4
+2015/03/04 12:22:54:496 EAS splice config on 2
+2015/03/04 12:22:54:498 Insert EAS on port 4
+2015/03/04 12:22:54:499 EAS splice config on 3
+2015/03/04 12:22:54:501 Insert EAS on port 4
+2015/03/04 12:22:54:502 EAS splice config on 4
+2015/03/04 12:22:54:503 Insert EAS on port 4
+2015/03/04 12:22:54:505 EAS splice config on 5
+2015/03/04 12:22:54:506 Insert EAS on port 4
+2015/03/04 12:22:54:507 EAS splice config on 6
+2015/03/04 12:22:54:508 Insert EAS on port 4
+2015/03/04 12:22:54:509 EAS splice config on 7
+2015/03/04 12:22:54:510 Insert EAS on port 4
+2015/03/04 12:22:54:512 sent eas insert
+2015/03/04 12:22:54:513 Starting Encoder
+2015/03/04 12:22:54:515 Start Streaming
+2015/03/04 12:22:58:612 reached end of file
+2015/03/04 12:22:58:614 reached end of file
+2015/03/04 12:22:58:622 finished stream
+2015/03/04 12:22:58:622 set bitrate to 4000000
+2015/03/04 12:23:02:862 Restarting EAS Engine
+2015/03/04 12:23:03:474  Transcoding Status: Stopped!
+2015/03/04 12:23:03:476 Ring Detect Closed
+2015/03/04 12:23:03:478 serial errorUnknown error13
+2015/03/04 12:23:03:481 Initialising Ring Detect
+2015/03/04 12:23:03:483 serial errorUnknown error0
+2015/03/04 12:23:03:484 serial errorNo such file or directory1
+2015/03/04 12:23:03:486 finished eas init
+2015/03/04 12:23:03:493 Restarting EAS Engine
+2015/03/04 12:23:03:495 Ring Detect Closed
+2015/03/04 12:23:03:496 serial errorUnknown error13
+2015/03/04 12:23:03:497 Initialising Ring Detect
+2015/03/04 12:23:03:498 serial errorUnknown error0
+2015/03/04 12:23:03:500 serial errorNo such file or directory1
+2015/03/04 12:23:03:501 finished eas init
+2015/03/04 12:23:03:503 EAS splice config on 1
+2015/03/04 12:23:03:505 Insert EAS on port 4
+2015/03/04 12:23:03:506 EAS splice config on 2
+2015/03/04 12:23:03:507 Insert EAS on port 4
+2015/03/04 12:23:03:508 EAS splice config on 3
+2015/03/04 12:23:03:509 Insert EAS on port 4
+2015/03/04 12:23:03:511 EAS splice config on 4
+2015/03/04 12:23:03:512 Insert EAS on port 4
+2015/03/04 12:23:03:513 EAS splice config on 5
+2015/03/04 12:23:03:514 Insert EAS on port 4
+2015/03/04 12:23:03:515 EAS splice config on 6
+2015/03/04 12:23:03:517 Insert EAS on port 4
+2015/03/04 12:23:03:518 EAS splice config on 7
+2015/03/04 12:23:03:519 Insert EAS on port 4
+2015/03/04 12:23:03:521 sent eas insert
+2015/03/04 12:23:03:522 Starting Encoder
+2015/03/04 12:23:03:523 Start Streaming
+2015/03/04 12:23:03:624 initialised stream, opening socket
+2015/03/04 12:23:03:624 starting stream (worker)
+2015/03/04 12:23:08:818 Restarting EAS Engine
+2015/03/04 12:23:09:497  Transcoding Status: Stopped!
+2015/03/04 12:23:09:498 Ring Detect Closed
+2015/03/04 12:23:09:500 serial errorUnknown error13
+2015/03/04 12:23:09:501 Initialising Ring Detect
+2015/03/04 12:23:09:502 serial errorUnknown error0
+2015/03/04 12:23:09:504 serial errorNo such file or directory1
+2015/03/04 12:23:09:505 finished eas init
+2015/03/04 12:23:09:512 Restarting EAS Engine
+2015/03/04 12:23:09:514 Ring Detect Closed
+2015/03/04 12:23:09:515 serial errorUnknown error13
+2015/03/04 12:23:09:516 Initialising Ring Detect
+2015/03/04 12:23:09:518 serial errorUnknown error0
+2015/03/04 12:23:09:519 serial errorNo such file or directory1
+2015/03/04 12:23:09:520 finished eas init
+2015/03/04 12:23:09:522 EAS splice config on 1
+2015/03/04 12:23:09:523 Insert EAS on port 4
+2015/03/04 12:23:09:524 EAS splice config on 2
+2015/03/04 12:23:09:525 Insert EAS on port 4
+2015/03/04 12:23:09:526 EAS splice config on 3
+2015/03/04 12:23:09:528 Insert EAS on port 4
+2015/03/04 12:23:09:529 EAS splice config on 4
+2015/03/04 12:23:09:530 Insert EAS on port 4
+2015/03/04 12:23:09:532 EAS splice config on 5
+2015/03/04 12:23:09:533 Insert EAS on port 4
+2015/03/04 12:23:09:534 EAS splice config on 6
+2015/03/04 12:23:09:535 Insert EAS on port 4
+2015/03/04 12:23:09:536 EAS splice config on 7
+2015/03/04 12:23:09:541 Insert EAS on port 4
+2015/03/04 12:23:09:543 sent eas insert
+2015/03/04 12:23:09:544 Starting Encoder
+2015/03/04 12:23:09:546 Start Streaming
+2015/03/04 12:23:09:938 reached end of file
+2015/03/04 12:23:09:945 finished stream
+2015/03/04 12:23:09:945 set bitrate to 4000000
+2015/03/04 12:23:14:946 initialised stream, opening socket
+2015/03/04 12:23:14:946 starting stream (worker)
+2015/03/04 12:23:17:534 reached end of file
+2015/03/04 12:23:17:536 reached end of file
+2015/03/04 12:23:17:544 finished stream
+2015/03/04 12:23:17:544 set bitrate to 4000000
+2015/03/04 12:23:22:546 initialised stream, opening socket
+2015/03/04 12:23:22:546 starting stream (worker)
+2015/03/04 12:23:23:730 Restarting EAS Engine
+2015/03/04 12:23:24:333  Transcoding Status: Stopped!
+2015/03/04 12:23:24:335 Ring Detect Closed
+2015/03/04 12:23:24:336 serial errorUnknown error13
+2015/03/04 12:23:24:337 Initialising Ring Detect
+2015/03/04 12:23:24:338 serial errorUnknown error0
+2015/03/04 12:23:24:347 serial errorNo such file or directory1
+2015/03/04 12:23:24:348 finished eas init
+2015/03/04 12:23:49:219 Restarting EAS Engine
+2015/03/04 12:23:49:219 Ring Detect Closed
+2015/03/04 12:23:49:220 serial errorUnknown error13
+2015/03/04 12:23:49:221 Initialising Ring Detect
+2015/03/04 12:23:49:221 serial errorUnknown error0
+2015/03/04 12:23:49:221 serial errorNo such file or directory1
+2015/03/04 12:23:49:222 finished eas init

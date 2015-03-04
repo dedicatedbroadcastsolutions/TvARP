@@ -49,18 +49,18 @@ Automation::Automation(QObject *parent) :
 
     mpeg_stream = new stream(this);
     connect(mpeg_stream,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
-    connect(mpeg_stream,SIGNAL(get_ts_info(QString)),this,SLOT(get_ts_info(QString)),Qt::DirectConnection);
-    connect(this,SIGNAL(bitrate(int)),mpeg_stream,SLOT(set_kbitrate(int)),Qt::DirectConnection);
+    connect(mpeg_stream,SIGNAL(get_bitrate(QString)),this,SLOT(get_bitrate(QString)),Qt::DirectConnection);
     check_timer= new QTimer(this);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
     connect(this,SIGNAL(stream_eas(QHostAddress,quint16,QString)),this,SLOT(start_stream(QHostAddress,quint16,QString)));
-
+    connect(this,SIGNAL(bitrate(int)),mpeg_stream,SLOT(set_bitrate(int)));
     ffmpeg = new FFmpeg(this);
     connect(ffmpeg,SIGNAL(ffmpeg_stdout(QString)),this,SLOT(encoder_output(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_status(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffplay_stdout(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_finished(bool )),this,SLOT(encoder_finished(bool)));
+    connect(ffmpeg,SIGNAL(analysis_stdout_display(QString)),this,SLOT(ingest_display(QString)));
     ad_ts = new TS_Info(this);
 
     connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
@@ -91,10 +91,11 @@ void Automation::kill_ts_info()
         ad_ts->kill=true;
 }
 
-void Automation::get_ts_info(QString filename)
+void Automation::get_bitrate(QString filename)
 {
-    if(ad_ts!=NULL)
-        emit bitrate(ad_ts->process_file(filename).kbitrate);  // blocks until bitrate in the worker thread is set.
+    qDebug("automation, asking ffmpeg about bitrate");
+    emit bitrate( ffmpeg->file_info(filename) );
+    qDebug("automation sent bitrate signal");
 }
 
 void Automation::encoder_output(QString output)
@@ -107,6 +108,11 @@ void Automation::encoder_finished( bool state)
     if(!state)
         kill_ffmpeg();
     emit encoder_done();
+}
+
+void Automation::ingest_display(QString string)
+{
+    emit ingest_disp(string);
 }
 
 void Automation::close_ring_detect()
@@ -229,6 +235,21 @@ void Automation::ad_splice_return_to_network( QList<int> channel_list )
     d2mux->return_from_splice( channel_list );
 }
 
+void Automation::ingest_program(QString inputfile)
+{
+    QString outputfile;
+
+    outputfile = "./Local Video/temp.ts";
+    outputfile = QFileInfo(outputfile).absoluteFilePath();
+    //ffmpeg->encode(inputfile,outputfile,
+     //              false,
+       //            settings.value("eas crossbar enable").toBool(),
+         //          settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
+           //        settings.value("eas audio device").toString() , -31 );
+    //QThread::sleep(2);
+    ffmpeg->file_info(outputfile);
+}
+
 void Automation::capture_eas_message( )
 {
     QString inputfile,outputfile;
@@ -248,6 +269,7 @@ void Automation::capture_eas_message( )
     outputfile = QFileInfo(outputfile).absoluteFilePath();
     log_eas("Starting Encoder");
     emit stream_eas( stream_addr, stream_port, outputfile);
+
     ffmpeg->encode(inputfile,outputfile,
                    settings.value("eas test file").toBool(),
                    settings.value("eas crossbar enable").toBool(),

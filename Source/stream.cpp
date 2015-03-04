@@ -43,7 +43,7 @@ stream::stream(QObject *parent) :
     connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
     connect(this, &stream::start_streaming , worker, &Worker::start_stream );
     connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
-    connect(worker,SIGNAL(ts_info(QString)),this,SLOT(ts_info(QString)),Qt::DirectConnection);
+    connect(worker,SIGNAL(find_bitrate(QString)),this,SLOT(find_bitrate(QString)),Qt::DirectConnection);
     connect(worker,SIGNAL(work_status(QString)),this,SLOT(worker_status(QString)));
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
@@ -75,12 +75,16 @@ void stream::done_with_worker()
     log("done with stream signal sent");
 }
 
-void stream::ts_info(QString filename)
+void stream::find_bitrate(QString filename)
 {
-    log("set bitrate to 4000");
-    set_kbitrate(4000);
-    QThread::sleep(5);
-    //emit get_ts_info(filename);    // blocks until automation slot returns after setting bitrate
+    qDebug("2 find bitrate ");
+    log("set bitrate to 4000000");
+    set_bitrate(4000000);
+    //qDebug("4 get bitrate leaves stream");
+    //emit get_bitrate(filename);    // blocks until automation slot returns after setting bitrate
+
+    qDebug("returning to worker stream function");
+
 }
 
 void stream::worker_status(QString string)
@@ -88,9 +92,10 @@ void stream::worker_status(QString string)
     emit status(string);
 }
 
-void stream::set_kbitrate(int kbitrate)
+void stream::set_bitrate(int bitrate)
 {
-    worker->set_packet_period(kbitrate);
+    qDebug()<< "Set worker bitrate to " << bitrate;
+    worker->set_packet_period(bitrate);
 }
 
 void stream::log(QString logdata)
@@ -117,21 +122,26 @@ void Worker::read_datagram()
     for(int i=1; i<=pkts_per_dgm;i++)
     {
         bytes_read = readfile.read(packet,packet_size);
+        //qDebug()<< "bytes read "<< bytes_read << readfile.pos();
         if(bytes_read<=0)
+        {
+            log("reached end of file");
             return;
+        }
         datagram.append( QByteArray( (char*) packet ,packet_size) );
     }
 }
 
-void Worker::set_packet_period(int kbitrate)
+void Worker::set_packet_period(int bitrate)
 {
-    if(kbitrate!=0)
+    if(bitrate!=0)
     {
         timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
-        timer_period = timer_period*1000000;
-        timer_period = timer_period/(kbitrate);
+        timer_period = timer_period*1000000000;
+        timer_period = timer_period/(bitrate);
         one_third_of_timer_period = timer_period/4;
         sleep_time = timer_period/3000;
+        //qDebug() << timer_period;
     }
     else
         timer_period = 0;
@@ -140,14 +150,24 @@ void Worker::set_packet_period(int kbitrate)
 bool Worker::stream_init(QString source_filename)
 {
     readfile.setFileName(source_filename);
-    emit ts_info(source_filename);  // blocks until stream class connection returns
+    qDebug("first step, find bitrate");
+    emit find_bitrate(source_filename);  // blocks until stream class connection returns
+    qDebug("Last step, bitrate found");
+
+    while(!readfile.open(QIODevice::ReadOnly))
+    {
+        QThread::msleep(100);
+    }
+    readfile.close();
+    QThread::sleep(5);
     if( readfile.open(QFile::ReadOnly) )
     {
+        readfile.seek(0);
         return true;
     }
     else
     {
-        log("filed to open file to stream");
+        log("failed to open file to stream");
         return false;
     }
 }
@@ -157,7 +177,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
         if( stream_init(source_filename) )  // get bitrate from stream and block until file is ready to stream.
 
         {
-            qDebug("initialised stream, opening socket");
+            log("initialised stream, opening socket");
             if( timer_period == 0)
             {
                 log("stream failed");
@@ -167,6 +187,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
             read_datagram();
             elapsed_timer.start();
             log("starting stream (worker)");
+            qDebug()<< "datagram " << !datagram.isEmpty() << !quit;
             while( !datagram.isEmpty() && !quit)
             {
                 while(elapsed_timer.nsecsElapsed() <= timer_period)
@@ -178,9 +199,10 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
                 udp_streaming_socket->waitForBytesWritten();
 
                 elapsed_timer.restart();
-
+                qDebug()<< socket_state;
                 if(socket_state!=(188*pkts_per_dgm))
                 {
+                    qDebug("error, trying to resend");
                     while ( socket_state == -1 )
                     {
                         socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);

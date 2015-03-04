@@ -4,8 +4,9 @@ FFmpeg::FFmpeg( QObject *parent) :
     QObject(parent)
 {
     mInputPlayProcess = new QProcess(this);
-    //mOutputPlayProcess = new QProcess(this);
+    mFileInfoProcess = new QProcess(this);
     mTranscodingProcess = new QProcess(this);
+    encoding = false;
     connect(mTranscodingProcess, SIGNAL(started()), this, SLOT(processStarted()));
     connect(mTranscodingProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(readyReadStandardOutput()));
     connect(mTranscodingProcess, SIGNAL(finished(int)), this, SLOT(encodingFinished()));
@@ -13,6 +14,10 @@ FFmpeg::FFmpeg( QObject *parent) :
     connect(mInputPlayProcess, SIGNAL(started()), this, SLOT(ffplay_processStarted()));
     connect(mInputPlayProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(readyread_ffplay()));
     connect(mInputPlayProcess, SIGNAL(finished(int)), this, SLOT(playFinished()));
+
+    connect(mFileInfoProcess, SIGNAL(started()), this, SLOT(analysis_started()));
+    connect(mFileInfoProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(analysis_stdout()));
+    connect(mFileInfoProcess, SIGNAL(finished(int)), this, SLOT(analysis_finished()));
 }
 
 FFmpeg::~FFmpeg()
@@ -35,6 +40,33 @@ void FFmpeg::readyread_ffplay()
     emit ffplay_stdout(mInputPlayProcess->readAllStandardOutput());
 }
 
+void FFmpeg::analysis_finished()
+{
+    log("analysis finished");
+}
+
+void FFmpeg::analysis_started()
+{
+    log("analysis started");
+}
+
+void FFmpeg::analysis_stdout()
+{
+    QString string;
+    string = mFileInfoProcess->readAllStandardOutput();
+    emit analysis_stdout_display(string);
+    if(string.contains("format.bit_rate"))
+    {
+        QStringList stringlist;
+        QString bitrate_line;
+        stringlist = string.split("\n");
+        stringlist = stringlist.filter("format.bit_rate");
+        bitrate_line = stringlist.first();
+        bitrate_line.chop(2);
+        FileInfo_bitrate = bitrate_line.remove("format.bit_rate=\"", Qt::CaseInsensitive).toInt();
+    }
+}
+
 void FFmpeg::kill_encoder()
 {
     mTranscodingProcess->kill();
@@ -54,18 +86,23 @@ void FFmpeg::processStarted()
     emit encode_started();
 }
 
-void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossbar,int crossbar_pin,QString vdev,QString adev,int dialnorm)
+void FFmpeg::encode(QString inputfile,QString outputfile, bool capture,bool crossbar,int crossbar_pin,QString vdev,QString adev,int dialnorm)
 {
+    while(encoding)
+    {
+        QThread::msleep(10);
+    }
+    encoding = true;
     QString program;
     program = "./FFmpeg/bin/ffmpeg.exe";
     program = QFileInfo(program).absoluteFilePath();
     encode_fileName = outputfile;
     QStringList arguments;
     arguments.clear();
-    arguments << "-v" << "9" << "-loglevel" << "99" ;
+    //arguments << "-v" << "9" << "-loglevel" << "99" ;
     arguments  << "-re" << "-rtbufsize" << "100000k";
 
-    if(!test)
+    if(capture)
     {
         arguments <<"-f" << "dshow" ;
         if(crossbar)
@@ -104,6 +141,32 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool test,bool crossba
     mTranscodingProcess->start(program, arguments);
 }
 
+int FFmpeg::file_info(QString inputfile)
+{
+    qDebug("file info");
+    QString program;
+    program = "./FFmpeg/bin/ffprobe.exe";
+    program = QFileInfo(program).absoluteFilePath();
+    QStringList arguments;
+    arguments.clear();
+    arguments   << "-v" << "error" << "-print_format" << "flat";
+    arguments   << "-show_format" <<"-show_programs"<< inputfile;
+
+   // arguments << "-v" << "9" ;//<< "-loglevel" << "99" ;
+    //arguments << "-i" << inputfile       // to read from a file
+    //          << "-af" << "volumedetect"
+    //          << "-vn" << "-f" << "null" << "NUL";
+
+    qDebug("problem line 1");
+    mFileInfoProcess->setProcessChannelMode(QProcess::MergedChannels);
+    qDebug("problem line 2");
+    mFileInfoProcess->start(program, arguments);
+    qDebug("problem line 3");
+    mFileInfoProcess->waitForFinished();
+    qDebug("here");
+    return(FileInfo_bitrate);
+}
+
 void FFmpeg::readyReadStandardOutput()
 {
     log_ffmpeg_stdout(mTranscodingProcess->readAllStandardOutput());
@@ -111,6 +174,7 @@ void FFmpeg::readyReadStandardOutput()
 
 void FFmpeg::encodingFinished()
 {
+    encoding = false;
     if (QFile::exists(encode_fileName))
     {
         emit ffmpeg_finished( true );
@@ -139,6 +203,7 @@ void FFmpeg::ffplay(QString inputfile)
     if(mInputPlayProcess->state()==0)
     {
         log("FFplay " + inputfile);
+        mInputPlayProcess->setProcessChannelMode(QProcess::MergedChannels);
         mInputPlayProcess->start(program, arguments);
     }
 }

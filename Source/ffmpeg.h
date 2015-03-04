@@ -4,6 +4,7 @@
 #include <QtCore>
 #include <QMessageBox>
 
+
 class FFmpeg : public QObject
 {
     Q_OBJECT
@@ -13,8 +14,9 @@ class FFmpeg : public QObject
     ~FFmpeg();
 
   public slots:
-    void encode(QString inputfile, QString outputfile, bool eas, bool crossbar, int crossbar_pin, QString vdev, QString adev, int dialnorm);
+    void encode(QString inputfile, QString outputfile, bool capture, bool crossbar, int crossbar_pin, QString vdev, QString adev, int dialnorm);
     void ffplay(QString inputfile);
+    int file_info(QString inputfile);
     void kill();
     void kill_encoder();
   signals:
@@ -23,6 +25,7 @@ class FFmpeg : public QObject
     void ffmpeg_stdout(QString);
     void encode_started();
     void ffplay_stdout(QString);
+    void analysis_stdout_display(QString);
   private slots:
      void readyReadStandardOutput();
      void processStarted();
@@ -30,14 +33,19 @@ class FFmpeg : public QObject
      void readyread_ffplay();
      void playFinished();
      void encodingFinished();
+     void analysis_started();
+     void analysis_finished();
+     void analysis_stdout();
      void log(QString logdata);
      void log_ffmpeg_stdout(QString logdata);
   private:
     QProcess *mTranscodingProcess;
     QProcess *mInputPlayProcess;
-    QProcess *mOutputPlayProcess;
+    QProcess *mFileInfoProcess;
     QString mOutputString;
     QString encode_fileName;
+    bool encoding;
+    int FileInfo_bitrate;
 
 };
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1062</width>
-    <height>494</height>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -297,9 +297,9 @@
               </widget>
              </item>
              <item row="0" column="6">
-              <widget class="QRadioButton" name="stream_file">
+              <widget class="QRadioButton" name="capture">
                <property name="text">
-                <string>Stream File</string>
+                <string>Capture</string>
                </property>
                <property name="checked">
                 <bool>true</bool>
@@ -1052,20 +1052,60 @@
       </widget>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
-        <string>3- Play Local</string>
+        <string>Local Ingest</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_8">
-        <item row="0" column="0">
+        <item row="1" column="1">
+         <widget class="QPushButton" name="inputfile_browse">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Browse</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
          <widget class="QLabel" name="label_17">
           <property name="text">
-           <string>3-PlayLocal.exe</string>
+           <string>Ingest/Encode</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QTextEdit" name="textEdit">
+         <widget class="QLineEdit" name="ingest_file">
           <property name="enabled">
            <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Video/ew050812-004403SD-h264lb.mov</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="ingest">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Ingest</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QTextEdit" name="ingest_display">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="test">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>test</string>
           </property>
          </widget>
         </item>

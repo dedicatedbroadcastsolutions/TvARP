@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     automation = new Automation(this);
     ad_ch.clear();
-    ad_ch.append(ui->comboBox->currentIndex());
+    ad_ch.append(ui->comboBox->currentIndex()+1);
     eas_ch.clear();
     eas_ch.append(1);
     eas_ch.append(2);
@@ -85,6 +85,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->eas_detect->verticalScrollBar()->setValue( ui->eas_detect->verticalScrollBar()->maximum() );
     connect(automation,SIGNAL(eas_status(QString)),ui->eas_detect,SLOT(insertPlainText(QString)));
 
+    ui->ingest_display->ensureCursorVisible();
+    ui->ingest_display->moveCursor(QTextCursor::End);
+    ui->ingest_display->verticalScrollBar()->setValue( ui->ingest_display->verticalScrollBar()->maximum() );
+    connect(automation,SIGNAL(ingest_disp(QString)),ui->ingest_display,SLOT(insertPlainText(QString)));
 
     ui->stream_status_display->ensureCursorVisible();
     ui->stream_status_display->moveCursor(QTextCursor::End);
@@ -156,9 +160,9 @@ void MainWindow::readSettings()
     settings.setValue( "eas crossbar pin" , ui->crossbar_pin->value());
 
     if( settings.contains("eas test file") )
-        ui->stream_file->setChecked( settings.value("eas test file").toBool() );
+        ui->capture->setChecked( settings.value("eas test file").toBool() );
     else
-    settings.setValue( "eas test file" , ui->stream_file->isChecked());
+    settings.setValue( "eas test file" , ui->capture->isChecked());
 
     if(settings.contains("eas video device"))
     {
@@ -225,7 +229,7 @@ void MainWindow::on_restart_eas_clicked()
     settings.setValue( "eas comport" , ui->eas_comport->currentText());
     settings.setValue( "eas crossbar enable" , ui->crossbar_enable->isChecked());
     settings.setValue( "eas crossbar pin" , ui->crossbar_pin->value());
-    settings.setValue( "eas test file" , ui->stream_file->isChecked());
+    settings.setValue( "eas test file" , ui->capture->isChecked());
     if(ui->test_eas->isChecked())
         ui->test_eas->click();
     else
@@ -278,13 +282,22 @@ void MainWindow::on_eas_detect_textChanged()
 
 void MainWindow::on_stream_status_display_textChanged()
 {
-
     if ( stream_status_scroll_maximum == ui->stream_status_display->verticalScrollBar()->value() )
     {
         ui->stream_status_display->moveCursor(QTextCursor::End);
         ui->stream_status_display->verticalScrollBar()->setValue( ui->stream_status_display->verticalScrollBar()->maximum() );
     }
     stream_status_scroll_maximum = ui->stream_status_display->verticalScrollBar()->maximum();
+}
+
+void MainWindow::on_ingest_display_textChanged()
+{
+    if ( ingest_status_scroll_maximum == ui->ingest_display->verticalScrollBar()->value() )
+    {
+        ui->ingest_display->moveCursor(QTextCursor::End);
+        ui->ingest_display->verticalScrollBar()->setValue( ui->ingest_display->verticalScrollBar()->maximum() );
+    }
+    ingest_status_scroll_maximum = ui->ingest_display->verticalScrollBar()->maximum();
 }
 
 void MainWindow::on_update_mux_settings_clicked()
@@ -388,7 +401,7 @@ void MainWindow::on_mux_advanced_toggled(bool checked)
 void MainWindow::on_comboBox_currentIndexChanged(int index)
 {
     ad_ch.clear();
-    ad_ch.append(index);
+    ad_ch.append(index+1);
 }
 
 void MainWindow::send_eas_config()
@@ -402,7 +415,7 @@ void MainWindow::on_revert_eas_config_clicked()
     automation->revert_eas_config(eas_ch);
 }
 
-void MainWindow::ad_insert()
+void MainWindow::on_ad_insert_clicked()
 {
     automation->ad_splice_insert(ad_ch);
 }
@@ -436,4 +449,35 @@ void MainWindow::on_test_eas_clicked(bool checked)
         automation->capture_eas_message();
         ui->test_eas->setText("Stop Test");
     }
+}
+
+void MainWindow::on_ingest_clicked(bool checked)
+{
+    if(!checked)
+    {
+        automation->ingest_program(ui->ingest_file->text());
+    }
+    else
+    {
+        // stop ingest process and clean up files
+    }
+
+}
+
+void MainWindow::on_inputfile_browse_clicked()
+{
+    QString fileName =
+        QFileDialog::getOpenFileName(
+                this,
+                tr("Open File"),
+                "Video",
+                tr("Video (*.mp4 *.mov *.avi *.mpg *.ts);;All files (*.*)"));
+    if (!fileName.isEmpty()) {
+        ui->ingest_file->setText(fileName);
+    }
+}
+
+void MainWindow::on_test_clicked()
+{
+
 }

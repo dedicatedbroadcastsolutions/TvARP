@@ -36,6 +36,7 @@
 #include <QSettings>
 #include <QtCore>
 #include <QScrollBar>
+#include <QFileDialog>
 #include "automation.h"
 //#include "eas.h"
 //#include "video_window.h"
@@ -67,6 +68,7 @@ private:
     int encoder_scroll_maximum;
     int eas_status_scroll_maximum;
     int stream_status_scroll_maximum;
+    int ingest_status_scroll_maximum;
     QList < int > eas_ch , ad_ch;
 private slots:
     void store_mux_settings();
@@ -94,11 +96,15 @@ private slots:
     void send_eas_config();
     void on_revert_eas_config_clicked();
     void on_comboBox_currentIndexChanged(int index);
-    void ad_insert();
+    void on_ad_insert_clicked();
     void on_ad_return_to_network_clicked();
     void on_show_vmon_clicked(bool checked);
     void on_send_eas_config_clicked();
     void on_test_eas_clicked(bool checked);
+    void on_ingest_clicked(bool checked);
+    void on_ingest_display_textChanged();
+    void on_inputfile_browse_clicked();
+    void on_test_clicked();
 };
 
 #endif // MAINWINDOW_H

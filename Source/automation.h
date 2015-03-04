@@ -31,6 +31,7 @@
 #ifndef AUTOMATION_H
 #define AUTOMATION_H
 #include "QtCore"
+
 #include "mux_control.h"
 #include "stream.h"
 #include "ts_info.h"
@@ -93,14 +94,16 @@ public slots:
     void is_open(bool);
 
     void encoder_output(QString output);
-    void get_ts_info(QString filename);
+    void get_bitrate(QString filename);
     void streaming_status( QString string );
     void encoder_finished(bool state);
+    void ingest_display(QString string);
+    void ingest_program(QString inputfile);
     void kill_ts_info();
 signals:
     void encoder_done();
     void init();
-    void bitrate(int kbitrate);
+    void bitrate(int bitrate);
     void event_log_output(QString);
     void play();
     void openFile(QString);
@@ -112,6 +115,8 @@ signals:
     void eas_status(QString);
     void stream_status(QString);
     void stream_eas(QHostAddress stream_addr, quint16, QString sourcefile);
+    void ingest_disp(QString);
+
 private:
     Mux_Control *d2mux;
     QSerialPort *serial;
