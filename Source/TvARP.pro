@@ -22,8 +22,8 @@ SOURCES +=\
     stream.cpp \
     configure_eas.cpp \
     ts_info.cpp \
-    tvarp_main.cpp \
-    ffmpeg.cpp
+    ffmpeg.cpp \
+    server_main.cpp
 
 HEADERS  += \
     automation.h \
@@ -40,3 +40,5 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     systray.qrc
+
+DISTFILES +=

@@ -40,6 +40,7 @@
 #include "QDebug"
 int main(int argc, char *argv[])
 {
+    qDebug("test");
 
 #if defined(Q_OS_WIN)
    SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, SPIF_SENDCHANGE, 0, 0);
@@ -70,8 +71,6 @@ int main(int argc, char *argv[])
         return(0);
 
     sys_Tray_Icon.setVisible(!settings.value("visible").toBool());
-
-
 
     return a.exec();
 }

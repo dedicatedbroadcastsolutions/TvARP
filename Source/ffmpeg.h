@@ -18,6 +18,8 @@ class FFmpeg : public QObject
     void ffplay(QString inputfile);
     int file_info(QString inputfile);
     void kill();
+    void close();
+    void close_encoder();
     void kill_encoder();
   signals:
     void ffmpeg_finished( bool );

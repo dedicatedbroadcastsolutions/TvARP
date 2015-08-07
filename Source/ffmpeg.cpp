@@ -25,6 +25,17 @@ FFmpeg::~FFmpeg()
     kill();
 }
 
+void FFmpeg::close()
+{
+
+}
+
+void FFmpeg::close_encoder()
+{
+    mTranscodingProcess->write("q");
+    mTranscodingProcess->closeWriteChannel();
+}
+
 void FFmpeg::playFinished()
 {
     log("play finished");
@@ -37,7 +48,7 @@ void FFmpeg::ffplay_processStarted()
 
 void FFmpeg::readyread_ffplay()
 {
-    emit ffplay_stdout(mInputPlayProcess->readAllStandardOutput());
+    //emit ffplay_stdout(mInputPlayProcess->readAllStandardOutput());
 }
 
 void FFmpeg::analysis_finished()
@@ -69,7 +80,8 @@ void FFmpeg::analysis_stdout()
 
 void FFmpeg::kill_encoder()
 {
-    mTranscodingProcess->kill();
+    close_encoder();
+    //mTranscodingProcess->kill();
     mTranscodingProcess->waitForFinished();
     qDebug("transcode processes finished");
 }
