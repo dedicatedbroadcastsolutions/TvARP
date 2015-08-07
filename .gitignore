@@ -11,3 +11,6 @@ release/*.cpp
 release/*/*.cpp
 ui*
 release/Schedule_and_logs/mux_log.txt
+*.user
+*.3-pre1
+Source/TvARP_Ingest.pro.user
