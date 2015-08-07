@@ -5,9 +5,8 @@
 *.Debug
 *.Release
 *.ts
-*.pro.user*
+*.user
 *.log
-Source/*.pro.user*
 release/*.cpp
 release/*/*.cpp
 ui*
