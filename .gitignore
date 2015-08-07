@@ -7,6 +7,7 @@
 *.ts
 *.pro.user*
 *.log
+Source/*.pro.user*
 release/*.cpp
 release/*/*.cpp
 ui*
