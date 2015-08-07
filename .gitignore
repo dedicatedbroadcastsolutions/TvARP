@@ -6,6 +6,7 @@
 *.Release
 *.ts
 *.pro.user*
+*.log
 release/*.cpp
 release/*/*.cpp
 ui*
