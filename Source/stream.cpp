@@ -184,10 +184,11 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
                 return;
             }
             udp_streaming_socket = new QUdpSocket(this);
+            qDebug()<< "Streaming to " << stream_addr;
             read_datagram();
             elapsed_timer.start();
             log("starting stream (worker)");
-            qDebug()<< "datagram " << !datagram.isEmpty() << !quit;
+           // qDebug()<< "datagram " << !datagram.isEmpty() << !quit;
             while( !datagram.isEmpty() && !quit)
             {
                 while(elapsed_timer.nsecsElapsed() <= timer_period)
@@ -199,7 +200,7 @@ void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString
                 udp_streaming_socket->waitForBytesWritten();
 
                 elapsed_timer.restart();
-                qDebug()<< socket_state;
+                //qDebug()<< socket_state;
                 if(socket_state!=(188*pkts_per_dgm))
                 {
                     qDebug("error, trying to resend");

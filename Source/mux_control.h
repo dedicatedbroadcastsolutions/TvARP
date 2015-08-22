@@ -79,13 +79,13 @@ private:
         int minorChans         [ 13 ] [9] =	  // Index is Minor Channel;        [          Stream                 ]
         // Array is [Mux TS Port In] [Sat Pgm #] [# PIDs to Insert] [Type 1] [PID #1] [Type 2] [PID #2] , [ AD Port ] , [ Add Program ]
                    {{      0        ,     0     ,        0         ,  0x02  ,  0x44  ,  0x81  ,  0x45   ,      7      ,       1         }    // Index 0 not used
-                               ,{0,  1, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}	  // ATSC Minor Channel 1   3ABN-EN	  English TV
-                               ,{0, 75, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 2   3ABN-PR   Proclaim TV
-                               ,{0,  2, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 3   3ABN-DD   Dare to Dream TV
-                               ,{0,  3, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 4   3ABN-ES   Latino TV
-                               ,{0,111, 1, 0x81, 0x45,   0 , 0   , 7, 1}    // ATSC Minor Channel 5   3ABN-RD   English Radio
-                               ,{0,133, 1, 0x81, 0x45,   0 , 0   , 7, 1}    // ATSC Minor Channel 6   3ABN-LR   Latino Radio
-                               ,{0,122, 1, 0x81, 0x45,   0 , 0   , 7, 1}    // ATSC Minor Channel 7   Radio74   Radio 74
+                               ,{0,  1, 2, 0x02, 0x54, 0x81, 0x55, 7, 1}	  // ATSC Minor Channel 1   3ABN-EN	  English TV
+                               ,{0, 75, 2, 0x02, 0x54, 0x81, 0x55, 7, 1}    // ATSC Minor Channel 2   3ABN-PR   Proclaim TV
+                               ,{0,  2, 2, 0x02, 0x54, 0x81, 0x55, 7, 1}    // ATSC Minor Channel 3   3ABN-DD   Dare to Dream TV
+                               ,{0,  3, 2, 0x02, 0x54, 0x81, 0x55, 7, 1}    // ATSC Minor Channel 4   3ABN-ES   Latino TV
+                               ,{0,111, 1, 0x81, 0x55,   0 , 0   , 7, 1}    // ATSC Minor Channel 5   3ABN-RD   English Radio
+                               ,{0,133, 1, 0x81, 0x55,   0 , 0   , 7, 1}    // ATSC Minor Channel 6   3ABN-LR   Latino Radio
+                               ,{0,122, 1, 0x81, 0x55,   0 , 0   , 7, 1}    // ATSC Minor Channel 7   Radio74   Radio 74
 
                                ,{8,  1, 2, 0x02, 0x44, 0x81, 0x45, 7, 1}    // ATSC Minor Channel 8   Testing   Program Testing
                                ,{0,  201, 2, 0x02, 0x7D5, 0x81, 0xFA5, 1, 5}    // ATSC Minor Channel 9   Alternate map for channel 8

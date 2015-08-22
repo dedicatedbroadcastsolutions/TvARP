@@ -35,9 +35,7 @@ QSettings settings("ZCybercomputing", "TVARP");
 
 /// Declare Global Variables
    QList <sch_entry> schedule;  // List that contains the event schedule
-   // extern class video_window video;
-    //  Switcher *switcher = new Switcher();
-// Switcher *switcher=new Switcher(settings.value("COM").toInt());
+
 //  Automation Functions
 /// ========================================================================================================
 Automation::Automation(QObject *parent) :
@@ -61,9 +59,9 @@ Automation::Automation(QObject *parent) :
     connect(ffmpeg,SIGNAL(ffplay_stdout(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_finished(bool )),this,SLOT(encoder_finished(bool)));
     connect(ffmpeg,SIGNAL(analysis_stdout_display(QString)),this,SLOT(ingest_display(QString)));
-    ad_ts = new TS_Info(this);
+   // ad_ts = new TS_Info(this);
 
-    connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
+   // connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
 
     init_mux_control();
     init_ring_detect();
@@ -87,8 +85,8 @@ void Automation::kill_ffmpeg()
 
 void Automation::kill_ts_info()
 {
-    if(ad_ts!=NULL)
-        ad_ts->kill=true;
+  //  if(ad_ts!=NULL)
+    //    ad_ts->kill=true;
 }
 
 void Automation::get_bitrate(QString filename)
@@ -113,6 +111,17 @@ void Automation::encoder_finished( bool state)
 void Automation::ingest_display(QString string)
 {
     emit ingest_disp(string);
+}
+
+void Automation::station_id()
+{
+    QHostAddress stream_addr;
+    quint16 stream_port;
+    QString id_file;
+    id_file = QFileInfo(settings.value("ID File").toString().prepend("./Local Video/")).absoluteFilePath();
+    stream_addr.setAddress( settings.value("EAS Stream Address").toString() );
+    stream_port = settings.value("EAS Stream Port").toInt();
+    mpeg_stream->stream_start(stream_addr,stream_port,id_file);
 }
 
 void Automation::close_ring_detect()
@@ -253,10 +262,11 @@ void Automation::ingest_program(QString inputfile)
 void Automation::capture_eas_message( )
 {
     QString inputfile,outputfile;
-    QHostAddress stream_addr;
-    quint16 stream_port;
 
     send_eas_config(channels);
+
+    QHostAddress stream_addr;
+    quint16 stream_port;    
     stream_addr.setAddress( settings.value("EAS Stream Address").toString() );
     stream_port = settings.value("EAS Stream Port").toInt();
 

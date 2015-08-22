@@ -38,7 +38,7 @@
 #include <QScrollBar>
 #include <QFileDialog>
 #include "automation.h"
-//#include "eas.h"
+#include "smtp.h"
 //#include "video_window.h"
 
 namespace Ui {
@@ -70,7 +70,12 @@ private:
     int stream_status_scroll_maximum;
     int ingest_status_scroll_maximum;
     QList < int > eas_ch , ad_ch;
+    QStringList files;
 private slots:
+    void sendMail();
+    void mailSent(QString);
+    void browse();
+
     void store_mux_settings();
     void on_actionStart_Minimized_toggled(bool );
     void on_actionExit_triggered();
@@ -105,6 +110,8 @@ private slots:
     void on_ingest_display_textChanged();
     void on_inputfile_browse_clicked();
     void on_test_clicked();
+    void on_test_station_ID_clicked();
+    void on_station_id_filename_textChanged(const QString &arg1);
 };
 
 #endif // MAINWINDOW_H

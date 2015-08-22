@@ -53,6 +53,9 @@ MainWindow::MainWindow(QWidget *parent) :
     int maxblock = 250;
     readSettings();
 
+    connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+
     automation = new Automation(this);
     ad_ch.clear();
     ad_ch.append(ui->comboBox->currentIndex()+1);
@@ -79,6 +82,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encoder_display->moveCursor(QTextCursor::End);
     ui->encoder_display->verticalScrollBar()->setValue( ui->encoder_display->verticalScrollBar()->maximum() );
     connect(automation,SIGNAL(encoder_display(QString)),ui->encoder_display,SLOT(insertPlainText(QString)));
+
 
     ui->eas_detect->ensureCursorVisible();
     ui->eas_detect->moveCursor(QTextCursor::End);
@@ -109,6 +113,43 @@ MainWindow::~MainWindow()
     file.close();
 }
 
+void MainWindow::browse()
+{
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void MainWindow::sendMail()
+{
+    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+
+void MainWindow::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
+
+
 void MainWindow::on_actionStart_Minimized_toggled(bool visible)
 {
     settings.setValue("visible", visible);
@@ -117,7 +158,13 @@ void MainWindow::on_actionStart_Minimized_toggled(bool visible)
 void MainWindow::readSettings()
 {
 
+
     ui->actionStart_Minimized->setChecked(settings.value("visible").toBool());
+
+    if( settings.contains("ID File"))
+        ui->station_id_filename->setText(settings.value("ID File").toString());
+    else
+        ui->station_id_filename->setText("station_id.ts");
 
     if( settings.contains("mux_output_port") )
         ui->mux_out_port->setCurrentIndex(settings.value("mux_output_port").toInt());
@@ -480,4 +527,19 @@ void MainWindow::on_inputfile_browse_clicked()
 void MainWindow::on_test_clicked()
 {
 
+}
+
+void MainWindow::on_test_station_ID_clicked()
+{
+
+    automation->station_id();
+
+}
+
+void MainWindow::on_station_id_filename_textChanged(const QString &arg1)
+{
+    QString filename;
+    filename = arg1;
+    settings.setValue("ID File", filename );
+    qDebug()<< "ID File " << settings.value("ID File").toString();
 }

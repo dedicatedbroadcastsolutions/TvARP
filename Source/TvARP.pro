@@ -21,9 +21,9 @@ SOURCES +=\
     mux_control.cpp \
     stream.cpp \
     configure_eas.cpp \
-    ts_info.cpp \
     ffmpeg.cpp \
-    server_main.cpp
+    server_main.cpp \
+    smtp.cpp
 
 HEADERS  += \
     automation.h \
@@ -32,8 +32,8 @@ HEADERS  += \
     mux_control.h \
     stream.h \
     configure_eas.h \
-    ts_info.h \
-    ffmpeg.h
+    ffmpeg.h \
+    smtp.h
 
 FORMS    += mainwindow.ui \
     configure_eas.ui

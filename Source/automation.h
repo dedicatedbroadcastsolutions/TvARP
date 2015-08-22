@@ -34,7 +34,7 @@
 
 #include "mux_control.h"
 #include "stream.h"
-#include "ts_info.h"
+//#include "ts_info.h"
 #include "ffmpeg.h"
 //#include "fix_pcr.h"
 //#include "video_window.h"
@@ -69,7 +69,7 @@ public:
     QList<int> channels;
 
     int mux_out_port ;
-    TS_Info *ad_ts;
+    //TS_Info *ad_ts;
 public slots:
     // mux control slots
     void send_eas_config( QList<int> channel_list );
@@ -100,6 +100,7 @@ public slots:
     void ingest_display(QString string);
     void ingest_program(QString inputfile);
     void kill_ts_info();
+    void station_id();
 signals:
     void encoder_done();
     void init();

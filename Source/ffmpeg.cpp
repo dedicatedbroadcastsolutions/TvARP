@@ -139,8 +139,8 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool capture,bool cros
     << "-af" << "pan=stereo|c0=c0|c1=c1"
     << "-ar" << "48000" << "-b:a" << "120k" << "-dialnorm" << QString::number(dialnorm)
 
-    << "-mpegts_pmt_start_pid" <<  "0x40"
-    << "-mpegts_start_pid" << "0x44"
+    << "-mpegts_pmt_start_pid" <<  "0x50"
+    << "-mpegts_start_pid" << "0x54"
     << "-metadata" << "service_name=\"Local\""
     << "-mpegts_service_id" << "1"
     << "-mpegts_original_network_id" << "7654"
