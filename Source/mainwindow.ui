@@ -964,90 +964,6 @@
         <string>Station ID and Email Config</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_12">
-        <item row="0" column="0">
-         <widget class="QGroupBox" name="groupBox_4">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="title">
-           <string>Log Email Config</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_5">
-           <item row="1" column="1" colspan="2">
-            <widget class="QLineEdit" name="server">
-             <property name="text">
-              <string>smtp.gmail.com</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_24">
-             <property name="text">
-              <string>SMTP Server:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_25">
-             <property name="text">
-              <string>Server Port</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1" colspan="2">
-            <widget class="QLineEdit" name="port">
-             <property name="text">
-              <string>465</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1" colspan="2">
-            <widget class="QLineEdit" name="paswd">
-             <property name="inputMethodHints">
-              <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
-             </property>
-             <property name="echoMode">
-              <enum>QLineEdit::Password</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_23">
-             <property name="text">
-              <string>Username:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_22">
-             <property name="text">
-              <string>Password:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1" colspan="2">
-            <widget class="QLabel" name="label_40">
-             <property name="text">
-              <string>use &quot;&quot; to separate multiple recipients</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_26">
-             <property name="text">
-              <string>Log Recipients:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1" colspan="2">
-            <widget class="QLineEdit" name="rcpt"/>
-           </item>
-           <item row="3" column="1" colspan="2">
-            <widget class="QLineEdit" name="uname"/>
-           </item>
-          </layout>
-         </widget>
-        </item>
         <item row="0" column="1" rowspan="2">
          <widget class="QGroupBox" name="groupBox_9">
           <property name="title">
@@ -1133,7 +1049,7 @@
             </widget>
            </item>
            <item row="1" column="4" colspan="2">
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="id_browse">
              <property name="text">
               <string>Browse</string>
              </property>
@@ -1318,6 +1234,160 @@
           </layout>
          </widget>
         </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="title">
+           <string>Log Email Config</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="server">
+             <property name="text">
+              <string>smtp.gmail.com</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>SMTP Server:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>Server Port</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QLineEdit" name="port">
+             <property name="text">
+              <string>465</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLineEdit" name="paswd">
+             <property name="inputMethodHints">
+              <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>Username:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>Password:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="2">
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>use comma to separate multiple recipients</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>Log Recipients:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="2">
+            <widget class="QLineEdit" name="rcpt"/>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QLineEdit" name="uname"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QRadioButton" name="radioButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Local Insert End</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QRadioButton" name="radioButton_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>EAS Send Finished</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QRadioButton" name="radioButton_4">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>EAS Recieved</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QRadioButton" name="radioButton_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Local Insert Start</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QRadioButton" name="radioButton_5">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Station ID Complete</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QRadioButton" name="radioButton_6">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Station ID Start</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Send Email Logs For:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_6">
@@ -1326,10 +1396,17 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_8">
         <item row="5" column="1">
-         <widget class="QLineEdit" name="lineEdit_11"/>
+         <widget class="QLineEdit" name="lineEdit_11">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_31">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Program:</string>
           </property>
@@ -1394,6 +1471,9 @@
         </item>
         <item row="4" column="2">
          <widget class="QCheckBox" name="checkBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Multi Part Series</string>
           </property>
@@ -1401,16 +1481,26 @@
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="label_32">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Title:</string>
           </property>
          </widget>
         </item>
         <item row="5" column="3">
-         <widget class="QSpinBox" name="spinBox"/>
+         <widget class="QSpinBox" name="spinBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item row="5" column="2">
          <widget class="QLabel" name="label_34">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Part:</string>
           </property>
@@ -1421,6 +1511,9 @@
         </item>
         <item row="6" column="3">
          <widget class="QComboBox" name="comboBox_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <item>
            <property name="text">
             <string>58:30</string>
@@ -1429,10 +1522,17 @@
          </widget>
         </item>
         <item row="6" column="1" rowspan="3">
-         <widget class="QPlainTextEdit" name="plainTextEdit_2"/>
+         <widget class="QPlainTextEdit" name="plainTextEdit_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item row="6" column="0">
          <widget class="QLabel" name="label_36">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Description:</string>
           </property>
@@ -1443,6 +1543,9 @@
         </item>
         <item row="6" column="2">
          <widget class="QLabel" name="label_35">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Run Time:</string>
           </property>
@@ -1453,16 +1556,26 @@
         </item>
         <item row="2" column="1">
          <widget class="QComboBox" name="comboBox_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="editable">
            <bool>true</bool>
           </property>
          </widget>
         </item>
         <item row="4" column="1">
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_33">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Subtitle:</string>
           </property>
@@ -1470,13 +1583,22 @@
         </item>
         <item row="9" column="0">
          <widget class="QLabel" name="label_37">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Notes:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
           </property>
          </widget>
         </item>
         <item row="8" column="2">
          <widget class="QLabel" name="label_38">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Time Slot:</string>
           </property>
@@ -1486,13 +1608,24 @@
          </widget>
         </item>
         <item row="9" column="1">
-         <widget class="QPlainTextEdit" name="plainTextEdit_3"/>
+         <widget class="QPlainTextEdit" name="plainTextEdit_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item row="8" column="3">
-         <widget class="QComboBox" name="comboBox_4"/>
+         <widget class="QComboBox" name="comboBox_4">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item row="7" column="3">
          <widget class="QComboBox" name="comboBox_5">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <item>
            <property name="text">
             <string>16:9</string>
@@ -1507,6 +1640,9 @@
         </item>
         <item row="7" column="2">
          <widget class="QLabel" name="label_39">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Aspect Ratio:</string>
           </property>
@@ -1688,7 +1824,7 @@
   <tabstop>comboBox_4</tabstop>
   <tabstop>comboBox_5</tabstop>
   <tabstop>spinBox_3</tabstop>
-  <tabstop>pushButton</tabstop>
+  <tabstop>id_browse</tabstop>
   <tabstop>lineEdit_2</tabstop>
   <tabstop>station_id_filename</tabstop>
   <tabstop>spinBox_2</tabstop>
