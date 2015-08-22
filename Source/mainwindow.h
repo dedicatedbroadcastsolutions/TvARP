@@ -70,7 +70,7 @@ private:
     int stream_status_scroll_maximum;
     int ingest_status_scroll_maximum;
     QList < int > eas_ch , ad_ch;
-    QStringList files;
+    QStringList file_attachments;
 private slots:
     void sendMail();
     void mailSent(QString);
