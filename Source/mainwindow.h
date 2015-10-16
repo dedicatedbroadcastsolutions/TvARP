@@ -112,6 +112,9 @@ private slots:
     void on_test_clicked();
     void on_test_station_ID_clicked();
     void on_station_id_filename_textChanged(const QString &arg1);
+    void on_inputfile_browse_2_clicked();
+    void on_pushButton_clicked();
+    void on_start_stream_clicked();
 };
 
 #endif // MAINWINDOW_H

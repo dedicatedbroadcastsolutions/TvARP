@@ -29,13 +29,14 @@
 ***************************************************************************
 */
 
+
 #include "mainwindow.h"
+
 #include "ui_mainwindow.h"
 //#include "com_select.h"
 //#include "live_controls.h"
 //#include "sys_tray_icon.h"
 //#include "schedule_program.h"
-
 
 /// Global Variables
 QString schfile="Schedule_and_logs/schedule.automation";
@@ -542,4 +543,34 @@ void MainWindow::on_station_id_filename_textChanged(const QString &arg1)
     filename = arg1;
     settings.setValue("ID File", filename );
     qDebug()<< "ID File " << settings.value("ID File").toString();
+}
+
+void MainWindow::on_inputfile_browse_2_clicked()
+{
+    QString fileName =
+        QFileDialog::getOpenFileName(
+                this,
+                tr("Open File"),
+                "Video",
+                tr("Video (*.ts);"));
+    if (!fileName.isEmpty()) {
+        ui->test_filename->setText(fileName);
+    }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    qDebug("automation told to start stream");
+    QHostAddress address;
+    quint16 port;
+    QString fname;
+    address.setAddress( ui->test_stream_address->text());
+    port = ui->test_stream_port->value();
+    fname = ui->test_filename->text();
+    automation->cue_stream(3,fname);
+}
+
+void MainWindow::on_start_stream_clicked()
+{
+    automation->start_stream(3);
 }

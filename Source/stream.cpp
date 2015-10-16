@@ -28,6 +28,7 @@
 *
 ***************************************************************************
 */
+#include <QReadWriteLock>
 #include "stream.h"
 #include "windows.h"
 /// ========================================================================================================
@@ -37,17 +38,20 @@ stream::stream(QObject *parent) :
     log("stream constructor");
     qRegisterMetaType<QHostAddress>("QHostAddress");
     qRegisterMetaType<BufferList>("BufferList");
+    qDebug()<< "Thread ID "<< QThread::currentThreadId();
 
-    worker = new Worker;
-
+    worker = new Worker(1234);
+    worker->moveToThread(&workerThread);
+    workerThread.start(QThread::TimeCriticalPriority);
     connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
     connect(this, &stream::start_streaming , worker, &Worker::start_stream );
     connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
-    connect(worker,SIGNAL(find_bitrate(QString)),this,SLOT(find_bitrate(QString)),Qt::DirectConnection);
     connect(worker,SIGNAL(work_status(QString)),this,SLOT(worker_status(QString)));
-    worker->moveToThread(&workerThread);
-    workerThread.start(QThread::TimeCriticalPriority);
-
+    connect(this,SIGNAL(start_stream_loop()),worker,SLOT(start_loop()));
+    connect(worker,SIGNAL(busy(int,QString)),this,SLOT(process_busy(int,QString)));
+    connect(worker,SIGNAL(streaming(int,QString)),this,SLOT(cancel_cue(int,QString)));
+    connect(this,SIGNAL(cue_streaming(int,QString)),worker,SLOT(cue_stream(int,QString)));
+    emit start_stream_loop();
     log("finished log constructor");
 }
 
@@ -63,10 +67,85 @@ stream::~stream()
     log("Stream destructor finished");
 }
 
-void stream::stream_start( QHostAddress stream_addr, quint16 stream_port, QString source_filename )
+void stream::cancel_cue(int ip_port, QString filename)
 {
+    switch ( ip_port )
+    {
+        case 1:
+            ip1_cue.clear();
+            break;
+        case 2:
+            ip2_cue.clear();
+            break;
+        case 3:
+            ip3_cue.clear();
+            break;
+        case 4:
+            ip4_cue.clear();
+            break;
+    }
+}
+
+void stream::process_busy( int ip_port,  QString source_filename )
+{
+    qDebug("busy");
+    switch ( ip_port )
+    {
+        case 1:
+            if(ip1_cue==source_filename||ip1_cue.isEmpty())
+            {
+                QTimer::singleShot(5000,this,SLOT(cue_file()));
+                ip1_cue = source_filename;
+            }
+            break;
+        case 2:
+            if(ip2_cue==source_filename||ip2_cue.isEmpty())
+            {
+                QTimer::singleShot(5000,this,SLOT(cue_file()));
+                ip2_cue = source_filename;
+            }
+            break;
+        case 3:
+            if(ip3_cue==source_filename||ip3_cue.isEmpty())
+            {
+                QTimer::singleShot(5000,this,SLOT(cue_file()));
+                ip3_cue = source_filename;
+            }
+            break;
+        case 4:
+            if(ip4_cue==source_filename||ip4_cue.isEmpty())
+            {
+                QTimer::singleShot(5000,this,SLOT(cue_file()));
+                ip4_cue = source_filename;
+            }
+            break;
+    }
+
+}
+void stream::cue_file()
+{
+    qDebug("trying again to cue file");
+    if(!ip1_cue.isEmpty())
+        stream_cue(1,ip1_cue);
+    if(!ip2_cue.isEmpty())
+        stream_cue(2,ip2_cue);
+    if(!ip3_cue.isEmpty())
+        stream_cue(3,ip3_cue);
+    if(!ip4_cue.isEmpty())
+        stream_cue(4,ip4_cue);
+}
+
+void stream::stream_start(int ip_port )
+{
+    qDebug("stream_start");
     log("Start Streaming");
-    emit start_streaming( stream_addr , stream_port , source_filename);
+    emit start_streaming( ip_port);
+}
+
+void stream::stream_cue(int ip_port, QString source_filename)
+{
+    qDebug() << "Cue " << source_filename << "on port " << ip_port;
+    emit cue_streaming(ip_port,source_filename);
 }
 
 void stream::done_with_worker()
@@ -75,27 +154,9 @@ void stream::done_with_worker()
     log("done with stream signal sent");
 }
 
-void stream::find_bitrate(QString filename)
-{
-    qDebug("2 find bitrate ");
-    log("set bitrate to 4000000");
-    set_bitrate(4000000);
-    //qDebug("4 get bitrate leaves stream");
-    //emit get_bitrate(filename);    // blocks until automation slot returns after setting bitrate
-
-    qDebug("returning to worker stream function");
-
-}
-
 void stream::worker_status(QString string)
 {
     emit status(string);
-}
-
-void stream::set_bitrate(int bitrate)
-{
-    qDebug()<< "Set worker bitrate to " << bitrate;
-    worker->set_packet_period(bitrate);
 }
 
 void stream::log(QString logdata)
@@ -103,33 +164,243 @@ void stream::log(QString logdata)
     emit status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
 }
 
-Worker::Worker()
+Worker::Worker(quint16 port)
 {
+
+    int bind_state;
     packet_size = 188;
     pkts_per_dgm = 7;  // must be between 1 and 7 packets per datagram
     quit = false;
+    udp_streaming_socket = new QUdpSocket(this);
+    bind_state = udp_streaming_socket->bind(QHostAddress("192.168.0.166"),port,QAbstractSocket::DontShareAddress);
+
+    if(bind_state != true)
+    {
+        qDebug("failed to bind");
+        log("Failed to bind, change IP address to 192.168.0.166");
+    }
+
 }
 
 Worker::~Worker()
 {
     log("Closing Stream Socket");
     log("worker destructor finished");
+    udp_streaming_socket->close();
 }
 
-void Worker::read_datagram()
+void Worker::start_loop()
 {
+    qDebug()<< "Loop Thread ID "<< QThread::currentThreadId();
+    QHostAddress ip1_address,ip2_address,ip3_address,ip4_address;
+    quint16 ip1_port,ip2_port,ip3_port,ip4_port;
+    ip1_port = 1234;
+    ip2_port = 1234;
+    ip3_port = 1234;
+    ip4_port = 1234;
+
+    set_packet_period(4000000);
+
+    ip1_address.setAddress( "239.0.0.220");
+    ip2_address.setAddress("239.0.0.225");
+    ip3_address.setAddress("239.0.0.230");
+    ip4_address.setAddress("239.0.0.230");
+
+    ip1 = false;
+    ip2 = false;
+    ip3 = false;
+    ip4 = false;
+
+    ip1a = false;   ip1b = false;
+    ip2a = false;   ip2b = false;
+    ip3a = false;   ip3b = false;
+    ip4a = false;   ip4b = false;
+    cue1a = false;  cue1b = false;
+    cue2a = false;  cue2b = false;
+    cue3a = false;  cue3b = false;
+    cue4a = false;  cue4b = false;
+    eas = false;
+    log("starting stream loop");
+    qDebug("loop is starting");
+    elapsed_timer.start();
+    while(!quit)
+    {
+
+        while(elapsed_timer.nsecsElapsed() <= timer_period)
+        {
+            if( elapsed_timer.nsecsElapsed() <= one_third_of_timer_period )
+                QCoreApplication::processEvents(QEventLoop::AllEvents,1);
+                //QThread::usleep( sleep_time );
+        }
+        if(ip1)
+        {
+            if(ip1a)
+            {   // Deck A
+                datagram_1a = read_datagram(readfile_1a);
+                if(!datagram_1a.isEmpty())
+                {
+                    udp_streaming_socket->writeDatagram( datagram_1a.data() , datagram_1a.size() ,ip1_address , ip1_port);
+                    udp_streaming_socket->waitForBytesWritten();
+                }
+                else
+                {
+                    // send signal to trigger deck b after delay
+                    qDebug("closing file on 1a");
+                    readfile_1a.close();
+                    ip1a=false;
+                }
+            }
+            else if(ip1b)
+            {   // Deck B
+                datagram_1b = read_datagram(readfile_1b);
+                if(!datagram_1b.isEmpty())
+                {
+                    udp_streaming_socket->writeDatagram( datagram_1b.data() , datagram_1b.size() ,ip1_address , ip1_port);
+                    udp_streaming_socket->waitForBytesWritten();
+                }
+                else
+                {
+                    // send signal to trigger deck a after delay
+                    qDebug("closing file on 1b");
+                    readfile_1b.close();
+                    ip1b=false;
+                }
+            }
+            if(!ip1a&&!ip1b)
+                ip1 = false;
+        }
+        if(ip2)
+        {
+            if(ip2a)
+            {
+                    datagram_2a = read_datagram(readfile_2a);
+                    if(!datagram_2a.isEmpty())
+                    {
+                        udp_streaming_socket->writeDatagram( datagram_2a.data() , datagram_2a.size() ,ip2_address , ip2_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                    }
+                    else
+                    {
+                        qDebug("closing file on 2a");
+                        readfile_2a.close();
+                        ip2a=false;
+                    }
+
+            }
+            else if(ip2b)
+            {
+                    datagram_2b = read_datagram(readfile_2b);
+                    if(!datagram_2b.isEmpty())
+                    {
+                        udp_streaming_socket->writeDatagram( datagram_2b.data() , datagram_2b.size() ,ip2_address , ip2_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                    }
+                    else
+                    {
+                        qDebug("closing file on 2b");
+                        readfile_2b.close();
+                        ip2b=false;
+                    }
+            }
+            if(!ip2a&&!ip2b)
+                ip2 = false;
+        }
+        if(ip3)
+        {
+            if(ip3a)
+            {
+                    datagram_3a = read_datagram(readfile_3a);
+                    if(!datagram_3a.isEmpty())
+                    {
+                        udp_streaming_socket->writeDatagram( datagram_3a.data() , datagram_3a.size() ,ip3_address , ip3_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                    }
+                    else
+                    {
+                        qDebug("closing file on 3a");
+                        readfile_3a.close();
+                        ip3a=false;
+                    }
+
+            }
+            else if(ip3b)
+            {
+                    datagram_3b = read_datagram(readfile_3b);
+                    if(!datagram_3b.isEmpty())
+                    {
+                        udp_streaming_socket->writeDatagram( datagram_3b.data() , datagram_3b.size() ,ip3_address , ip3_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                    }
+                    else
+                    {
+                        qDebug("closing file on 3b");
+                        readfile_3b.close();
+                        ip3b=false;
+                    }
+            }
+            if(!ip3a&&!ip3b)
+                ip3 = false;
+        }
+        if(ip4)
+        {
+            if(ip4a)
+            {
+                    datagram_4a = read_datagram(readfile_4a);
+                    if(!datagram_4a.isEmpty())
+                    {
+                        udp_streaming_socket->writeDatagram( datagram_4a.data() , datagram_4a.size() ,ip4_address , ip4_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                    }
+                    else
+                    {
+                        qDebug("closing file on 4a");
+                        readfile_4a.close();
+                        ip4a=false;
+                    }
+
+            }
+            else if(ip4b)
+            {
+                    datagram_4b = read_datagram(readfile_4b);
+                    if(!datagram_4b.isEmpty())
+                    {
+                        udp_streaming_socket->writeDatagram( datagram_4b.data() , datagram_4b.size() ,ip4_address , ip4_port);
+                        udp_streaming_socket->waitForBytesWritten();
+                    }
+                    else
+                    {
+                        qDebug("closing file on 4b");
+                        readfile_4b.close();
+                        ip4b=false;
+                    }
+            }
+            if(!ip4a&&!ip4b)
+                ip4 = false;
+        }
+        elapsed_timer.restart();
+    }
+    udp_streaming_socket->close();
+}
+
+QByteArray Worker::read_datagram(QFile &readfile)
+{
+    int bytes_read=0;
+    char packet [pkts_per_dgm*packet_size];
+    QByteArray datagram;
     datagram.clear();
+
     for(int i=1; i<=pkts_per_dgm;i++)
     {
         bytes_read = readfile.read(packet,packet_size);
-        //qDebug()<< "bytes read "<< bytes_read << readfile.pos();
         if(bytes_read<=0)
         {
             log("reached end of file");
-            return;
+            datagram.clear();
+            return datagram;
         }
         datagram.append( QByteArray( (char*) packet ,packet_size) );
     }
+    return datagram;
 }
 
 void Worker::set_packet_period(int bitrate)
@@ -147,77 +418,186 @@ void Worker::set_packet_period(int bitrate)
         timer_period = 0;
 }
 
-bool Worker::stream_init(QString source_filename)
+bool Worker::stream_init(QString source_filename , QFile &readfile)
 {
     readfile.setFileName(source_filename);
-    qDebug("first step, find bitrate");
-    emit find_bitrate(source_filename);  // blocks until stream class connection returns
-    qDebug("Last step, bitrate found");
 
+    int i=0;
     while(!readfile.open(QIODevice::ReadOnly))
     {
         QThread::msleep(100);
+        qDebug("can't open file");
+        if(i<=10)
+            i++;
+        else
+        {
+            break;
+        }
     }
     readfile.close();
     QThread::sleep(5);
     if( readfile.open(QFile::ReadOnly) )
     {
         readfile.seek(0);
+        qDebug() << "opened file on " << readfile.fileName();
         return true;
     }
     else
     {
         log("failed to open file to stream");
+        qDebug("failed to open stream");
         return false;
     }
 }
 
-void Worker::start_stream(QHostAddress stream_addr, quint16 stream_port, QString source_filename)
+void Worker::start_stream(int ip_num )
 {
-        if( stream_init(source_filename) )  // get bitrate from stream and block until file is ready to stream.
+    switch ( ip_num )
+    {
+        case 1:
+            if(ip1a||ip1b)
+                ip1 = true;
+        break;
+        case 2:
+            if(ip2a||ip2b)
+                ip2 = true;
+        break;
+        case 3:
+            if(ip3a||ip3b)
+                ip3 = true;
+        break;
+        case 4:
+            if(ip4a||ip4b)
+                ip4 = true;
+        break;
+    }
+}
 
-        {
-            log("initialised stream, opening socket");
-            if( timer_period == 0)
+void Worker::cue_stream(int ip_num, QString source_filename)
+{
+    qDebug() << "cueing stream on " << ip_num;
+    switch ( ip_num )
+    {
+        case 1:
+            if(!ip1a)
             {
-                log("stream failed");
-                return;
-            }
-            udp_streaming_socket = new QUdpSocket(this);
-            qDebug()<< "Streaming to " << stream_addr;
-            read_datagram();
-            elapsed_timer.start();
-            log("starting stream (worker)");
-           // qDebug()<< "datagram " << !datagram.isEmpty() << !quit;
-            while( !datagram.isEmpty() && !quit)
-            {
-                while(elapsed_timer.nsecsElapsed() <= timer_period)
+                if( stream_init(source_filename,readfile_1a) )
                 {
-                    if( elapsed_timer.nsecsElapsed() <= one_third_of_timer_period )
-                        QThread::usleep( sleep_time );
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 1a");
+                    eas = true;
+                    ip1a = true;
                 }
-                socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);
-                udp_streaming_socket->waitForBytesWritten();
+                else
+                    qDebug("failed to stream");
+            }
+            else if(!ip1b)
+            {
+                if( stream_init(source_filename,readfile_1b) )
+                {
+                    qDebug("cueing stream on 1b");
+                    emit streaming(ip_num,source_filename);
+                    eas = true;
+                    ip1b = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else
+            {
+                qDebug("worker busy");
+                emit busy(ip_num,source_filename);
+            }
+            break;
+        case 2:
+            if(!ip2a)
+            {
+                if( stream_init(source_filename,readfile_2a) )
+                {
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 2a");
+                    ip2a = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else if(!ip2b)
+            {
+                if( stream_init(source_filename,readfile_2b) )
+                {
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 2b");
+                    ip2b = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else
+            {
+                qDebug("worker busy");
+                emit busy(ip_num,source_filename);
+            }
+            break;
+        case 3:
+            if(!ip3a)
+            {
+                if( stream_init(source_filename,readfile_3a) )
+                {
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 3a");
+                    ip3a = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else if(!ip3b)
+            {
+                if( stream_init(source_filename,readfile_3b) )
+                {
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 3b");
+                    ip3b = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else
+            {
+                qDebug("worker busy");
+                emit busy(ip_num,source_filename);
+            }
+            break;
+        case 4:
+            if(!ip4a)
+            {
+                if( stream_init(source_filename,readfile_4a) )
+                {
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 4a");
+                    ip4a = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else if(!ip4b)
+            {
+                if( stream_init(source_filename,readfile_4b) )
+                {
+                    emit streaming(ip_num,source_filename);
+                    qDebug("cueing stream on 4b");
+                    ip4b = true;
+                }
+                else
+                    qDebug("failed to stream");
+            }
+            else
+            {
+                qDebug("worker busy");
+                emit busy(ip_num,source_filename);
+            }
+            break;
+    }
 
-                elapsed_timer.restart();
-                //qDebug()<< socket_state;
-                if(socket_state!=(188*pkts_per_dgm))
-                {
-                    qDebug("error, trying to resend");
-                    while ( socket_state == -1 )
-                    {
-                        socket_state = udp_streaming_socket->writeDatagram( datagram.data() , datagram.size() ,stream_addr , stream_port);
-                        udp_streaming_socket->waitForBytesWritten();
-                        QThread::usleep(1);
-                    }
-                }
-                emit datagram_sent(datagram);
-                read_datagram();
-            }
-            readfile.close();
-            udp_streaming_socket->close();
-            log("finished stream");
-        }
 }
 
 void Worker::log(QString logdata)

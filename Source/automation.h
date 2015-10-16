@@ -57,6 +57,7 @@ public:
     ~Automation();
     void run_schedule();
     void load_schedule(QString schfile);
+    void stream_file(QString ts_file,QHostAddress address,quint16 port);
     QList<QString> check_schedule();
     void load_config();
     int comport;
@@ -80,7 +81,8 @@ public slots:
     void init_mux_control();
     void restart_mux_control();
     void kill_ffmpeg();
-    void start_stream(QHostAddress stream_addr, quint16, QString sourcefile);
+    void start_stream(int ip_port);
+    void cue_stream(int ip_port,QString sourcefile);
     void restart_eas_engine();
     void init_ring_detect();
     void close_ring_detect();

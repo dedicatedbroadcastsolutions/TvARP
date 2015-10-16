@@ -47,12 +47,10 @@ Automation::Automation(QObject *parent) :
 
     mpeg_stream = new stream(this);
     connect(mpeg_stream,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
-    connect(mpeg_stream,SIGNAL(get_bitrate(QString)),this,SLOT(get_bitrate(QString)),Qt::DirectConnection);
     check_timer= new QTimer(this);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
     connect(this,SIGNAL(stream_eas(QHostAddress,quint16,QString)),this,SLOT(start_stream(QHostAddress,quint16,QString)));
-    connect(this,SIGNAL(bitrate(int)),mpeg_stream,SLOT(set_bitrate(int)));
     ffmpeg = new FFmpeg(this);
     connect(ffmpeg,SIGNAL(ffmpeg_stdout(QString)),this,SLOT(encoder_output(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_status(QString)),this,SLOT(streaming_status(QString)));
@@ -121,7 +119,9 @@ void Automation::station_id()
     id_file = QFileInfo(settings.value("ID File").toString().prepend("./Local Video/")).absoluteFilePath();
     stream_addr.setAddress( settings.value("EAS Stream Address").toString() );
     stream_port = settings.value("EAS Stream Port").toInt();
-    mpeg_stream->stream_start(stream_addr,stream_port,id_file);
+    // send ID config
+    cue_stream(1,id_file);
+    // start_stream(ip_port)
 }
 
 void Automation::close_ring_detect()
@@ -140,9 +140,16 @@ void Automation::restart_eas_engine()
     init_ring_detect();
 }
 
-void Automation::start_stream(QHostAddress stream_addr,quint16 stream_port,QString sourcefile)
+void Automation::start_stream(int ip_port)
 {
-    mpeg_stream->stream_start(stream_addr,stream_port,sourcefile);
+    qDebug("automation is starting the stream");
+    mpeg_stream->stream_start(ip_port);
+}
+
+void Automation::cue_stream(int ip_port, QString sourcefile)
+{
+    qDebug("automation is cueing the stream");
+    mpeg_stream->stream_cue(ip_port,sourcefile);
 }
 
 void Automation::init_ring_detect()
