@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1062</width>
-    <height>584</height>
+    <width>1063</width>
+    <height>621</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,7 +31,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>0</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -39,595 +39,33 @@
       <property name="documentMode">
        <bool>false</bool>
       </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
         <string>Schedule</string>
        </attribute>
       </widget>
-      <widget class="QWidget" name="tab_2">
-       <attribute name="title">
-        <string>EAS</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="title">
-             <string>EAS Configuration</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_3">
-             <item row="1" column="6">
-              <widget class="QSpinBox" name="crossbar_pin">
-               <property name="value">
-                <number>1</number>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="4">
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>Audio Input Device</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="4">
-              <widget class="QComboBox" name="eas_audio_device">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="editable">
-                <bool>true</bool>
-               </property>
-               <item>
-                <property name="text">
-                 <string>USB Audio Device</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Line (USB EMP Audio Device)</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Line (2- USB EMP Audio Device)</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="0" column="8">
-              <widget class="QPushButton" name="test_eas">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="text">
-                <string>Test EAS Stream</string>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="7">
-              <widget class="QPushButton" name="config_eas">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="text">
-                <string>Detailed Config</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="3">
-              <widget class="QComboBox" name="eas_video_device">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="editable">
-                <bool>true</bool>
-               </property>
-               <item>
-                <property name="text">
-                 <string>USB 2861 Device</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>WDM 2861 Capture</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="1" column="8">
-              <widget class="QPushButton" name="restart_eas">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="text">
-                <string>Restart EAS Engine</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="7">
-              <widget class="QPushButton" name="get_input_devices">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="text">
-                <string>Detect Input Devices</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>Port:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>Output Address:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string>Video Input Device</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QSpinBox" name="eas_stream_port">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>75</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="minimum">
-                <number>1024</number>
-               </property>
-               <property name="maximum">
-                <number>49151</number>
-               </property>
-               <property name="value">
-                <number>1234</number>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="eas_stream_address">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="inputMask">
-                <string>000.000.000.000;_</string>
-               </property>
-               <property name="text">
-                <string>239.000.000.220</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QComboBox" name="eas_comport">
-               <property name="editable">
-                <bool>true</bool>
-               </property>
-               <item>
-                <property name="text">
-                 <string>COM6</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_18">
-               <property name="text">
-                <string>EAS Ring Detect</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="5">
-              <widget class="QRadioButton" name="crossbar_enable">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="text">
-                <string>Crossbar Pin</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-               <property name="autoExclusive">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="5">
-              <widget class="QRadioButton" name="show_vmon">
-               <property name="text">
-                <string>Show Video Monitor</string>
-               </property>
-               <property name="autoExclusive">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="6">
-              <widget class="QRadioButton" name="capture">
-               <property name="text">
-                <string>Capture</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-               <property name="autoExclusive">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <property name="spacing">
-             <number>10</number>
-            </property>
-            <item>
-             <widget class="QGroupBox" name="groupBox_3">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>300</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>350</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Input Preview</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout">
-               <item>
-                <widget class="QGroupBox" name="groupBox_7">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string/>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="flat">
-                  <bool>false</bool>
-                 </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_2">
-                  <property name="spacing">
-                   <number>0</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QWidget" name="widget" native="true">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>176</width>
-                      <height>120</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>176</width>
-                      <height>120</height>
-                     </size>
-                    </property>
-                    <property name="autoFillBackground">
-                     <bool>false</bool>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(50,50, 50);</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_20">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Ring Detect Status</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QTextBrowser" name="eas_detect">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="baseSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="groupBox_2">
-              <property name="minimumSize">
-               <size>
-                <width>500</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Output</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <layout class="QGridLayout" name="gridLayout">
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>5</number>
-               </property>
-               <property name="bottomMargin">
-                <number>5</number>
-               </property>
-               <property name="horizontalSpacing">
-                <number>0</number>
-               </property>
-               <property name="verticalSpacing">
-                <number>2</number>
-               </property>
-               <item row="3" column="0">
-                <widget class="QTextBrowser" name="encoder_display">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>Encoder Output</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0">
-                <widget class="QLabel" name="label_7">
-                 <property name="text">
-                  <string>TvARP Status</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_6">
-                 <property name="text">
-                  <string>Mux Output</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QTextEdit" name="mux_log_display">
-                 <property name="verticalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAsNeeded</enum>
-                 </property>
-                 <property name="autoFormatting">
-                  <set>QTextEdit::AutoAll</set>
-                 </property>
-                 <property name="readOnly">
-                  <bool>true</bool>
-                 </property>
-                 <property name="acceptRichText">
-                  <bool>true</bool>
-                 </property>
-                 <property name="textInteractionFlags">
-                  <set>Qt::NoTextInteraction</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0">
-                <widget class="QTextBrowser" name="stream_status_display">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="baseSize">
-                  <size>
-                   <width>176</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
-        <string>Mux Setup</string>
+        <string>Settings</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_9">
-        <item row="5" column="0" colspan="2">
-         <widget class="QTextEdit" name="mux_log_display_2">
-          <property name="verticalScrollBarPolicy">
-           <enum>Qt::ScrollBarAlwaysOn</enum>
-          </property>
-          <property name="autoFormatting">
-           <set>QTextEdit::AutoAll</set>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-          <property name="acceptRichText">
-           <bool>true</bool>
-          </property>
-          <property name="textInteractionFlags">
-           <set>Qt::NoTextInteraction</set>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0" colspan="2">
-         <widget class="QLabel" name="label_19">
-          <property name="text">
-           <string>Mux Output</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0" rowspan="2">
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0" rowspan="2">
          <widget class="QGroupBox" name="groupBox_5">
           <property name="title">
-           <string>Settings</string>
+           <string>Mux Settings</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>Use Mux Output:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2" colspan="2">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>For EAS Alerts</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
+           <item row="4" column="2">
             <widget class="QComboBox" name="mux_out_port">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <item>
               <property name="text">
                <string>ASI-1</string>
@@ -670,11 +108,37 @@
              </item>
             </widget>
            </item>
-           <item row="2" column="0" colspan="3">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Control Address</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Port:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
             <widget class="QLineEdit" name="mux_ctrl_addr">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>95</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="maximumSize">
               <size>
-               <width>190</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
@@ -684,10 +148,40 @@
              <property name="text">
               <string>192.168.000.150</string>
              </property>
+             <property name="maxLength">
+              <number>15</number>
+             </property>
             </widget>
            </item>
-           <item row="2" column="3">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="mux_advanced">
+             <property name="text">
+              <string>Advanced Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Mux Debug on:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Use Mux Output:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
             <widget class="QSpinBox" name="mux_ctrl_port">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="maximumSize">
               <size>
                <width>75</width>
@@ -705,29 +199,14 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0" colspan="3">
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>Mux Control Address</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>Port:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_16">
-             <property name="text">
-              <string>Mux Debug on:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
+           <item row="5" column="2">
             <widget class="QComboBox" name="mux_debug_comport">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="editable">
               <bool>true</bool>
              </property>
@@ -738,21 +217,7 @@
              </item>
             </widget>
            </item>
-           <item row="5" column="3">
-            <widget class="QPushButton" name="update_mux_settings">
-             <property name="text">
-              <string>Save Changes</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="restore_mux_defaults">
-             <property name="text">
-              <string>Restore Defaults</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
+           <item row="0" column="2">
             <widget class="QPushButton" name="set_mux_defaults">
              <property name="enabled">
               <bool>false</bool>
@@ -762,23 +227,317 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QRadioButton" name="mux_advanced">
+           <item row="2" column="3">
+            <widget class="QPushButton" name="pushButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="text">
-              <string>Advanced Mode</string>
+              <string>Config Channels</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Config IP Ports</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>For EAS Alerts</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QPushButton" name="update_mux_settings">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Save Changes</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="restore_mux_defaults">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Restore Defaults</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="2" column="1" rowspan="2">
+        <item row="0" column="1" rowspan="2">
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="title">
+           <string>EAS Settings</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="5" column="2" colspan="3">
+            <widget class="QPushButton" name="restart_eas">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Restart EAS Engine</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Video Input Device</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QPushButton" name="test_eas">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Test EAS Stream</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Port:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QSpinBox" name="crossbar_pin">
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="comboBox_8">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>IP1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IP2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IP3</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IP4</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Test</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="5">
+            <widget class="QComboBox" name="eas_audio_device">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>USB Audio Device</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Line (USB EMP Audio Device)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Line (2- USB EMP Audio Device)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="2" colspan="2">
+            <widget class="QRadioButton" name="capture">
+             <property name="text">
+              <string>Capture</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Audio Input Device</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QComboBox" name="eas_comport">
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>COM1</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="3" colspan="2">
+            <widget class="QRadioButton" name="crossbar_enable">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Crossbar Pin</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" colspan="3">
+            <widget class="QPushButton" name="get_input_devices">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Detect Input Devices</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="5">
+            <widget class="QComboBox" name="eas_video_device">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>USB 2861 Device</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>WDM 2861 Capture</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="2">
          <widget class="QGroupBox" name="groupBox_6">
           <property name="title">
            <string>Mux Commands</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_10">
-           <item row="0" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
             <widget class="QRadioButton" name="ch1">
              <property name="text">
               <string>3ABN English</string>
@@ -791,7 +550,7 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="2">
+           <item row="0" column="1">
             <widget class="QRadioButton" name="ch2">
              <property name="text">
               <string>Proclaim</string>
@@ -804,7 +563,7 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="3">
+           <item row="0" column="2" colspan="2">
             <widget class="QRadioButton" name="ch3">
              <property name="text">
               <string>Dare to Dream</string>
@@ -833,7 +592,7 @@
            <item row="1" column="0">
             <widget class="QRadioButton" name="ch5">
              <property name="text">
-              <string>3ABN RD</string>
+              <string>3ABN Radio</string>
              </property>
              <property name="checked">
               <bool>true</bool>
@@ -843,7 +602,7 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="2">
+           <item row="1" column="1">
             <widget class="QRadioButton" name="ch6">
              <property name="text">
               <string>3ABN RL</string>
@@ -856,7 +615,7 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="3">
+           <item row="1" column="2" colspan="2">
             <widget class="QRadioButton" name="ch7">
              <property name="text">
               <string>Radio 74</string>
@@ -872,7 +631,7 @@
            <item row="1" column="4">
             <widget class="QRadioButton" name="ch8">
              <property name="text">
-              <string>Test Channel 8</string>
+              <string>Local</string>
              </property>
              <property name="checked">
               <bool>false</bool>
@@ -882,8 +641,20 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="0" colspan="3">
+           <item row="2" column="0" colspan="2">
             <widget class="QPushButton" name="send_eas_config">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="text">
               <string>Send EAS Config Start</string>
              </property>
@@ -891,13 +662,103 @@
            </item>
            <item row="2" column="3" colspan="2">
             <widget class="QPushButton" name="revert_eas_config">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="text">
               <string>Send EAS Config End</string>
              </property>
             </widget>
            </item>
+           <item row="2" column="5">
+            <widget class="QPushButton" name="ad_insert">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Ad Splice Insert</string>
+             </property>
+            </widget>
+           </item>
            <item row="3" column="0">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>Splice Chan</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_42">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Ad Port</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Ad Program</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QRadioButton" name="radioButton_7">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Vid PID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QLabel" name="label_43">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Audio PID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
             <widget class="QComboBox" name="comboBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <item>
               <property name="text">
                <string>3ABN English</string>
@@ -940,305 +801,559 @@
              </item>
             </widget>
            </item>
-           <item row="3" column="1" colspan="2">
-            <widget class="QPushButton" name="ad_insert">
-             <property name="text">
-              <string>Ad Splice Insert</string>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="spinBox_5">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
              </property>
             </widget>
            </item>
-           <item row="3" column="3" colspan="2">
+           <item row="4" column="2">
+            <widget class="QSpinBox" name="spinBox_4">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QSpinBox" name="spinBox_6">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QSpinBox" name="spinBox_7">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="5">
             <widget class="QPushButton" name="ad_return_to_network">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
              <property name="text">
-              <string>Ad Splice Return to Network</string>
+              <string>End Splice</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_14">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Streaming Test</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_55">
+             <property name="text">
+              <string>Output Port:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_56">
+             <property name="text">
+              <string>File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QPushButton" name="inputfile_browse_3">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Browse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="text">
+              <string>Cue Stream</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QComboBox" name="comboBox_9">
+             <item>
+              <property name="text">
+               <string>IP1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IP2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IP3</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IP4</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Test</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="4">
+            <widget class="QLineEdit" name="test_filename_2"/>
+           </item>
+           <item row="3" column="5">
+            <widget class="QPushButton" name="start_stream_2">
+             <property name="text">
+              <string>Start Stream</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>MPEG TS @ 4000kbps</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Station ID:</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="5" column="0">
+            <widget class="QRadioButton" name="ch5_2">
+             <property name="text">
+              <string>3ABN RD</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QRadioButton" name="ch6_2">
+             <property name="text">
+              <string>3ABN RL</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>File:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="4">
+            <widget class="QLineEdit" name="station_id_filename">
+             <property name="text">
+              <string>station_id.ts</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Station ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QRadioButton" name="ch1_2">
+             <property name="text">
+              <string>3ABN English</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QRadioButton" name="ch2_2">
+             <property name="text">
+              <string>Proclaim</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="id_browse">
+             <property name="text">
+              <string>Browse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_2">
+             <property name="text">
+              <string>K33EJ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QSpinBox" name="spinBox_2">
+             <property name="minimum">
+              <number>2</number>
+             </property>
+             <property name="maximum">
+              <number>50</number>
+             </property>
+             <property name="value">
+              <number>33</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Channel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string># Sub Chs</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QSpinBox" name="spinBox_3">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>8</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="test_station_ID">
+             <property name="text">
+              <string>Send Station ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QRadioButton" name="ch3_2">
+             <property name="text">
+              <string>Dare to Dream</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QRadioButton" name="ch7_2">
+             <property name="text">
+              <string>Radio 74</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QRadioButton" name="ch4_2">
+             <property name="text">
+              <string>Latino</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QRadioButton" name="ch8_2">
+             <property name="text">
+              <string>Local</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QPushButton" name="send_ID_config">
+             <property name="text">
+              <string>ID Config Start</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="4">
+            <widget class="QPushButton" name="revert_ID_config">
+             <property name="text">
+              <string>ID Config End</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="3">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Must be MPEG 2/AC3 in MPEG TS @ 4000kbps muxrate</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="2" rowspan="3">
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tabWidgetPage1">
+           <attribute name="title">
+            <string>EAS/Stream/Mux</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_46">
+              <property name="text">
+               <string>EAS Trigger</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="eas_detect">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_45">
+              <property name="text">
+               <string>Stream</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="stream_status_display">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>176</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>Mux Status</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="mux_log_display_2">
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOn</enum>
+              </property>
+              <property name="autoFormatting">
+               <set>QTextEdit::AutoAll</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="acceptRichText">
+               <bool>true</bool>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::NoTextInteraction</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>Encoder/Mux</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Mux Output</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="mux_log_display">
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAsNeeded</enum>
+              </property>
+              <property name="autoFormatting">
+               <set>QTextEdit::AutoAll</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="acceptRichText">
+               <bool>true</bool>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::NoTextInteraction</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Encoder Output</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="encoder_display">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
        </layout>
-      </widget>
-      <widget class="QWidget" name="channls">
-       <attribute name="title">
-        <string>Channel Setup</string>
-       </attribute>
-       <widget class="QGroupBox" name="groupBox_12">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>214</width>
-          <height>207</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Mux IP Input Ports</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_15">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_46">
-           <property name="text">
-            <string>Port 6: IP 1</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="label_45">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLineEdit" name="eas_stream_address_2">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="inputMask">
-            <string>000.000.000.000;_</string>
-           </property>
-           <property name="text">
-            <string>239.000.000.220</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QSpinBox" name="eas_stream_port_2">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>75</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="minimum">
-            <number>1024</number>
-           </property>
-           <property name="maximum">
-            <number>49151</number>
-           </property>
-           <property name="value">
-            <number>1234</number>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_48">
-           <property name="text">
-            <string>Port 7: IP 2</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="label_47">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLineEdit" name="eas_stream_address_3">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="inputMask">
-            <string>000.000.000.000;_</string>
-           </property>
-           <property name="text">
-            <string>239.000.000.220</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QSpinBox" name="eas_stream_port_3">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>75</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="minimum">
-            <number>1024</number>
-           </property>
-           <property name="maximum">
-            <number>49151</number>
-           </property>
-           <property name="value">
-            <number>1234</number>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_52">
-           <property name="text">
-            <string>Port 8: IP 3</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLabel" name="label_51">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLineEdit" name="eas_stream_address_4">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="inputMask">
-            <string>000.000.000.000;_</string>
-           </property>
-           <property name="text">
-            <string>239.000.000.220</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QSpinBox" name="eas_stream_port_4">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>75</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="minimum">
-            <number>1024</number>
-           </property>
-           <property name="maximum">
-            <number>49151</number>
-           </property>
-           <property name="value">
-            <number>1234</number>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_50">
-           <property name="text">
-            <string>Port 9: IP 4</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QLabel" name="label_49">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLineEdit" name="eas_stream_address_5">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="inputMask">
-            <string>000.000.000.000;_</string>
-           </property>
-           <property name="text">
-            <string>239.000.000.220</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
-          <widget class="QSpinBox" name="eas_stream_port_5">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>75</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="minimum">
-            <number>1024</number>
-           </property>
-           <property name="maximum">
-            <number>49151</number>
-           </property>
-           <property name="value">
-            <number>1234</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_13">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>80</y>
-          <width>281</width>
-          <height>271</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Channels</string>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
-        <string>Station ID and Email Config</string>
+        <string>Email Logs</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_12">
         <item row="0" column="1" rowspan="2">
@@ -1305,213 +1420,7 @@
           </layout>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QGroupBox" name="groupBox_8">
-          <property name="title">
-           <string>Station ID:</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_11">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_21">
-             <property name="text">
-              <string>Station ID File:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="4">
-            <widget class="QLineEdit" name="station_id_filename">
-             <property name="text">
-              <string>station_id.ts</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="4" colspan="2">
-            <widget class="QPushButton" name="id_browse">
-             <property name="text">
-              <string>Browse</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>Station ID</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3" colspan="2">
-            <widget class="QLabel" name="label_10">
-             <property name="text">
-              <string>Channel</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QLabel" name="label_11">
-             <property name="text">
-              <string># Sub Chs</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" colspan="3">
-            <widget class="QLineEdit" name="lineEdit_2">
-             <property name="text">
-              <string>K33EJ</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3" colspan="2">
-            <widget class="QSpinBox" name="spinBox_2">
-             <property name="minimum">
-              <number>2</number>
-             </property>
-             <property name="maximum">
-              <number>50</number>
-             </property>
-             <property name="value">
-              <number>33</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="spinBox_3">
-             <property name="minimum">
-              <number>1</number>
-             </property>
-             <property name="value">
-              <number>7</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QRadioButton" name="ch1_2">
-             <property name="text">
-              <string>3ABN English</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QRadioButton" name="ch2_2">
-             <property name="text">
-              <string>Proclaim</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2" colspan="2">
-            <widget class="QRadioButton" name="ch3_2">
-             <property name="text">
-              <string>Dare to Dream</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="4">
-            <widget class="QRadioButton" name="ch4_2">
-             <property name="text">
-              <string>Latino</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QPushButton" name="send_ID_config">
-             <property name="text">
-              <string>ID Config Start</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QRadioButton" name="ch5_2">
-             <property name="text">
-              <string>3ABN RD</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QRadioButton" name="ch6_2">
-             <property name="text">
-              <string>3ABN RL</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2" colspan="2">
-            <widget class="QRadioButton" name="ch7_2">
-             <property name="text">
-              <string>Radio 74</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="4">
-            <widget class="QRadioButton" name="ch8_2">
-             <property name="text">
-              <string>Test Channel 8</string>
-             </property>
-             <property name="checked">
-              <bool>false</bool>
-             </property>
-             <property name="autoExclusive">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QPushButton" name="revert_ID_config">
-             <property name="text">
-              <string>ID Config End</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QPushButton" name="test_station_ID">
-             <property name="text">
-              <string>Send Station ID</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="0" column="0">
+        <item row="0" column="0" rowspan="2">
          <widget class="QGroupBox" name="groupBox_4">
           <property name="enabled">
            <bool>true</bool>
@@ -1578,7 +1487,7 @@
               <string>use comma to separate multiple recipients</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignHCenter|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -1659,6 +1568,29 @@
             <widget class="QLabel" name="label_9">
              <property name="text">
               <string>Send Email Logs For:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QRadioButton" name="radioButton_8">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Program Error</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QRadioButton" name="radioButton_9">
+             <property name="text">
+              <string>Timeslot Verification</string>
              </property>
             </widget>
            </item>
@@ -1930,335 +1862,6 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_4">
-       <attribute name="title">
-        <string>Streaming Test</string>
-       </attribute>
-       <widget class="QGroupBox" name="groupBox_10">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>141</y>
-          <width>507</width>
-          <height>201</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Mux Commands</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_13">
-         <item row="0" column="2">
-          <widget class="QRadioButton" name="ch2_3">
-           <property name="text">
-            <string>Proclaim</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QRadioButton" name="ch3_3">
-           <property name="text">
-            <string>Dare to Dream</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0" colspan="2">
-          <widget class="QRadioButton" name="ch1_3">
-           <property name="text">
-            <string>3ABN English</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="QRadioButton" name="ch4_3">
-           <property name="text">
-            <string>Latino</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QRadioButton" name="ch5_3">
-           <property name="text">
-            <string>3ABN RD</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QRadioButton" name="ch6_3">
-           <property name="text">
-            <string>3ABN RL</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QRadioButton" name="ch7_3">
-           <property name="text">
-            <string>Radio 74</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="4">
-          <widget class="QRadioButton" name="ch8_3">
-           <property name="text">
-            <string>Test Channel 8</string>
-           </property>
-           <property name="checked">
-            <bool>false</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0" colspan="3">
-          <widget class="QPushButton" name="send_eas_config_2">
-           <property name="text">
-            <string>Send EAS Config Start</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="3" colspan="2">
-          <widget class="QPushButton" name="revert_eas_config_2">
-           <property name="text">
-            <string>Send EAS Config End</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QComboBox" name="comboBox_6">
-           <item>
-            <property name="text">
-             <string>3ABN English</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Proclaim</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Dare to Dream</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Latino</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>3ABN Radio</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Latino Radio</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Radio 74</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Test Ch 8</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="5" column="1" colspan="2">
-          <widget class="QPushButton" name="ad_insert_2">
-           <property name="text">
-            <string>Ad Splice Insert</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3" colspan="2">
-          <widget class="QPushButton" name="ad_return_to_network_2">
-           <property name="text">
-            <string>Ad Splice Return to Network</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_11">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>441</width>
-          <height>126</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Streaming Commands</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_14">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_43">
-           <property name="text">
-            <string>File</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="3">
-          <widget class="QLineEdit" name="test_filename"/>
-         </item>
-         <item row="1" column="3" rowspan="2">
-          <widget class="QPushButton" name="inputfile_browse_2">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="text">
-            <string>Browse</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0" rowspan="2">
-          <widget class="QLabel" name="label_42">
-           <property name="text">
-            <string>Output Address:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1" rowspan="2">
-          <widget class="QLabel" name="label_41">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QLabel" name="label_44">
-           <property name="text">
-            <string>Bitrate (kbps)</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLineEdit" name="test_stream_address">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="inputMask">
-            <string>000.000.000.000;_</string>
-           </property>
-           <property name="text">
-            <string>239.000.000.220</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QSpinBox" name="test_stream_port">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>75</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="minimum">
-            <number>1024</number>
-           </property>
-           <property name="maximum">
-            <number>49151</number>
-           </property>
-           <property name="value">
-            <number>1234</number>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2">
-          <widget class="QSpinBox" name="test_bitrate">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="maximum">
-            <number>19000</number>
-           </property>
-           <property name="value">
-            <number>4000</number>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QPushButton" name="pushButton">
-           <property name="text">
-            <string>Cue Stream</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="3">
-          <widget class="QPushButton" name="start_stream">
-           <property name="text">
-            <string>Start Stream</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
      </widget>
     </item>
    </layout>
@@ -2268,7 +1871,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1062</width>
+     <width>1063</width>
      <height>21</height>
     </rect>
    </property>
@@ -2360,56 +1963,13 @@
   <tabstop>browseBtn</tabstop>
   <tabstop>msg</tabstop>
   <tabstop>sendBtn</tabstop>
-  <tabstop>eas_stream_address</tabstop>
-  <tabstop>eas_comport</tabstop>
-  <tabstop>crossbar_enable</tabstop>
-  <tabstop>show_vmon</tabstop>
-  <tabstop>capture</tabstop>
-  <tabstop>eas_detect</tabstop>
-  <tabstop>encoder_display</tabstop>
-  <tabstop>mux_log_display</tabstop>
-  <tabstop>stream_status_display</tabstop>
-  <tabstop>mux_log_display_2</tabstop>
-  <tabstop>mux_out_port</tabstop>
   <tabstop>mux_ctrl_addr</tabstop>
-  <tabstop>mux_ctrl_port</tabstop>
-  <tabstop>mux_debug_comport</tabstop>
-  <tabstop>update_mux_settings</tabstop>
-  <tabstop>restore_mux_defaults</tabstop>
-  <tabstop>set_mux_defaults</tabstop>
   <tabstop>mux_advanced</tabstop>
   <tabstop>ch1</tabstop>
-  <tabstop>ch2</tabstop>
-  <tabstop>ch3</tabstop>
-  <tabstop>ch4</tabstop>
   <tabstop>ch5</tabstop>
-  <tabstop>ch6</tabstop>
-  <tabstop>ch7</tabstop>
-  <tabstop>ch8</tabstop>
   <tabstop>send_eas_config</tabstop>
   <tabstop>revert_eas_config</tabstop>
-  <tabstop>comboBox</tabstop>
-  <tabstop>ad_insert</tabstop>
   <tabstop>ad_return_to_network</tabstop>
-  <tabstop>eas_audio_device</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>config_eas</tabstop>
-  <tabstop>crossbar_pin</tabstop>
-  <tabstop>eas_video_device</tabstop>
-  <tabstop>restart_eas</tabstop>
-  <tabstop>eas_stream_port</tabstop>
-  <tabstop>get_input_devices</tabstop>
-  <tabstop>send_ID_config</tabstop>
-  <tabstop>revert_ID_config</tabstop>
-  <tabstop>ch8_2</tabstop>
-  <tabstop>ch7_2</tabstop>
-  <tabstop>ch6_2</tabstop>
-  <tabstop>ch5_2</tabstop>
-  <tabstop>ch4_2</tabstop>
-  <tabstop>ch3_2</tabstop>
-  <tabstop>ch2_2</tabstop>
-  <tabstop>ch1_2</tabstop>
-  <tabstop>test_station_ID</tabstop>
   <tabstop>lineEdit_11</tabstop>
   <tabstop>inputfile_browse</tabstop>
   <tabstop>ingest_file</tabstop>
@@ -2424,13 +1984,7 @@
   <tabstop>plainTextEdit_3</tabstop>
   <tabstop>comboBox_4</tabstop>
   <tabstop>comboBox_5</tabstop>
-  <tabstop>spinBox_3</tabstop>
-  <tabstop>id_browse</tabstop>
-  <tabstop>lineEdit_2</tabstop>
-  <tabstop>station_id_filename</tabstop>
-  <tabstop>spinBox_2</tabstop>
   <tabstop>file</tabstop>
-  <tabstop>test_eas</tabstop>
  </tabstops>
  <resources>
   <include location="systray.qrc"/>

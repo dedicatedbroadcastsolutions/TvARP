@@ -187,16 +187,6 @@ void MainWindow::readSettings()
     else
         settings.setValue("Mux Debug Comport", ui->mux_debug_comport->currentText());
 
-    if( settings.contains("EAS Stream Address") )
-        ui->eas_stream_address->setText( settings.value("EAS Stream Address").toString() );
-    else
-        settings.setValue("EAS Stream Address", ui->mux_ctrl_addr->text() );
-
-    if( settings.contains("EAS Stream Port") )
-        ui->eas_stream_port->setValue( settings.value("EAS Stream Port").toInt() );
-    else
-        settings.setValue("EAS Stream Port", ui->mux_ctrl_port->value());
-
     if( settings.contains("eas crossbar enable") )
         ui->crossbar_enable->setChecked( settings.value("eas crossbar enable").toBool() );
     else
@@ -270,8 +260,6 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_restart_eas_clicked()
 {
-    settings.setValue( "EAS Stream Address",ui->eas_stream_address->text());
-    settings.setValue( "EAS Stream Port" ,ui->eas_stream_port->value());
     settings.setValue( "eas video device",ui->eas_video_device->currentText() );
     settings.setValue( "eas audio device",ui->eas_audio_device->currentText() );
     settings.setValue( "eas comport" , ui->eas_comport->currentText());
@@ -553,9 +541,10 @@ void MainWindow::on_inputfile_browse_2_clicked()
                 tr("Open File"),
                 "Video",
                 tr("Video (*.ts);"));
-    if (!fileName.isEmpty()) {
-        ui->test_filename->setText(fileName);
-    }
+    //if (!fileName.isEmpty()) {
+        //ui->test_filename->setText(fileName);
+   // }
+    qDebug("function needs fixed");
 }
 
 void MainWindow::on_pushButton_clicked()
@@ -564,10 +553,11 @@ void MainWindow::on_pushButton_clicked()
     QHostAddress address;
     quint16 port;
     QString fname;
-    address.setAddress( ui->test_stream_address->text());
-    port = ui->test_stream_port->value();
-    fname = ui->test_filename->text();
-    automation->cue_stream(3,fname);
+    //address.setAddress( ui->test_stream_address->text());
+    //port = ui->test_stream_port->value();
+    //fname = ui->test_filename->text();
+    //automation->cue_stream(3,fname);
+    qDebug("function needs repaired");
 }
 
 void MainWindow::on_start_stream_clicked()

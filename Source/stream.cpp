@@ -43,14 +43,14 @@ stream::stream(QObject *parent) :
     worker = new Worker(1234);
     worker->moveToThread(&workerThread);
     workerThread.start(QThread::TimeCriticalPriority);
-    connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater);
-    connect(this, &stream::start_streaming , worker, &Worker::start_stream );
-    connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()));
-    connect(worker,SIGNAL(work_status(QString)),this,SLOT(worker_status(QString)));
-    connect(this,SIGNAL(start_stream_loop()),worker,SLOT(start_loop()));
-    connect(worker,SIGNAL(busy(int,QString)),this,SLOT(process_busy(int,QString)));
-    connect(worker,SIGNAL(streaming(int,QString)),this,SLOT(cancel_cue(int,QString)));
-    connect(this,SIGNAL(cue_streaming(int,QString)),worker,SLOT(cue_stream(int,QString)));
+    connect(&workerThread, &QThread::finished, worker, &QObject::deleteLater,Qt::QueuedConnection);
+    connect(this, &stream::start_streaming , worker, &Worker::start_stream,Qt::QueuedConnection );
+    connect(worker,SIGNAL(done_streaming()),this,SLOT(done_with_worker()),Qt::QueuedConnection);
+    connect(worker,SIGNAL(work_status(QString)),this,SLOT(worker_status(QString)),Qt::QueuedConnection);
+    connect(this,SIGNAL(start_stream_loop()),worker,SLOT(start_loop()),Qt::QueuedConnection);
+    connect(worker,SIGNAL(busy(int,QString)),this,SLOT(process_busy(int,QString)),Qt::QueuedConnection);
+    connect(worker,SIGNAL(streaming(int,QString)),this,SLOT(cancel_cue(int,QString)),Qt::QueuedConnection);
+    connect(this,SIGNAL(cue_streaming(int,QString)),worker,SLOT(cue_stream(int,QString)),Qt::QueuedConnection);
     emit start_stream_loop();
     log("finished log constructor");
 }
