@@ -1013,9 +1013,9 @@
           </property>
           <layout class="QGridLayout" name="gridLayout_11">
            <item row="5" column="0">
-            <widget class="QRadioButton" name="ch5_2">
+            <widget class="QRadioButton" name="id_ch5">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>3ABN RD</string>
@@ -1029,9 +1029,9 @@
             </widget>
            </item>
            <item row="5" column="1">
-            <widget class="QRadioButton" name="ch6_2">
+            <widget class="QRadioButton" name="id_ch6">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>3ABN RL</string>
@@ -1054,7 +1054,7 @@
            <item row="1" column="0" colspan="4">
             <widget class="QLineEdit" name="station_id_filename">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>station_id.ts</string>
@@ -1069,9 +1069,9 @@
             </widget>
            </item>
            <item row="4" column="0">
-            <widget class="QRadioButton" name="ch1_2">
+            <widget class="QRadioButton" name="id_ch1">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>3ABN English</string>
@@ -1085,9 +1085,9 @@
             </widget>
            </item>
            <item row="4" column="1">
-            <widget class="QRadioButton" name="ch2_2">
+            <widget class="QRadioButton" name="id_ch2">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Proclaim</string>
@@ -1163,7 +1163,7 @@
            <item row="3" column="4">
             <widget class="QPushButton" name="test_station_ID">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Send Station ID</string>
@@ -1171,9 +1171,9 @@
             </widget>
            </item>
            <item row="4" column="2">
-            <widget class="QRadioButton" name="ch3_2">
+            <widget class="QRadioButton" name="id_ch3">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Dare to Dream</string>
@@ -1187,9 +1187,9 @@
             </widget>
            </item>
            <item row="5" column="2">
-            <widget class="QRadioButton" name="ch7_2">
+            <widget class="QRadioButton" name="id_ch7">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Radio 74</string>
@@ -1203,9 +1203,9 @@
             </widget>
            </item>
            <item row="4" column="3">
-            <widget class="QRadioButton" name="ch4_2">
+            <widget class="QRadioButton" name="id_ch4">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Latino</string>
@@ -1219,9 +1219,9 @@
             </widget>
            </item>
            <item row="5" column="3">
-            <widget class="QRadioButton" name="ch8_2">
+            <widget class="QRadioButton" name="id_ch8">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>Local</string>
@@ -1237,7 +1237,7 @@
            <item row="4" column="4">
             <widget class="QPushButton" name="send_ID_config">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>ID Config Start</string>
@@ -1247,7 +1247,7 @@
            <item row="5" column="4">
             <widget class="QPushButton" name="revert_ID_config">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>ID Config End</string>

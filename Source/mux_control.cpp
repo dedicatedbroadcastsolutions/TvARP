@@ -612,3 +612,13 @@ void Mux_Control::log(QString logdata)
     emit mux_debug_status( (QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss:zzz ") + logdata + "\n") ) ;
 
 }
+
+bool Mux_Control::check_ring()
+{
+    bool ring;
+    if(mux_debug->isOpen())
+        ring = (mux_debug->pinoutSignals() & QSerialPort::RingIndicatorSignal);
+    else
+        ring=false;
+    return ring;
+}

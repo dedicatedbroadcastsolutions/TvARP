@@ -68,6 +68,14 @@ MainWindow::MainWindow(QWidget *parent) :
     eas_ch.append(5);
     eas_ch.append(6);
     eas_ch.append(7);
+    id_ch.clear();
+    id_ch.append(1);
+    id_ch.append(2);
+    id_ch.append(3);
+    id_ch.append(4);
+    id_ch.append(5);
+    id_ch.append(6);
+    id_ch.append(7);
     ui->mux_log_display->ensureCursorVisible();
     ui->mux_log_display->moveCursor(QTextCursor::End);
     ui->mux_log_display->verticalScrollBar()->setValue( ui->mux_log_display->verticalScrollBar()->maximum() );
@@ -513,7 +521,7 @@ void MainWindow::on_inputfile_browse_clicked()
         QFileDialog::getOpenFileName(
                 this,
                 tr("Open File"),
-                "Video",
+                "Local Video",
                 tr("Video (*.mp4 *.mov *.avi *.mpg *.ts);;All files (*.*)"));
     if (!fileName.isEmpty()) {
         ui->ingest_file->setText(fileName);
@@ -522,7 +530,7 @@ void MainWindow::on_inputfile_browse_clicked()
 
 void MainWindow::on_test_station_ID_clicked()
 {
-
+    automation->set_id_channels(id_ch);
     automation->station_id();
 }
 
@@ -540,7 +548,7 @@ void MainWindow::on_inputfile_browse_2_clicked()
                 this,
                 tr("Open File"),
                 "Video",
-                tr("Video (*.ts);"));
+                tr("Local Video (*.ts);"));
     if (!fileName.isEmpty()) {
         ui->test_filename->setText(fileName);
     }
@@ -560,4 +568,91 @@ void MainWindow::on_start_stream_clicked()
     int ip_port;
     ip_port = ui->test_ip_port->currentIndex()+1;
     automation->start_stream(ip_port);
+}
+
+void MainWindow::on_id_ch1_clicked(bool checked)
+{
+    if(!id_ch.contains(1)&&checked)
+        id_ch.append(1);
+    if (!checked)
+        id_ch.removeAll(1);
+}
+
+void MainWindow::on_id_ch2_clicked(bool checked)
+{
+    if(!id_ch.contains(2)&&checked)
+        id_ch.append(2);
+    if (!checked)
+        id_ch.removeAll(2);
+}
+
+void MainWindow::on_id_ch3_clicked(bool checked)
+{
+    if(!id_ch.contains(3)&&checked)
+        id_ch.append(3);
+    if (!checked)
+        id_ch.removeAll(3);
+}
+
+void MainWindow::on_id_ch4_clicked(bool checked)
+{
+    if(!id_ch.contains(4)&&checked)
+        id_ch.append(4);
+    if (!checked)
+        id_ch.removeAll(4);
+}
+
+void MainWindow::on_id_ch5_clicked(bool checked)
+{
+    if(!id_ch.contains(5)&&checked)
+        id_ch.append(5);
+    if (!checked)
+        id_ch.removeAll(5);
+}
+
+void MainWindow::on_id_ch6_clicked(bool checked)
+{
+    if(!id_ch.contains(6)&&checked)
+        id_ch.append(6);
+    if (!checked)
+        id_ch.removeAll(6);
+}
+
+void MainWindow::on_id_ch7_clicked(bool checked)
+{
+    if(!id_ch.contains(7)&&checked)
+        id_ch.append(7);
+    if (!checked)
+        id_ch.removeAll(7);
+}
+
+void MainWindow::on_id_ch8_clicked(bool checked)
+{
+    if(!id_ch.contains(8)&&checked)
+        id_ch.append(8);
+    if (!checked)
+        id_ch.removeAll(8);
+}
+
+void MainWindow::on_send_ID_config_clicked()
+{
+    automation->send_eas_config(id_ch);
+}
+
+void MainWindow::on_revert_ID_config_clicked()
+{
+    automation->revert_eas_config(id_ch);
+}
+
+void MainWindow::on_id_browse_clicked()
+{
+    QString fileName =
+        QFileDialog::getOpenFileName(
+                this,
+                tr("Open File"),
+                "Local Video",
+                tr("Video (*.mp4 *.mov *.avi *.mpg *.ts);;All files (*.*)"));
+    if (!fileName.isEmpty()) {
+        ui->station_id_filename->setText(fileName);
+    }
 }

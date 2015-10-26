@@ -47,6 +47,8 @@ struct sch_entry
     }
     QByteArray play_cmd;
     QDateTime play_time;
+    int ip_port;
+    QList<int> channels;
     QString schedule_string;
 };
 
@@ -68,8 +70,9 @@ public:
     bool show_vmon;
     QString audio_dev ;
     QString video_dev ;
-    QList<int> channels;
-
+    QList<int> eas_channels;
+    QList<int> id_channels;
+    QList<int> ad_channels;
     int mux_out_port ;
     //TS_Info *ad_ts;
 public slots:
@@ -91,11 +94,13 @@ public slots:
     void check_eas_ring();
     void capture_eas_message();
     void send_eas_message();
+    void send_eas_stream();
     void check_time();
     void video_state(int);
     void stream_eas(QString sourcefile);
     void is_open(bool);
-
+    void set_eas_channels(QList<int> ch);
+    void set_id_channels(QList<int> ch);
     void encoder_output(QString output);
     void get_bitrate(QString filename);
     void streaming_status( QString string );
@@ -105,13 +110,15 @@ public slots:
     void kill_ts_info();
     void station_id();
     void load_schedule();
+    void done_streaming(int ip_port);
+    void done_with_file(int port);
 signals:
     void encoder_done();
     void init();
     void bitrate(int bitrate);
     void event_log_output(QString);
-    void play();
-    void openFile(QString);
+    void play(int port);
+    void openFile(int , QString);
     void get_video_state();
     void mux_eas_log(QString);
     void mux_log(QString);
@@ -132,6 +139,7 @@ private:
     QTimer *load_sch;
     int ring_init;
     QList <sch_entry> schedule;  // List that contains the event schedule
+    bool ad;
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);

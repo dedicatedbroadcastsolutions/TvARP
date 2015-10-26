@@ -69,7 +69,7 @@ private:
     int eas_status_scroll_maximum;
     int stream_status_scroll_maximum;
     int ingest_status_scroll_maximum;
-    QList < int > eas_ch , ad_ch;
+    QList < int > eas_ch , ad_ch, id_ch;
     QStringList file_attachments;
 private slots:
     void sendMail();
@@ -114,6 +114,17 @@ private slots:
     void on_inputfile_browse_2_clicked();
     void on_cue_test_stream_clicked();
     void on_start_stream_clicked();
+    void on_id_ch1_clicked(bool checked);
+    void on_id_ch2_clicked(bool checked);
+    void on_id_ch3_clicked(bool checked);
+    void on_id_ch4_clicked(bool checked);
+    void on_id_ch5_clicked(bool checked);
+    void on_id_ch6_clicked(bool checked);
+    void on_id_ch7_clicked(bool checked);
+    void on_id_ch8_clicked(bool checked);
+    void on_send_ID_config_clicked();
+    void on_revert_ID_config_clicked();
+    void on_id_browse_clicked();
 };
 
 #endif // MAINWINDOW_H

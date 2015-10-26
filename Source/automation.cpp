@@ -65,11 +65,22 @@ Automation::Automation(QObject *parent) :
     connect(this,SIGNAL(mux_eas_log(QString)),this,SLOT(save_log(QString)));
     connect(this,SIGNAL(stream_status(QString)),this,SLOT(save_log(QString)));
     connect(this,SIGNAL(eas_status(QString)),this,SLOT(save_log(QString)));
-
+    connect(this,SIGNAL(openFile(int,QString)),this,SLOT(cue_stream(int,QString)));
+    connect(this,SIGNAL(play(int)),this,SLOT(start_stream(int)));
+    connect(mpeg_stream,SIGNAL(done_with_file(int)),this,SLOT(done_with_file(int)));
     load_sch= new QTimer(this);
     connect(load_sch, SIGNAL(timeout()),this,SLOT(load_schedule()));
     load_sch->setInterval(1000);
     load_sch->start();
+
+    id_channels.clear();
+    id_channels.append(1);
+    id_channels.append(2);
+    id_channels.append(3);
+    id_channels.append(4);
+    id_channels.append(5);
+    id_channels.append(6);
+    id_channels.append(7);
 }
 
 Automation::~Automation()
@@ -78,6 +89,11 @@ Automation::~Automation()
     if(!share_comport)
         if( serial->isOpen() )
             close_ring_detect();
+}
+
+void Automation::done_with_file(int port)
+{
+    ad_splice_return_to_network(ad_channels);
 }
 
 void Automation::kill_ffmpeg()
@@ -119,10 +135,22 @@ void Automation::ingest_display(QString string)
 void Automation::station_id()
 {
     QString id_file;
-    id_file = QFileInfo(settings.value("ID File").toString().prepend("./Local Video/")).absoluteFilePath();
+    d2mux->eas_insert(id_channels);
+    id_file = settings.value("ID File").toString();
     cue_stream(1,id_file);
     QCoreApplication::processEvents(QEventLoop::AllEvents,100);
     start_stream(1);
+}
+
+void Automation::done_streaming(int ip_port)
+{
+
+}
+
+void Automation::set_id_channels(QList<int> ch)
+{
+    id_channels.clear();
+    id_channels = ch;
 }
 
 void Automation::close_ring_detect()
@@ -158,20 +186,25 @@ void Automation::init_ring_detect()
 {
     log_eas("Initialising Ring Detect");
     ring_init = 0;
-    if(settings.value( "eas comport" ).toString() == settings.value("Mux Debug Comport").toString())
+    if(settings.value( "eas comport" ).toString().contains(settings.value("Mux Debug Comport").toString(),Qt::CaseInsensitive))
+    {
+
+        log_eas("sharing comport");
+        qDebug("comport is the same");
         share_comport = true;
+    }
     else
         share_comport = false;
 
     QString port_num = settings.value( "eas comport" ).toString();
-    channels.clear();
-    channels.append(1);
-    channels.append(2);
-    channels.append(3);
-    channels.append(4);
-    channels.append(5);
-    channels.append(6);
-    channels.append(7);
+    eas_channels.clear();
+    eas_channels.append(1);
+    eas_channels.append(2);
+    eas_channels.append(3);
+    eas_channels.append(4);
+    eas_channels.append(5);
+    eas_channels.append(6);
+    eas_channels.append(7);
 
     eas_live=false;
     eas_test=false;
@@ -191,11 +224,17 @@ void Automation::init_ring_detect()
     log_eas("finished eas init");
 }
 
+void Automation::set_eas_channels(QList<int> ch)
+{
+    eas_channels.clear();
+    eas_channels = ch;
+}
+
 void Automation::handleError()
 {
     if(!share_comport)
     {
-        log_eas("serial error" + serial->errorString() + QString::number( serial->error() ));
+        log_eas("eas serial error" + serial->errorString() + QString::number( serial->error() ));
     }
 }
 
@@ -242,6 +281,34 @@ if(!share_comport)
         }
     }
  }
+else
+{
+    bool ring;
+    ring = d2mux->check_ring();
+    if(ring_init <= 10)
+    {
+        if(ring)
+            ring_init++;
+    }
+    else
+    {
+        if ( !(ring) && !eas_live )
+        {
+            eas_live=true;
+            log_eas("sensed ring");
+            emit eas_ring();
+        }
+        else
+        {
+            if( (ring) && eas_live )
+            {
+                eas_live=false;
+                log_eas("Stop Encoder");
+                kill_ffmpeg();
+            }
+        }
+    }
+}
 }
 
 void Automation::send_eas_message()
@@ -249,15 +316,21 @@ void Automation::send_eas_message()
     log_eas("Start EAS Encode");
     capture_eas_message();
 }
+void Automation::send_eas_stream()
+{
+    start_stream(1);
+}
 
 void Automation::send_eas_config( QList<int> channel_list )
 {
+    set_eas_channels(channel_list);
     d2mux->eas_insert(channel_list);
     log_eas("sent eas insert");
 }
 
 void Automation::revert_eas_config( QList<int> channel_list )
 {
+    set_eas_channels(channel_list);
     d2mux->revert_eas_config(channel_list);
 }
 
@@ -290,7 +363,7 @@ void Automation::capture_eas_message( )
 {
     QString inputfile,outputfile;
 
-    send_eas_config(channels);
+    send_eas_config(eas_channels);
 
     inputfile = "./Video/ew050812-004403SD-h264lb.mov";
     inputfile = QFileInfo(inputfile).absoluteFilePath();
@@ -318,7 +391,7 @@ void Automation::stream_eas(QString sourcefile)
     {
         QCoreApplication::processEvents(QEventLoop::AllEvents,100);
         qDebug("can't open file");
-        if(i<=20)
+        if(i<=500000)
             i++;
         else
         {
@@ -327,8 +400,7 @@ void Automation::stream_eas(QString sourcefile)
     }
     easfile.close();
     cue_stream(1,sourcefile);
-    QCoreApplication::processEvents(QEventLoop::AllEvents,100);
-    start_stream(1);
+    QTimer::singleShot(500,this,SLOT(send_eas_stream()));
 }
 
 void Automation::init_mux_control()
@@ -370,9 +442,12 @@ void Automation::check_time()
     {
         if(QDateTime::currentDateTime() >= schedule[0].play_time)
         {
-            //switcher->setVideoOutputChannel(settings.value("cptr").toInt());
-            qDebug("emit play");
-            emit play();
+            emit play(schedule[0].ip_port);
+            if(schedule[0].ip_port == 2)
+            {
+                ad_channels = schedule[0].channels;
+                ad_splice_insert(ad_channels);
+            }
          // Must be last
             schedule.removeAt(0);
         }
@@ -380,9 +455,10 @@ void Automation::check_time()
             if(QDateTime::currentDateTime() >= schedule[0].play_time.addSecs(-15)
                 && !isOpen)
             {
-                qDebug("emit openFile");
-                emit openFile(schedule[0].play_cmd);
                 isOpen = 1;
+                if(schedule[0].ip_port==1)
+                    d2mux->eas_insert(schedule[0].channels);
+                emit openFile(schedule[0].ip_port,schedule[0].play_cmd);
                 //switcher->restart_comport();
             }
     }
@@ -479,7 +555,9 @@ void Automation::load_schedule()
   //Declare Variables
     sch_entry load;
     QList<QString> line_input;
+    QString ch;
     QByteArray file_play;
+    bool *ok;
     QString file_name="";
     QString datetime="";
     QRegExp rx("????-??-?? ??:??:?? ??	??:??*");
@@ -524,6 +602,11 @@ void Automation::load_schedule()
         file_name.truncate(name_loc);
         file_play=file_name.toLocal8Bit();
         load.play_cmd = file_play;
+        ch = line_input[j].at(33);
+        event_log_output("scheduled on channel" + ch);
+        load.channels.append(ch.toInt(ok,10));
+        load.ip_port = 2;
+
              schedule << load;
     }
     file.close();

@@ -60,6 +60,7 @@ class Worker : public QObject
     void work_status( QString );
     void streaming(int,QString);
     void busy(int ip_num, QString source_filename );
+    void finished_file(int port);
   private slots:
 
     QByteArray read_datagram(QFile &readfile);
@@ -117,7 +118,9 @@ class stream : public QObject
     void cue_file();
     void stream_start(int ip_port);
     void stream_cue(int ip_port, QString source_filename);
+    void finished_stream(int port);
   signals:
+    void done_with_file(int port);
     void start_stream_loop();
     void done_with_stream();
     void start_streaming( int ip_port );

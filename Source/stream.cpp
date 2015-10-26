@@ -51,6 +51,7 @@ stream::stream(QObject *parent) :
     connect(worker,SIGNAL(busy(int,QString)),this,SLOT(process_busy(int,QString)),Qt::QueuedConnection);
     connect(worker,SIGNAL(streaming(int,QString)),this,SLOT(cancel_cue(int,QString)),Qt::QueuedConnection);
     connect(this,SIGNAL(cue_streaming(int,QString)),worker,SLOT(cue_stream(int,QString)),Qt::QueuedConnection);
+    connect(worker,SIGNAL(finished_file(int)),this,SLOT(finished_stream(int)));
     emit start_stream_loop();
     log("finished log constructor");
 }
@@ -66,6 +67,11 @@ stream::~stream()
         workerThread.wait();
     }
     log("Stream destructor finished");
+}
+
+void stream::finished_stream(int port)
+{
+    emit done_with_file( port);
 }
 
 void stream::cancel_cue(int ip_port, QString filename)
@@ -146,6 +152,7 @@ void stream::stream_start(int ip_port )
 void stream::stream_cue(int ip_port, QString source_filename)
 {
     qDebug() << "Cue " << source_filename << "on port " << ip_port;
+    log("cued file" + source_filename + " on port " + QString::number(ip_port));
     emit cue_streaming(ip_port,source_filename);
 }
 
@@ -249,6 +256,7 @@ void Worker::start_loop()
                 {
                     // send signal to trigger deck b after delay
                     qDebug("closing file on 1a");
+                    emit finished_file(1);
                     readfile_1a.close();
                     ip1a=false;
                     cue1a = false;
@@ -266,6 +274,7 @@ void Worker::start_loop()
                 {
                     // send signal to trigger deck a after delay
                     qDebug("closing file on 1b");
+                    emit finished_file(1);
                     readfile_1b.close();
                     ip1a=true;
                     cue1b = false;
@@ -289,6 +298,7 @@ void Worker::start_loop()
                     else
                     {
                         qDebug("closing file on 2a");
+                        emit finished_file(2);
                         readfile_2a.close();
                         ip2a=false;
                         cue2a = false;
@@ -306,6 +316,7 @@ void Worker::start_loop()
                     else
                     {
                         qDebug("closing file on 2b");
+                        emit finished_file(2);
                         readfile_2b.close();
                         ip2a=true;
                         cue2a = false;
@@ -330,6 +341,7 @@ void Worker::start_loop()
                     else
                     {
                         qDebug("closing file on 3a");
+                        emit finished_file(3);
                         readfile_3a.close();
                         ip3a=false;
                         cue3a = false;
@@ -347,6 +359,7 @@ void Worker::start_loop()
                     else
                     {
                         qDebug("closing file on 3b");
+                        emit finished_file(3);
                         readfile_3b.close();
                         ip3a=true;
                         cue3b = false;
@@ -370,6 +383,7 @@ void Worker::start_loop()
                     else
                     {
                         qDebug("closing file on 4a");
+                        emit finished_file(4);
                         readfile_4a.close();
                         ip4a=false;
                         cue4a = false;
@@ -387,6 +401,7 @@ void Worker::start_loop()
                     else
                     {
                         qDebug("closing file on 4b");
+                        emit finished_file(4);
                         readfile_4b.close();
                         ip4a=true;
                         cue4b = false;
@@ -458,7 +473,7 @@ bool Worker::stream_init(QString source_filename , QFile &readfile)
     if( readfile.open(QFile::ReadOnly) )
     {
         readfile.seek(0);
-        qDebug() << "opened file on " << readfile.fileName();
+        log("opened file on " + readfile.fileName());
         return true;
     }
     else
