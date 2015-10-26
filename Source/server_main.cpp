@@ -40,16 +40,6 @@
 #include "QDebug"
 int main(int argc, char *argv[])
 {
-
-
-#if defined(Q_OS_WIN)
-   SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, SPIF_SENDCHANGE, 0, 0);
-#endif
-
-    SystemParametersInfo(SPI_SETSCREENSAVEACTIVE,FALSE,NULL,TRUE);
-
-
-
     Q_INIT_RESOURCE(systray);
 
     QApplication a(argc, argv);

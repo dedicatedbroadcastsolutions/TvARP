@@ -34,11 +34,7 @@
 
 #include "mux_control.h"
 #include "stream.h"
-//#include "ts_info.h"
 #include "ffmpeg.h"
-//#include "fix_pcr.h"
-//#include "video_window.h"
-//#include "switcher.h"
 
 struct sch_entry
 {
@@ -94,7 +90,6 @@ public slots:
     void check_eas_ring();
     void capture_eas_message();
     void send_eas_message();
-    void send_eas_stream();
     void check_time();
     void video_state(int);
     void stream_eas(QString sourcefile);
@@ -112,6 +107,7 @@ public slots:
     void load_schedule();
     void done_streaming(int ip_port);
     void done_with_file(int port);
+    void msleep(int msec);
 signals:
     void encoder_done();
     void init();
@@ -140,6 +136,9 @@ private:
     int ring_init;
     QList <sch_entry> schedule;  // List that contains the event schedule
     bool ad;
+    bool eas_nc;
+    bool eas_ready;
+    bool eas_np;
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);

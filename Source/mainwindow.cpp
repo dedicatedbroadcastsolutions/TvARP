@@ -29,22 +29,8 @@
 ***************************************************************************
 */
 
-
 #include "mainwindow.h"
-
 #include "ui_mainwindow.h"
-//#include "com_select.h"
-//#include "live_controls.h"
-//#include "sys_tray_icon.h"
-//#include "schedule_program.h"
-
-/// Global Variables
-QString schfile="C:/remote/Videos/insert.sch";
-/// Initiate Thread
-//Schedulethread schthread;
-
-
-//QFileDialog::getOpenFileName(this,tr("Load a file"), "~", tr("Video Files (*.mpg *.mp4 *.flv *mov)"));
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

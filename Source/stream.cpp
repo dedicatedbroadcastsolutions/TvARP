@@ -175,19 +175,9 @@ void stream::log(QString logdata)
 Worker::Worker(quint16 port)
 {
 
-    int bind_state;
     packet_size = 188;
     pkts_per_dgm = 7;  // must be between 1 and 7 packets per datagram
     quit = false;
-    udp_streaming_socket = new QUdpSocket(this);
-    bind_state = udp_streaming_socket->bind(QHostAddress("192.168.0.166"),port,QAbstractSocket::DontShareAddress);
-
-    if(bind_state != true)
-    {
-        qDebug("failed to bind");
-        log("Failed to bind, change IP address to 192.168.0.166");
-    }
-
 }
 
 Worker::~Worker()
@@ -199,6 +189,15 @@ Worker::~Worker()
 
 void Worker::start_loop()
 {
+    int bind_state;
+    udp_streaming_socket = new QUdpSocket(this);
+    bind_state = udp_streaming_socket->bind(QHostAddress("192.168.0.166"),1234,QAbstractSocket::DontShareAddress);
+
+    if(bind_state != true)
+    {
+        qDebug("failed to bind");
+        log("Failed to bind, change IP address to 192.168.0.166");
+    }
     //qDebug()<< "Loop Thread ID "<< QThread::currentThreadId();
     QHostAddress ip1_address,ip2_address,ip3_address,ip4_address;
     quint16 ip1_port,ip2_port,ip3_port,ip4_port;
@@ -228,8 +227,8 @@ void Worker::start_loop()
     cue3a = false;  cue3b = false;
     cue4a = false;  cue4b = false;
     eas = false;
-    log("starting stream loop");
-    //qDebug("loop is starting");
+    if(bind_state==true)
+        log("Ready to Stream");
     elapsed_timer.start();
     while(!quit)
     {
@@ -238,7 +237,8 @@ void Worker::start_loop()
         {
             if( elapsed_timer.nsecsElapsed() <= one_third_of_timer_period )
                 QCoreApplication::processEvents(QEventLoop::AllEvents,1);
-                //QThread::usleep( sleep_time );
+            if( elapsed_timer.nsecsElapsed() <= one_third_of_timer_period )
+                QThread::usleep( sleep_time );
         }
         if(ip1)
         {

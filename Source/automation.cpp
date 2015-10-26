@@ -81,6 +81,9 @@ Automation::Automation(QObject *parent) :
     id_channels.append(5);
     id_channels.append(6);
     id_channels.append(7);
+    eas_nc = false;
+    eas_ready = false;
+    eas_np = false;
 }
 
 Automation::~Automation()
@@ -138,7 +141,7 @@ void Automation::station_id()
     d2mux->eas_insert(id_channels);
     id_file = settings.value("ID File").toString();
     cue_stream(1,id_file);
-    QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    msleep(4);
     start_stream(1);
 }
 
@@ -156,17 +159,17 @@ void Automation::set_id_channels(QList<int> ch)
 void Automation::close_ring_detect()
 {
     check_timer->stop();
-    log_eas("Ring Detect Closed");
     if(!share_comport)
         serial->close();
 }
 
 void Automation::restart_eas_engine()
 {
-    log_eas("Restarting EAS Engine");
+    if(eas_ready||eas_nc||eas_np)
+        log_eas("Restarting EAS Engine");
+    close_ring_detect();
     kill_ts_info();
     kill_ffmpeg();
-    close_ring_detect();
     init_ring_detect();
 }
 
@@ -184,7 +187,8 @@ void Automation::cue_stream(int ip_port, QString sourcefile)
 
 void Automation::init_ring_detect()
 {
-    log_eas("Initialising Ring Detect");
+    eas_nc = false;
+    //log_eas("Initialising Ring Detect");
     ring_init = 0;
     if(settings.value( "eas comport" ).toString().contains(settings.value("Mux Debug Comport").toString(),Qt::CaseInsensitive))
     {
@@ -215,13 +219,17 @@ void Automation::init_ring_detect()
         connect(serial, SIGNAL(error(QSerialPort::SerialPortError)), this, SLOT(handleError()));
         serial->setPortName(port_num);
         serial->open(QIODevice::ReadOnly);
+        if(!serial->isOpen())
+        {
+            log_eas("could not open port");
+            eas_np = true;
+        }
     }
     else
     {
         qDebug("New code goes here");
     }
     check_timer->start(1);                                               // create timer with 1 ms resolution
-    log_eas("finished eas init");
 }
 
 void Automation::set_eas_channels(QList<int> ch)
@@ -232,9 +240,22 @@ void Automation::set_eas_channels(QList<int> ch)
 
 void Automation::handleError()
 {
-    if(!share_comport)
+    int error;
+    if(serial->isOpen())
     {
-        log_eas("eas serial error" + serial->errorString() + QString::number( serial->error() ));
+        error = serial->error();
+        if(!share_comport&& !error==0)
+        {
+            switch ( error )
+            {
+                case 3:
+                    log_eas("eas ring error opening port");
+                    break;
+                default:
+                    log_eas("eas ring error: " + serial->errorString() + QString::number( error ));
+
+            }
+        }
     }
 }
 
@@ -253,7 +274,11 @@ if(!share_comport)
             }
             else
             {
-                log_eas("Ring not connected");
+                if(!eas_nc)
+                {
+                    log_eas("Ring not connected");
+                    eas_nc=true;
+                }
             }
         }
         //else
@@ -263,6 +288,11 @@ if(!share_comport)
     {
         if(serial->isOpen())
         {
+            if(!eas_ready)
+            {
+                eas_ready = true;
+                log_eas("EAS Ring Connected Initialised");
+            }
             if ( !(serial->pinoutSignals() & QSerialPort::RingIndicatorSignal) && !eas_live )
             {
                 eas_live=true;
@@ -315,10 +345,6 @@ void Automation::send_eas_message()
 {
     log_eas("Start EAS Encode");
     capture_eas_message();
-}
-void Automation::send_eas_stream()
-{
-    start_stream(1);
 }
 
 void Automation::send_eas_config( QList<int> channel_list )
@@ -389,7 +415,7 @@ void Automation::stream_eas(QString sourcefile)
     int i=0;
     while(!easfile.open(QIODevice::ReadOnly))
     {
-        QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+        msleep(500);
         qDebug("can't open file");
         if(i<=500000)
             i++;
@@ -400,7 +426,18 @@ void Automation::stream_eas(QString sourcefile)
     }
     easfile.close();
     cue_stream(1,sourcefile);
-    QTimer::singleShot(500,this,SLOT(send_eas_stream()));
+    msleep(500);
+    start_stream(1);
+}
+
+void Automation::msleep(int msec)
+{
+    QElapsedTimer timer;
+    timer.start();
+    while(timer.elapsed()<=msec)
+    {
+        QCoreApplication::processEvents(QEventLoop::AllEvents,msec);
+    }
 }
 
 void Automation::init_mux_control()
@@ -560,8 +597,8 @@ void Automation::load_schedule()
     bool *ok;
     QString file_name="";
     QString datetime="";
-    QRegExp rx("????-??-?? ??:??:?? ??	??:??*");
-    rx.setPatternSyntax(QRegExp::Wildcard);
+    QRegExp rx("....-..-.. ..:..:.. ..	..:..*");
+    //rx.setPatternSyntax(QRegExp::Wildcard);
     int name_loc=0;
 
   // Purge Existing Schedule
