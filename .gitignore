@@ -16,3 +16,4 @@ release/Schedule_and_logs/mux_log.txt
 Source/TvARP_Ingest.pro.user
 *.log
 Source/TvARP.pro.user
+release/Schedule_and_logs/TvARP.log
