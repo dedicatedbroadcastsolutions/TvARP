@@ -121,12 +121,6 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-    QFile file("Schedule_and_logs/running.config");
-    if (!file.open(QIODevice::WriteOnly))
-        return;
-    QTextStream out(&file);
-        out << 0;
-    file.close();
 }
 
 void MainWindow::browse()
