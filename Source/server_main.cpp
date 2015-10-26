@@ -40,23 +40,26 @@
 #include "QDebug"
 int main(int argc, char *argv[])
 {
-    QCoreApplication::addLibraryPath("./");
+
 
 #if defined(Q_OS_WIN)
    SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, SPIF_SENDCHANGE, 0, 0);
 #endif
 
     SystemParametersInfo(SPI_SETSCREENSAVEACTIVE,FALSE,NULL,TRUE);
-    QCoreApplication::setOrganizationName("ZCybercomputing");
-    QCoreApplication::setOrganizationDomain("3abnlocal.tv");
-    QCoreApplication::setApplicationName("TVARP");
-    QSettings settings;
+
 
 
     Q_INIT_RESOURCE(systray);
 
     QApplication a(argc, argv);
 
+    QCoreApplication::setOrganizationName("ZCybercomputing");
+    QCoreApplication::setOrganizationDomain("3abnlocal.tv");
+    QCoreApplication::setApplicationName("TVARP");
+    QSettings settings;
+
+    QCoreApplication::addLibraryPath("./");
     if (!QSystemTrayIcon::isSystemTrayAvailable()) {
         QMessageBox::critical(0, QObject::tr("Systray"),
                               QObject::tr("I couldn't detect any system tray "
