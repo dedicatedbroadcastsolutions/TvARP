@@ -40,7 +40,7 @@
 #include "QDebug"
 int main(int argc, char *argv[])
 {
-    qDebug("test");
+    QCoreApplication::addLibraryPath("./");
 
 #if defined(Q_OS_WIN)
    SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, SPIF_SENDCHANGE, 0, 0);
