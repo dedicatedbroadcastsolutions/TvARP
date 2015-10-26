@@ -38,7 +38,7 @@ stream::stream(QObject *parent) :
     log("stream constructor");
     qRegisterMetaType<QHostAddress>("QHostAddress");
     qRegisterMetaType<BufferList>("BufferList");
-    qDebug()<< "Thread ID "<< QThread::currentThreadId();
+    //qDebug()<< "Thread ID "<< QThread::currentThreadId();
 
     worker = new Worker(1234);
     worker->moveToThread(&workerThread);
@@ -54,7 +54,8 @@ stream::stream(QObject *parent) :
     emit start_stream_loop();
     log("finished log constructor");
 }
-
+// need to fix cue command blocking stream
+// need to fix occasional deck change on cue command.
 stream::~stream()
 {
     log("stopping stream");
@@ -191,7 +192,7 @@ Worker::~Worker()
 
 void Worker::start_loop()
 {
-    qDebug()<< "Loop Thread ID "<< QThread::currentThreadId();
+    //qDebug()<< "Loop Thread ID "<< QThread::currentThreadId();
     QHostAddress ip1_address,ip2_address,ip3_address,ip4_address;
     quint16 ip1_port,ip2_port,ip3_port,ip4_port;
     ip1_port = 1234;
@@ -211,17 +212,17 @@ void Worker::start_loop()
     ip3 = false;
     ip4 = false;
 
-    ip1a = false;   ip1b = false;
-    ip2a = false;   ip2b = false;
-    ip3a = false;   ip3b = false;
-    ip4a = false;   ip4b = false;
+    ip1a = false;
+    ip2a = false;
+    ip3a = false;
+    ip4a = false;
     cue1a = false;  cue1b = false;
     cue2a = false;  cue2b = false;
     cue3a = false;  cue3b = false;
     cue4a = false;  cue4b = false;
     eas = false;
     log("starting stream loop");
-    qDebug("loop is starting");
+    //qDebug("loop is starting");
     elapsed_timer.start();
     while(!quit)
     {
@@ -234,7 +235,9 @@ void Worker::start_loop()
         }
         if(ip1)
         {
-            if(ip1a)
+            if(!ip1a&&cue1a&&!cue1b)
+                ip1a = true;
+            if(ip1a && cue1a)
             {   // Deck A
                 datagram_1a = read_datagram(readfile_1a);
                 if(!datagram_1a.isEmpty())
@@ -248,9 +251,10 @@ void Worker::start_loop()
                     qDebug("closing file on 1a");
                     readfile_1a.close();
                     ip1a=false;
+                    cue1a = false;
                 }
             }
-            else if(ip1b)
+            if(!ip1a && cue1b)
             {   // Deck B
                 datagram_1b = read_datagram(readfile_1b);
                 if(!datagram_1b.isEmpty())
@@ -263,15 +267,18 @@ void Worker::start_loop()
                     // send signal to trigger deck a after delay
                     qDebug("closing file on 1b");
                     readfile_1b.close();
-                    ip1b=false;
+                    ip1a=true;
+                    cue1b = false;
                 }
             }
-            if(!ip1a&&!ip1b)
+            if(!cue1a&&!cue1b)
                 ip1 = false;
         }
         if(ip2)
         {
-            if(ip2a)
+            if(!ip2a&&cue2a&&!cue2b)
+                ip2a = true;
+            if(ip2a && cue2a)
             {
                     datagram_2a = read_datagram(readfile_2a);
                     if(!datagram_2a.isEmpty())
@@ -284,10 +291,11 @@ void Worker::start_loop()
                         qDebug("closing file on 2a");
                         readfile_2a.close();
                         ip2a=false;
+                        cue2a = false;
                     }
 
             }
-            else if(ip2b)
+            if(!ip2a && cue2a)
             {
                     datagram_2b = read_datagram(readfile_2b);
                     if(!datagram_2b.isEmpty())
@@ -299,15 +307,19 @@ void Worker::start_loop()
                     {
                         qDebug("closing file on 2b");
                         readfile_2b.close();
-                        ip2b=false;
+                        ip2a=true;
+                        cue2a = false;
                     }
             }
-            if(!ip2a&&!ip2b)
+            if(!cue2a&&!cue2b)
                 ip2 = false;
         }
         if(ip3)
         {
-            if(ip3a)
+          //  qDebug("IP3 is true");
+            if(!ip3a&&cue3a&&!cue3b)
+                ip3a = true;
+            if(ip3a && cue3a)
             {
                     datagram_3a = read_datagram(readfile_3a);
                     if(!datagram_3a.isEmpty())
@@ -320,10 +332,11 @@ void Worker::start_loop()
                         qDebug("closing file on 3a");
                         readfile_3a.close();
                         ip3a=false;
+                        cue3a = false;
                     }
 
             }
-            else if(ip3b)
+            if(!ip3a && cue3b)
             {
                     datagram_3b = read_datagram(readfile_3b);
                     if(!datagram_3b.isEmpty())
@@ -335,15 +348,18 @@ void Worker::start_loop()
                     {
                         qDebug("closing file on 3b");
                         readfile_3b.close();
-                        ip3b=false;
+                        ip3a=true;
+                        cue3b = false;
                     }
             }
-            if(!ip3a&&!ip3b)
+            if(!cue3a&&!cue3b)
                 ip3 = false;
         }
         if(ip4)
         {
-            if(ip4a)
+            if(!ip4a&&cue4a&&!cue4b)
+                ip4a = true;
+            if(ip4a && cue4a)
             {
                     datagram_4a = read_datagram(readfile_4a);
                     if(!datagram_4a.isEmpty())
@@ -356,10 +372,11 @@ void Worker::start_loop()
                         qDebug("closing file on 4a");
                         readfile_4a.close();
                         ip4a=false;
+                        cue4a = false;
                     }
 
             }
-            else if(ip4b)
+            if(!ip4a && cue4b)
             {
                     datagram_4b = read_datagram(readfile_4b);
                     if(!datagram_4b.isEmpty())
@@ -371,10 +388,11 @@ void Worker::start_loop()
                     {
                         qDebug("closing file on 4b");
                         readfile_4b.close();
-                        ip4b=false;
+                        ip4a=true;
+                        cue4b = false;
                     }
             }
-            if(!ip4a&&!ip4b)
+            if(!cue4a&&!cue4b)
                 ip4 = false;
         }
         elapsed_timer.restart();
@@ -421,7 +439,7 @@ void Worker::set_packet_period(int bitrate)
 bool Worker::stream_init(QString source_filename , QFile &readfile)
 {
     readfile.setFileName(source_filename);
-
+    /*
     int i=0;
     while(!readfile.open(QIODevice::ReadOnly))
     {
@@ -435,7 +453,8 @@ bool Worker::stream_init(QString source_filename , QFile &readfile)
         }
     }
     readfile.close();
-    QThread::sleep(5);
+    */
+    //QThread::sleep(5);
     if( readfile.open(QFile::ReadOnly) )
     {
         readfile.seek(0);
@@ -452,22 +471,23 @@ bool Worker::stream_init(QString source_filename , QFile &readfile)
 
 void Worker::start_stream(int ip_num )
 {
+    qDebug()<< "Starting stream on IP: " << ip_num;
     switch ( ip_num )
     {
         case 1:
-            if(ip1a||ip1b)
+            if(cue1a||cue1b)
                 ip1 = true;
         break;
         case 2:
-            if(ip2a||ip2b)
+            if(cue2a||cue2b)
                 ip2 = true;
         break;
         case 3:
-            if(ip3a||ip3b)
+            if(cue3a||cue3b)
                 ip3 = true;
         break;
         case 4:
-            if(ip4a||ip4b)
+            if(cue4a||cue4b)
                 ip4 = true;
         break;
     }
@@ -479,26 +499,26 @@ void Worker::cue_stream(int ip_num, QString source_filename)
     switch ( ip_num )
     {
         case 1:
-            if(!ip1a)
+            if(!cue1a)
             {
                 if( stream_init(source_filename,readfile_1a) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 1a");
                     eas = true;
-                    ip1a = true;
+                    cue1a = true;
                 }
                 else
                     qDebug("failed to stream");
             }
-            else if(!ip1b)
+            else if(!cue1b)
             {
                 if( stream_init(source_filename,readfile_1b) )
                 {
                     qDebug("cueing stream on 1b");
                     emit streaming(ip_num,source_filename);
                     eas = true;
-                    ip1b = true;
+                    cue1b = true;
                 }
                 else
                     qDebug("failed to stream");
@@ -510,24 +530,24 @@ void Worker::cue_stream(int ip_num, QString source_filename)
             }
             break;
         case 2:
-            if(!ip2a)
+            if(!cue2a)
             {
                 if( stream_init(source_filename,readfile_2a) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 2a");
-                    ip2a = true;
+                    cue2a = true;
                 }
                 else
                     qDebug("failed to stream");
             }
-            else if(!ip2b)
+            else if(!cue2b)
             {
                 if( stream_init(source_filename,readfile_2b) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 2b");
-                    ip2b = true;
+                    cue2b = true;
                 }
                 else
                     qDebug("failed to stream");
@@ -539,24 +559,24 @@ void Worker::cue_stream(int ip_num, QString source_filename)
             }
             break;
         case 3:
-            if(!ip3a)
+            if(!cue3a)
             {
                 if( stream_init(source_filename,readfile_3a) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 3a");
-                    ip3a = true;
+                    cue3a = true;
                 }
                 else
                     qDebug("failed to stream");
             }
-            else if(!ip3b)
+            else if(!cue3b)
             {
                 if( stream_init(source_filename,readfile_3b) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 3b");
-                    ip3b = true;
+                    cue3b = true;
                 }
                 else
                     qDebug("failed to stream");
@@ -568,24 +588,24 @@ void Worker::cue_stream(int ip_num, QString source_filename)
             }
             break;
         case 4:
-            if(!ip4a)
+            if(!cue4a)
             {
                 if( stream_init(source_filename,readfile_4a) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 4a");
-                    ip4a = true;
+                    cue4a = true;
                 }
                 else
                     qDebug("failed to stream");
             }
-            else if(!ip4b)
+            else if(!cue4b)
             {
                 if( stream_init(source_filename,readfile_4b) )
                 {
                     emit streaming(ip_num,source_filename);
                     qDebug("cueing stream on 4b");
-                    ip4b = true;
+                    cue4b = true;
                 }
                 else
                     qDebug("failed to stream");

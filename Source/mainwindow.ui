@@ -31,7 +31,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -46,6 +46,18 @@
        <attribute name="title">
         <string>Schedule</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <widget class="QTextEdit" name="event_log_display"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Event Log</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -251,6 +263,9 @@
            </item>
            <item row="3" column="3">
             <widget class="QPushButton" name="pushButton_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -328,6 +343,9 @@
            </item>
            <item row="1" column="0" colspan="2">
             <widget class="QLabel" name="label_4">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="text">
               <string>Video Input Device</string>
              </property>
@@ -354,6 +372,9 @@
            </item>
            <item row="0" column="0">
             <widget class="QLabel" name="label_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Port:</string>
              </property>
@@ -361,6 +382,9 @@
            </item>
            <item row="3" column="2">
             <widget class="QSpinBox" name="crossbar_pin">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="value">
               <number>1</number>
              </property>
@@ -368,6 +392,9 @@
            </item>
            <item row="0" column="1">
             <widget class="QComboBox" name="comboBox_8">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -440,6 +467,9 @@
            </item>
            <item row="1" column="2" colspan="2">
             <widget class="QRadioButton" name="capture">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="text">
               <string>Capture</string>
              </property>
@@ -453,6 +483,9 @@
            </item>
            <item row="3" column="0" colspan="2">
             <widget class="QLabel" name="label_5">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="text">
               <string>Audio Input Device</string>
              </property>
@@ -460,6 +493,9 @@
            </item>
            <item row="1" column="4">
             <widget class="QComboBox" name="eas_comport">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="editable">
               <bool>true</bool>
              </property>
@@ -899,7 +935,7 @@
             </widget>
            </item>
            <item row="1" column="5">
-            <widget class="QPushButton" name="inputfile_browse_3">
+            <widget class="QPushButton" name="inputfile_browse_2">
              <property name="enabled">
               <bool>true</bool>
              </property>
@@ -909,14 +945,14 @@
             </widget>
            </item>
            <item row="3" column="4">
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="cue_test_stream">
              <property name="text">
               <string>Cue Stream</string>
              </property>
             </widget>
            </item>
            <item row="3" column="3">
-            <widget class="QComboBox" name="comboBox_9">
+            <widget class="QComboBox" name="test_ip_port">
              <item>
               <property name="text">
                <string>IP1</string>
@@ -945,10 +981,10 @@
             </widget>
            </item>
            <item row="1" column="1" colspan="4">
-            <widget class="QLineEdit" name="test_filename_2"/>
+            <widget class="QLineEdit" name="test_filename"/>
            </item>
            <item row="3" column="5">
-            <widget class="QPushButton" name="start_stream_2">
+            <widget class="QPushButton" name="start_stream">
              <property name="text">
               <string>Start Stream</string>
              </property>
@@ -978,6 +1014,9 @@
           <layout class="QGridLayout" name="gridLayout_11">
            <item row="5" column="0">
             <widget class="QRadioButton" name="ch5_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>3ABN RD</string>
              </property>
@@ -991,6 +1030,9 @@
            </item>
            <item row="5" column="1">
             <widget class="QRadioButton" name="ch6_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>3ABN RL</string>
              </property>
@@ -1011,6 +1053,9 @@
            </item>
            <item row="1" column="0" colspan="4">
             <widget class="QLineEdit" name="station_id_filename">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>station_id.ts</string>
              </property>
@@ -1025,6 +1070,9 @@
            </item>
            <item row="4" column="0">
             <widget class="QRadioButton" name="ch1_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>3ABN English</string>
              </property>
@@ -1038,6 +1086,9 @@
            </item>
            <item row="4" column="1">
             <widget class="QRadioButton" name="ch2_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Proclaim</string>
              </property>
@@ -1058,6 +1109,9 @@
            </item>
            <item row="3" column="0" colspan="2">
             <widget class="QLineEdit" name="lineEdit_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>K33EJ</string>
              </property>
@@ -1065,6 +1119,9 @@
            </item>
            <item row="3" column="2">
             <widget class="QSpinBox" name="spinBox_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="minimum">
               <number>2</number>
              </property>
@@ -1092,6 +1149,9 @@
            </item>
            <item row="3" column="3">
             <widget class="QSpinBox" name="spinBox_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="minimum">
               <number>1</number>
              </property>
@@ -1102,6 +1162,9 @@
            </item>
            <item row="3" column="4">
             <widget class="QPushButton" name="test_station_ID">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Send Station ID</string>
              </property>
@@ -1109,6 +1172,9 @@
            </item>
            <item row="4" column="2">
             <widget class="QRadioButton" name="ch3_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Dare to Dream</string>
              </property>
@@ -1122,6 +1188,9 @@
            </item>
            <item row="5" column="2">
             <widget class="QRadioButton" name="ch7_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Radio 74</string>
              </property>
@@ -1135,6 +1204,9 @@
            </item>
            <item row="4" column="3">
             <widget class="QRadioButton" name="ch4_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Latino</string>
              </property>
@@ -1148,6 +1220,9 @@
            </item>
            <item row="5" column="3">
             <widget class="QRadioButton" name="ch8_2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Local</string>
              </property>
@@ -1161,6 +1236,9 @@
            </item>
            <item row="4" column="4">
             <widget class="QPushButton" name="send_ID_config">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>ID Config Start</string>
              </property>
@@ -1168,6 +1246,9 @@
            </item>
            <item row="5" column="4">
             <widget class="QPushButton" name="revert_ID_config">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>ID Config End</string>
              </property>
@@ -1664,7 +1745,7 @@
         <item row="1" column="3">
          <widget class="QPushButton" name="ingest">
           <property name="enabled">
-           <bool>true</bool>
+           <bool>false</bool>
           </property>
           <property name="text">
            <string>Ingest</string>

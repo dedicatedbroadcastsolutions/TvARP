@@ -34,7 +34,7 @@
 Mux_Control::Mux_Control(QHostAddress ctrl_addr, qint16 ctrl_port, QString comport, int out_port , QObject *parent) :
     QObject(parent)
 {
-    qDebug("mux constructor");
+    //qDebug("mux constructor");
     mux_log.setFileName("./Schedule_and_logs/mux_log.txt");
     //qDebug()<< "mux debug port " << comport << "mux ctrl port "<< ctrl_port << "mux ctrl addr " << ctrl_addr << "mux output port" << out_port;
     splice_active = 0;

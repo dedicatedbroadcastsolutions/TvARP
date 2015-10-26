@@ -30,11 +30,8 @@
 */
 #include "automation.h"
 #include "QtCore"
-/// Initialize settings and Switcher on Comport
+/// Initialize settings
 QSettings settings("ZCybercomputing", "TVARP");
-
-/// Declare Global Variables
-   QList <sch_entry> schedule;  // List that contains the event schedule
 
 //  Automation Functions
 /// ========================================================================================================
@@ -48,9 +45,11 @@ Automation::Automation(QObject *parent) :
     mpeg_stream = new stream(this);
     connect(mpeg_stream,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
     check_timer= new QTimer(this);
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(check_time()));
+    timer->start(1);
     connect(check_timer, SIGNAL(timeout()), this, SLOT(check_eas_ring()));  // connect timer to check_eas_ring()
     connect(this, SIGNAL(eas_ring()), this, SLOT(send_eas_message()));       // connect eas_ring() to send_eas_message()
-    connect(this,SIGNAL(stream_eas(QHostAddress,quint16,QString)),this,SLOT(start_stream(QHostAddress,quint16,QString)));
     ffmpeg = new FFmpeg(this);
     connect(ffmpeg,SIGNAL(ffmpeg_stdout(QString)),this,SLOT(encoder_output(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_status(QString)),this,SLOT(streaming_status(QString)));
@@ -66,13 +65,19 @@ Automation::Automation(QObject *parent) :
     connect(this,SIGNAL(mux_eas_log(QString)),this,SLOT(save_log(QString)));
     connect(this,SIGNAL(stream_status(QString)),this,SLOT(save_log(QString)));
     connect(this,SIGNAL(eas_status(QString)),this,SLOT(save_log(QString)));
+
+    load_sch= new QTimer(this);
+    connect(load_sch, SIGNAL(timeout()),this,SLOT(load_schedule()));
+    load_sch->setInterval(1000);
+    load_sch->start();
 }
 
 Automation::~Automation()
 {
     kill_ts_info();
-    if( serial->isOpen() )
-        close_ring_detect();
+    if(!share_comport)
+        if( serial->isOpen() )
+            close_ring_detect();
 }
 
 void Automation::kill_ffmpeg()
@@ -113,22 +118,19 @@ void Automation::ingest_display(QString string)
 
 void Automation::station_id()
 {
-    QHostAddress stream_addr;
-    quint16 stream_port;
     QString id_file;
     id_file = QFileInfo(settings.value("ID File").toString().prepend("./Local Video/")).absoluteFilePath();
-    stream_addr.setAddress( settings.value("EAS Stream Address").toString() );
-    stream_port = settings.value("EAS Stream Port").toInt();
-    // send ID config
     cue_stream(1,id_file);
-    // start_stream(ip_port)
+    QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    start_stream(1);
 }
 
 void Automation::close_ring_detect()
 {
     check_timer->stop();
     log_eas("Ring Detect Closed");
-    serial->close();
+    if(!share_comport)
+        serial->close();
 }
 
 void Automation::restart_eas_engine()
@@ -156,6 +158,11 @@ void Automation::init_ring_detect()
 {
     log_eas("Initialising Ring Detect");
     ring_init = 0;
+    if(settings.value( "eas comport" ).toString() == settings.value("Mux Debug Comport").toString())
+        share_comport = true;
+    else
+        share_comport = false;
+
     QString port_num = settings.value( "eas comport" ).toString();
     channels.clear();
     channels.append(1);
@@ -169,27 +176,38 @@ void Automation::init_ring_detect()
     eas_live=false;
     eas_test=false;
 
-    serial = new QSerialPort(this);
-    connect(serial, SIGNAL(error(QSerialPort::SerialPortError)), this,
-                SLOT(handleError()));
-    serial->setPortName(port_num);
-    serial->open(QIODevice::ReadOnly);
-
+    if(!share_comport)
+    {
+        serial = new QSerialPort(this);
+        connect(serial, SIGNAL(error(QSerialPort::SerialPortError)), this, SLOT(handleError()));
+        serial->setPortName(port_num);
+        serial->open(QIODevice::ReadOnly);
+    }
+    else
+    {
+        qDebug("New code goes here");
+    }
     check_timer->start(1);                                               // create timer with 1 ms resolution
     log_eas("finished eas init");
 }
 
 void Automation::handleError()
 {
-    log_eas("serial error" + serial->errorString() + QString::number( serial->error() ));
+    if(!share_comport)
+    {
+        log_eas("serial error" + serial->errorString() + QString::number( serial->error() ));
+    }
 }
 
 void Automation::check_eas_ring()
 {
 
+if(!share_comport)
+{
     if(ring_init <= 10)
     {
         if(serial->isOpen())
+        {
             if((serial->pinoutSignals() & QSerialPort::RingIndicatorSignal))  // if eas is connected
             {
                 ring_init++;
@@ -198,6 +216,7 @@ void Automation::check_eas_ring()
             {
                 log_eas("Ring not connected");
             }
+        }
         //else
             //log_eas("Port not connected");
     }
@@ -222,6 +241,7 @@ void Automation::check_eas_ring()
             }
         }
     }
+ }
 }
 
 void Automation::send_eas_message()
@@ -272,11 +292,6 @@ void Automation::capture_eas_message( )
 
     send_eas_config(channels);
 
-    QHostAddress stream_addr;
-    quint16 stream_port;    
-    stream_addr.setAddress( settings.value("EAS Stream Address").toString() );
-    stream_port = settings.value("EAS Stream Port").toInt();
-
     inputfile = "./Video/ew050812-004403SD-h264lb.mov";
     inputfile = QFileInfo(inputfile).absoluteFilePath();
 
@@ -285,16 +300,35 @@ void Automation::capture_eas_message( )
     outputfile.append(".ts");
     outputfile = QFileInfo(outputfile).absoluteFilePath();
     log_eas("Starting Encoder");
-    emit stream_eas( stream_addr, stream_port, outputfile);
 
     ffmpeg->encode(inputfile,outputfile,
                    settings.value("eas test file").toBool(),
                    settings.value("eas crossbar enable").toBool(),
                    settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
                    settings.value("eas audio device").toString() , -31 );
+    stream_eas( outputfile);
+}
 
-    if(show_vmon)
-        ffmpeg->ffplay( "udp://@" + stream_addr.toString() + ":" + QString::number(stream_port) );
+void Automation::stream_eas(QString sourcefile)
+{
+    QFile easfile;
+    easfile.setFileName(sourcefile);
+    int i=0;
+    while(!easfile.open(QIODevice::ReadOnly))
+    {
+        QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+        qDebug("can't open file");
+        if(i<=20)
+            i++;
+        else
+        {
+            break;
+        }
+    }
+    easfile.close();
+    cue_stream(1,sourcefile);
+    QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    start_stream(1);
 }
 
 void Automation::init_mux_control()
@@ -327,54 +361,17 @@ void Automation::process_mux_debug(QString data)
 // ================================================================
 void Automation::run_schedule()
 {
-    for(int i=0;i<schedule.size();i++)
-    {
-        if(QDateTime::currentDateTime() > schedule[i].play_time )
-        {
-            emit event_log_output("Removing old date");
-            emit event_log_output(schedule[i].play_time.toString());
-            schedule.removeAt(i);
-            i--;
-        }
-        else
-        {
-            QFile file(schedule[i].play_cmd);
-                 if (!file.open(QIODevice::ReadOnly))
-                 {
-                     QString output=schedule[i].play_cmd;
-                     output+=" does not exist";
-                     emit event_log_output(output);
-                     schedule.removeAt(i);
-                     i--;
-                 }
-                 else
-                    file.close();
-        }
-    }
-    if(!schedule.empty())
-    {
-    timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(check_time()));
-    timer->start(1);
-    }
-    for(int i=0;i<schedule.size();i++)
-    {
-        QString output;
-        output.append("Will play ");
-        output.append(schedule[i].play_cmd);
-        output.append(" at ");
-        output.append(schedule[i].play_time.toString());
-        emit event_log_output(output);
-    }
+
 }
 
 void Automation::check_time()
   {
     if(!schedule.empty()&&state==0)
     {
-        if(QDateTime::currentDateTime() >= schedule[0].play_time && isOpen)
+        if(QDateTime::currentDateTime() >= schedule[0].play_time)
         {
             //switcher->setVideoOutputChannel(settings.value("cptr").toInt());
+            qDebug("emit play");
             emit play();
          // Must be last
             schedule.removeAt(0);
@@ -383,7 +380,9 @@ void Automation::check_time()
             if(QDateTime::currentDateTime() >= schedule[0].play_time.addSecs(-15)
                 && !isOpen)
             {
+                qDebug("emit openFile");
                 emit openFile(schedule[0].play_cmd);
+                isOpen = 1;
                 //switcher->restart_comport();
             }
     }
@@ -442,7 +441,7 @@ void Automation::print_log(QString log)
      QTextStream out(&file);
      out << "\n" << log <<"\n";
      file.close();
-     emit event_log_output( log );
+     emit event_log_output( log  + "\n");
  }
 
 //======================================================================
@@ -472,15 +471,20 @@ QList<QString> Automation::check_schedule()
 
 //======================================================================
 /// Load Schedule From File
-void Automation::load_schedule(QString schfile)
+void Automation::load_schedule()
 {
-    emit event_log_output("Schedule Loaded");
-
+    //emit event_log_output("Schedule Loaded\n");
+    QString schfile;
+    schfile = "C:/Remote/Videos/insert.sch";
   //Declare Variables
     sch_entry load;
     QList<QString> line_input;
     QByteArray file_play;
     QString file_name="";
+    QString datetime="";
+    QRegExp rx("????-??-?? ??:??:?? ??	??:??*");
+    rx.setPatternSyntax(QRegExp::Wildcard);
+    int name_loc=0;
 
   // Purge Existing Schedule
     schedule.clear();
@@ -497,35 +501,30 @@ void Automation::load_schedule(QString schfile)
 
   //Process File
      for (int c=0; c < line_input.size(); c++)
-     {  if(line_input[c].contains("Filename:"))
-         {}
-         else
-         {  if(line_input[c].contains("Date:"))
-            {}
-             else
-             {  line_input.removeAt(c);
-                c--;
-             }
-         }
+     {  if( rx.exactMatch(line_input[c]) ) // look for valid schedule line
+        {}
+        else
+        {
+            line_input.removeAt(c);
+            c--;
+        }
      }
   //Load Schedule from input
+
     for (int j=0; j< line_input.size();j++)
     {
-       if(line_input[j].contains("Filename:"))
-       {
-          file_name = line_input[j];
-          file_name.replace(0, 10, "Videos/");
-          file_play=file_name.toLocal8Bit();
-       }
-       else
-       {
-          if(line_input[j].contains("Date:"))
-          {
-             load.play_time = QDateTime::fromString(line_input[j],"'Date:'MM'-'dd','yyyy HH:mm:ss");
-             load.play_cmd = file_play;                            //"Date:11-10,2010 13:01:02"
+        load.schedule_string = line_input[j];
+        datetime = line_input[j];
+        datetime.truncate(22);
+        load.play_time = QDateTime::fromString(datetime,"yyyy-MM-dd hh:mm:ss AP");
+                                                            // "2014-10-28 12:13:30 PM"
+        file_name = line_input[j];
+        file_name.remove(0,38);
+        name_loc = file_name.indexOf("\t");
+        file_name.truncate(name_loc);
+        file_play=file_name.toLocal8Bit();
+        load.play_cmd = file_play;
              schedule << load;
-          }
-       }
     }
     file.close();
   // Sort Schedule in chronological order.
@@ -536,6 +535,11 @@ void Automation::load_schedule(QString schfile)
     {
         if(QDateTime::currentDateTime() > schedule[i].play_time )
         {
+            QString output=schedule[i].play_cmd;
+            output+="scheduled at ";
+            output+=schedule[i].play_time.toString();
+            output+=" Removed: cannot schedule in past\n";
+            emit event_log_output(output);
             schedule.removeAt(i);
             i--;
         }
@@ -546,7 +550,7 @@ void Automation::load_schedule(QString schfile)
                 {
                    QString output=schedule[i].play_cmd;
                    output+=" does not exist";
-                   emit event_log_output(output);
+                   emit event_log_output(output + "\n");
                    schedule.removeAt(i);
                    i--;
                 }
@@ -554,23 +558,26 @@ void Automation::load_schedule(QString schfile)
         }
     }
     // Write cleaned schedule to file
-    QFile write_file("Schedule_and_logs/schedule.automation");
+    QFile write_file(schfile);
         if (write_file.open(QIODevice::WriteOnly | QIODevice::Text))
         {
+
             QTextStream out(&write_file);
             QString last,fname;
             for(int i=0;i<schedule.size();i++)
             {
-                fname=schedule[i].play_cmd;
-                fname.replace(0, 7, "");
-             //  if(fname!=last)
-                    out<< " Filename:" << fname <<"\n";
-              // last=stringout;
-                out << schedule[i].play_time.toString("'Date:'MM'-'dd','yyyy HH:mm:ss")<<"\n";
+                /*
+                QString output;
+                output.append("Will play ");
+                output.append(schedule[i].play_cmd);
+                output.append(" at ");
+                output.append(schedule[i].play_time.toString());
+                emit event_log_output(output + "\n");*/
+
+                out<< schedule[i].schedule_string << "\n\n";
             }
             write_file.close();
         }
-
 }
 //======================================================================
 /// ========================================================================================================

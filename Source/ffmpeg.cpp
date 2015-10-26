@@ -83,7 +83,7 @@ void FFmpeg::kill_encoder()
     close_encoder();
     //mTranscodingProcess->kill();
     mTranscodingProcess->waitForFinished();
-    qDebug("transcode processes finished");
+    //qDebug("transcode processes finished");
 }
 
 void FFmpeg::kill()

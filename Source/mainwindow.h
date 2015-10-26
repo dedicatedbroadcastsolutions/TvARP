@@ -103,17 +103,16 @@ private slots:
     void on_comboBox_currentIndexChanged(int index);
     void on_ad_insert_clicked();
     void on_ad_return_to_network_clicked();
-    void on_show_vmon_clicked(bool checked);
+    //void on_show_vmon_clicked(bool checked);
     void on_send_eas_config_clicked();
     void on_test_eas_clicked(bool checked);
     void on_ingest_clicked(bool checked);
     void on_ingest_display_textChanged();
     void on_inputfile_browse_clicked();
-    void on_test_clicked();
     void on_test_station_ID_clicked();
     void on_station_id_filename_textChanged(const QString &arg1);
     void on_inputfile_browse_2_clicked();
-    void on_pushButton_clicked();
+    void on_cue_test_stream_clicked();
     void on_start_stream_clicked();
 };
 

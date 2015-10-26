@@ -47,6 +47,7 @@ struct sch_entry
     }
     QByteArray play_cmd;
     QDateTime play_time;
+    QString schedule_string;
 };
 
 class Automation : public QObject
@@ -56,11 +57,11 @@ public:
     explicit Automation(QObject *parent = 0);
     ~Automation();
     void run_schedule();
-    void load_schedule(QString schfile);
     void stream_file(QString ts_file,QHostAddress address,quint16 port);
     QList<QString> check_schedule();
     void load_config();
     int comport;
+    bool share_comport;
     bool visible;
     QTimer *timer;
     int state,isOpen;
@@ -92,7 +93,7 @@ public slots:
     void send_eas_message();
     void check_time();
     void video_state(int);
-
+    void stream_eas(QString sourcefile);
     void is_open(bool);
 
     void encoder_output(QString output);
@@ -103,6 +104,7 @@ public slots:
     void ingest_program(QString inputfile);
     void kill_ts_info();
     void station_id();
+    void load_schedule();
 signals:
     void encoder_done();
     void init();
@@ -117,7 +119,6 @@ signals:
     void encoder_display(QString);
     void eas_status(QString);
     void stream_status(QString);
-    void stream_eas(QHostAddress stream_addr, quint16, QString sourcefile);
     void ingest_disp(QString);
 
 private:
@@ -128,13 +129,16 @@ private:
     bool eas_test;
     bool eas_live;
     QTimer *check_timer;
+    QTimer *load_sch;
     int ring_init;
+    QList <sch_entry> schedule;  // List that contains the event schedule
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);
     void log_channel(int channel,QDateTime DateTime);
     void log_playback(QString message,QString file,QDateTime DateTime);
     void save_log(QString log);
+
 };
 
 #endif // AUTOMATION_H

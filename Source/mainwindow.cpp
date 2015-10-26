@@ -39,7 +39,7 @@
 //#include "schedule_program.h"
 
 /// Global Variables
-QString schfile="Schedule_and_logs/schedule.automation";
+QString schfile="C:/remote/Videos/insert.sch";
 /// Initiate Thread
 //Schedulethread schthread;
 
@@ -71,13 +71,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mux_log_display->ensureCursorVisible();
     ui->mux_log_display->moveCursor(QTextCursor::End);
     ui->mux_log_display->verticalScrollBar()->setValue( ui->mux_log_display->verticalScrollBar()->maximum() );
+
     ui->mux_log_display_2->ensureCursorVisible();
     ui->mux_log_display_2->moveCursor(QTextCursor::End);
     ui->mux_log_display_2->verticalScrollBar()->setValue( ui->mux_log_display_2->verticalScrollBar()->maximum() );
-    QTextDocument * doc = ui->mux_log_display->document();
-    doc->setMaximumBlockCount(maxblock);
-    connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display,SLOT( insertPlainText(QString) ) );
-    connect(automation,SIGNAL(mux_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
+
+    ui->event_log_display->ensureCursorVisible();
+    ui->event_log_display->moveCursor(QTextCursor::End);
+    ui->event_log_display->verticalScrollBar()->setValue( ui->event_log_display->verticalScrollBar()->maximum() );
 
     ui->encoder_display->ensureCursorVisible();
     ui->encoder_display->moveCursor(QTextCursor::End);
@@ -98,6 +99,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->stream_status_display->ensureCursorVisible();
     ui->stream_status_display->moveCursor(QTextCursor::End);
     ui->stream_status_display->verticalScrollBar()->setValue( ui->stream_status_display->verticalScrollBar()->maximum() );
+
+    QTextDocument * doc = ui->mux_log_display->document();
+    doc->setMaximumBlockCount(maxblock);
+    connect(automation,SIGNAL(mux_eas_log(QString)),ui->mux_log_display,SLOT( insertPlainText(QString) ) );
+    connect(automation,SIGNAL(mux_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
+    connect(automation,SIGNAL(event_log_output(QString)),ui->event_log_display,SLOT(insertPlainText(QString)));
     connect(automation,SIGNAL(stream_status(QString)),ui->stream_status_display,SLOT(insertPlainText(QString)));
     automation->restart_eas_engine();
     ///automation->restart_mux_control();
@@ -461,10 +468,10 @@ void MainWindow::on_ad_return_to_network_clicked()
     automation->ad_splice_return_to_network(ad_ch);
 }
 
-void MainWindow::on_show_vmon_clicked(bool checked)
-{
-    automation->show_vmon = checked;
-}
+//void MainWindow::on_show_vmon_clicked(bool checked)
+//{
+//    automation->show_vmon = checked;
+//}
 
 void MainWindow::on_send_eas_config_clicked()
 {
@@ -513,16 +520,10 @@ void MainWindow::on_inputfile_browse_clicked()
     }
 }
 
-void MainWindow::on_test_clicked()
-{
-
-}
-
 void MainWindow::on_test_station_ID_clicked()
 {
 
     automation->station_id();
-
 }
 
 void MainWindow::on_station_id_filename_textChanged(const QString &arg1)
@@ -530,7 +531,6 @@ void MainWindow::on_station_id_filename_textChanged(const QString &arg1)
     QString filename;
     filename = arg1;
     settings.setValue("ID File", filename );
-    qDebug()<< "ID File " << settings.value("ID File").toString();
 }
 
 void MainWindow::on_inputfile_browse_2_clicked()
@@ -541,26 +541,23 @@ void MainWindow::on_inputfile_browse_2_clicked()
                 tr("Open File"),
                 "Video",
                 tr("Video (*.ts);"));
-    //if (!fileName.isEmpty()) {
-        //ui->test_filename->setText(fileName);
-   // }
-    qDebug("function needs fixed");
+    if (!fileName.isEmpty()) {
+        ui->test_filename->setText(fileName);
+    }
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_cue_test_stream_clicked()
 {
-    qDebug("automation told to start stream");
-    QHostAddress address;
-    quint16 port;
     QString fname;
-    //address.setAddress( ui->test_stream_address->text());
-    //port = ui->test_stream_port->value();
-    //fname = ui->test_filename->text();
-    //automation->cue_stream(3,fname);
-    qDebug("function needs repaired");
+    int ip_port;
+    ip_port = ui->test_ip_port->currentIndex()+1;
+    fname = ui->test_filename->text();
+    automation->cue_stream(ip_port,fname);
 }
 
 void MainWindow::on_start_stream_clicked()
 {
-    automation->start_stream(3);
+    int ip_port;
+    ip_port = ui->test_ip_port->currentIndex()+1;
+    automation->start_stream(ip_port);
 }
