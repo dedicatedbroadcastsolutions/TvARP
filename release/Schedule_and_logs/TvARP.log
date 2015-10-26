@@ -2912,3 +2912,403 @@
 2015/08/21 17:47:19:978 serial errorUnknown error0
 2015/08/21 17:47:19:978 serial errorNo such file or directory1
 2015/08/21 17:47:19:978 finished eas init
+2015/10/25 21:12:07:622 Restarting EAS Engine
+2015/10/25 21:12:07:622 Ring Detect Closed
+2015/10/25 21:12:07:622 serial errorUnknown error13
+2015/10/25 21:12:07:622 Initialising Ring Detect
+2015/10/25 21:12:07:622 serial errorUnknown error0
+2015/10/25 21:12:07:622 serial errorNo such file or directory1
+2015/10/25 21:12:07:622 finished eas init
+2015/10/25 21:12:07:622 starting stream loop
+2015/10/25 21:24:29:829 Restarting EAS Engine
+2015/10/25 21:24:29:829 Ring Detect Closed
+2015/10/25 21:24:29:829 serial errorUnknown error13
+2015/10/25 21:24:29:829 Initialising Ring Detect
+2015/10/25 21:24:29:829 serial errorUnknown error0
+2015/10/25 21:24:29:829 serial errorNo such file or directory1
+2015/10/25 21:24:29:829 finished eas init
+2015/10/25 21:24:29:798 starting stream loop
+2015/10/25 21:24:38:510 Restarting EAS Engine
+2015/10/25 21:24:38:510 Ring Detect Closed
+2015/10/25 21:24:38:510 serial errorUnknown error13
+2015/10/25 21:24:38:510 Initialising Ring Detect
+2015/10/25 21:24:38:510 serial errorUnknown error0
+2015/10/25 21:24:38:510 serial errorNo such file or directory1
+2015/10/25 21:24:38:510 finished eas init
+2015/10/25 21:24:38:510 starting stream loop
+2015/10/25 21:25:01:616 Restarting EAS Engine
+2015/10/25 21:25:01:617 Ring Detect Closed
+2015/10/25 21:25:01:617 serial errorUnknown error13
+2015/10/25 21:25:01:618 Initialising Ring Detect
+2015/10/25 21:25:01:618 serial errorUnknown error0
+2015/10/25 21:25:01:618 serial errorNo such file or directory1
+2015/10/25 21:25:01:619 finished eas init
+2015/10/25 21:25:01:615 starting stream loop
+2015/10/25 21:25:12:919 Restarting EAS Engine
+2015/10/25 21:25:12:919 Ring Detect Closed
+2015/10/25 21:25:12:919 serial errorUnknown error13
+2015/10/25 21:25:12:919 Initialising Ring Detect
+2015/10/25 21:25:12:919 serial errorUnknown error0
+2015/10/25 21:25:12:919 serial errorNo such file or directory1
+2015/10/25 21:25:12:919 finished eas init
+2015/10/25 21:25:12:903 starting stream loop
+2015/10/25 21:25:41:817 Restarting EAS Engine
+2015/10/25 21:25:41:817 Ring Detect Closed
+2015/10/25 21:25:41:817 serial errorUnknown error13
+2015/10/25 21:25:41:817 Initialising Ring Detect
+2015/10/25 21:25:41:817 serial errorUnknown error0
+2015/10/25 21:25:41:817 serial errorNo such file or directory1
+2015/10/25 21:25:41:817 finished eas init
+2015/10/25 21:25:41:786 starting stream loop
+2015/10/25 21:26:11:716 Restarting EAS Engine
+2015/10/25 21:26:11:716 Ring Detect Closed
+2015/10/25 21:26:11:716 serial errorUnknown error13
+2015/10/25 21:26:11:716 Initialising Ring Detect
+2015/10/25 21:26:11:716 serial errorUnknown error0
+2015/10/25 21:26:11:716 serial errorNo such file or directory1
+2015/10/25 21:26:11:716 finished eas init
+2015/10/25 21:26:11:716 starting stream loop
+2015/10/25 21:26:22:290 Restarting EAS Engine
+2015/10/25 21:26:22:290 Ring Detect Closed
+2015/10/25 21:26:22:290 serial errorUnknown error13
+2015/10/25 21:26:22:290 Initialising Ring Detect
+2015/10/25 21:26:22:290 serial errorUnknown error0
+2015/10/25 21:26:22:290 serial errorNo such file or directory1
+2015/10/25 21:26:22:290 finished eas init
+2015/10/25 21:26:22:290 starting stream loop
+2015/10/25 21:27:12:799 Restarting EAS Engine
+2015/10/25 21:27:12:799 Ring Detect Closed
+2015/10/25 21:27:12:799 serial errorUnknown error13
+2015/10/25 21:27:12:799 Initialising Ring Detect
+2015/10/25 21:27:12:799 serial errorUnknown error0
+2015/10/25 21:27:12:799 serial errorNo such file or directory1
+2015/10/25 21:27:12:799 finished eas init
+2015/10/25 21:27:12:784 starting stream loop
+2015/10/25 21:27:25:582 Restarting EAS Engine
+2015/10/25 21:27:25:582 Ring Detect Closed
+2015/10/25 21:27:25:582 serial errorUnknown error13
+2015/10/25 21:27:25:582 Initialising Ring Detect
+2015/10/25 21:27:25:582 serial errorUnknown error0
+2015/10/25 21:27:25:582 serial errorNo such file or directory1
+2015/10/25 21:27:25:582 finished eas init
+2015/10/25 21:27:25:582 starting stream loop
+2015/10/25 21:27:40:095 Restarting EAS Engine
+2015/10/25 21:27:40:095 Ring Detect Closed
+2015/10/25 21:27:40:095 serial errorUnknown error13
+2015/10/25 21:27:40:095 Initialising Ring Detect
+2015/10/25 21:27:40:095 serial errorUnknown error0
+2015/10/25 21:27:40:095 serial errorNo such file or directory1
+2015/10/25 21:27:40:095 finished eas init
+2015/10/25 21:27:40:095 starting stream loop
+2015/10/25 21:27:56:775 Restarting EAS Engine
+2015/10/25 21:27:56:775 Ring Detect Closed
+2015/10/25 21:27:56:775 serial errorUnknown error13
+2015/10/25 21:27:56:775 Initialising Ring Detect
+2015/10/25 21:27:56:775 serial errorUnknown error0
+2015/10/25 21:27:56:775 serial errorNo such file or directory1
+2015/10/25 21:27:56:775 finished eas init
+2015/10/25 21:27:56:760 starting stream loop
+2015/10/25 21:28:26:899 Restarting EAS Engine
+2015/10/25 21:28:26:899 Ring Detect Closed
+2015/10/25 21:28:26:899 serial errorUnknown error13
+2015/10/25 21:28:26:899 Initialising Ring Detect
+2015/10/25 21:28:26:899 serial errorUnknown error0
+2015/10/25 21:28:26:899 serial errorNo such file or directory1
+2015/10/25 21:28:26:899 finished eas init
+2015/10/25 21:28:26:899 starting stream loop
+2015/10/25 21:28:36:151 Restarting EAS Engine
+2015/10/25 21:28:36:151 Ring Detect Closed
+2015/10/25 21:28:36:151 serial errorUnknown error13
+2015/10/25 21:28:36:151 Initialising Ring Detect
+2015/10/25 21:28:36:151 serial errorUnknown error0
+2015/10/25 21:28:36:151 serial errorNo such file or directory1
+2015/10/25 21:28:36:151 finished eas init
+2015/10/25 21:28:36:151 starting stream loop
+2015/10/25 21:28:44:380 Restarting EAS Engine
+2015/10/25 21:28:44:380 Ring Detect Closed
+2015/10/25 21:28:44:380 serial errorUnknown error13
+2015/10/25 21:28:44:380 Initialising Ring Detect
+2015/10/25 21:28:44:380 serial errorUnknown error0
+2015/10/25 21:28:44:380 serial errorNo such file or directory1
+2015/10/25 21:28:44:380 finished eas init
+2015/10/25 21:28:44:380 starting stream loop
+2015/10/25 21:28:51:292 Restarting EAS Engine
+2015/10/25 21:28:51:292 Ring Detect Closed
+2015/10/25 21:28:51:292 serial errorUnknown error13
+2015/10/25 21:28:51:292 Initialising Ring Detect
+2015/10/25 21:28:51:292 serial errorUnknown error0
+2015/10/25 21:28:51:292 serial errorNo such file or directory1
+2015/10/25 21:28:51:292 finished eas init
+2015/10/25 21:28:51:276 starting stream loop
+2015/10/25 21:28:59:662 Restarting EAS Engine
+2015/10/25 21:28:59:662 Ring Detect Closed
+2015/10/25 21:28:59:662 serial errorUnknown error13
+2015/10/25 21:28:59:662 Initialising Ring Detect
+2015/10/25 21:28:59:662 serial errorUnknown error0
+2015/10/25 21:28:59:662 serial errorNo such file or directory1
+2015/10/25 21:28:59:662 finished eas init
+2015/10/25 21:28:59:662 starting stream loop
+2015/10/25 21:29:07:093 Restarting EAS Engine
+2015/10/25 21:29:07:093 Ring Detect Closed
+2015/10/25 21:29:07:093 serial errorUnknown error13
+2015/10/25 21:29:07:093 Initialising Ring Detect
+2015/10/25 21:29:07:093 serial errorUnknown error0
+2015/10/25 21:29:07:093 serial errorNo such file or directory1
+2015/10/25 21:29:07:093 finished eas init
+2015/10/25 21:29:07:077 starting stream loop
+2015/10/25 21:29:15:316 Restarting EAS Engine
+2015/10/25 21:29:15:316 Ring Detect Closed
+2015/10/25 21:29:15:316 serial errorUnknown error13
+2015/10/25 21:29:15:316 Initialising Ring Detect
+2015/10/25 21:29:15:316 serial errorUnknown error0
+2015/10/25 21:29:15:316 serial errorNo such file or directory1
+2015/10/25 21:29:15:316 finished eas init
+2015/10/25 21:29:15:316 starting stream loop
+2015/10/25 21:29:22:895 Restarting EAS Engine
+2015/10/25 21:29:22:895 Ring Detect Closed
+2015/10/25 21:29:22:895 serial errorUnknown error13
+2015/10/25 21:29:22:895 Initialising Ring Detect
+2015/10/25 21:29:22:895 serial errorUnknown error0
+2015/10/25 21:29:22:895 serial errorNo such file or directory1
+2015/10/25 21:29:22:895 finished eas init
+2015/10/25 21:29:22:879 starting stream loop
+2015/10/25 21:29:32:167 Restarting EAS Engine
+2015/10/25 21:29:32:183 Ring Detect Closed
+2015/10/25 21:29:32:183 serial errorUnknown error13
+2015/10/25 21:29:32:183 Initialising Ring Detect
+2015/10/25 21:29:32:183 serial errorUnknown error0
+2015/10/25 21:29:32:183 serial errorNo such file or directory1
+2015/10/25 21:29:32:183 finished eas init
+2015/10/25 21:29:32:167 starting stream loop
+2015/10/25 21:29:41:462 Restarting EAS Engine
+2015/10/25 21:29:41:462 Ring Detect Closed
+2015/10/25 21:29:41:462 serial errorUnknown error13
+2015/10/25 21:29:41:462 Initialising Ring Detect
+2015/10/25 21:29:41:462 serial errorUnknown error0
+2015/10/25 21:29:41:462 serial errorNo such file or directory1
+2015/10/25 21:29:41:462 finished eas init
+2015/10/25 21:29:41:462 starting stream loop
+2015/10/25 21:29:52:947 Restarting EAS Engine
+2015/10/25 21:29:52:947 Ring Detect Closed
+2015/10/25 21:29:52:947 serial errorUnknown error13
+2015/10/25 21:29:52:947 Initialising Ring Detect
+2015/10/25 21:29:52:947 serial errorUnknown error0
+2015/10/25 21:29:52:947 serial errorNo such file or directory1
+2015/10/25 21:29:52:947 finished eas init
+2015/10/25 21:29:52:947 starting stream loop
+2015/10/25 21:30:04:830 Restarting EAS Engine
+2015/10/25 21:30:04:830 Ring Detect Closed
+2015/10/25 21:30:04:830 serial errorUnknown error13
+2015/10/25 21:30:04:830 Initialising Ring Detect
+2015/10/25 21:30:04:830 serial errorUnknown error0
+2015/10/25 21:30:04:830 serial errorNo such file or directory1
+2015/10/25 21:30:04:830 finished eas init
+2015/10/25 21:30:04:814 starting stream loop
+2015/10/25 21:30:35:947 Restarting EAS Engine
+2015/10/25 21:30:35:947 Ring Detect Closed
+2015/10/25 21:30:35:947 serial errorUnknown error13
+2015/10/25 21:30:35:947 Initialising Ring Detect
+2015/10/25 21:30:35:947 serial errorUnknown error0
+2015/10/25 21:30:35:947 serial errorNo such file or directory1
+2015/10/25 21:30:35:947 finished eas init
+2015/10/25 21:30:35:947 starting stream loop
+2015/10/25 21:30:55:571 Restarting EAS Engine
+2015/10/25 21:30:55:571 Ring Detect Closed
+2015/10/25 21:30:55:571 serial errorUnknown error13
+2015/10/25 21:30:55:571 Initialising Ring Detect
+2015/10/25 21:30:55:571 serial errorUnknown error0
+2015/10/25 21:30:55:571 serial errorNo such file or directory1
+2015/10/25 21:30:55:571 finished eas init
+2015/10/25 21:30:55:556 starting stream loop
+2015/10/25 21:31:04:832 Restarting EAS Engine
+2015/10/25 21:31:04:832 Ring Detect Closed
+2015/10/25 21:31:04:847 serial errorUnknown error13
+2015/10/25 21:31:04:847 Initialising Ring Detect
+2015/10/25 21:31:04:847 serial errorUnknown error0
+2015/10/25 21:31:04:847 serial errorNo such file or directory1
+2015/10/25 21:31:04:847 finished eas init
+2015/10/25 21:31:04:816 starting stream loop
+2015/10/25 21:31:32:824 Restarting EAS Engine
+2015/10/25 21:31:32:824 Ring Detect Closed
+2015/10/25 21:31:32:824 serial errorUnknown error13
+2015/10/25 21:31:32:824 Initialising Ring Detect
+2015/10/25 21:31:32:824 serial errorUnknown error0
+2015/10/25 21:31:32:824 serial errorNo such file or directory1
+2015/10/25 21:31:32:824 finished eas init
+2015/10/25 21:31:32:824 starting stream loop
+2015/10/25 21:31:48:234 Restarting EAS Engine
+2015/10/25 21:31:48:234 Ring Detect Closed
+2015/10/25 21:31:48:234 serial errorUnknown error13
+2015/10/25 21:31:48:234 Initialising Ring Detect
+2015/10/25 21:31:48:234 serial errorUnknown error0
+2015/10/25 21:31:48:234 serial errorNo such file or directory1
+2015/10/25 21:31:48:234 finished eas init
+2015/10/25 21:31:48:234 starting stream loop
+2015/10/25 21:32:01:875 Restarting EAS Engine
+2015/10/25 21:32:01:875 Ring Detect Closed
+2015/10/25 21:32:01:875 serial errorUnknown error13
+2015/10/25 21:32:01:875 Initialising Ring Detect
+2015/10/25 21:32:01:875 serial errorUnknown error0
+2015/10/25 21:32:01:875 serial errorNo such file or directory1
+2015/10/25 21:32:01:875 finished eas init
+2015/10/25 21:32:01:875 starting stream loop
+2015/10/25 21:32:29:210 Restarting EAS Engine
+2015/10/25 21:32:29:210 Ring Detect Closed
+2015/10/25 21:32:29:210 serial errorUnknown error13
+2015/10/25 21:32:29:210 Initialising Ring Detect
+2015/10/25 21:32:29:210 serial errorUnknown error0
+2015/10/25 21:32:29:210 serial errorNo such file or directory1
+2015/10/25 21:32:29:210 finished eas init
+2015/10/25 21:32:29:163 starting stream loop
+2015/10/25 21:32:48:265 Restarting EAS Engine
+2015/10/25 21:32:48:265 Ring Detect Closed
+2015/10/25 21:32:48:265 serial errorUnknown error13
+2015/10/25 21:32:48:265 Initialising Ring Detect
+2015/10/25 21:32:48:265 serial errorUnknown error0
+2015/10/25 21:32:48:265 serial errorNo such file or directory1
+2015/10/25 21:32:48:265 finished eas init
+2015/10/25 21:32:48:265 starting stream loop
+2015/10/25 21:33:02:883 Restarting EAS Engine
+2015/10/25 21:33:02:883 Ring Detect Closed
+2015/10/25 21:33:02:883 serial errorUnknown error13
+2015/10/25 21:33:02:883 Initialising Ring Detect
+2015/10/25 21:33:02:883 serial errorUnknown error0
+2015/10/25 21:33:02:883 serial errorNo such file or directory1
+2015/10/25 21:33:02:883 finished eas init
+2015/10/25 21:33:02:883 starting stream loop
+2015/10/25 21:33:13:817 Restarting EAS Engine
+2015/10/25 21:33:13:817 Ring Detect Closed
+2015/10/25 21:33:13:817 serial errorUnknown error13
+2015/10/25 21:33:13:817 Initialising Ring Detect
+2015/10/25 21:33:13:817 serial errorUnknown error0
+2015/10/25 21:33:13:817 serial errorNo such file or directory1
+2015/10/25 21:33:13:817 finished eas init
+2015/10/25 21:33:13:817 starting stream loop
+2015/10/25 21:33:24:922 Restarting EAS Engine
+2015/10/25 21:33:24:922 Ring Detect Closed
+2015/10/25 21:33:24:922 serial errorUnknown error13
+2015/10/25 21:33:24:922 Initialising Ring Detect
+2015/10/25 21:33:24:922 serial errorUnknown error0
+2015/10/25 21:33:24:922 serial errorNo such file or directory1
+2015/10/25 21:33:24:922 finished eas init
+2015/10/25 21:33:24:922 starting stream loop
+2015/10/25 21:33:39:534 Restarting EAS Engine
+2015/10/25 21:33:39:534 Ring Detect Closed
+2015/10/25 21:33:39:534 serial errorUnknown error13
+2015/10/25 21:33:39:534 Initialising Ring Detect
+2015/10/25 21:33:39:534 serial errorUnknown error0
+2015/10/25 21:33:39:534 serial errorNo such file or directory1
+2015/10/25 21:33:39:534 finished eas init
+2015/10/25 21:33:39:534 starting stream loop
+2015/10/25 21:34:04:822 Restarting EAS Engine
+2015/10/25 21:34:04:822 Ring Detect Closed
+2015/10/25 21:34:04:822 serial errorUnknown error13
+2015/10/25 21:34:04:822 Initialising Ring Detect
+2015/10/25 21:34:04:822 serial errorUnknown error0
+2015/10/25 21:34:04:822 serial errorNo such file or directory1
+2015/10/25 21:34:04:822 finished eas init
+2015/10/25 21:34:04:807 starting stream loop
+2015/10/25 21:34:48:988 Restarting EAS Engine
+2015/10/25 21:34:48:988 Ring Detect Closed
+2015/10/25 21:34:49:003 serial errorUnknown error13
+2015/10/25 21:34:49:003 Initialising Ring Detect
+2015/10/25 21:34:49:003 serial errorUnknown error0
+2015/10/25 21:34:49:003 serial errorNo such file or directory1
+2015/10/25 21:34:49:003 finished eas init
+2015/10/25 21:34:48:988 starting stream loop
+2015/10/25 21:35:12:695 Restarting EAS Engine
+2015/10/25 21:35:12:695 Ring Detect Closed
+2015/10/25 21:35:12:695 serial errorUnknown error13
+2015/10/25 21:35:12:711 Initialising Ring Detect
+2015/10/25 21:35:12:711 serial errorUnknown error0
+2015/10/25 21:35:12:711 serial errorNo such file or directory1
+2015/10/25 21:35:12:711 finished eas init
+2015/10/25 21:35:12:695 starting stream loop
+2015/10/25 21:35:26:272 Restarting EAS Engine
+2015/10/25 21:35:26:272 Ring Detect Closed
+2015/10/25 21:35:26:272 serial errorUnknown error13
+2015/10/25 21:35:26:272 Initialising Ring Detect
+2015/10/25 21:35:26:272 serial errorUnknown error0
+2015/10/25 21:35:26:272 serial errorNo such file or directory1
+2015/10/25 21:35:26:272 finished eas init
+2015/10/25 21:35:26:272 starting stream loop
+2015/10/25 21:37:15:087 Restarting EAS Engine
+2015/10/25 21:37:15:087 Ring Detect Closed
+2015/10/25 21:37:15:087 serial errorUnknown error13
+2015/10/25 21:37:15:087 Initialising Ring Detect
+2015/10/25 21:37:15:087 serial errorUnknown error0
+2015/10/25 21:37:15:087 serial errorNo such file or directory1
+2015/10/25 21:37:15:087 finished eas init
+2015/10/25 21:37:15:087 starting stream loop
+2015/10/25 21:37:25:146 Restarting EAS Engine
+2015/10/25 21:37:25:146 Ring Detect Closed
+2015/10/25 21:37:25:146 serial errorUnknown error13
+2015/10/25 21:37:25:146 Initialising Ring Detect
+2015/10/25 21:37:25:146 serial errorUnknown error0
+2015/10/25 21:37:25:146 serial errorNo such file or directory1
+2015/10/25 21:37:25:146 finished eas init
+2015/10/25 21:37:25:131 starting stream loop
+2015/10/25 21:38:07:683 Restarting EAS Engine
+2015/10/25 21:38:07:683 Ring Detect Closed
+2015/10/25 21:38:07:683 serial errorUnknown error13
+2015/10/25 21:38:07:683 Initialising Ring Detect
+2015/10/25 21:38:07:683 serial errorUnknown error0
+2015/10/25 21:38:07:683 serial errorNo such file or directory1
+2015/10/25 21:38:07:683 finished eas init
+2015/10/25 21:38:07:683 starting stream loop
+2015/10/25 21:39:12:570 Restarting EAS Engine
+2015/10/25 21:39:12:570 Ring Detect Closed
+2015/10/25 21:39:12:570 serial errorUnknown error13
+2015/10/25 21:39:12:570 Initialising Ring Detect
+2015/10/25 21:39:12:570 serial errorUnknown error0
+2015/10/25 21:39:12:570 serial errorNo such file or directory1
+2015/10/25 21:39:12:570 finished eas init
+2015/10/25 21:39:12:570 starting stream loop
+2015/10/25 21:39:25:226 Restarting EAS Engine
+2015/10/25 21:39:25:226 Ring Detect Closed
+2015/10/25 21:39:25:226 serial errorUnknown error13
+2015/10/25 21:39:25:226 Initialising Ring Detect
+2015/10/25 21:39:25:226 serial errorUnknown error0
+2015/10/25 21:39:25:226 serial errorNo such file or directory1
+2015/10/25 21:39:25:226 finished eas init
+2015/10/25 21:39:25:226 starting stream loop
+2015/10/25 21:40:00:282 Restarting EAS Engine
+2015/10/25 21:40:00:282 Ring Detect Closed
+2015/10/25 21:40:00:282 serial errorUnknown error13
+2015/10/25 21:40:00:282 Initialising Ring Detect
+2015/10/25 21:40:00:282 serial errorUnknown error0
+2015/10/25 21:40:00:282 serial errorNo such file or directory1
+2015/10/25 21:40:00:282 finished eas init
+2015/10/25 21:40:00:157 starting stream loop
+2015/10/25 21:46:27:091 Restarting EAS Engine
+2015/10/25 21:46:27:106 Ring Detect Closed
+2015/10/25 21:46:27:106 serial errorUnknown error13
+2015/10/25 21:46:27:106 Initialising Ring Detect
+2015/10/25 21:46:27:106 serial errorUnknown error0
+2015/10/25 21:46:27:106 serial errorNo such file or directory1
+2015/10/25 21:46:27:106 finished eas init
+2015/10/25 21:46:27:091 starting stream loop
+2015/10/25 21:46:39:039 Restarting EAS Engine
+2015/10/25 21:46:39:039 Ring Detect Closed
+2015/10/25 21:46:39:039 serial errorUnknown error13
+2015/10/25 21:46:39:039 Initialising Ring Detect
+2015/10/25 21:46:39:055 serial errorUnknown error0
+2015/10/25 21:46:39:055 serial errorNo such file or directory1
+2015/10/25 21:46:39:055 finished eas init
+2015/10/25 21:46:39:039 starting stream loop
+2015/10/25 21:46:56:963 Restarting EAS Engine
+2015/10/25 21:46:56:963 Ring Detect Closed
+2015/10/25 21:46:56:963 serial errorUnknown error13
+2015/10/25 21:46:56:963 Initialising Ring Detect
+2015/10/25 21:46:56:963 serial errorUnknown error0
+2015/10/25 21:46:56:963 serial errorNo such file or directory1
+2015/10/25 21:46:56:963 finished eas init
+2015/10/25 21:46:56:963 starting stream loop
+2015/10/25 21:47:08:732 Restarting EAS Engine
+2015/10/25 21:47:08:732 Ring Detect Closed
+2015/10/25 21:47:08:732 serial errorUnknown error13
+2015/10/25 21:47:08:732 Initialising Ring Detect
+2015/10/25 21:47:08:732 serial errorUnknown error0
+2015/10/25 21:47:08:732 serial errorNo such file or directory1
+2015/10/25 21:47:08:732 finished eas init
+2015/10/25 21:47:08:732 starting stream loop

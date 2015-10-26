@@ -60,6 +60,11 @@ int main(int argc, char *argv[])
     QSettings settings;
 
     QCoreApplication::addLibraryPath("./");
+
+    QStringList libPaths = QCoreApplication::libraryPaths();
+    libPaths.append( "./plugins");
+    QCoreApplication::setLibraryPaths(libPaths);
+
     if (!QSystemTrayIcon::isSystemTrayAvailable()) {
         QMessageBox::critical(0, QObject::tr("Systray"),
                               QObject::tr("I couldn't detect any system tray "
