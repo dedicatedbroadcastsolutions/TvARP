@@ -125,6 +125,7 @@ private slots:
     void on_send_ID_config_clicked();
     void on_revert_ID_config_clicked();
     void on_id_browse_clicked();
+    void on_ip_config_clicked();
 };
 
 #endif // MAINWINDOW_H

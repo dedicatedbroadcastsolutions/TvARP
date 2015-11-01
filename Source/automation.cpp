@@ -376,12 +376,12 @@ void Automation::ingest_program(QString inputfile)
 
     outputfile = "./Local Video/temp.ts";
     outputfile = QFileInfo(outputfile).absoluteFilePath();
-    //ffmpeg->encode(inputfile,outputfile,
-     //              false,
-       //            settings.value("eas crossbar enable").toBool(),
-         //          settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
-           //        settings.value("eas audio device").toString() , -31 );
-    //QThread::sleep(2);
+    ffmpeg->encode(inputfile,outputfile,
+                   false,
+                   settings.value("eas crossbar enable").toBool(),
+                   settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
+                   settings.value("eas audio device").toString() , -31 );
+    msleep(2000);
     ffmpeg->file_info(outputfile);
 }
 

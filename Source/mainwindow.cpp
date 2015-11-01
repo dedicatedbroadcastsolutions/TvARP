@@ -83,7 +83,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->eas_detect->ensureCursorVisible();
     ui->eas_detect->moveCursor(QTextCursor::End);
     ui->eas_detect->verticalScrollBar()->setValue( ui->eas_detect->verticalScrollBar()->maximum() );
-    connect(automation,SIGNAL(eas_status(QString)),ui->eas_detect,SLOT(insertPlainText(QString)));
+    connect(automation,SIGNAL(eas_status(QString)),ui->stream_status_display,SLOT(insertPlainText(QString)));
 
     ui->ingest_display->ensureCursorVisible();
     ui->ingest_display->moveCursor(QTextCursor::End);
@@ -635,4 +635,9 @@ void MainWindow::on_id_browse_clicked()
     if (!fileName.isEmpty()) {
         ui->station_id_filename->setText(fileName);
     }
+}
+
+void MainWindow::on_ip_config_clicked()
+{
+
 }
