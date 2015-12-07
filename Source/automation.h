@@ -102,12 +102,14 @@ public slots:
     void encoder_finished(bool state);
     void ingest_display(QString string);
     void ingest_program(QString inputfile);
+    void ingest_cancel();
     void kill_ts_info();
     void station_id();
     void load_schedule();
     void done_streaming(int ip_port);
     void done_with_file(int port);
     void msleep(int msec);
+    void clear_stream(int ip_port);
 signals:
     void encoder_done();
     void init();

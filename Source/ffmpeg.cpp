@@ -104,6 +104,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool capture,bool cros
     {
         QThread::msleep(10);
     }
+    qDebug("encoding process starting");
     encoding = true;
     QString program;
     program = "./FFmpeg/bin/ffmpeg.exe";

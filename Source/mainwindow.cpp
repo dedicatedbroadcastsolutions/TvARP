@@ -490,7 +490,7 @@ void MainWindow::on_ingest_clicked(bool checked)
     }
     else
     {
-        // stop ingest process and clean up files
+        automation->ingest_cancel();
     }
 
 }
@@ -638,6 +638,11 @@ void MainWindow::on_id_browse_clicked()
 }
 
 void MainWindow::on_ip_config_clicked()
+{
+
+}
+
+void MainWindow::on_clear_stream_clicked()
 {
 
 }

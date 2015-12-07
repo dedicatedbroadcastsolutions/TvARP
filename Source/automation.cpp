@@ -145,6 +145,11 @@ void Automation::station_id()
     start_stream(1);
 }
 
+void Automation::ingest_cancel()
+{
+    qDebug("Need to send quit command");
+}
+
 void Automation::done_streaming(int ip_port)
 {
 
@@ -183,6 +188,11 @@ void Automation::cue_stream(int ip_port, QString sourcefile)
 {
     qDebug("automation is cueing the stream");
     mpeg_stream->stream_cue(ip_port,sourcefile);
+}
+
+void Automation::clear_stream(int ip_port)
+{
+
 }
 
 void Automation::init_ring_detect()
@@ -373,7 +383,6 @@ void Automation::ad_splice_return_to_network( QList<int> channel_list )
 void Automation::ingest_program(QString inputfile)
 {
     QString outputfile;
-
     outputfile = "./Local Video/temp.ts";
     outputfile = QFileInfo(outputfile).absoluteFilePath();
     ffmpeg->encode(inputfile,outputfile,
@@ -381,8 +390,8 @@ void Automation::ingest_program(QString inputfile)
                    settings.value("eas crossbar enable").toBool(),
                    settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
                    settings.value("eas audio device").toString() , -31 );
-    msleep(2000);
-    ffmpeg->file_info(outputfile);
+    //msleep(2000);
+    //ffmpeg->file_info(outputfile);
 }
 
 void Automation::capture_eas_message( )

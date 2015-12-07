@@ -923,16 +923,6 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="5">
-            <widget class="QPushButton" name="inputfile_browse_2">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="text">
-              <string>Browse</string>
-             </property>
-            </widget>
-           </item>
            <item row="3" column="4">
             <widget class="QPushButton" name="cue_test_stream">
              <property name="text">
@@ -942,6 +932,9 @@
            </item>
            <item row="3" column="3">
             <widget class="QComboBox" name="test_ip_port">
+             <property name="currentIndex">
+              <number>2</number>
+             </property>
              <item>
               <property name="text">
                <string>IP1</string>
@@ -969,9 +962,6 @@
              </item>
             </widget>
            </item>
-           <item row="1" column="1" colspan="4">
-            <widget class="QLineEdit" name="test_filename"/>
-           </item>
            <item row="3" column="5">
             <widget class="QPushButton" name="start_stream">
              <property name="text">
@@ -985,6 +975,26 @@
               <string>MPEG TS @ 4000kbps</string>
              </property>
             </widget>
+           </item>
+           <item row="3" column="6">
+            <widget class="QPushButton" name="clear_stream">
+             <property name="text">
+              <string>Clear Stream</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="6">
+            <widget class="QPushButton" name="inputfile_browse_2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Browse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="5">
+            <widget class="QLineEdit" name="test_filename"/>
            </item>
           </layout>
          </widget>
@@ -1748,6 +1758,9 @@
           </property>
           <property name="text">
            <string>Ingest</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
