@@ -484,7 +484,7 @@ void MainWindow::on_test_eas_clicked(bool checked)
 
 void MainWindow::on_ingest_clicked(bool checked)
 {
-    if(!checked)
+    if(checked)
     {
         automation->ingest_program(ui->ingest_file->text());
     }

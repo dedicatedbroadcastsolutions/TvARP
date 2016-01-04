@@ -17,6 +17,7 @@ class FFmpeg : public QObject
     void encode(QString inputfile, QString outputfile, bool capture, bool crossbar, int crossbar_pin, QString vdev, QString adev, int dialnorm);
     void ffplay(QString inputfile);
     int file_info(QString inputfile);
+    void Transcode(QString infile,QString outfile);
     void kill();
     void close();
     void close_encoder();
@@ -28,6 +29,8 @@ class FFmpeg : public QObject
     void encode_started();
     void ffplay_stdout(QString);
     void analysis_stdout_display(QString);
+    void transcode_stdout_display(QString);
+
   private slots:
      void readyReadStandardOutput();
      void processStarted();
@@ -38,9 +41,14 @@ class FFmpeg : public QObject
      void analysis_started();
      void analysis_finished();
      void analysis_stdout();
+     void transcode_stdout(QString);
      void log(QString logdata);
      void log_ffmpeg_stdout(QString logdata);
+     void transcode_processStarted();
+     void readyread_transcode();
+     void TranscodeFinished();
   private:
+    QProcess *mEncodingProcess;
     QProcess *mTranscodingProcess;
     QProcess *mInputPlayProcess;
     QProcess *mFileInfoProcess;

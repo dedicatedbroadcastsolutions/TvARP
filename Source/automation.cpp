@@ -55,7 +55,7 @@ Automation::Automation(QObject *parent) :
     connect(ffmpeg,SIGNAL(ffmpeg_status(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffplay_stdout(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_finished(bool )),this,SLOT(encoder_finished(bool)));
-    connect(ffmpeg,SIGNAL(analysis_stdout_display(QString)),this,SLOT(ingest_display(QString)));
+    connect(ffmpeg,SIGNAL(transcode_stdout_display(QString)),this,SLOT(ingest_display(QString)));
    // ad_ts = new TS_Info(this);
 
    // connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
@@ -68,10 +68,13 @@ Automation::Automation(QObject *parent) :
     connect(this,SIGNAL(openFile(int,QString)),this,SLOT(cue_stream(int,QString)));
     connect(this,SIGNAL(play(int)),this,SLOT(start_stream(int)));
     connect(mpeg_stream,SIGNAL(done_with_file(int)),this,SLOT(done_with_file(int)));
-    load_sch= new QTimer(this);
-    connect(load_sch, SIGNAL(timeout()),this,SLOT(load_schedule()));
-    load_sch->setInterval(1000);
-    load_sch->start();
+    //load_sch= new QTimer(this);
+    //connect(load_sch, SIGNAL(timeout()),this,SLOT(load_schedule()));
+    //load_sch->setInterval(1000);
+    //load_sch->start();
+
+    watcher.addPath("C:/Remote/Videos/insert.sch");
+    QObject::connect(&watcher, SIGNAL(fileChanged(QString)), this, SLOT(load_schedule(QString)));
 
     id_channels.clear();
     id_channels.append(1);
@@ -385,11 +388,8 @@ void Automation::ingest_program(QString inputfile)
     QString outputfile;
     outputfile = "./Local Video/temp.ts";
     outputfile = QFileInfo(outputfile).absoluteFilePath();
-    ffmpeg->encode(inputfile,outputfile,
-                   false,
-                   settings.value("eas crossbar enable").toBool(),
-                   settings.value("eas crossbar pin").toInt(),settings.value("eas video device").toString(),
-                   settings.value("eas audio device").toString() , -31 );
+    qDebug() << inputfile << outputfile;
+    ffmpeg->Transcode(inputfile,outputfile);
     //msleep(2000);
     //ffmpeg->file_info(outputfile);
 }
@@ -593,11 +593,10 @@ QList<QString> Automation::check_schedule()
 
 //======================================================================
 /// Load Schedule From File
-void Automation::load_schedule()
+void Automation::load_schedule(QString schfile)
 {
+    qDebug("Loading Schedule");
     //emit event_log_output("Schedule Loaded\n");
-    QString schfile;
-    schfile = "C:/Remote/Videos/insert.sch";
   //Declare Variables
     sch_entry load;
     QList<QString> line_input;
@@ -664,6 +663,7 @@ void Automation::load_schedule()
     {
         if(QDateTime::currentDateTime() > schedule[i].play_time )
         {
+            cleaned_schedule = true;
             QString output=schedule[i].play_cmd;
             output+="scheduled at ";
             output+=schedule[i].play_time.toString();
@@ -677,6 +677,7 @@ void Automation::load_schedule()
           QFile file(schedule[i].play_cmd);
                if (!file.open(QIODevice::ReadOnly))
                 {
+                   cleaned_schedule = true;
                    QString output=schedule[i].play_cmd;
                    output+=" does not exist";
                    emit event_log_output(output + "\n");
@@ -687,26 +688,25 @@ void Automation::load_schedule()
         }
     }
     // Write cleaned schedule to file
-    QFile write_file(schfile);
+    if(cleaned_schedule)
+    {
+        qDebug("Writing Schedule File");
+        QFile write_file(schfile);
         if (write_file.open(QIODevice::WriteOnly | QIODevice::Text))
         {
-
             QTextStream out(&write_file);
-            QString last,fname;
             for(int i=0;i<schedule.size();i++)
             {
-                /*
-                QString output;
-                output.append("Will play ");
-                output.append(schedule[i].play_cmd);
-                output.append(" at ");
-                output.append(schedule[i].play_time.toString());
-                emit event_log_output(output + "\n");*/
-
                 out<< schedule[i].schedule_string << "\n\n";
             }
             write_file.close();
         }
+        else
+        {
+            qDebug("Couldn't open schedule file for write");
+        }
+        cleaned_schedule = false;
+    }
 }
 //======================================================================
 /// ========================================================================================================

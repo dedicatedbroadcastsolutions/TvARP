@@ -1,7 +1,7 @@
-ECHO OFF
-REM FF Prompt 1.1
+@ECHO OFF
+REM FF Prompt 1.2
 REM Open a command prompt to run ffmpeg/ffplay/ffprobe
-REM Copyright (C) 2013  Kyle Schwarz
+REM Copyright (C) 2013-2015  Kyle Schwarz
 
 TITLE FF Prompt
 
@@ -12,10 +12,10 @@ IF NOT EXIST bin\ffmpeg.exe (
 )
 
 CD bin || GOTO:error
-PROMPT $G
+PROMPT $P$_$G
+SET PATH=%CD%;%PATH%
 CLS
 ffmpeg -version
-SET PATH=%CD%;%PATH%
 ECHO.
 ECHO For help run: ffmpeg -h
 ECHO For formats run: ffmpeg -formats ^| more
@@ -25,11 +25,11 @@ ECHO Current directory is now: "%CD%"
 ECHO The bin directory has been added to PATH
 ECHO.
 
-CMD /F:ON /Q /K
+CMD /Q /K 
 GOTO:EOF
 
 :error
-  ECHO.
-  ECHO Press any key to exit.
-  PAUSE >nul
-  GOTO:EOF
+ECHO.
+ECHO Press any key to exit.
+PAUSE >nul
+GOTO:EOF

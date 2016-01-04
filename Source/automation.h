@@ -105,7 +105,7 @@ public slots:
     void ingest_cancel();
     void kill_ts_info();
     void station_id();
-    void load_schedule();
+    void load_schedule(QString schfile);
     void done_streaming(int ip_port);
     void done_with_file(int port);
     void msleep(int msec);
@@ -135,12 +135,14 @@ private:
     bool eas_live;
     QTimer *check_timer;
     QTimer *load_sch;
+    QFileSystemWatcher watcher;
     int ring_init;
     QList <sch_entry> schedule;  // List that contains the event schedule
     bool ad;
     bool eas_nc;
     bool eas_ready;
     bool eas_np;
+    bool cleaned_schedule;
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);
