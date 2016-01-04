@@ -66,6 +66,9 @@ void FFmpeg::readyread_ffplay()
 
 void FFmpeg::TranscodeFinished()
 {
+    emit transcode_finished();
+    //file_info(transcode_source);
+    file_info(transcode_output);
     qDebug("Transcode Finished");
     log("transcode finished");
 }
@@ -79,44 +82,39 @@ void FFmpeg::transcode_processStarted()
 void FFmpeg::Transcode(QString inputfile,QString outputfile)
 {
     qDebug("FFmpeg Transcode");
-    ////while(encoding)
-    //{
-    //    QThread::msleep(10);
-    //}
-    //qDebug("encoding process starting");
-    //encoding = true;
+    transcode_source = inputfile;
+    transcode_output = outputfile;
     QString program;
-    program = "./FFmpeg/bin/ffprobe.exe";
+    program = "./FFmpeg/bin/ffmpeg.exe";
     program = QFileInfo(program).absoluteFilePath();
-    //encode_fileName = outputfile;
     QStringList arguments;
     arguments.clear();
     //arguments << "-v" << "9" << "-loglevel" << "99" ;
    // arguments  << "-re" << "-rtbufsize" << "100000k";
-        arguments << "-i" << inputfile;       // to read from a file
-/*
+        arguments << "-y" << "-i" << inputfile;       // to read from a file
+
     arguments << "-f" << "mpegts"
-    << "-muxrate" << "4000k"
-    << "-mpegts_transport_stream_id" << "8471"
-    << "-metadata" << "service_provider=\"K33EJ-D\""
+              << "-mpegts_transport_stream_id" << "8471"
+              << "-metadata" << "service_provider=\"K33EJ-D\""
+              << "-metadata" << "service_name=\"Local\""
+              << "-mpegts_service_id" << "1"
+              << "-mpegts_original_network_id" << "7654"
+              << "-tables_version" << "10"
+              << "-vcodec" << "mpeg2video"
 
-    << "-vf" << "fps=29.97,scale=704x480"
-    << "-vcodec" << "mpeg2video"
-    << "-b:v" << "2000k"
-    << "-pix_fmt" << "yuv420p"
+              << "-vf" << "fps=29.97,scale=704x480" << "-pix_fmt" << "yuv420p"
 
+              << "-muxrate" << "4000k" << "-g" << "15"
+              << "-b:v" << "3500k" << "-minrate:v" << "3500k" << "-maxrate:v" << "3500k" << "-bufsize" << "3500k"
+              << "-mbd" << "bits" << "-lmin" << "QP2LAMBDA"
+              << "-me_method" << "epzs" << "-bf" << "2" << "-b_strategy" << "1"
+              << "-trellis" << "2" << "-cmp" << "2" << "-subcmp" << "2" << "-sc_threshold" << "1000000k"
+              << "-packetsize" << "188" << "-mpegts_pmt_start_pid" <<  "0x40" << "-mpegts_start_pid" << "0x44"
     << "-acodec" <<"ac3"
     << "-af" << "pan=stereo|c0=c0|c1=c1"
-    << "-ar" << "48000" << "-b:a" << "120k"
-    << "-mpegts_pmt_start_pid" <<  "0x40"
-    << "-mpegts_start_pid" << "0x44"
-    << "-metadata" << "service_name=\"Local\""
-    << "-mpegts_service_id" << "1"
-    << "-mpegts_original_network_id" << "7654"
-    << "-tables_version" << "10"
+    << "-ar" << "48000" << "-b:a" << "120k" 
     << "-threads" << "1"
     << outputfile;
-    */
     //qDebug()<< arguments;
     mTranscodingProcess->setProcessChannelMode(QProcess::MergedChannels);
     mTranscodingProcess->start(program, arguments);
@@ -124,7 +122,7 @@ void FFmpeg::Transcode(QString inputfile,QString outputfile)
 
 void FFmpeg::readyread_transcode()
 {
-    qDebug("readyread");
+    //qDebug("readyread");
     transcode_stdout(mTranscodingProcess->readAllStandardOutput());
 }
 
@@ -145,7 +143,7 @@ void FFmpeg::analysis_started()
 
 void FFmpeg::analysis_stdout()
 {
-    qDebug("analysis stdout");
+    //qDebug("analysis stdout");
     QString string;
     string = mFileInfoProcess->readAllStandardOutput();
     emit analysis_stdout_display(string);

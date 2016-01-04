@@ -31,7 +31,7 @@
 #ifndef AUTOMATION_H
 #define AUTOMATION_H
 #include "QtCore"
-
+#include "smtp.h"
 #include "mux_control.h"
 #include "stream.h"
 #include "ffmpeg.h"
@@ -73,10 +73,11 @@ public:
     //TS_Info *ad_ts;
 public slots:
     // mux control slots
+
     void send_eas_config( QList<int> channel_list );
     void revert_eas_config( QList<int> channel_list );
-    void ad_splice_insert( QList<int> channel_list );
-    void ad_splice_return_to_network( QList<int> channel_list );
+    void ad_splice_insert(QList<int> channel_list , int ad_port, int ad_prog);
+    void ad_splice_return_to_network( QList<int> channel_list ,int ad_port,int ad_prog);
     void process_mux_debug(QString data);
     void init_mux_control();
     void restart_mux_control();
@@ -104,13 +105,18 @@ public slots:
     void ingest_program(QString inputfile);
     void ingest_cancel();
     void kill_ts_info();
-    void station_id();
+    void cue_station_id();
+    void start_station_id();
     void load_schedule(QString schfile);
+    void log_email(QString subject,QString message);
     void done_streaming(int ip_port);
     void done_with_file(int port);
     void msleep(int msec);
     void clear_stream(int ip_port);
+    void transcode_finished();
+    void check_ingest_dir(QString ingest_dir);
 signals:
+    void show_schedule(QList<QString>);
     void encoder_done();
     void init();
     void bitrate(int bitrate);
@@ -125,6 +131,7 @@ signals:
     void eas_status(QString);
     void stream_status(QString);
     void ingest_disp(QString);
+    void ingest_finished();
 
 private:
     Mux_Control *d2mux;
@@ -143,6 +150,8 @@ private:
     bool eas_ready;
     bool eas_np;
     bool cleaned_schedule;
+    bool station_id_loaded,station_id_played;
+    QString video_watch_dir;
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);

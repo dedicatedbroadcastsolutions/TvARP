@@ -28,17 +28,30 @@
 *
 ***************************************************************************
 */
-#include "configure_eas.h"
-#include "ui_configure_eas.h"
+#include "configure.h"
+#include "ui_configure.h"
 
-configure_eas::configure_eas(QWidget *parent) :
+
+
+configure::configure(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::configure_eas)
+    ui(new Ui::configure)
 {
+    //settings.set
     ui->setupUi(this);
 }
 
-configure_eas::~configure_eas()
+configure::~configure()
 {
     delete ui;
+}
+
+void configure::on_buttonBox_accepted()
+{
+    settings.setValue("Signal Delay", ui->sig_delay->value() );
+}
+
+void configure::on_restart_eas_clicked()
+{
+
 }

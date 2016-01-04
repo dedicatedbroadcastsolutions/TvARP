@@ -30,7 +30,7 @@ class FFmpeg : public QObject
     void ffplay_stdout(QString);
     void analysis_stdout_display(QString);
     void transcode_stdout_display(QString);
-
+    void transcode_finished();
   private slots:
      void readyReadStandardOutput();
      void processStarted();
@@ -54,6 +54,7 @@ class FFmpeg : public QObject
     QProcess *mFileInfoProcess;
     QString mOutputString;
     QString encode_fileName;
+    QString transcode_source,transcode_output;
     bool encoding;
     int FileInfo_bitrate;
 

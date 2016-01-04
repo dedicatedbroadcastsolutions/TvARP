@@ -61,13 +61,16 @@ Mux_Control::~Mux_Control()
 {
     qDebug("mux destructor");
     // remove duplicate entries from channels
-    QSet<int> ch_set;
-    ch_set = channels.toSet();
-    channels = QList<int>::fromSet(ch_set);
-    if(splice_active&&channels.size()>0)
+   // QSet<int> ch_set;
+    //ch_set = channels.toSet();
+    //channels = QList<int>::fromSet(ch_set);
+    if(splice_active&&ad_splice.size()>0)
     {
         log("returning to network");
-        return_from_splice( channels );
+        for(int i=0; i<ad_splice.size();i++)
+        {
+            return_from_splice( ad_splice[i].channels ,ad_splice[i].ad_port,ad_splice[i].ad_prog);
+        }
     }
     udpSocket->close();
     log("mux control destructor");
@@ -103,8 +106,6 @@ void Mux_Control::eas_insert( QList<int> channel_list)
     ch_set = channel_list.toSet();
     channel_list = QList<int>::fromSet(ch_set);
     qSort(channel_list);
-    // record spliced channels for destructor
-    channels.append(channel_list);
 
     // Declare Variables.
     int channel;
@@ -240,8 +241,6 @@ void Mux_Control::revert_eas_config(QList<int> channel_list)
     ch_set = channel_list.toSet();
     channel_list = QList<int>::fromSet(ch_set);
     qSort(channel_list);
-    // record spliced channels for destructor
-    channels.append(channel_list);
 
     // Declare Variables.
     int channel;
@@ -357,11 +356,12 @@ void Mux_Control::revert_eas_config(QList<int> channel_list)
     eas_active = 0;
 }
 
-void Mux_Control::program_splice( QList<int> channel_list )
+void Mux_Control::program_splice(QList<int> channel_list , int ad_port, int ad_prog)
 {
    // log("ad program splice");
     splice_active = 1;
     // remove duplicate entries from channel_list
+    QList<int> channels;
     channels.clear();
     QSet<int> ch_set;
     ch_set = channel_list.toSet();
@@ -499,9 +499,14 @@ void Mux_Control::program_splice( QList<int> channel_list )
         }
    }
    udpSocket->writeDatagram(splice_start_datagram.data(), splice_start_datagram.size(),control_address , control_port);
+   splice prog_splice;
+   prog_splice.ad_port = ad_port;
+   prog_splice.ad_prog = ad_prog;
+   prog_splice.channels = channels;
+   ad_splice.append(prog_splice);
 }
 
-void Mux_Control::return_from_splice( QList<int> channel_list )
+void Mux_Control::return_from_splice( QList<int> channel_list , int ad_port,int ad_prog )
 {
     //log("return from ad splice");
     splice_active = 0;
@@ -513,7 +518,7 @@ void Mux_Control::return_from_splice( QList<int> channel_list )
 /// Remove channels from this splice.
     for (int in = 0; in<channel_list.size();in++)
     {
-        channels.removeAll(channel_list[in]);
+        ad_splice[0].channels.removeAll(channel_list[in]);
     }
 ///
     int channel;

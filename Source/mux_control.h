@@ -34,6 +34,17 @@
 #include <QUdpSocket>
 #include <QSerialPort>
 
+
+struct splice
+{
+    bool operator<(const splice& other) const {
+        return ad_port < other.ad_port; // sort by play_time
+    }
+    int ad_port;
+    int ad_prog;
+    QList<int> channels;
+};
+
 class Mux_Control : public QObject
 {
     Q_OBJECT
@@ -47,8 +58,8 @@ public:
 public slots:
     void eas_insert(QList<int> channel_list);
     void revert_eas_config( QList<int> channel_list);
-    void program_splice( QList<int> channel_list );
-    void return_from_splice( QList<int> channel_list );
+    void program_splice( QList<int> channel_list,int ad_port,int ad_prog);
+    void return_from_splice( QList<int> channel_list,int ad_port,int ad_prog);
     void handleError();
     void read_mux_debug();
     void log(QString logdata);
@@ -64,7 +75,7 @@ private:
     QTextStream mux_log_out;
     int output_port;
     int message_type;
-    QList<int> channels;
+    QList<splice> ad_splice;
     bool splice_active;
     bool eas_active ;
     QByteArray splice_start_datagram;

@@ -30,7 +30,7 @@ Smtp::Smtp( const QString &user, const QString &pass, const QString &host, int p
     this->host = host;
     this->port = port;
     this->timeout = timeout;
-
+    qDebug("Finished smtp constructor");
 
 }
 
@@ -102,6 +102,7 @@ void Smtp::sendMail(const QString &from, const QString &to, const QString &subje
 
 Smtp::~Smtp()
 {
+    qDebug("SMTP Destructor");
     delete t;
     delete socket;
 }
@@ -260,6 +261,7 @@ void Smtp::readyRead()
     else if ( state == Close )
     {
         deleteLater();
+        qDebug("State is close, returning from readyread");
         return;
     }
     else
@@ -270,4 +272,5 @@ void Smtp::readyRead()
         emit status( tr( "Failed to send message" ) );
     }
     response = "";
+    qDebug("Finished readyread function");
 }

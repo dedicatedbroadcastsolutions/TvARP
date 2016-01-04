@@ -56,6 +56,8 @@ Automation::Automation(QObject *parent) :
     connect(ffmpeg,SIGNAL(ffplay_stdout(QString)),this,SLOT(streaming_status(QString)));
     connect(ffmpeg,SIGNAL(ffmpeg_finished(bool )),this,SLOT(encoder_finished(bool)));
     connect(ffmpeg,SIGNAL(transcode_stdout_display(QString)),this,SLOT(ingest_display(QString)));
+    connect(ffmpeg,SIGNAL(analysis_stdout_display(QString)),this,SLOT(ingest_display(QString)));
+    connect(ffmpeg,SIGNAL(transcode_finished()),this,SLOT(transcode_finished()));
    // ad_ts = new TS_Info(this);
 
    // connect(ad_ts      ,SIGNAL(status(QString)),this,SLOT(streaming_status(QString)));
@@ -73,8 +75,12 @@ Automation::Automation(QObject *parent) :
     //load_sch->setInterval(1000);
     //load_sch->start();
 
-    watcher.addPath("C:/Remote/Videos/insert.sch");
+    watcher.addPath("C:/Remote/insert.sch");
     QObject::connect(&watcher, SIGNAL(fileChanged(QString)), this, SLOT(load_schedule(QString)));
+    load_schedule("C:/Remote/insert.sch");
+    video_watch_dir = "C:/Remote/Videos";
+    watcher.addPath(video_watch_dir);
+    QObject::connect(&watcher, SIGNAL(directoryChanged(QString)),this,SLOT(check_ingest_dir(QString)));
 
     id_channels.clear();
     id_channels.append(1);
@@ -87,6 +93,7 @@ Automation::Automation(QObject *parent) :
     eas_nc = false;
     eas_ready = false;
     eas_np = false;
+
 }
 
 Automation::~Automation()
@@ -99,7 +106,7 @@ Automation::~Automation()
 
 void Automation::done_with_file(int port)
 {
-    ad_splice_return_to_network(ad_channels);
+    ad_splice_return_to_network(ad_channels,7,7);
 }
 
 void Automation::kill_ffmpeg()
@@ -112,6 +119,11 @@ void Automation::kill_ts_info()
 {
   //  if(ad_ts!=NULL)
     //    ad_ts->kill=true;
+}
+
+void Automation::transcode_finished()
+{
+    emit ingest_finished();
 }
 
 void Automation::get_bitrate(QString filename)
@@ -138,14 +150,17 @@ void Automation::ingest_display(QString string)
     emit ingest_disp(string);
 }
 
-void Automation::station_id()
+void Automation::cue_station_id()
 {
-    QString id_file;
-    d2mux->eas_insert(id_channels);
-    id_file = settings.value("ID File").toString();
-    cue_stream(1,id_file);
-    msleep(4);
-    start_stream(1);
+        QString id_file;
+        d2mux->eas_insert(id_channels);
+        id_file = settings.value("ID File").toString();
+        cue_stream(1,id_file);
+}
+
+void Automation::start_station_id()
+{
+        start_stream(1);
 }
 
 void Automation::ingest_cancel()
@@ -373,20 +388,25 @@ void Automation::revert_eas_config( QList<int> channel_list )
     d2mux->revert_eas_config(channel_list);
 }
 
-void Automation::ad_splice_insert( QList<int> channel_list )
+void Automation::ad_splice_insert( QList<int> channel_list ,int ad_port,int ad_prog)
 {
-    d2mux->program_splice( channel_list );
+    d2mux->program_splice( channel_list ,ad_port,ad_prog);
 }
 
-void Automation::ad_splice_return_to_network( QList<int> channel_list )
+void Automation::ad_splice_return_to_network( QList<int> channel_list ,int ad_port,int ad_prog)
 {
-    d2mux->return_from_splice( channel_list );
+    d2mux->return_from_splice( channel_list ,ad_port,ad_prog);
+}
+void Automation::check_ingest_dir(QString ingest_dir)
+{
+    qDebug("New file has arrived");
 }
 
 void Automation::ingest_program(QString inputfile)
 {
+    QFileInfo input_info(inputfile);
     QString outputfile;
-    outputfile = "./Local Video/temp.ts";
+    outputfile = "Local Video/" + input_info.baseName() + ".ts";
     outputfile = QFileInfo(outputfile).absoluteFilePath();
     qDebug() << inputfile << outputfile;
     ffmpeg->Transcode(inputfile,outputfile);
@@ -484,15 +504,28 @@ void Automation::run_schedule()
 
 void Automation::check_time()
   {
+    if(!station_id_loaded)
+        if(QDateTime::currentDateTime().time().minute()==59&&QDateTime::currentDateTime().time().second()==45)
+        {
+            cue_station_id();
+            station_id_loaded;
+        }
+    if(!station_id_played)
+        if(QDateTime::currentDateTime().time().minute()==0&&QDateTime::currentDateTime().time().second()==0)
+        {
+            start_station_id();
+            station_id_played;
+        }
+
     if(!schedule.empty()&&state==0)
-    {
+    {        
         if(QDateTime::currentDateTime() >= schedule[0].play_time)
         {
             emit play(schedule[0].ip_port);
             if(schedule[0].ip_port == 2)
             {
                 ad_channels = schedule[0].channels;
-                ad_splice_insert(ad_channels);
+                ad_splice_insert(ad_channels,7,7);
             }
          // Must be last
             schedule.removeAt(0);
@@ -530,6 +563,7 @@ void Automation::log_channel(int channel,QDateTime DateTime)
 }
 void Automation::log_playback(QString message,QString file,QDateTime DateTime)
 {
+
     QString log=message;
     log+= file;
     log.append(" on ");
@@ -687,6 +721,13 @@ void Automation::load_schedule(QString schfile)
                 file.close();
         }
     }
+    QList<QString> schedule_string_list;
+    schedule_string_list.clear();
+    for(int i=0;i<schedule.size();i++)
+    {
+        schedule_string_list.append(schedule[i].schedule_string);
+    }
+    emit show_schedule(schedule_string_list);
     // Write cleaned schedule to file
     if(cleaned_schedule)
     {
@@ -749,4 +790,17 @@ void Automation::load_config()
        }
     }
     file.close();
+}
+
+void Automation::log_email(QString subject, QString message)
+{
+    Smtp* smtp = new Smtp(settings.value("uname").toString(), settings.value("pswd").toString(),
+                          settings.value("Server").toString(), settings.value("port").toInt());
+    //connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+   // if( !file_attachments.isEmpty() )
+    //    smtp->sendMail(settings.value("uname").toString(), settings.value("email to").toString(),
+    //                   subject,message, file_attachments );
+    //else
+    smtp->sendMail(settings.value("uname").toString(), settings.value("email to").toString(),subject,message);
 }

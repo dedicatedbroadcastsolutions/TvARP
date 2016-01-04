@@ -44,6 +44,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
     automation = new Automation(this);
+    ip_config = new configure(this);
     ad_ch.clear();
     ad_ch.append(ui->comboBox->currentIndex()+1);
     eas_ch.clear();
@@ -100,6 +101,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(automation,SIGNAL(mux_log(QString)),ui->mux_log_display_2,SLOT( insertPlainText(QString) ) );
     connect(automation,SIGNAL(event_log_output(QString)),ui->event_log_display,SLOT(insertPlainText(QString)));
     connect(automation,SIGNAL(stream_status(QString)),ui->stream_status_display,SLOT(insertPlainText(QString)));
+    connect(automation,SIGNAL(ingest_finished()),this,SLOT(ingest_finished()));
+    connect(automation,SIGNAL(show_schedule(QList<QString>)),this,SLOT(show_schedule(QList<QString>)));
     automation->restart_eas_engine();
     ///automation->restart_mux_control();
 }
@@ -130,21 +133,26 @@ void MainWindow::browse()
 
 void MainWindow::sendMail()
 {
-    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    Smtp* smtp = new Smtp(settings.value("uname").toString(), settings.value("pswd").toString(),
+                          settings.value("Server").toString(), settings.value("port").toInt());
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !file_attachments.isEmpty() )
-        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), file_attachments );
+    {
+        //smtp->sendMail(settings.value("uname").toString(), settings.value("email to").toString(), ui->subject->text(),ui->msg->toPlainText(), file_attachments );
+    }
     else
-        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+    {
+        smtp->sendMail(settings.value("uname").toString(), settings.value("email to").toString(), ui->subject->text(),ui->msg->toPlainText());
+        //smtp->sendMail(ui->uname->text(), ui->rcpt->text(), ui->subject->text(),ui->msg->toPlainText());
+    }
+    qDebug("finished sendmail");
 }
 
 void MainWindow::mailSent(QString status)
 {
-    if(status == "Message sent")
-        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    qDebug("Message Sent");
 }
-
 
 void MainWindow::on_actionStart_Minimized_toggled(bool visible)
 {
@@ -153,9 +161,22 @@ void MainWindow::on_actionStart_Minimized_toggled(bool visible)
 
 void MainWindow::readSettings()
 {
-
-
     ui->actionStart_Minimized->setChecked(settings.value("visible").toBool());
+
+    if( settings.contains("port"))
+        ui->port->setText(settings.value("port").toString());
+
+    if( settings.contains("pswd"))
+        ui->paswd->setText(settings.value("pswd").toString());
+
+    if( settings.contains("uname"))
+        ui->uname->setText(settings.value("uname").toString());
+
+    if( settings.contains("email to"))
+        ui->rcpt->setText(settings.value("email to").toString());
+
+    if( settings.contains("Server"))
+        ui->server->setText(settings.value("Server").toString());
 
     if( settings.contains("ID File"))
         ui->station_id_filename->setText(settings.value("ID File").toString());
@@ -331,6 +352,11 @@ void MainWindow::on_ingest_display_textChanged()
     ingest_status_scroll_maximum = ui->ingest_display->verticalScrollBar()->maximum();
 }
 
+void MainWindow::ingest_finished()
+{
+    ui->ingest->setChecked(false);
+}
+
 void MainWindow::on_update_mux_settings_clicked()
 {
     store_mux_settings();
@@ -448,12 +474,18 @@ void MainWindow::on_revert_eas_config_clicked()
 
 void MainWindow::on_ad_insert_clicked()
 {
-    automation->ad_splice_insert(ad_ch);
+    automation->ad_splice_insert(ad_ch,ui->ad_port->currentIndex(),ui->ad_prog->value());
 }
 
 void MainWindow::on_ad_return_to_network_clicked()
 {
-    automation->ad_splice_return_to_network(ad_ch);
+    automation->ad_splice_return_to_network(ad_ch,ui->ad_port->currentIndex(),ui->ad_prog->value());
+}
+
+void MainWindow::show_schedule(QList<QString> schedule)
+{
+    ui->schedule->clear();
+    ui->schedule->addItems(schedule);
 }
 
 //void MainWindow::on_show_vmon_clicked(bool checked)
@@ -511,7 +543,7 @@ void MainWindow::on_inputfile_browse_clicked()
 void MainWindow::on_test_station_ID_clicked()
 {
     automation->set_id_channels(id_ch);
-    automation->station_id();
+    automation->cue_station_id();
 }
 
 void MainWindow::on_station_id_filename_textChanged(const QString &arg1)
@@ -519,6 +551,7 @@ void MainWindow::on_station_id_filename_textChanged(const QString &arg1)
     QString filename;
     filename = arg1;
     settings.setValue("ID File", filename );
+    qDebug()<< "Will Use Station ID File: " << filename;
 }
 
 void MainWindow::on_inputfile_browse_2_clicked()
@@ -637,12 +670,22 @@ void MainWindow::on_id_browse_clicked()
     }
 }
 
-void MainWindow::on_ip_config_clicked()
+void MainWindow::on_advanced_config_clicked()
 {
-
+    ip_config->show();
 }
 
 void MainWindow::on_clear_stream_clicked()
 {
+    qDebug("Need to turn off ip output");
+}
 
+void MainWindow::on_save_email_settings_clicked()
+{
+    settings.setValue("Server", ui->server->text() );
+    settings.setValue("port",ui->port->text());
+    settings.setValue("uname",ui->uname->text());
+    settings.setValue("pswd",ui->paswd->text());
+    settings.setValue("email to",ui->rcpt->text());
+    qDebug("Email Settings Saved");
 }

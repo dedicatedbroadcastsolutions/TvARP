@@ -38,7 +38,8 @@
 #include <QScrollBar>
 #include <QFileDialog>
 #include "automation.h"
-#include "smtp.h"
+
+#include "configure.h"
 //#include "video_window.h"
 
 namespace Ui {
@@ -53,6 +54,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
    // video_window *video;
+    configure *ip_config;
     QSettings settings;
     Automation *automation;
 
@@ -69,18 +71,19 @@ private:
     int eas_status_scroll_maximum;
     int stream_status_scroll_maximum;
     int ingest_status_scroll_maximum;
+
     QList < int > eas_ch , ad_ch, id_ch;
     QStringList file_attachments;
 private slots:
     void sendMail();
     void mailSent(QString);
     void browse();
-
+    void ingest_finished();
     void store_mux_settings();
     void on_actionStart_Minimized_toggled(bool );
     void on_actionExit_triggered();
     void on_restart_eas_clicked();
-
+    void show_schedule(QList<QString> schedule);
     void on_stream_status_display_textChanged();
     void on_eas_detect_textChanged();
     void on_mux_log_display_textChanged();
@@ -125,8 +128,9 @@ private slots:
     void on_send_ID_config_clicked();
     void on_revert_ID_config_clicked();
     void on_id_browse_clicked();
-    void on_ip_config_clicked();
+    void on_advanced_config_clicked();
     void on_clear_stream_clicked();
+    void on_save_email_settings_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -28,25 +28,31 @@
 *
 ***************************************************************************
 */
-#ifndef CONFIGURE_EAS_H
-#define CONFIGURE_EAS_H
-
+#ifndef CONFIGURE_H
+#define CONFIGURE_H
+#include <QtCore>
 #include <QDialog>
 
 namespace Ui {
-class configure_eas;
+class configure;
 }
 
-class configure_eas : public QDialog
+class configure : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit configure_eas(QWidget *parent = 0);
-    ~configure_eas();
+    explicit configure(QWidget *parent = 0);
+    ~configure();
+
+private slots:
+    void on_buttonBox_accepted();
+
+    void on_restart_eas_clicked();
 
 private:
-    Ui::configure_eas *ui;
+    Ui::configure *ui;
+    QSettings settings;
 };
 
-#endif // CONFIGURE_EAS_H
+#endif // CONFIGURE_H

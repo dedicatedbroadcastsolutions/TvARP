@@ -20,10 +20,10 @@ SOURCES +=\
     sys_tray_icon.cpp \
     mux_control.cpp \
     stream.cpp \
-    configure_eas.cpp \
     ffmpeg.cpp \
     server_main.cpp \
-    smtp.cpp
+    smtp.cpp \
+    configure.cpp
 
 HEADERS  += \
     automation.h \
@@ -31,12 +31,12 @@ HEADERS  += \
     mainwindow.h \
     mux_control.h \
     stream.h \
-    configure_eas.h \
     ffmpeg.h \
-    smtp.h
+    smtp.h \
+    configure.h
 
 FORMS    += mainwindow.ui \
-    configure_eas.ui
+    configure.ui
 
 RESOURCES += \
     systray.qrc
