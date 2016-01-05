@@ -521,7 +521,7 @@ void Automation::check_time()
     QDateTime current_time,sat_time;
     current_time = QDateTime::currentDateTime();
     sat_time = current_time.addMSecs(sat_delay);
-    int station_id_Min = 37;
+    int station_id_Min = 0;
     if(!station_id_loaded)
         if(sat_time.time().minute()==(station_id_Min-1)&&sat_time.time().second()==45)
         {
