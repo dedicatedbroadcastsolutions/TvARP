@@ -38,13 +38,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     int maxblock = 250;
+    automation = new Automation(this);
+    ip_config = new configure(this);
     readSettings();
 
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
-    automation = new Automation(this);
-    ip_config = new configure(this);
+
+    connect(ip_config,SIGNAL(accepted()),this,SLOT(process_config_dialog()));
     ad_ch.clear();
     ad_ch.append(ui->comboBox->currentIndex()+1);
     eas_ch.clear();
@@ -131,6 +133,11 @@ void MainWindow::browse()
 
 }
 
+void MainWindow::process_config_dialog()
+{
+    automation->set_sat_delay(settings.value("Signal Delay").toInt());
+}
+
 void MainWindow::sendMail()
 {
     Smtp* smtp = new Smtp(settings.value("uname").toString(), settings.value("pswd").toString(),
@@ -161,7 +168,11 @@ void MainWindow::on_actionStart_Minimized_toggled(bool visible)
 
 void MainWindow::readSettings()
 {
-    ui->actionStart_Minimized->setChecked(settings.value("visible").toBool());
+    if( settings.contains("Signal Delay"))
+        automation->set_sat_delay(settings.value("Signal Delay").toInt());
+
+    if( settings.contains("visible"))
+        ui->actionStart_Minimized->setChecked(settings.value("visible").toBool());
 
     if( settings.contains("port"))
         ui->port->setText(settings.value("port").toString());

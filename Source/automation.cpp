@@ -93,7 +93,8 @@ Automation::Automation(QObject *parent) :
     eas_nc = false;
     eas_ready = false;
     eas_np = false;
-
+    station_id_loaded=false;
+    station_id_played=false;
 }
 
 Automation::~Automation()
@@ -155,11 +156,13 @@ void Automation::cue_station_id()
         QString id_file;
         d2mux->eas_insert(id_channels);
         id_file = settings.value("ID File").toString();
+        qDebug() << "playing station id: " << id_file;
         cue_stream(1,id_file);
 }
 
 void Automation::start_station_id()
 {
+    qDebug("Starting STation ID File");
         start_stream(1);
 }
 
@@ -399,7 +402,14 @@ void Automation::ad_splice_return_to_network( QList<int> channel_list ,int ad_po
 }
 void Automation::check_ingest_dir(QString ingest_dir)
 {
-    qDebug("New file has arrived");
+    QDir ingest_folder;
+    QStringList files;
+    ingest_folder.setCurrent(ingest_dir);
+    QStringList filters;
+    filters << "*.ts" << "*.ps" << ".*m2ts" << ".*mxf" << ".*mov" << ".*avi" << ".*flv" << ".*mpg" << ".*mpeg";
+    files = ingest_folder.entryList(filters);
+    qDebug() << "New file has arrived" << files;
+
 }
 
 void Automation::ingest_program(QString inputfile)
@@ -501,25 +511,35 @@ void Automation::run_schedule()
 {
 
 }
+void Automation::set_sat_delay(qint64 delay)
+{
+    sat_delay = delay;
+}
 
 void Automation::check_time()
   {
+    QDateTime current_time,sat_time;
+    current_time = QDateTime::currentDateTime();
+    sat_time = current_time.addMSecs(sat_delay);
+    int station_id_Min = 37;
     if(!station_id_loaded)
-        if(QDateTime::currentDateTime().time().minute()==59&&QDateTime::currentDateTime().time().second()==45)
+        if(sat_time.time().minute()==(station_id_Min-1)&&sat_time.time().second()==45)
         {
+            qDebug("Trying to cue id file");
             cue_station_id();
-            station_id_loaded;
+            station_id_loaded=true;
         }
     if(!station_id_played)
-        if(QDateTime::currentDateTime().time().minute()==0&&QDateTime::currentDateTime().time().second()==0)
+        if(sat_time.time().minute()==station_id_Min&&sat_time.time().second()==0)
         {
+            qDebug("Playing ID File");
             start_station_id();
-            station_id_played;
+            station_id_played=true;
         }
 
     if(!schedule.empty()&&state==0)
     {        
-        if(QDateTime::currentDateTime() >= schedule[0].play_time)
+        if(sat_time >= schedule[0].play_time)
         {
             emit play(schedule[0].ip_port);
             if(schedule[0].ip_port == 2)
@@ -531,7 +551,7 @@ void Automation::check_time()
             schedule.removeAt(0);
         }
         else
-            if(QDateTime::currentDateTime() >= schedule[0].play_time.addSecs(-15)
+            if(sat_time >= schedule[0].play_time.addSecs(-15)
                 && !isOpen)
             {
                 isOpen = 1;

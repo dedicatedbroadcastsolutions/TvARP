@@ -37,8 +37,9 @@ configure::configure(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::configure)
 {
-    //settings.set
     ui->setupUi(this);
+
+    ui->sat_delay->setValue(settings.value("Signal Delay").toInt());
 }
 
 configure::~configure()
@@ -48,7 +49,7 @@ configure::~configure()
 
 void configure::on_buttonBox_accepted()
 {
-    settings.setValue("Signal Delay", ui->sig_delay->value() );
+    settings.setValue("Signal Delay", ui->sat_delay->value() );
 }
 
 void configure::on_restart_eas_clicked()

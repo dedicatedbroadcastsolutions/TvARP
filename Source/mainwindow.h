@@ -131,6 +131,7 @@ private slots:
     void on_advanced_config_clicked();
     void on_clear_stream_clicked();
     void on_save_email_settings_clicked();
+    void process_config_dialog();
 };
 
 #endif // MAINWINDOW_H

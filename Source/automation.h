@@ -115,6 +115,7 @@ public slots:
     void clear_stream(int ip_port);
     void transcode_finished();
     void check_ingest_dir(QString ingest_dir);
+    void set_sat_delay(qint64 delay);
 signals:
     void show_schedule(QList<QString>);
     void encoder_done();
@@ -152,6 +153,8 @@ private:
     bool cleaned_schedule;
     bool station_id_loaded,station_id_played;
     QString video_watch_dir;
+    QStringList video_watch_files;
+    qint64 sat_delay;
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);
