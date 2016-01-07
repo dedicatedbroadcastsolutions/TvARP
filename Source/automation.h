@@ -76,24 +76,32 @@ public slots:
 
     void send_eas_config( QList<int> channel_list );
     void revert_eas_config( QList<int> channel_list );
+    void restart_eas_engine();
+    void init_ring_detect();
+    void close_ring_detect();
+    void check_eas_ring();
+    void capture_eas_message();
+    void send_eas_message();
+    void handleError();
+
     void ad_splice_insert(QList<int> channel_list , int ad_port, int ad_prog);
     void ad_splice_return_to_network( QList<int> channel_list ,int ad_port,int ad_prog);
     void process_mux_debug(QString data);
     void init_mux_control();
     void restart_mux_control();
+
     void kill_ffmpeg();
     void start_stream(int ip_port);
     void cue_stream(int ip_port,QString sourcefile);
-    void restart_eas_engine();
-    void init_ring_detect();
-    void close_ring_detect();
-    void handleError();
-    void check_eas_ring();
-    void capture_eas_message();
-    void send_eas_message();
+    void stream_eas(QString sourcefile);
+    void clear_stream(int ip_port);
+
+
     void check_time();
     void video_state(int);
-    void stream_eas(QString sourcefile);
+    void msleep(int msec);
+    void check_ingest_dir(QString ingest_dir);
+    void set_sat_delay(qint64 delay);
     void is_open(bool);
     void set_eas_channels(QList<int> ch);
     void set_id_channels(QList<int> ch);
@@ -111,11 +119,10 @@ public slots:
     void log_email(QString subject,QString message);
     void done_streaming(int ip_port);
     void done_with_file(int port);
-    void msleep(int msec);
-    void clear_stream(int ip_port);
+
+    void started_streaming(int ip_port,QString filename);
     void transcode_finished();
-    void check_ingest_dir(QString ingest_dir);
-    void set_sat_delay(qint64 delay);
+    void failed_to_cue(QString filename);
 signals:
     void show_schedule(QList<QString>);
     void encoder_done();
@@ -155,6 +162,7 @@ private:
     QString video_watch_dir;
     QStringList video_watch_files;
     qint64 sat_delay;
+    bool ad_file_cued;
 private slots:
     void log_eas(QString logdata);
     void print_log(QString log);

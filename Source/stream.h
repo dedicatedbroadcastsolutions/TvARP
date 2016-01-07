@@ -58,9 +58,11 @@ class Worker : public QObject
     void datagram_sent(QByteArray datagram);
     //void find_bitrate(QString filename);
     void work_status( QString );
-    void streaming(int,QString);
+    void streaming(int ip_num, QString source_filename);
     void busy(int ip_num, QString source_filename );
     void finished_file(int port);
+    void cued_file(int ip_num,QString source_file);
+    void failed_to_cue_file(QString filename);
   private slots:
 
     QByteArray read_datagram(QFile &readfile);
@@ -119,13 +121,17 @@ class stream : public QObject
     void stream_start(int ip_port);
     void stream_cue(int ip_port, QString source_filename);
     void finished_stream(int port);
+    void failed_to_cue(QString filename);
   signals:
     void done_with_file(int port);
     void start_stream_loop();
     void done_with_stream();
     void start_streaming( int ip_port );
+    void stream_started(int ip_num,QString sourcefile);
     void status( QString );
     void cue_streaming(int ip_port, QString source_filename);
+    void stream_cued();
+    void failed_to_open(QString filename);
   private:
     Worker *worker;
 

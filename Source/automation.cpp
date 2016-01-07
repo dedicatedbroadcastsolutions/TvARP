@@ -70,6 +70,7 @@ Automation::Automation(QObject *parent) :
     connect(this,SIGNAL(openFile(int,QString)),this,SLOT(cue_stream(int,QString)));
     connect(this,SIGNAL(play(int)),this,SLOT(start_stream(int)));
     connect(mpeg_stream,SIGNAL(done_with_file(int)),this,SLOT(done_with_file(int)));
+    connect(mpeg_stream,SIGNAL(failed_to_open(QString)),this,SLOT(failed_to_cue(QString)));
     //load_sch= new QTimer(this);
     //connect(load_sch, SIGNAL(timeout()),this,SLOT(load_schedule()));
     //load_sch->setInterval(1000);
@@ -95,6 +96,7 @@ Automation::Automation(QObject *parent) :
     eas_np = false;
     station_id_loaded=false;
     station_id_played=false;
+    file_cued = false;
 }
 
 Automation::~Automation()
@@ -120,6 +122,12 @@ void Automation::kill_ts_info()
 {
   //  if(ad_ts!=NULL)
     //    ad_ts->kill=true;
+}
+
+void Automation::failed_to_cue(QString filename)
+{
+    ad_file_cued=false;
+
 }
 
 void Automation::transcode_finished()
@@ -203,6 +211,11 @@ void Automation::start_stream(int ip_port)
 {
     qDebug("automation is starting the stream");
     mpeg_stream->stream_start(ip_port);
+}
+
+void Automation::started_streaming(int ip_port, QString filename)
+{
+    qDebug("started stream");
 }
 
 void Automation::cue_stream(int ip_port, QString sourcefile)
@@ -503,7 +516,7 @@ void Automation::process_mux_debug(QString data)
 {
     emit mux_log(data);
     //if(!data.contains( QRegExp("arp")) )
-        emit mux_eas_log(data);
+    emit mux_eas_log(data);
 }
 
 // ================================================================
@@ -521,16 +534,16 @@ void Automation::check_time()
     QDateTime current_time,sat_time;
     current_time = QDateTime::currentDateTime();
     sat_time = current_time.addMSecs(sat_delay);
-    int station_id_Min = 0;
+    int station_id_Min = 30;
     if(!station_id_loaded)
-        if(sat_time.time().minute()==(station_id_Min-1)&&sat_time.time().second()==45)
+        if(sat_time.time().minute()==(station_id_Min-1)&&sat_time.time().second()==30)
         {
             qDebug("Trying to cue id file");
             cue_station_id();
             station_id_loaded=true;
         }
     if(!station_id_played)
-        if(sat_time.time().minute()==station_id_Min&&sat_time.time().second()==0)
+        if(sat_time.time().minute()==(station_id_Min-1)&&sat_time.time().second()==45)
         {
             qDebug("Playing ID File");
             start_station_id();
@@ -539,7 +552,7 @@ void Automation::check_time()
 
     if(!schedule.empty()&&state==0)
     {        
-        if(sat_time >= schedule[0].play_time)
+        if(sat_time >= schedule[0].play_time && ad_file_cued)
         {
             emit play(schedule[0].ip_port);
             if(schedule[0].ip_port == 2)

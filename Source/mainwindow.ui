@@ -1112,7 +1112,7 @@
               <bool>true</bool>
              </property>
              <property name="text">
-              <string>C:/Users/Zach/Development/TvARP/release/Local Video/ew051512-004398SD-h264lb.ts</string>
+              <string>./Local Video/ID000001.ts</string>
              </property>
             </widget>
            </item>
@@ -1810,7 +1810,7 @@
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>Video/ew050812-004403SD-h264lb.mov</string>
+           <string/>
           </property>
          </widget>
         </item>

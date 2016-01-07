@@ -544,7 +544,7 @@ void MainWindow::on_inputfile_browse_clicked()
         QFileDialog::getOpenFileName(
                 this,
                 tr("Open File"),
-                "Local Video",
+                "Ingest",
                 tr("Video (*.mp4 *.mov *.avi *.mpg *.ts);;All files (*.*)"));
     if (!fileName.isEmpty()) {
         ui->ingest_file->setText(fileName);

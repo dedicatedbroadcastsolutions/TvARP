@@ -104,8 +104,8 @@ void FFmpeg::Transcode(QString inputfile,QString outputfile)
 
               << "-vf" << "fps=29.97,scale=704x480" << "-pix_fmt" << "yuv420p"
 
-              << "-muxrate" << "4000k" << "-g" << "15"
-              << "-b:v" << "3500k" << "-minrate:v" << "3500k" << "-maxrate:v" << "3500k" << "-bufsize" << "3500k"
+              << "-muxrate" << "3000k" << "-g" << "15"
+              << "-b:v" << "2500k" << "-minrate:v" << "2500k" << "-maxrate:v" << "2500k" << "-bufsize" << "2500k"
               << "-mbd" << "bits" << "-lmin" << "QP2LAMBDA"
               << "-me_method" << "epzs" << "-bf" << "2" << "-b_strategy" << "1"
               << "-trellis" << "2" << "-cmp" << "2" << "-subcmp" << "2" << "-sc_threshold" << "1000000k"
@@ -212,7 +212,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool capture,bool cros
         arguments << "-i" << inputfile;       // to read from a file
 
     arguments << "-f" << "mpegts"
-    << "-muxrate" << "4000k"
+    << "-muxrate" << "2000k"
     << "-mpegts_transport_stream_id" << "8471"
     << "-metadata" << "service_provider=\"K33EJ-D\""
 

@@ -52,6 +52,7 @@ stream::stream(QObject *parent) :
     connect(worker,SIGNAL(streaming(int,QString)),this,SLOT(cancel_cue(int,QString)),Qt::QueuedConnection);
     connect(this,SIGNAL(cue_streaming(int,QString)),worker,SLOT(cue_stream(int,QString)),Qt::QueuedConnection);
     connect(worker,SIGNAL(finished_file(int)),this,SLOT(finished_stream(int)));
+    connect(worker,SIGNAL(failed_to_cue_file(QString)),this,SLOT(failed_to_cue(QString)));
     emit start_stream_loop();
     log("finished log constructor");
 }
@@ -67,6 +68,11 @@ stream::~stream()
         workerThread.wait();
     }
     log("Stream destructor finished");
+}
+
+void stream::failed_to_cue(QString filename)
+{
+    emit failed_to_open(filename);
 }
 
 void stream::finished_stream(int port)
@@ -91,6 +97,7 @@ void stream::cancel_cue(int ip_port, QString filename)
             ip4_cue.clear();
             break;
     }
+    emit stream_started(ip_port,filename);
 }
 
 void stream::process_busy( int ip_port,  QString source_filename )
@@ -206,7 +213,7 @@ void Worker::start_loop()
     ip3_port = 1234;
     ip4_port = 1234;
 
-    set_packet_period(4000000);
+    set_packet_period(3000000);
 
     ip1_address.setAddress( "239.0.0.220");
     ip2_address.setAddress("239.0.0.225");
@@ -443,8 +450,8 @@ void Worker::set_packet_period(int bitrate)
         timer_period = 8*packet_size*pkts_per_dgm; // 8 bits per byte, ms between packets.
         timer_period = timer_period*1000000000;
         timer_period = timer_period/(bitrate);
-        one_third_of_timer_period = timer_period/4;
-        sleep_time = timer_period/3000;
+        one_third_of_timer_period = timer_period/3;
+        sleep_time = timer_period/4000;
         //qDebug() << timer_period;
     }
     else
@@ -524,7 +531,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue1a = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else if(!cue1b)
             {
@@ -536,7 +546,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue1b = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else
             {
@@ -554,7 +567,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue2a = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else if(!cue2b)
             {
@@ -565,7 +581,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue2b = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else
             {
@@ -583,7 +602,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue3a = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else if(!cue3b)
             {
@@ -594,7 +616,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue3b = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else
             {
@@ -612,7 +637,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue4a = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else if(!cue4b)
             {
@@ -623,7 +651,10 @@ void Worker::cue_stream(int ip_num, QString source_filename)
                     cue4b = true;
                 }
                 else
+                {
+                    emit failed_to_cue_file(source_filename);
                     qDebug("failed to stream");
+                }
             }
             else
             {
