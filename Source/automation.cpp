@@ -469,6 +469,7 @@ void Automation::stream_eas(QString sourcefile)
     {
         msleep(500);
         qDebug("can't open file");
+        log_eas("couldn't open EAS file, trying again.\n");
         if(i<=500000)
             i++;
         else
