@@ -96,7 +96,7 @@ Automation::Automation(QObject *parent) :
     eas_np = false;
     station_id_loaded=false;
     station_id_played=false;
-    file_cued = false;
+    ad_file_cued = false;
 }
 
 Automation::~Automation()

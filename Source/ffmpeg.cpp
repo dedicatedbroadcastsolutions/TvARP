@@ -212,7 +212,7 @@ void FFmpeg::encode(QString inputfile,QString outputfile, bool capture,bool cros
         arguments << "-i" << inputfile;       // to read from a file
 
     arguments << "-f" << "mpegts"
-    << "-muxrate" << "2000k"
+    << "-muxrate" << "3000k"
     << "-mpegts_transport_stream_id" << "8471"
     << "-metadata" << "service_provider=\"K33EJ-D\""
 
