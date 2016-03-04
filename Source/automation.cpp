@@ -474,6 +474,7 @@ void Automation::stream_eas(QString sourcefile)
             i++;
         else
         {
+            log_eas("Error: couldn't open EAS file\n");
             break;
         }
     }
