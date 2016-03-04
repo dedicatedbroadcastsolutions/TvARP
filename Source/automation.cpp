@@ -349,7 +349,7 @@ if(!share_comport)
                 {
                     eas_live=false;
                     log_eas("Stop Encoder");
-                    QTimer::singleShot(5000, this, SLOT(kill_ffmpeg()));
+                    QTimer::singleShot(10000, this, SLOT(kill_ffmpeg()));
                 }
             }
         }
@@ -378,7 +378,7 @@ else
             {
                 eas_live=false;
                 log_eas("Stop Encoder");
-                QTimer::singleShot(5000, this, SLOT(kill_ffmpeg()));
+                QTimer::singleShot(10000, this, SLOT(kill_ffmpeg()));
             }
         }
     }
