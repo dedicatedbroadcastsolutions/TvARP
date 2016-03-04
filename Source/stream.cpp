@@ -451,7 +451,7 @@ void Worker::set_packet_period(int bitrate)
         timer_period = timer_period*1000000000;
         timer_period = timer_period/(bitrate);
         one_third_of_timer_period = timer_period/3;
-        sleep_time = timer_period/4000;
+        sleep_time = timer_period/3000;
         //qDebug() << timer_period;
     }
     else
