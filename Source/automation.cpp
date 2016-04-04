@@ -556,12 +556,13 @@ void Automation::check_time()
     {        
         if(sat_time >= schedule[0].play_time && ad_file_cued)
         {
-            emit play(schedule[0].ip_port);
+            //emit play(schedule[0].ip_port);
             if(schedule[0].ip_port == 2)
             {
                 ad_channels = schedule[0].channels;
                 ad_splice_insert(ad_channels,7,7);
             }
+            start_stream(schedule[0].ip_port);
          // Must be last
             schedule.removeAt(0);
         }
