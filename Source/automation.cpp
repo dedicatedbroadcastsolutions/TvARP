@@ -480,7 +480,7 @@ void Automation::stream_eas(QString sourcefile)
     }
     easfile.close();
     cue_stream(1,sourcefile);
-    msleep(500);
+    msleep(3000);
     start_stream(1);
 }
 

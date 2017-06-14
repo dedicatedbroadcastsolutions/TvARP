@@ -93,7 +93,10 @@ void Mux_Control::read_mux_debug()
 
 void Mux_Control::handleError()
 {
-    log( "mux debug port error" + mux_debug->errorString() + QString::number(mux_debug->error()) ) ;
+    int error_num;
+    error_num = mux_debug->error();
+    if(error_num!=10)
+    log( "mux debug port error" + mux_debug->errorString() + QString::number(error_num) ) ;
 }
 
 void Mux_Control::eas_insert( QList<int> channel_list)
